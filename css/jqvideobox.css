@@ -1,0 +1,78 @@
+
+#lbOverlay {
+    background-color: #000000;
+    cursor: pointer;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 30;
+}
+#lbCenter, #lbBottomContainer {
+    background-color: #FFFFFF;
+    left: 50%;
+    overflow: hidden;
+    padding: 5px;
+    position: fixed;
+    text-align: center;
+    z-index: 1000;
+}
+.lbLoading {
+    background: url("loading.gif") no-repeat scroll center center #FFFFFF;
+}
+#lbImage {
+    border: 10px solid #FFFFFF;
+}
+#lbPrevLink, #lbNextLink {
+    display: none;
+    height: 34px;
+    outline: medium none;
+    position: absolute;
+    top: 0;
+    width: 63px;
+}
+#lbPrevLink {
+    background: url("btn-prev.gif") no-repeat scroll 0 15% transparent;
+    left: 0;
+}
+#lbNextLink {
+    background: url("btn-next.gif") no-repeat scroll 100% 15% transparent;
+    right: 0;
+}
+#lbBottom {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #FFFFFF;
+    border-image: none;
+    border-right: 5px solid #FFFFFF;
+    border-style: none solid solid;
+    border-width: 5px;
+    color: #666666;
+    font-family: Verdana,Helvetica,sans-serif;
+    font-size: 10px;
+    line-height: 1.4em;
+    text-align: left;
+}
+#lbCloseLink {
+    background: url("closelabel.gif") no-repeat scroll center center transparent;
+    display: block;
+    float: right;
+    height: 22px;
+    margin: 5px 0;
+    width: 66px;
+}
+#lbCaption, #lbNumber {
+    margin-right: 71px;
+}
+#lbCaption {
+    font-weight: bold;
+}
+.lbImageCaption {
+    color: #555555;
+    font-size: 9px;
+    left: 4px;
+    position: absolute;
+    top: 0;
+}

@@ -1,0 +1,24 @@
+/* CSS Document */
+
+.form-wrap{
+	margin-top:20px;
+	margin-bottom:10px;
+}
+.center{
+	text-align:center;	
+}
+.text-success{
+	color:#3c763d;
+}
+.text-danger{
+	color:#a94442;
+}
+.btn-competition{
+	cursor:pointer;
+	width:85%;	
+}
+.competition-tems{
+	color:#716f6f;
+	margin-top: 15px;
+	line-height: 14px;
+}

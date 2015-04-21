@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#background-popup{ display:none; position:fixed; _position:absolute; /* hack for internet explorer 6*/ height:100%; width:100%; top:0; left:0; background:#000000; border:0; z-index:100; }
+#popup-box{ display:none; position:fixed; _position:absolute; /* hack for internet explorer 6*/ height:auto; width:auto; background:#fff; z-index:200; text-align:left; }
+#popup-content { border:10px solid #ccc; background:#fff; padding:20px; }
+#popup-content p { padding:5px 0; }
+#popup-content input.textfield { width:250px; }

@@ -1,0 +1,330 @@
+<?php
+class Product_model extends Model {
+	function __construct() {
+		parent::Model();
+	}
+	
+	function add($data) {
+		$this->db->insert('products',$data);
+		return $this->db->insert_id();
+	}
+	function all() {
+		$this->db->order_by('title','asc');
+		$query = $this->db->get('products');
+		return $query->result_array();		
+	}
+	function group($row) {
+		$sql = "SELECT * FROM `products` ORDER BY `title` ASC LIMIT $row,10";
+		$query = $this->db->query($sql);
+		return $query->result_array();
+	}
+	function search($keyword,$category,$status) {	
+		if ($category == 0) {
+			$sql = "SELECT * FROM `products` WHERE (`products`.`title` LIKE '%$keyword%' OR `products`.`short_desc` LIKE '%$keyword%' OR `products`.`long_desc` LIKE '%$keyword%')";
+		} else {
+			$sql = "SELECT `products`.* FROM `products`,`products_categories`
+					WHERE `products_categories`.`category_id` = $category
+					AND `products_categories`.`product_id` = `products`.`id`
+					AND (`products`.`title` LIKE '%$keyword%' OR `products`.`short_desc` LIKE '%$keyword%' OR `products`.`long_desc` LIKE '%$keyword%')";
+		}
+		if ($status) {
+			$sql .= " AND `products`.`status` = 1";
+		}
+		$query = $this->db->query($sql);
+		return $query->result_array();		
+	}
+	function search_group($row,$per_page,$keyword,$category,$sort_type,$status) {	
+		if ($category == 0) {
+			$sql = "SELECT * FROM `products` WHERE (`products`.`title` LIKE '%$keyword%' OR `products`.`short_desc` LIKE '%$keyword%' OR `products`.`long_desc` LIKE '%$keyword%')";
+		} else {
+			$sql = "SELECT `products`.* FROM `products`,`products_categories`
+					WHERE `products_categories`.`category_id` = $category
+					AND `products_categories`.`product_id` = `products`.`id`
+					AND (`products`.`title` LIKE '%$keyword%' OR `products`.`short_desc` LIKE '%$keyword%' OR `products`.`long_desc` LIKE '%$keyword%')";
+		}
+		if($status) {
+			$sql .= " AND `products`.`status` = 1";
+		}
+		if ($sort_type == 0) {
+			$sql .= " ORDER BY `products`.`title` ASC";
+		} else if ($sort_type == 1) {
+			$sql .= " ORDER BY `products`.`sale_price` ASC";
+		} else if ($sort_type == 2) {
+			$sql .= " ORDER BY `products`.`sale_price` DESC";
+		}
+		$sql .= " LIMIT $row,$per_page";
+		$query = $this->db->query($sql);
+		return $query->result_array();		
+	}
+	function identify($id) {
+		$this->db->where('id',$id);
+		$query = $this->db->get('products');
+		return $query->first_row('array');
+	}
+	function update($id,$data) {
+		$this->db->where('id',$id);
+		return $this->db->update('products',$data);
+	}
+	function delete($id) {
+		$this->db->where('id',$id);
+		$this->db->delete('products');
+	}
+	
+	function remove_categories($product_id) {
+		$this->db->where('product_id',$product_id);
+		$this->db->delete('products_categories');
+	}
+	function add_category($data) {
+		$this->db->insert('products_categories',$data);		
+	}
+	function get_categories($product_id) {
+		$this->db->where('product_id',$product_id);
+		$query = $this->db->get('products_categories');
+		return $query->result_array();
+	}
+	function product_category($product_id,$category_id) {
+		$this->db->where('product_id',$product_id);
+		$this->db->where('category_id',$category_id);
+		$query = $this->db->get('products_categories');
+		if ($query->num_rows() > 0) {
+			return true;
+		}
+		return false;
+	}
+	
+	function add_attribute($data) {
+		$this->db->insert('products_attributes',$data);
+	}
+	function remove_attributes($product_id) {
+		$this->db->where('product_id',$product_id);
+		$this->db->delete('products_attributes');
+	}
+	function get_attributes($product_id) {
+		//$attributes = array();
+		$this->db->where('product_id',$product_id);
+		$this->db->order_by('id','asc');
+		$query = $this->db->get('products_attributes');
+		return  $query->result_array();
+		/*
+		$result = $query->result_array();
+		foreach($result as $row)
+	    {
+			
+			$options = array();
+			if($row['value'] != '')
+			{
+				$options = json_decode($row['value'], true);
+			}
+			$attributes[] = array(
+				
+				'name' => $row['name'],
+				'options' => $options
+			);			
+		}
+		return $attributes;
+		*/
+	}
+	function get_attribute($id) {
+		$this->db->where('id',$id);
+		$query = $this->db->get('products_attributes');
+		$result = $query->first_row('array');
+		//$value = explode("~",$result['value']);
+		
+		$options = array();
+		$options = json_decode($result['value'],true);
+		/*
+		for($i=0;$i<count($value)-1;$i++) {
+			$options[] = $value[$i];
+		}
+		*/
+		return $options;
+		
+	}
+	function add_photo($data) {
+		$this->db->insert('products_photos',$data);
+		return $this->db->insert_id();
+	}
+	function update_photo($id,$data) {
+		$this->db->where('id',$id);
+		$this->db->update('products_photos',$data);
+	}
+	function delete_photo($id) {
+		$this->db->where('id',$id);
+		$this->db->delete('products_photos');
+	}
+	function get_photos($product_id) {
+		$this->db->where('product_id',$product_id);
+		$this->db->where('hero',0);
+		$this->db->order_by('order','asc');
+		$query = $this->db->get('products_photos');
+		return $query->result_array();
+	}
+	function get_photo($id) {
+		$this->db->where('id',$id);
+		$query = $this->db->get('products_photos');
+		return $query->first_row('array');
+	}
+	function hero_photo($product_id,$id) {
+		$sql = "UPDATE `products_photos` SET `hero` = 0 WHERE `product_id` = $product_id";
+		$this->db->query($sql);
+		$sql = "UPDATE `products_photos` SET `hero` = 1 WHERE `id` = $id";
+		$this->db->query($sql);
+	}
+	function thumb_photo($product_id) {
+		$this->db->where('product_id',$product_id);
+		$this->db->order_by('hero','desc');
+		$query = $this->db->get('products_photos');
+		return $query->first_row('array');
+	}
+	function get_hero($product_id) {
+		$this->db->where('product_id',$product_id);
+		$this->db->where('hero',1);
+		$query = $this->db->get('products_photos');
+		return $query->first_row('array');
+	}
+	function get_next_photo($product_id,$order) {
+		$sql = "SELECT * FROM `products_photos` WHERE `product_id` = $product_id
+				AND `order` > $order
+				ORDER BY `order` ASC";
+		$query = $this->db->query($sql);
+		return $query->first_row('array');
+	}
+	function get_prev_photo($product_id,$order) {
+		$sql = "SELECT * FROM `products_photos` WHERE `product_id` = $product_id
+				AND `order` < $order
+				ORDER BY `order` DESC";
+		$query = $this->db->query($sql);
+		return $query->first_row('array');
+	}
+	
+	function add_crosssale($data) {
+		$this->db->insert('products_crosssales',$data);
+		return $this->db->insert_id();
+	}
+	function update_crosssale($id,$data) {	
+		$this->db->where('id',$id);
+		$this->db->update('products_crosssales',$data);
+	}
+	function remove_crosssale($id) {
+		$this->db->where('id',$id);
+		$this->db->delete('products_crosssales');
+	}
+	function remove_crosssales($product_id) {
+		$this->db->where('product_id',$product_id);
+		$this->db->delete('products_crosssales');
+	}
+	function remove_related($product_id) {
+		$sql = "DELETE FROM `products_crosssales` WHERE `product_id` = $product_id OR `related` = $product_id";
+		$this->db->query($sql);
+	}
+	function is_crosssale($product_id,$related) {
+		$this->db->where('product_id',$product_id);
+		$this->db->where('related',$related);
+		$query = $this->db->get('products_crosssales');
+		if ($query->num_rows() > 0) {
+			return true;
+		}
+		return false;
+	}
+	function count_crosssales($product_id) {
+		$this->db->where('product_id',$product_id);
+		$query = $this->db->get('products_crosssales');
+		return $query->num_rows();
+	}
+	function get_crosssale($id) {
+		$this->db->where('id',$id);
+		$query = $this->db->get('products_crosssales');
+		return $query->first_row('array');
+	}
+	function get_crosssales($product_id) {
+		$sql = "SELECT `products_crosssales`.* FROM `products_crosssales`,`products`
+				WHERE `products`.`id` = `products_crosssales`.`related`
+				AND `products`.`status` = 1
+				AND `products_crosssales`.`product_id` = '$product_id'
+				ORDER BY `order` ASC";
+		/*$this->db->where('product_id',$product_id);
+		$this->db->order_by('order','asc');
+		$query = $this->db->get('products_crosssales');*/
+		$query = $this->db->query($sql);
+		return $query->result_array();
+	}
+	function get_next_crosssale($product_id,$order) {
+		$sql = "SELECT * FROM `products_crosssales` WHERE `product_id` = $product_id
+				AND `order` > $order
+				ORDER BY `order` ASC";
+		$query = $this->db->query($sql);
+		return $query->first_row('array');
+	}
+	function get_prev_crosssale($product_id,$order) {
+		$sql = "SELECT * FROM `products_crosssales` WHERE `product_id` = $product_id
+				AND `order` < $order
+				ORDER BY `order` DESC";
+		$query = $this->db->query($sql);
+		return $query->first_row('array');
+	}
+	
+	function add_feature($data) {
+		$this->db->insert('products_features',$data);
+		return $this->db->insert_id();
+	}
+	function get_features() {
+//		$sql = "SELECT `products`.* FROM `products`,`products_features` WHERE `products`.`id` = `products_features`.`product_id` ORDER  BY `products_features`.`order` ASC ";
+		$sql = "SELECT `products`.* FROM `products`,`products_features` WHERE `products`.`id` = `products_features`.`product_id` ORDER  BY `products_features`.`order` ASC LIMIT 0,3";
+		$query = $this->db->query($sql);
+		return $query->result_array();
+	}
+	function remove_feature($product_id) {
+		$this->db->where('product_id',$product_id);
+		$this->db->delete('products_features');
+	}
+	function get_feature($product_id) {
+		$this->db->where('product_id',$product_id);
+		$query = $this->db->get('products_features');
+		return $query->first_row('array');
+	}
+	function update_feature($id,$data) {
+		$this->db->where('id',$id);
+		$this->db->update('products_features',$data);
+	}
+	function is_feature($product_id) {
+		$this->db->where('product_id',$product_id);
+		$query = $this->db->get('products_features');
+		if ($query->num_rows() > 0) { return true; }
+		return false;
+	}
+	function count_features() {
+		$query = $this->db->get('products_features');
+		return $query->num_rows();
+	}
+	
+	function get_next_feature($order) {
+		$sql = "SELECT * FROM `products_features` WHERE `order` > $order
+				ORDER BY `order` ASC";
+		$query = $this->db->query($sql);
+		return $query->first_row('array');
+	}
+	function get_prev_feature($order) {
+		$sql = "SELECT * FROM `products_features` WHERE `order` < $order
+				ORDER BY `order` DESC";
+		$query = $this->db->query($sql);
+		return $query->first_row('array');
+	}
+	
+	function purchased_time($product_id) {
+		$sql = "SELECT sum(`carts`.`quantity`) as `total` 
+				FROM `carts`,`orders` 
+				WHERE `carts`.`product_id` = ".$product_id." 
+				AND `carts`.`session_id` = `orders`.`session_id` 
+				AND `orders`.`status` = 'successful'";
+		$query = $this->db->query($sql);
+		$row = $query->first_row('array');
+		$times = 0;
+		if ($row['total'] != NULL) { $times = $row['total']; }
+		return $times;
+	}
+	function remove_features($product_id) {
+		$this->db->where('product_id',$product_id);
+		$this->db->delete('products_features');
+	}
+}
+?>

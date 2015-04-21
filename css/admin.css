@@ -1,0 +1,146 @@
+
+
+.pri_link{
+	color:#FF8D7A!important;
+	text-decoration:none!important;
+}
+h1{
+	font-weight : 700;
+	font-size:20px!important;
+	/*color: #2084ce*/
+	color:#000000;
+}
+h2{
+	font-weight : 700;
+	font-size:18px!important;
+	color: #333
+}
+.line-between
+{
+	height: 0px; 
+	clear: both; 
+	border-top:1px solid #ccc;
+}
+th
+{
+	font-weight : 700 !important;
+	font-size:15px!important;
+}
+
+#main-header
+{
+	position:inherit;
+}
+
+.btn
+{
+	background-image: linear-gradient(to bottom, #504B4B, #3a3a3a);
+	
+	
+	background-color: #3a3a3a;
+	color:#ffffff!important;
+}
+.btn-group.open .btn.dropdown-toggle {
+    background-color: #000;
+}
+.active {    
+    background-color:rgba(194,194,194,0.25) !important;
+    color: #222 !important;
+}
+.inner-active {
+    
+	background-color: #000000 !important;
+	 
+}
+.accordion-inner {
+    background-color: rgba(227, 227, 227, 0.25);
+}
+.header-bg-color
+{
+	
+	background-color: rgba(227, 227, 227, 0.25)!important;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+  background-position: inherit;
+  -webkit-transition: background-position 0s linear;
+     -moz-transition: background-position 0s linear;
+       -o-transition: background-position 0s linear;
+          transition: background-position 0s linear;
+}
+
+.btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: 0px;
+}
+
+/* Tiles */
+h1.page-header-alt{
+	padding-left:7px;	
+}
+.box{
+	min-height: 365px; 
+	border: 1px solid #d6d6d6; 
+	border-radius: 5px; 
+	margin-right: 19px;	
+	padding:20px;
+	float:left;
+	width:100%;
+}
+.form-label{
+	width: 20%; 
+	float: left; 
+	height: 30px; 
+	line-height: 30px;	
+}
+.form-group{
+	float:left;
+	width:100%;
+	margin-bottom:5px;	
+}
+.form-control{
+	width: 80%; 
+	float: right	
+}
+.form-control input[type=text]{
+	width:97%;	
+}
+img.tile-thumb{
+	float:right;
+	width:160px;	
+}
+.vgap{
+	margin-top:20px;	
+}
+.error{
+	background-color:#f2dede !important;	
+}
+a.anchor:hover{
+	text-decoration:none;
+	display:block;	
+}
+.center{
+	text-align:center !important;	
+}
+.icon-active{
+	color:#00c717;
+}
+.icon-inactive{
+	color:#d6d6d6;	
+}
+.icon-danger{
+	color:#c70520;	
+}
+.sortable-table tbody tr{
+	cursor:move;	
+}
+.male{
+
+}
+.female{
+	color:#e6394c;	
+}

@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteCond %{HTTPS} !=on
+RewriteRule "^(/secure/.*)" "https://%{HTTP_HOST}$1" [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+RewriteCond %{HTTP_HOST} ^bared\.com\.au$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.bared\.com\.au$
+RewriteRule ^shoe\-features\/16\/Frequently\-Asked\-Questions\/?(.*)$ "https\:\/\/bared\.com\.au\/page\/About\-Bared\-Footwear$1" [R=301,L]
+

@@ -1,0 +1,291 @@
+<script>
+function export_csv(type) {
+	if (confirm('This will export the order list to a csv file. Do you want to continue?')) {
+		window.location = '<?=base_url()?>admin/order/exportorder/'+type;
+	}
+}
+function deleteorder(id) {
+	if (confirm('Are you sure you want to delete this order?')) {
+		window.location = '<?=base_url()?>admin/order/deleteorder/' + id;
+	}
+}
+
+jQuery(function() {
+	jQuery('.view-order').tooltip({
+		showURL: false
+	});
+	
+	jQuery('.delete-order').tooltip({
+		showURL: false
+	});
+	
+});
+
+
+function change_status(id)
+{	
+	var status = $('#status'+id).val();
+
+	jQuery.ajax({
+		url: '<?=base_url()?>admin/order/change_order_status',
+		type: 'POST',
+		data: ({id:id,status:status}),
+		dataType: "html",
+		success: function(html) {
+			if(html != '')
+			{
+				//alert(html);
+				if(status == 'shipped')
+				{
+					$('#any_message').html('Error - The order tracking URL is blank');
+					$('#anyModal').modal('show');
+				}
+				//location.reload();
+				$('#status'+id).val(html);
+			}
+			else
+			{
+				if(status == 'shipped')
+				{
+					$('#any_message').html('An automated email has been sent to this customer with ship tracking information');
+					$('#anyModal').modal('show');
+				}
+			}
+		}
+	})
+}
+</script>
+<div class="span9">
+	<div style="min-height: 365px; border: 1px solid #d6d6d6; border-radius: 5px; margin-right: 19px;">
+		<div style="padding: 20px">
+			<!-- start here -->
+			<h1>Manage Orders</h1>
+			<h2>Search Order</h2>
+			<form method="post" action="<?=base_url()?>admin/order/searchorder">
+			<div>
+				<div style="float: left; width: 20%; height: 30px; line-height: 30px">
+					Customer Name
+				</div>
+				<div style="float: left; width: 80%">
+					<input type="text" class="textfield rounded" id="name" name="customer_name" value=""/>
+				</div>
+			</div>
+			<div>
+				<div style="float: left; width: 20%; height: 30px; line-height: 30px">
+					Customer ID
+				</div>
+				<div style="float: left; width: 80%">
+					<input type="text" class="textfield rounded" id="name" name="customer_id" value=""/>
+				</div>
+			</div>
+			<div>
+				<div style="float: left; width: 20%; height: 30px; line-height: 30px">
+					Order ID
+				</div>
+				<div style="float: left; width: 80%">
+					<input type="text" class="textfield rounded" id="name" name="order_id" value=""/>
+				</div>
+			</div>
+			<div>
+				<div style="float: left; width: 20%; height: 30px; line-height: 30px">
+					From Date
+				</div>
+				<div style="float: left; width: 80%">
+					<div id="datetimepicker1" class="input-append">
+					    <input data-format="dd-MM-yyyy" type="text" name="from_date"></input>
+					    <span style="cursor: pointer" class="add-on">
+					      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+					      </i>
+					    </span>
+					  </div>
+					<script type="text/javascript">
+					  $(function() {
+					    $('#datetimepicker1').datetimepicker({
+					      pickTime: false
+					    });
+					  });
+					</script>
+				</div>
+			</div>
+			<div>
+				<div style="float: left; width: 20%; height: 30px; line-height: 30px">
+					To Date
+				</div>
+				<div style="float: left; width: 80%">
+					<div id="datetimepicker4" class="input-append">
+					    <input data-format="dd-MM-yyyy" type="text" name="to_date"></input>
+					    <span style="cursor: pointer" class="add-on">
+					      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+					      </i>
+					    </span>
+					  </div>
+					<script type="text/javascript">
+					  $(function() {
+					    $('#datetimepicker4').datetimepicker({
+					      pickTime: false
+					    });
+					  });
+					</script>
+				</div>
+			</div>
+            <!--
+			<div style="clear: both"></div>
+			<div>
+				<div style="float: left; width: 20%; height: 30px; line-height: 30px">
+					By Payment Status
+				</div>
+				<div style="float: left; width: 80%">
+					<select class="selectpicker" id="cat" name="by_payment">
+						<option value="All">All</option>
+						<option value="successful">Successful</option>
+						<option value="trade">30 Days Trade Account</option>
+						<option value="failed">Failed</option>
+					</select>
+                   <script>jQuery(".selectpicker").selectpicker();</script>
+				</div>
+			</div>
+            -->
+			<div style="clear: both"></div>
+			<div>
+				<div style="float: left; width: 20%; height: 30px; line-height: 30px">
+					By Order Status
+				</div>
+				<div style="float: left; width: 80%">
+					<select class="selectpicker" id="stat" name="by_status">
+						<option value="All">All</option>
+						<option value="failed">Failed</option>
+                        <option value="cancelled">Cancelled</option>
+						<option value="shipped">Shipped</option>
+						<option value="processed">Processed</option>
+						<option value="increasing status">Increasing Status</option>
+						<option value="30 days invoice">30 Days Invoice</option>
+					</select>
+                    <!-- <script>jQuery(".selectpicker").selectpicker();</script> -->
+				</div>
+			</div>
+			<div style="clear: both"></div>
+			<div>
+				<div style="float: left; width: 20%; height: 30px; line-height: 30px">
+					By Keyword
+				</div>
+				<div style="float: left; width: 80%">
+					<input type="text" class="textfield rounded" id="name" name="by_keyword" value=""/>
+				</div>
+			</div>
+			<div style="clear: both"></div>
+			<div>
+				<div style="float: left; width: 20%; height: 30px; line-height: 30px">
+					&nbsp;
+				</div>
+				<div style="float: left; width: 80%">
+					<button class="btn btn-primary">Search</button>
+				</div>
+			</div>
+			</form>
+			<div style="clear: both"></div>
+			<div style="clear: both; height: 20px"></div>
+			<div style="float: left; margin-right: 20px;">
+				<h2>Order List</h2>
+			</div>
+			<div style="float: left; margin-top: 15px;">
+				<button class="btn btn-primary" onclick="export_csv('');">Export To CSV</button>
+			</div>
+			<div style="clear: both; height: 10px;"></div>
+			<div>
+				Total Sales: <span style="font-weight: 700" id="cur_ttl">$</span>
+			</div>
+			<div style="clear: both; height: 10px;"></div>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th style="width: 10%">Order ID</th>
+						<th style="width: 25%">Customer Name</th>
+						<th style="width: 20%">Order Date</th>
+						<th style="width: 10%">Total</th>
+						<th style="width: 15%">Status</th>
+						<th style="width: 20%; text-align: center" colspan="2">Functions</th>
+					</tr>
+				</thead>
+                <? if(count($orders)==0){ $curttl=0; ?>
+					<tbody>
+                    	<tr><td colspan="6"> Sorry, there are no results </td></tr>
+					</tbody>
+				<? }else{?>                
+				<tbody>
+					<?php
+						$curttl = 0; 
+						foreach($orders as $order) { ?>
+						<tr>
+							<td><?=$order['id']?> / <?=$order['lightspeed_order_id']?></td>
+							<td>
+								<?php
+								if($this->session->userdata('by_typecustomer')==4){
+									$customer = $this->Customer_model->identify($order['customer_id']);
+									?>
+									<a href="<?=base_url()?>admin/customer/list_all/edit/<?=$order['customer_id']?>"><?=$customer['company']?></a>
+									<?php
+								}
+								else
+								{
+									$cust = $this->Customer_model->identify($order['customer_id']);
+									$user = $this->User_model->identify_cust_id($order['customer_id']);
+								?>
+								<a href="<?=base_url()?>admin/customer/list_all/edit/<?=$user['id']?>"><?=$cust['firstname'].' '.$cust['lastname']?> (<?=$order['customer_id']?>) </a>
+								<?php
+								}
+								?>
+							</td>
+							<td><?=date('d-m-Y',strtotime($order['order_time']))?><br/><?=date('H:i:s',strtotime($order['order_time']))?></td>
+							<td>$<?=number_format($order['total'],2,'.',',')?></td>
+							<!-- <td style="<?php if($order['status'] != 'successful') print 'color:red'; else print 'color:green'; ?>"><?=ucwords($order['status'])?></td> -->
+							<td>
+								<select class="selectpicker" id="status<?=$order['id']?>" onchange="change_status(<?=$order['id']?>);">
+									<option value="failed" <?php if($order['order_status'] == 'failed'){echo "selected='selected'";}?>>Failed</option>
+									<option value="pending" <?php if($order['order_status'] == 'pending'){echo "selected='selected'";}?>>Pending</option>
+                                    <option value="cancelled" <?php if($order['order_status'] == 'cancelled'){echo "selected='selected'";}?>>Cancelled</option>
+									<option value="increasing status" <?php if($order['order_status'] == 'increasing status'){echo "selected='selected'";}?>>Increasing Status</option>
+                                    <option value="shipped" <?php if($order['order_status'] == 'shipped'){echo "selected='selected'";}?>>Shipped</option>
+									<option value="processed" <?php if($order['order_status'] == 'processed'){echo "selected='selected'";}?>>Processed</option>	
+									<option value="30 days invoice" <?php if($order['order_status'] == '30 days invoice'){echo "selected='selected'";}?>>30 Days Invoice</option>									
+								</select>
+							</td>
+							<td style="text-align: center">
+								<span class="view-order" data-toggle="tooltip" title="View Order" style="cursor: pointer" onclick="window.location='<?=base_url().'admin/order/list_all/view/'.$order['id']?>'">
+		    						<i class="icon-search icon-2x"></i>
+		    					</span>
+							</td>
+							<td style="text-align: center">
+								<span class="delete-order" data-toggle="tooltip" title="Delete Order" style="cursor: pointer" onclick="deleteorder(<?=$order['id']?>);">
+		    						<i style="color: #c70520" class="icon-remove-circle icon-2x"></i>
+		    					</span>
+							</td>
+						</tr>
+					<?php
+					if($order['order_status']=='completed' || $order['order_status']=='processed'){	
+					 $curttl += $order['total'];
+					}
+					} ?>
+				</tbody>
+                <? } ?>
+			</table>
+			<script>
+				$('#cur_ttl').text('$<?=number_format($curttl,2,'.',',')?>');
+			</script>
+			<!-- end here -->
+		</div>
+	</div>
+</div>
+<script>jQuery(".selectpicker").selectpicker();</script>
+	<div id="anyModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	<h3 id="myModalLabel">Message</h3>
+	</div>
+	<div class="modal-body">
+	    <p id="any_message"></p>
+	</div>
+	<div class="modal-footer">
+	<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
+	
+	</div>
+	</div>
