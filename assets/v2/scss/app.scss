@@ -30,7 +30,7 @@ $fa:'FontAwesome';
 	padding-right:$right;
 }
 
-@mixin placeholder($font_size:12px,$font_weight:300,$opacity:1){
+@mixin placeholder($font_size:12px,$font_weight:400,$opacity:1,$letter_spacing:1.5px,$word_spacing:1.4px){
 	&::-webkit-input-placeholder {
   		 color: $color4;
 		 font-size:$font_size;
@@ -38,6 +38,8 @@ $fa:'FontAwesome';
 		 font-weight:$font_weight;
 		 opacity:$opacity;
 		 text-transform:none;
+		 letter-spacing:$letter_spacing;
+		 word-spacing:$word_spacing;
 	}
 
 	&:-moz-placeholder { /* Firefox 18- */
@@ -47,6 +49,8 @@ $fa:'FontAwesome';
 		font-weight:$font_weight;
 		opacity:$opacity;
 		text-transform:none;
+		letter-spacing:$letter_spacing;
+		word-spacing:$word_spacing;
 	}
 
 	&::-moz-placeholder {  /* Firefox 19+ */
@@ -56,6 +60,8 @@ $fa:'FontAwesome';
 		font-weight:$font_weight;
 		opacity:$opacity;
 		text-transform:none;
+		letter-spacing:$letter_spacing;
+		word-spacing:$word_spacing;
 	}
 
 	&:-ms-input-placeholder {  
@@ -65,6 +71,8 @@ $fa:'FontAwesome';
 		font-weight:$font_weight;
 		opacity:$opacity;
 		text-transform:none;
+		letter-spacing:$letter_spacing;
+		word-spacing:$word_spacing;
 	}	
 }
 
@@ -111,7 +119,7 @@ h4,.h4{
 }
 h5,.h5{
 	font-size:16px;
-	font-weight:400;	
+	font-weight:300;	
 }
 h6,.h6{
 	font-size:14px;
@@ -119,7 +127,9 @@ h6,.h6{
 }
 
 body{
-	font-family:$font1;	
+	font-family:$font1;
+	letter-spacing:1.4px;	
+	word-spacing:1.4px;
 }
 
 .app-badge{
@@ -174,7 +184,6 @@ body{
 	text-transform:uppercase;
 	border-radius:0;
 	font-size:18px;
-	letter-spacing:1px;
 	padding:10px 20px;
 	min-width:245px;
 	
@@ -590,7 +599,6 @@ $tile_caption_height:95px;
 			@include responsive_font(24,26);
 			font-weight:700;
 			text-align:center;
-			letter-spacing:1px;
 		}
 		
 		h4{
@@ -645,7 +653,6 @@ $tile_caption_height:95px;
 			  padding: 4px 12px 3px;
 			  font-size: 14px;
 			  font-weight: 500;
-			  letter-spacing:1px;
 			  line-height: 1;
 			  color: $white;
 			  text-align: center;
@@ -810,7 +817,6 @@ $tile_caption_height:95px;
 	text-align:center;
 	padding-top:$footer_top_padding;
 	padding-bottom:60px;	
-	letter-spacing:1px;
 	width:100%;
 	float:left;
 	position:relative;
@@ -842,6 +848,10 @@ $tile_caption_height:95px;
 		padding:0;	
 	}
 	
+	.subscribe-box{
+		margin-top:28px;	
+	}
+	
 	ul.social-links,
 	ul.quick-links{
 		text-transform:uppercase;
@@ -852,7 +862,7 @@ $tile_caption_height:95px;
 	}
 	
 	ul.social-links{
-		margin-top:20px;
+		margin-top:15px;
 		margin-bottom:0;
 		
 		li{
@@ -863,7 +873,7 @@ $tile_caption_height:95px;
 			text-align:center;
 			border:1px solid rgba(255,255,255,0.5);
 			border-radius:50%;
-			margin-right:275px;
+			margin-right:235px;
 			
 			&:last-child{
 				margin-right:0;	
@@ -915,6 +925,7 @@ $tile_caption_height:95px;
 		margin-top:28px;
 		margin-bottom:30px;
 		opacity:0.10;
+		float:left;
 	}
 	
 	.disclaimer{

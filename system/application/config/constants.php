@@ -70,7 +70,7 @@ Your application is currently being reviewed. We will be in contact as soon as t
 
 <p>Warm Regards,</p>
 ");
-
+define('ENVIRONMENT', 'development');
 define('SALT','br-');
 
 define('PAYPAL_MODE','sandbox');

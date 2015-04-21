@@ -291,11 +291,12 @@
                 </div>
                 
                 <hr>
-                
-                <p class="disclaimer">
-                    &copy; BARED PTY LTD,ABN 76 843 320 186 (Bared Trading Trust Owns & Operates The Website) 	<br>
-                    1098 HIGH STREET ARMADALE VIC 3143 AUSTRALIA
-                </p>   
+                <div class="col-md-12">
+                    <p class="disclaimer">
+                        &copy; BARED PTY LTD,ABN 76 843 320 186 (Bared Trading Trust Owns & Operates The Website) 	<br>
+                        1098 HIGH STREET ARMADALE VIC 3143 AUSTRALIA
+                    </p> 
+                </div>  
         </div>
     </div>
 </footer>
