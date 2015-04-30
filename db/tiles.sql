@@ -1,24 +1,3 @@
-# controlers
-	admin/tiles.php - done
-    admin/cms/update_setting
-    admin/cms/update_setting_trade
-    store.php -> added Tiles_model in constructor - done
-
-# models
-	admin/tiles_model.php - done
-
-# views
-	admin/common/leftbar.php
-	admin/cms/homepage.php
-
-# db
-
--- --------------------------------------------------------
-
---
--- Table structure for table `home_tiles`
---
-
 CREATE TABLE `tiles` (
   `tile_id` int(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -35,11 +14,3 @@ ALTER TABLE `homepage` ADD `tiles` INT NOT NULL AFTER `stories`;
 
 
 ALTER TABLE `tiles` ADD `sort_order` INT NOT NULL AFTER `image_name`;
-
-
-# css
-	- css/admin.css
-    - css/bared.css
-    
-# js
-	- js/ui/jquery-ui-1.11.1.min.js

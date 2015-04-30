@@ -30,9 +30,9 @@ $fa:'FontAwesome';
 	padding-right:$right;
 }
 
-@mixin placeholder($font_size:12px,$font_weight:400,$opacity:1,$letter_spacing:1.5px,$word_spacing:1.4px){
+@mixin placeholder($font_size:12px,$font_weight:400,$opacity:1,$letter_spacing:1.5px,$word_spacing:1.4px,$color:#191919){
 	&::-webkit-input-placeholder {
-  		 color: $color4;
+  		 color: $color;
 		 font-size:$font_size;
 		 font-family:$font1;
 		 font-weight:$font_weight;
@@ -43,7 +43,7 @@ $fa:'FontAwesome';
 	}
 
 	&:-moz-placeholder { /* Firefox 18- */
-   		color: $color4; 
+   		color: $color; 
 		font-size:$font_size;
 		font-family:$font1; 
 		font-weight:$font_weight;
@@ -54,7 +54,7 @@ $fa:'FontAwesome';
 	}
 
 	&::-moz-placeholder {  /* Firefox 19+ */
-   		color: $color4;  
+   		color: $color;  
 		font-size:$font_size;
 		font-family:$font1;
 		font-weight:$font_weight;
@@ -65,7 +65,7 @@ $fa:'FontAwesome';
 	}
 
 	&:-ms-input-placeholder {  
-   		color: $color4; 
+   		color: $color; 
 		font-size:$font_size;
 		font-family:$font1; 
 		font-weight:$font_weight;
@@ -89,7 +89,7 @@ $vw_ratio: 0.05308333;
 }
 /* default is black */
 @mixin overlay($a,$r:0,$g:0,$b:0){
-	background:$color3;
+	background:$black;
 	background-color:rgba($r,$g,$b,$a);
     background-color: transparent\9;	
 }
@@ -144,6 +144,36 @@ body{
 	&:hover{
 		color:$color4;	
 	}
+}
+
+.app_flex{
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;	
+}
+
+.app-btn{
+	text-transform:uppercase;	
+}
+
+$btn_states:".active",":active",".focus",":focus";
+@each $states in $btn_states{
+	.app-btn#{$states}{
+		box-shadow:none;
+		border:none;
+	}
+}
+	
+
+@mixin app_set_flex($flex){
+	-webkit-box-flex: $flex;      /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-flex: $flex;         /* OLD - Firefox 19- */
+	width: 20%;               /* For old syntax, otherwise collapses. */
+	-webkit-flex: $flex;          /* Chrome */
+	-ms-flex: $flex;              /* IE 10 */
+	flex: $flex; 
 }
 
 .caption{
@@ -206,7 +236,8 @@ body{
 	margin-top:10px;	
 }
 
-$header_height:200px;
+$header_height:150px;
+$mob_header_height:75px;
 
 #header{
 	@include add_gutters();
@@ -217,7 +248,7 @@ $header_height:200px;
 		text-align:center;
 		
 		img{
-			height:auto;	
+			height:108px;	
 		}
 	}
 	
@@ -227,13 +258,13 @@ $header_height:200px;
 		}
 		
 		&.lt{
-			padding-top:60px;
+			padding-top:15px;
 		}
 		&.rt{
 			text-align:right;
 			
 			.acc-access{
-				padding-top:78px;
+				padding-top:42px;
 				padding-bottom:10px;	
 				
 				.fa{
@@ -260,7 +291,78 @@ $header_height:200px;
 				}
 			}
 		}
+	} /* hdr-block */
+	
+	.search-form{
+		.form-control-feedback{
+			  pointer-events: auto;
+		}
 	}
+	
+	.mob-header{
+		font-size:18px;	
+		text-transform:uppercase;
+		color:$white;
+		
+		.block{
+			height:$mob_header_height;
+		}
+		
+		.search-form{
+			&.form-group{
+				margin-bottom:0;	
+			}
+			.form-control{
+				@include placeholder(18px,400,1,1.5px,1.4px,$white);
+				
+				background-color:transparent;
+				color:$white;
+				border:none;
+				width:130px;
+				font-size:18px;
+				padding-right:35.5px;
+				padding-top:0;
+				padding-bottom:0;
+				height:auto;
+			}
+			.form-control-feedback{
+				color:$white;
+				height:auto;
+				line-height:22px;
+			}
+		}
+		
+		ul.acc-info{
+			list-style:none;	
+			float:right;
+			margin-bottom:0;
+			margin-top:16px;
+			
+			li{
+				float:left;
+				width:auto;
+				padding-left:15px;	
+			}
+			.app-badge{
+				float:right;
+				margin-top:3px;
+				margin-left:8px;	
+			}
+		}
+		
+		.mob-nav-btn{
+			background-color:transparent;
+			color:#fff;	
+			font-size:18px;
+			padding:0;
+			margin-top:15px;
+			
+			.fa{
+				font-size: 20px;
+  				padding-right: 5px;	
+			}
+		}
+	} /* mob header*/
 }
 
 .app-form-control{
@@ -354,6 +456,7 @@ $nav_height:46px;
 		 /* background-color:$color3;*/
 		  
 		  & > li{
+			  height:$nav_height;
 			  & > a{
 				  font-family:$font2;
 				  color:$white;
@@ -374,7 +477,7 @@ $nav_height:46px;
 			  
 			  &:last-child{
 					.dropdown-menu{
-						
+						margin-left:-95px;
 					}
 			  }
 			  
@@ -383,20 +486,7 @@ $nav_height:46px;
 		  
 	  } /* nav*/
 	  
-	  .dropdown-menu{
-		  @extend .nav;
-		  border:0;
-		  
-		  border-radius:0;	
-		   & > li{
-			  & > a{
-					font-size:14px;
-					padding-top:8px;
-					padding-bottom:8px;	  
-			  }
-			  
-		   }
-	  }
+	  
 	  
 	  .navbar-nav {
 		  height:$nav_height;
@@ -436,7 +526,38 @@ $nav_height:46px;
 	  }	/*navbar-nav*/
 	  
 	  
-	  
+	  .dropdown-menu{
+		  @include overlay(0.8);
+		  border:0;
+		  margin-left:-15px;
+		  border-radius:0;	
+		  
+		   & > li{
+			  min-width:245px;
+			  & > a{
+				  	font-family:$font2;
+					color:$white;
+					font-size: 14px;
+					font-weight: 400;
+					letter-spacing: 1.5px;
+					text-transform:uppercase;
+					padding:8px 20px;
+					margin-top:0;
+					border-radius:0;
+					
+					&:hover{
+						 @include overlay(0.3);	
+					}
+					&:focus{
+						 @include overlay(0.3);	
+					}
+					&.active{
+						 @include overlay(0.3);	
+					}
+			  }
+			  
+		   }
+	  }
 	
 		
 } /*top-nav*/
@@ -545,19 +666,19 @@ $tile_caption_height:95px;
 	}
 	
 	&.social{
+		@extend .app_flex;
 		color:$black;
 		margin-top:40px;
 		margin-bottom:25px;
-		display:flex;
 		
 		.segment{
-			flex:1;	
+			@include app_set_flex(1);
 			padding-left:15px;
 			padding-right:15px;
 			
 			&:first-child,
 			&:last-child{
-				flex:0.6;	
+				@include app_set_flex(0.6);	
 			}
 		}
 		
@@ -956,6 +1077,15 @@ $tile_caption_height:95px;
 	}
 }
 
+/* bootstra overwrites */
+.form-control{
+	&:focus{
+		box-shadow:none;
+		border-color:inherit;	
+	}
+}
+
+
 /* Helpers */
 $font_weights: 100,300,400,700,900;
 @each $fw in $font_weights{
@@ -992,6 +1122,9 @@ $font_weights: 100,300,400,700,900;
 .block{
 	display:block;	
 }
+.inline{
+	display:inline;	
+}
 .pointer{
 	cursor:pointer;	
 }
@@ -1009,4 +1142,19 @@ $font_weights: 100,300,400,700,900;
 }
 .margin-auto{
 	margin:auto;
+}
+
+@media (max-width: 767px) {
+	
+	#header{
+		height:$mob_header_height;
+		background-color:$color1;
+		padding-top:8px;
+		
+		.logo-wrap{
+			
+		}
+		
+		
+	}	
 }

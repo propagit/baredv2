@@ -5,38 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bared Footwear</title>
 
-
-<?php if(ENVIRONMENT == 'development'){ ?>
-
 <link rel="stylesheet" href="<?=base_url() . ASSETS;?>bootstrap-3.2.2/css/bootstrap.min.css">
 <!-- FA -->
 <link rel="stylesheet" href="<?=base_url() . ASSETS;?>font-awesome-4.3.0/css/font-awesome.min.css">
-<?php }else{ ?>
-    <!-- BS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <!-- FA -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<?php } ?>
-
-
 <!-- app css -->
 <link rel="stylesheet" href="<?=base_url() . ASSETS;?>css/app.css">
 
-
 <!-- Load Scripts -->
-
-<?php if(ENVIRONMENT == 'development'){ ?>
 <!-- jQuery -->
 <script src="<?=base_url() . ASSETS;?>js/jquery-1.11.2.min.js"></script>
 <!-- BSJS-->
 <script src="<?=base_url() . ASSETS;?>bootstrap-3.2.2/js/bootstrap.min.js"></script>
-
-<?php }else{ ?>  
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- BSJS-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<?php } ?>
 <!-- jquery touch -->
 <script type="text/javascript" src="<?=base_url() . ASSETS;?>js/jquery.mobile.custom.min.js"></script>
 <!--app js-->
@@ -49,48 +28,12 @@
 
 <header>
 	<div id="header" class="app-container">
-        <div class="col-md-5 hdr-block lt">
-        	<span class="h6 block">
-            	<span class="fw-700 block">Free Shipping</span>
-            	Australia wide on order voer $150!
-            </span>
-            
-            
-            <div class="form-group has-feedback col-xs-5 x-gutters">
-              <input type="text" class="form-control app-form-control" id="search-product" placeholder="Search Products...">
-              <span class="form-control-feedback pointer"><i class="fa fa-search"></i></span>
-            </div>
-        </div>
-        
-        <div class="col-md-2 logo-wrap">
-            <img src="<?=base_url() . ASSETS;?>img/bared-logo.png" alt="bared-logo.png" title="Bared Footwear Logo">
-        </div>
-        
-        <div class="col-md-5 hdr-block rt">
-        	<span class="h6 fw-700 block acc-access"><i class="fa fa-unlock-alt"></i> <a class="app-link" href="#">Register</a> / <a class="app-link" href="#">Login</a></span>
-            
-            <ul class="acc-info h6">
-                <li><i class="fa fa-heart"></i> Wish List <span class="badge app-badge wish-list">19</span></li>
-                <li><i class="fa fa-shopping-cart"></i> Shopping Cart <span class="badge app-badge shopping-cart-items">2</span></li>
-            </ul>
-        </div>
-    </div>
+    	<div class="hidden-xs"><?=$this->load->view('common/desktop_header');?></div>
+    	<div class="visible-xs mob-header"><?=$this->load->view('common/mob_header');?></div>
+    </div>    
 </header> 
 
-<nav>
-	<div id="top-nav" class="app-container">
-    	<ul class="nav navbar-nav">
-        	<li><a href="#">new arrivals</a></li>
-            <li><a href="#">women's</a></li>
-            <li><a href="#">men's</a></li>
-            <li><a href="#">sale</a></li>
-            <li><a href="#">why bared?</a></li>
-            <li><a href="#">gallery</a></li>
-            <li><a href="#">press</a></li>
-            <li><a href="#">contact us</a></li>
-        </ul>
-    </div>
-</nav>
+<?php $this->load->view('common/nav/main_view'); ?>
 
 <div id="banners" class="app-container carousel slide" data-ride="carousel">
       <!-- Wrapper for slides -->
@@ -121,7 +64,7 @@
 		$caption = array("'parrot' monk - in navy", "micah gianelli hot pring", "summer flip flops");
 		for($i = 1; $i < 4; $i++){
 	?>
-	<div class="col-md-4 tile">
+	<div class="col-sm-4 tile">
     	<img src="<?=base_url() . ASSETS;?>img/dummy/tile<?=$i;?>.jpg">
         <div class="tile-btn-wrap"><button class="btn-tile"><?=$btn[$i-1];?></button></div>
         <div class="caption">
@@ -137,7 +80,7 @@
           <?php for($i = 1;$i < 7; $i++){ ?>
           <div class="item <?=$i == 1 ? 'active' : '';?>">
               <a href="#">
-              <div class="col-md-2 product">
+              <div class="col-sm-2 product">
                   <img src="<?=base_url() . ASSETS;?>img/dummy/feature<?=$i;?>.jpg" />
                   <div class="carousel-caption product-info <?=$i == 3 ? ' on-sale' : '';?>">
                       <h3>Kiwi 2</h3>
@@ -179,7 +122,7 @@
           <?php for($i = 1;$i < 7; $i++){ ?>
           <div class="item <?=$i == 1 ? 'active' : '';?>">
               <a href="#" data-toggle="modal" data-target="#myModal">
-              <div class="col-md-2">
+              <div class="col-sm-2">
                   <img src="<?=base_url() . ASSETS;?>img/dummy/instagram<?=$i;?>.jpg" />
               </div>
               </a>
@@ -201,10 +144,10 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body">
-        	<div class="col-md-8 x-gutters left">
+        	<div class="col-sm-8 x-gutters left">
             	<img src="<?=base_url() . ASSETS;?>img/dummy/instagram-featured.jpg">
             </div>
-            <div class="col-md-4 x-gutters right">
+            <div class="col-sm-4 x-gutters right">
             	 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                  
                  <div class="product">
@@ -258,7 +201,7 @@
                 
                 <hr>
                 
-                <div class="col-md-4">
+                <div class="col-sm-4">
                     <ul class="quick-links">
         				<li><h5>customer care</h5></li>
                         <li><a href="#">shipping information</a></li>
@@ -270,7 +213,7 @@
                         <li><a href="#">competitions</a></li>
                     </ul>   
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-4">
                     <ul class="quick-links">
         				<li><h5>fitting options</h5></li>
                         <li><a href="#">fitting options</a></li>
@@ -281,7 +224,7 @@
                         <li><a href="#">size chart</a></li>
                     </ul>   
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-4">
                     <ul class="quick-links">
         				<li><h5>your account</h5></li>
                         <li><a href="#">login</a></li>
@@ -291,7 +234,7 @@
                 </div>
                 
                 <hr>
-                <div class="col-md-12">
+                <div class="col-sm-12">
                     <p class="disclaimer">
                         &copy; BARED PTY LTD,ABN 76 843 320 186 (Bared Trading Trust Owns & Operates The Website) 	<br>
                         1098 HIGH STREET ARMADALE VIC 3143 AUSTRALIA
