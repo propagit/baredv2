@@ -12,8 +12,8 @@
 |
 */
 
-#$config['base_url']	= "http://localhost/baredv2/";
-$config['base_url']	= "";
+$config['base_url']	= "http://localhost/baredv2/";
+#$config['base_url']	= "http://localhost/propagate/baredv2/";
 //$config['bussinessPayPalAccountTest']='rseptiane@gmail.com';
 #$config['bussinessPayPalAccount']='Andrew@bared.com.au';
 
