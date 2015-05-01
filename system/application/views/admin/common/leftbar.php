@@ -267,6 +267,10 @@ function click_active(id)
       </a>
     </div>
     <div id="collapseOne" class="accordion-body collapse <?php if(($curr_head == 'cms' && ($curr_page=='banner' || $curr_page=='stories' || $curr_page=='promotions' || $curr_page=='page' || $curr_page=='page_category' || $curr_page=='galleries' || $curr_page=='category' || $curr_page=='homepage')) || ($curr_head == 'gallery' && $curr_page=='galleries')){echo "in";}?>">
+        <div class="accordion-inner <?php if($curr_page == 'landing_page'){echo $active_page2;} else {echo $not_active_page2;}?>" id="inner-5">
+         <a href="<?=base_url()?>admin/landing_page" <?php if($curr_page == 'landing_page'){echo $active_page;} else {echo $not_active_page;}?>><i class="icon-chevron-right"></i>Manage Landing Page</a>
+      </div> 
+      
       <div class="accordion-inner <?php if($curr_page == 'banner'){echo $active_page2;} else {echo $not_active_page2;}?>" id="inner-1">
         <a href="<?=base_url()?>admin/cms/banner" <?php if($curr_page == 'banner'){echo $active_page;} else {echo $not_active_page;}?>><i class="icon-chevron-right"></i>Manage Banners</a>
       </div>
@@ -665,12 +669,6 @@ function click_active(id)
         <a href="<?=base_url()?>admin/system/webstat" <?php if($curr_page == 'webstat'){echo $active_page;} else {echo $not_active_page;}?>> <i class="icon-chevron-right"></i>Web Stats</a>
       </div>
     </div>
-  </div>
-  
+  </div> 
 </div>
-
-</div>
-
-   
-     
-    
+</div>    
