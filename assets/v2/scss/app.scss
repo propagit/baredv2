@@ -10,6 +10,9 @@ $color2:#3b3b3b; /* lighter charcoal */
 $color3:#e9e8e8; /* grey */
 $color4:#231f20; /* black, font colors */
 $color5:#ff8c52; /* orange sale colors */
+$color6:#333333; /* grey - mobile nav background */
+$color7:#292929; /* darker grey - mob sub nav background */
+$color8:#303030; /* shade of grey as well mobile badge */
 
 $white:#fff; /* white */
 $black:#000; /* black */
@@ -155,7 +158,7 @@ body{
 }
 
 .app-btn{
-	text-transform:uppercase;	
+	text-transform:uppercase;
 }
 
 $btn_states:".active",":active",".focus",":focus";
@@ -163,6 +166,7 @@ $btn_states:".active",":active",".focus",":focus";
 	.app-btn#{$states}{
 		box-shadow:none;
 		border:none;
+		outline:none !important;
 	}
 }
 	
@@ -242,7 +246,6 @@ $mob_header_height:75px;
 #header{
 	@include add_gutters();
 	height:$header_height;
-	padding-top:20px;
 	
 	.logo-wrap{
 		text-align:center;
@@ -299,13 +302,26 @@ $mob_header_height:75px;
 		}
 	}
 	
-	.mob-header{
+	.desktop{
+		padding-top:20px;	
+	}
+	
+	.mob{
 		font-size:18px;	
 		text-transform:uppercase;
 		color:$white;
+		float:left;
+		width:100%;
 		
 		.block{
 			height:$mob_header_height;
+			padding-top:8px;
+			
+			&:last-child{
+				border-left:solid;
+				border-left-width:1px;
+				border-left-color:rgba(255,255,255,0.1);	
+			}
 		}
 		
 		.search-form{
@@ -313,7 +329,7 @@ $mob_header_height:75px;
 				margin-bottom:0;	
 			}
 			.form-control{
-				@include placeholder(18px,400,1,1.5px,1.4px,$white);
+				@include placeholder(14px,400,1,1.5px,1.4px,$white);
 				
 				background-color:transparent;
 				color:$white;
@@ -347,6 +363,8 @@ $mob_header_height:75px;
 				float:right;
 				margin-top:3px;
 				margin-left:8px;	
+				background-color:$color8;
+				color:$white;
 			}
 		}
 		
@@ -516,11 +534,11 @@ $nav_height:46px;
 		  }
 		  .dropdown{
 			  
-			  &:hover{
+			  /*&:hover{
 				  ul{
 					  display:block;
 				  }
-			  }
+			  }*/
 			  
 		  }
 	  }	/*navbar-nav*/
@@ -1144,17 +1162,160 @@ $font_weights: 100,300,400,700,900;
 	margin:auto;
 }
 
+@media (min-width: 768px){
+	#top-nav{
+		height:$nav_height !important;
+		&.collapse{
+			display:block;
+			visibility:visible;	
+		}
+		
+		.navbar-nav {
+			.dropdown{
+				
+				&:hover{
+					ul{
+						display:block; 
+					}
+				}
+				
+			}
+		}	/*navbar-nav*/
+		  
+		  
+		  
+		
+			
+	} /*top-nav*/
+}
+
 @media (max-width: 767px) {
 	
 	#header{
 		height:$mob_header_height;
-		background-color:$color1;
-		padding-top:8px;
+		background-color:$color1;		
+	}	
+	
+	#top-nav{
+		padding-left:0;
+		padding-right:0;
+		height:auto;
+		background-color:$color6;
 		
-		.logo-wrap{
+		.nav{
+		   /* background-color:$color3;*/
+	
+			& > li{
+				
+				& > a{
+					border-radius:0;
+					
+					&.dropdown-toggle::before{
+						  content:"\f0fe"; 
+						  font-size: 18px;
+						  position: absolute;
+						  top: 8px;
+ 						  margin-left: -25px;
+						  font-family:$fa;
+					}
+					
+					&:hover,
+					&:focus,
+					&:active{
+					   
+					}
+				}
+				
+				&:last-child{
+					  .dropdown-menu{
+						  
+					  }
+				}
+				
+			} /* & > li*/
 			
+			
+			& > li.open{
+					& > a{
+						background-color:$color7;	
+						padding-left:25px;
+						
+						&::before{
+							content:"";	
+						}
+					}
+			}
+		} /* nav*/
+		
+		
+		
+		.navbar-nav {
+			height:auto;
+			margin:0;
+			
+			
+			& > li{
+  				
+				
+				a{
+					padding-left:50px;
+					color:$white;	
+				}
+				
+				&:first-child{
+		  
+				}
+				&:last-child{
+					text-align:left;
+					
+					.dropdown-menu{
+						margin-left:0;	
+					}
+				}
+			}
+			.dropdown{
+				float:left;
+				width:100%;
+				height:auto;
+				
+				
+				&:hover{
+					ul{
+					   
+					}
+				}
+				
+			}
+		}	/*navbar-nav*/
+		
+		
+		.dropdown-menu{
+			 position:relative;
+			 width:100%;
+			 float:left;
+			 margin-left:0;
+			 background-color:$color7;
+			 
+			
+			 & > li{
+			    
+				& > a{
+				   padding-left:50px; 
+					
+					&:hover{
+							
+					}
+					&:focus{
+						 
+					}
+					&.active{
+					
+					}
+				}
+				
+			 }
 		}
 		
-		
-	}	
+			
+	} /*top-nav*/
 }

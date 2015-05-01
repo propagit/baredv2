@@ -12,7 +12,7 @@
 ?>
 
 <nav>
-	<div id="top-nav" class="app-container hidden-xs">
+	<div id="top-nav" class="app-container collapse">
     	<ul class="nav navbar-nav">
         	<?php 
 				foreach($nav_array as $nav){ 

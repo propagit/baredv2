@@ -28,8 +28,8 @@
 
 <header>
 	<div id="header" class="app-container">
-    	<div class="hidden-xs"><?=$this->load->view('common/desktop_header');?></div>
-    	<div class="visible-xs mob-header"><?=$this->load->view('common/mob_header');?></div>
+    	<div class="hidden-xs desktop"><?=$this->load->view('common/desktop_header');?></div>
+    	<div class="visible-xs mob"><?=$this->load->view('common/mob_header');?></div>
     </div>    
 </header> 
 

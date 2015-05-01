@@ -8,6 +8,9 @@
 /* grey */
 /* black, font colors */
 /* orange sale colors */
+/* grey - mobile nav background */
+/* darker grey - mob sub nav background */
+/* shade of grey as well mobile badge */
 /* white */
 /* black */
 /* Main font, body copy*/
@@ -81,19 +84,23 @@ body {
 
 .app-btn.active {
   box-shadow: none;
-  border: none; }
+  border: none;
+  outline: none !important; }
 
 .app-btn:active {
   box-shadow: none;
-  border: none; }
+  border: none;
+  outline: none !important; }
 
 .app-btn.focus {
   box-shadow: none;
-  border: none; }
+  border: none;
+  outline: none !important; }
 
 .app-btn:focus {
   box-shadow: none;
-  border: none; }
+  border: none;
+  outline: none !important; }
 
 .caption, .carousel .carousel-caption, .tiles .tile .caption {
   background: black;
@@ -150,7 +157,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   height: 150px;
-  padding-top: 20px;
   /* hdr-block */
   /* mob header*/ }
   #header .logo-wrap {
@@ -181,15 +187,24 @@ body {
           margin-left: 10px; }
   #header .search-form .form-control-feedback {
     pointer-events: auto; }
-  #header .mob-header {
+  #header .desktop {
+    padding-top: 20px; }
+  #header .mob {
     font-size: 18px;
     text-transform: uppercase;
-    color: white; }
-    #header .mob-header .block {
-      height: 75px; }
-    #header .mob-header .search-form.form-group {
+    color: white;
+    float: left;
+    width: 100%; }
+    #header .mob .block {
+      height: 75px;
+      padding-top: 8px; }
+      #header .mob .block:last-child {
+        border-left: solid;
+        border-left-width: 1px;
+        border-left-color: rgba(255, 255, 255, 0.1); }
+    #header .mob .search-form.form-group {
       margin-bottom: 0; }
-    #header .mob-header .search-form .form-control {
+    #header .mob .search-form .form-control {
       background-color: transparent;
       color: white;
       border: none;
@@ -199,68 +214,70 @@ body {
       padding-top: 0;
       padding-bottom: 0;
       height: auto; }
-      #header .mob-header .search-form .form-control::-webkit-input-placeholder {
+      #header .mob .search-form .form-control::-webkit-input-placeholder {
         color: white;
-        font-size: 18px;
+        font-size: 14px;
         font-family: "Lato", sans-serif;
         font-weight: 400;
         opacity: 1;
         text-transform: none;
         letter-spacing: 1.5px;
         word-spacing: 1.4px; }
-      #header .mob-header .search-form .form-control:-moz-placeholder {
+      #header .mob .search-form .form-control:-moz-placeholder {
         /* Firefox 18- */
         color: white;
-        font-size: 18px;
+        font-size: 14px;
         font-family: "Lato", sans-serif;
         font-weight: 400;
         opacity: 1;
         text-transform: none;
         letter-spacing: 1.5px;
         word-spacing: 1.4px; }
-      #header .mob-header .search-form .form-control::-moz-placeholder {
+      #header .mob .search-form .form-control::-moz-placeholder {
         /* Firefox 19+ */
         color: white;
-        font-size: 18px;
+        font-size: 14px;
         font-family: "Lato", sans-serif;
         font-weight: 400;
         opacity: 1;
         text-transform: none;
         letter-spacing: 1.5px;
         word-spacing: 1.4px; }
-      #header .mob-header .search-form .form-control:-ms-input-placeholder {
+      #header .mob .search-form .form-control:-ms-input-placeholder {
         color: white;
-        font-size: 18px;
+        font-size: 14px;
         font-family: "Lato", sans-serif;
         font-weight: 400;
         opacity: 1;
         text-transform: none;
         letter-spacing: 1.5px;
         word-spacing: 1.4px; }
-    #header .mob-header .search-form .form-control-feedback {
+    #header .mob .search-form .form-control-feedback {
       color: white;
       height: auto;
       line-height: 22px; }
-    #header .mob-header ul.acc-info {
+    #header .mob ul.acc-info {
       list-style: none;
       float: right;
       margin-bottom: 0;
       margin-top: 16px; }
-      #header .mob-header ul.acc-info li {
+      #header .mob ul.acc-info li {
         float: left;
         width: auto;
         padding-left: 15px; }
-      #header .mob-header ul.acc-info .app-badge {
+      #header .mob ul.acc-info .app-badge {
         float: right;
         margin-top: 3px;
-        margin-left: 8px; }
-    #header .mob-header .mob-nav-btn {
+        margin-left: 8px;
+        background-color: #303030;
+        color: white; }
+    #header .mob .mob-nav-btn {
       background-color: transparent;
       color: #fff;
       font-size: 18px;
       padding: 0;
       margin-top: 15px; }
-      #header .mob-header .mob-nav-btn .fa {
+      #header .mob .mob-nav-btn .fa {
         font-size: 20px;
         padding-right: 5px; }
 
@@ -395,8 +412,12 @@ body {
         text-align: left; }
       #top-nav .navbar-nav > li:last-child {
         text-align: right; }
-    #top-nav .navbar-nav .dropdown:hover ul {
-      display: block; }
+    #top-nav .navbar-nav .dropdown {
+    /*&:hover{
+  	  ul{
+  		  display:block;
+  	  }
+    }*/ }
   #top-nav .dropdown-menu {
     background: black;
     background-color: rgba(0, 0, 0, 0.8);
@@ -863,8 +884,67 @@ body {
 .margin-auto {
   margin: auto; }
 
+@media (min-width: 768px) {
+  #top-nav {
+    height: 46px !important;
+    /*navbar-nav*/ }
+    #top-nav.collapse {
+      display: block;
+      visibility: visible; }
+    #top-nav .navbar-nav .dropdown:hover ul {
+      display: block; }
+
+  /*top-nav*/ }
 @media (max-width: 767px) {
   #header {
     height: 75px;
-    background-color: #191919;
-    padding-top: 8px; } }
+    background-color: #191919; }
+
+  #top-nav {
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+    background-color: #333333;
+    /* nav*/
+    /*navbar-nav*/ }
+    #top-nav .nav {
+      /* background-color:$color3;*/
+      /* & > li*/ }
+      #top-nav .nav > li > a {
+        border-radius: 0; }
+        #top-nav .nav > li > a.dropdown-toggle::before {
+          content: "\f0fe";
+          font-size: 18px;
+          position: absolute;
+          top: 8px;
+          margin-left: -25px;
+          font-family: "FontAwesome"; }
+      #top-nav .nav > li.open > a {
+        background-color: #292929;
+        padding-left: 25px; }
+        #top-nav .nav > li.open > a::before {
+          content: ""; }
+    #top-nav .navbar-nav {
+      height: auto;
+      margin: 0; }
+      #top-nav .navbar-nav > li a {
+        padding-left: 50px;
+        color: white; }
+      #top-nav .navbar-nav > li:last-child {
+        text-align: left; }
+        #top-nav .navbar-nav > li:last-child .dropdown-menu {
+          margin-left: 0; }
+      #top-nav .navbar-nav .dropdown {
+        float: left;
+        width: 100%;
+        height: auto; }
+    #top-nav .dropdown-menu {
+      position: relative;
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      background-color: #292929; }
+      #top-nav .dropdown-menu > li > a {
+        padding-left: 50px; }
+
+  /*top-nav*/ }
