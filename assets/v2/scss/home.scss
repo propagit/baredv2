@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 1, 2015, 2:34:21 PM
+    Author     : Zlatko Petrov
+*/
+$vw_ratio: 0.05308333;
+@mixin responsive_font($font_size,$line_height){
+	font-size: unquote(($vw_ratio * $font_size) + 'vw');
+	line-height: unquote(($vw_ratio * $line_height) + 'vw');
+}
+.landing_page{
+    .tile-btn-wrap{
+        top: 40% !important; 
+    }
+    .btn-tile{
+        font-size: 3.50vw !important;
+        font-weight: 700 !important;
+        padding: 20px 25px !important;
+    }
+}
+
