@@ -3032,6 +3032,20 @@ class Cms extends Controller {
 		$this->load->view('admin/cms/banner',$data);
 		$this->load->view('admin/common/footer');
 	}
+        
+        function ajax_get_banners_by_category()
+	{
+		$category = $this->input->post('category');
+		echo $this->row_view($category);	
+	}
+        
+        function row_view($category, $temp = 1, $site = 'Retail')
+	{
+                $data['temp']=$temp;
+		$data['site']=$site;
+		$data['banners'] = $this->Content_model->get_banners_by_category($category);
+		return $this->load->view('admin/cms/row_view_banners',$data,true);
+	}
 
 	function deletebanner($id="",$temp="2") {
 		$banner = $this->Content_model->get_banner($id);
@@ -3041,7 +3055,7 @@ class Cms extends Controller {
 		redirect('admin/cms/banner/'.$temp);
 	}
 	function updatebanner() {
-		$this->Content_model->update_banner($_POST['banner_id'],array('url' => $_POST['url']));
+		$this->Content_model->update_banner($_POST['banner_id'],array('url' => $_POST['url'],'category' => $_POST['banners-category'],'caption' => $_POST['caption']));
 		redirect('admin/cms/banner');
 	}
 
@@ -3079,7 +3093,9 @@ class Cms extends Controller {
 				'lru' => $this->Content_model->min_lru(),
 				'template' => $_POST['banner_template'],
 				'site' => 'Retail',
-				'created' => date('Y-m-d H:i:s')
+				'created' => date('Y-m-d H:i:s'),
+                                'category' => $_POST['banners-category'],
+                                'caption' => $_POST['caption']
 			);
 			if ($this->Content_model->add_banner($banner)) {
 				# Create thumbnails
@@ -3755,6 +3771,19 @@ class Cms extends Controller {
 		$this->load->view('admin/common/leftbar');
 		$this->load->view('admin/product/feature',$data);
 		$this->load->view('admin/common/footer');
+	}
+        function ajax_get_feature_product_by_category()
+	{
+		$category = $this->input->post('category');
+		echo $this->row_view($category);	
+	}
+        
+        function feature_product_view($category, $temp = 1, $site = 'Retail')
+	{
+                $data['temp']=$temp;
+		$data['site']=$site;
+		$data['banners'] = $this->Content_model->get_banners_by_category($category);
+		return $this->load->view('admin/cms/row_view_banners',$data,true);
 	}
 	function searchfeature() {
 		$keyword = $_POST['keyword'];

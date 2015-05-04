@@ -17,12 +17,36 @@ function searchproduct() {
 		}
 	})
 }
+function get_feature_products_by_category(){
+	var category = jQuery('#product-filter').val();
+	jQuery.ajax({
+			url:'<?=base_url();?>admin/cms/ajax_get_feature_product_by_category',
+			type:'POST',
+			dateType:'html',
+			data:{category:category},
+			success:function(html){
+				jQuery('#feature-products').html(html);
+			}
+		});	
+}
+
+jQuery(function(){
+get_products_by_category();
+
+});
 </script>
 <div class="span9">
 	<div style="min-height: 365px; border: 1px solid #d6d6d6; border-radius: 5px; margin-right: 19px;">
 		<div style="padding: 20px">
 			<!-- start here -->
 			<h1 style="padding-left: 7px">Feature Products</h1>
+                        <h2 style="padding-left: 7px;">Filter Banners</h2>
+                        <select name="product-category" id="product-filter" onChange="get_feature_products_by_category();" style="display: inherit; margin-bottom: 10px;">
+                            <option  value="all">All</option>
+                            <option  value="1">Male</option>
+                            <option  value="2">Female</option>
+                        </select> 
+                        <div id="feature-products">
             <?php $n = 0; if($features) 
 					foreach($features as $product) 
 					{ $n++; ?>
@@ -44,6 +68,7 @@ function searchproduct() {
                     </div>
                     
                   </div>
+                        </div>
                     <?php 
 					} ?>
                     

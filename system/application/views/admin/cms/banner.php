@@ -29,6 +29,25 @@ function change_banner()
 	var site='retail';
 	window.location = '<?=base_url()?>admin/cms/banner/'+id+'/'+site;
 }
+    
+function get_banners_by_category(){
+	var category = jQuery('#banners-filter').val();
+	jQuery.ajax({
+			url:'<?=base_url();?>admin/cms/ajax_get_banners_by_category',
+			type:'POST',
+			dateType:'html',
+			data:{category:category},
+			success:function(html){
+				jQuery('#banners-rows').html(html);
+			}
+		});	
+}
+
+jQuery(function(){
+get_banners_by_category();
+
+});
+
 </script>
 <style>
 .fileupload {
@@ -48,13 +67,19 @@ function change_banner()
 				Manage Banners
 
 			</h1>
-			           
+            <h2 style="padding-left: 7px;">Filter Banners</h2>
+            <form name="uploadForm" method="post" enctype="multipart/form-data" action="<?=base_url()?>admin/cms/uploadbanner">
+                <select name="banners-category" id="banners-filter" onChange="get_banners_by_category();">
+              <option  value="all">All</option>
+              <option  value="1">Male</option>
+              <option  value="2">Female</option>
+          </select> 
             <h2 style="padding-left: 7px;">Add new banner</h2>
             <p class="desc" style="padding-left: 7px;">
             Add a new image banner by browsing your computer and uploading a file. The image files accepted for upload include, (.jpg , .gif , .png) Enter a web link in the space provided to create a click through for you image. Images can be published and unpublished by clicking the tick icon. To delete a banner click the red cross.
             </p>
             <div style="height: 10px; clear: both">&nbsp;</div>
-            <form name="uploadForm" method="post" enctype="multipart/form-data" action="<?=base_url()?>admin/cms/uploadbanner">
+            
             <div style="padding-left: 7px;">
                 <div style="width: 20%; float: left; height: 30px; line-height: 30px;">Upload image</div>
                 <div style="width: 80%; float: right">                    
@@ -66,6 +91,13 @@ function change_banner()
                     <input type="file" name="userfile" /></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
                     </div>
                     </div>
+                </div>
+            </div>
+            <div style="padding-left: 7px;">
+                <div style="width: 20%; float: left; height: 30px; line-height: 52px;">Set Caption</div>
+                <div style="width: 80%; float: right">                    
+                <input type="text" class="textfield rounded" style="margin-bottom:0px!important;" name="caption" value="" />   
+                    
                 </div>
             </div>
             <div style="height: 5px; clear: both">&nbsp;</div>
@@ -120,44 +152,9 @@ function change_banner()
                 <? }?>
             </div>
             <div style="height: 10px; clear: both">&nbsp;</div>                
-            
-			<?php foreach($banners as $banner) { ?>
-            <table align="center" style="padding-left: 7px;">
-            	<tr>
-                	<td align="center" width="80%">
-                    	<a href="<?=base_url()?>uploads/banners/<?=$banner['name']?>"><img style="width:50%;height:50%;" src="<?=base_url()?>uploads/banners/ori2/<?=$banner['name']?>" /></a>
-                    </td>
-                    
-                    <td align="center" valign="top" width="20%">
-                    <div class="icon" style="margin-left:20px;">
-                            <a style="text-decoration:none;" href="<?=base_url()?>admin/cms/activebanner/<?=$banner['id']?>/<?=$temp?>/retail" title="Active this banner">                            
-                            <i <?php if(!$banner['actived']){echo 'style="color: #d6d6d6"';}else {echo 'style="color: #00c717"';}?> class="icon-ok-circle icon-2x"></i>
-                            </a>
-                            <a style="text-decoration:none;" href="javascript:deletebanner(<?=$banner['id']?>)"><i style="color: #c70520" class="icon-remove-circle icon-2x"></i></a>
-                     </div>
-                    </td>
-                </tr>
-                <tr>
-                	<td align="center" width="80%">
-                    	<form method="post" action="<?=base_url()?>admin/cms/updatebanner">
-                        <input type="hidden" name="banner_id" value="<?=$banner['id']?>" />
-                        <div style="height: 5px; clear: both">&nbsp;</div> 
-                        <p>Link to when click (<?=$banner['hit']?> times)</p>
-                        <input type="text" class="textfield rounded" style="margin-bottom:0px!important;" name="url" value="<?=$banner['url']?>" />
-                        <button class="btn btn-primary" type="submit">Update</button>
-                        </form>
-                        
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>
-            <div style="height: 0px; clear: both; border-top:1px solid #ccc">&nbsp;</div>
-            <div style="height: 10px; clear: both">&nbsp;</div>
-                                    
-            <?php } ?>
-            
-            
-            
+            <div id="banners-rows">
+
+            </div>
 			<!-- end here -->
 
 		</div>
