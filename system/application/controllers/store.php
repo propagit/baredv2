@@ -25,7 +25,7 @@ class Store extends Controller {
 		$this->load->model('Position_model');
 		$this->load->model('Lightspeed_model');
 		$this->load->model('Tiles_model');
-                $this->load->model('Landing_page_model');
+        #$this->load->model('Landing_page_model');
 	}
 	
 	

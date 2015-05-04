@@ -35,10 +35,19 @@
 
 <?php $this->load->view('common/nav/main_view'); ?>
 
-<div id="banners" class="app-container carousel slide" data-ride="carousel">
+<div id="banners" class="app-container carousel slide" data-ride="carousel" data-interval="false">
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
           <div class="item active">
+              <a href="#">
+                  <img src="<?=base_url() . ASSETS;?>img/dummy/banner2.jpg" />
+                  <div class="carousel-caption visible-xs">
+                      <h3>Mobile Caption</h3>
+                  </div>
+              </a>
+          </div>
+          
+          <div class="item">
               <a href="#">
                   <img src="<?=base_url() . ASSETS;?>img/dummy/banner2.jpg" />
                   <div class="carousel-caption visible-xs">
@@ -85,7 +94,7 @@
                   <div class="carousel-caption product-info <?=$i == 3 ? ' on-sale' : '';?>">
                       <h3>Kiwi 2</h3>
                       <h4>Back & Patent</h4>
-                      <h4>au 
+                      <h4><span class="currency">au</span> 
                       	<span class="price">
                       		<span class="normal-price">$229.<sub>00</sub></span>
                             <span class="sale-price">$179.<sub>00</sub></span>
@@ -110,8 +119,8 @@
 <div class="app-container relative bar social col-xs-12 x-gutters">
 	<div class="segment"><hr></div>
 	<div class="segment">
-        <h2>use #baredfootwear <i class="fa fa-instagram"></i></h2>
-        <h4>to show us how your wear bared on instagram</h4>
+        <h2><span class="hidden-xs">use #baredfootwear </span><i class="fa fa-instagram"></i></h2>
+        <h4 class="hidden-xs">to show us how your wear bared on instagram</h4>
     </div>
     <div class="segment"><hr></div>
 </div>
@@ -250,7 +259,7 @@ $(function(){
 	  if (!next.length) {
 		next = $(this).siblings(':first');
 	  }
-	  next.children(':first-child').clone().appendTo($(this));
+	  next.children(':first-child').clone().appendTo($(this)).addClass('clone');
 	  
 	  for (var i=0;i<4;i++) {
 		next=next.next();
@@ -258,9 +267,17 @@ $(function(){
 			next = $(this).siblings(':first');
 		}
 		
-		next.children(':first-child').clone().appendTo($(this));
+		next.children(':first-child').clone().appendTo($(this)).addClass('clone');
 	  }
 	});
+	
+	 //carousel swipe
+	 $(".carousel").swiperight(function() {  
+      	$(".carousel").carousel('prev');  
+     });  
+   	 $(".carousel").swipeleft(function() {  
+      	$(".carousel").carousel('next');  
+   	 });  
 });	
 </script>
 
