@@ -901,7 +901,7 @@ $tile_caption_height:95px;
 	}
 	
 	.modal-dialog{
-		width:1230px;
+		width:70%;
 		
 		.modal-content{
 			border-radius:0;
@@ -1380,11 +1380,15 @@ $font_weights: 100,300,400,700,900;
 		}
 		
 		&.social{
+			background-color:$black;
+			color:$white;
+			
 			hr{
 				margin-top:50%;	
 			}
 			h2{
-				@include responsive_font(150,150);	
+				@include responsive_font(90,140);
+				margin-top:15px;	
 			}
 			.segment{
 				.fa-instagram{
@@ -1446,6 +1450,51 @@ $font_weights: 100,300,400,700,900;
 			  
 		} /* product-info */
 	}
+	
+	.app-modal{
+		.modal-backdrop.in{
+			
+		}
+		
+		.modal-dialog{
+			width:100%;
+			
+			.modal-content{
+				
+				.modal-body{
+					
+					
+					button.close{
+						
+					}
+					
+					.left{
+						img{
+							
+						}
+					}
+					
+					.right{
+						
+						.product{
+	
+							img{
+								width:100%;	
+							}
+							
+							.btn{
+								
+							}
+						}
+					}
+				}
+				
+					
+			}
+			
+		} /*modal-dialog*/
+		
+	} /* app-modal */
 	
 	.subscribe-box{
 		

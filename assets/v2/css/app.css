@@ -687,7 +687,7 @@ body {
   .app-modal .modal-backdrop.in {
     opacity: 1; }
   .app-modal .modal-dialog {
-    width: 1230px; }
+    width: 70%; }
     .app-modal .modal-dialog .modal-content {
       border-radius: 0;
       float: left;
@@ -984,14 +984,18 @@ body {
   .bar h3 {
     font-size: 4.7775vw;
     line-height: 4.7775vw; }
-  .bar.social hr {
-    margin-top: 50%; }
-  .bar.social h2 {
-    font-size: 7.9625vw;
-    line-height: 7.9625vw; }
-  .bar.social .segment .fa-instagram {
-    font-size: 7.9625vw;
-    line-height: 7.9625vw; }
+  .bar.social {
+    background-color: black;
+    color: white; }
+    .bar.social hr {
+      margin-top: 50%; }
+    .bar.social h2 {
+      font-size: 4.7775vw;
+      line-height: 7.43167vw;
+      margin-top: 15px; }
+    .bar.social .segment .fa-instagram {
+      font-size: 7.9625vw;
+      line-height: 7.9625vw; }
 
   .product {
     /* product-info */ }
@@ -1014,6 +1018,14 @@ body {
         font-size: 2.65417vw;
         line-height: 2.65417vw; }
 
+  .app-modal {
+    /*modal-dialog*/ }
+    .app-modal .modal-dialog {
+      width: 100%; }
+      .app-modal .modal-dialog .modal-content .modal-body .right .product img {
+        width: 100%; }
+
+  /* app-modal */
   .subscribe-box .form-group {
     width: 100%; }
 

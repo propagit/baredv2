@@ -1,5 +1,5 @@
 // JavaScript Document
-// kaushtuv@propagate.com.au
+// kaushtuvgurung@gmail.com
 
 $(function(){
 	 $('#goto-top').click(function(){
@@ -42,15 +42,40 @@ $(function(){
 
 	 });// scroll
 	 
+	 $('.carousel[data-type="multi"] .item').each(function(){
+		  var next = $(this).next();
+		  if (!next.length) {
+			next = $(this).siblings(':first');
+		  }
+		  next.children(':first-child').clone().appendTo($(this)).addClass('clone');
+		  
+		  for (var i=0;i<4;i++) {
+			next=next.next();
+			if (!next.length) {
+				next = $(this).siblings(':first');
+			}
+			
+			next.children(':first-child').clone().appendTo($(this)).addClass('clone');
+		  }
+	 });
 	 
 	 //carousel swipe
-	 $(".carousel").swiperight(function() {  
-      	$(".carousel").carousel('prev');  
-     });  
-   	 $(".carousel").swipeleft(function() {  
-      	$(".carousel").carousel('next');  
-   	 });  
+	 
 	 
 	 
 }); // ready
+
+var app = {
+	
+	swiper:function(selector){
+		$(selector).swiperight(function() {  
+      		$(selector).carousel('prev');  
+		 });  
+		 $(selector).swipeleft(function() {  
+			$(selector).carousel('next');  
+		 });  
+	}
+	
+		
+};
 

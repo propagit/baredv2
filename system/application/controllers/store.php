@@ -25,7 +25,7 @@ class Store extends Controller {
 		$this->load->model('Position_model');
 		$this->load->model('Lightspeed_model');
 		$this->load->model('Tiles_model');
-        #$this->load->model('Landing_page_model');
+        $this->load->model('Landing_page_model');
 	}
 	
 	
@@ -44,17 +44,10 @@ class Store extends Controller {
 	function index()
 	{
 		$this->load->view('common/header');
+		$this->load->view('home/men');
 		$this->load->view('common/footer');	
 	}
-        
-        function home()
-        {
-            $landing_page = $this->Landing_page_model->get_all();
-            $data['landing_pages'] = $landing_page;
-            $this->load->view('home',$data);
-	    $this->load->view('common/footer');	
-        
-        }
+
 	
 	function _index() {
 		$this->check_session();

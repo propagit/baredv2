@@ -40,7 +40,7 @@
 |
 */
 
-$route['default_controller'] = "store";
+$route['default_controller'] = "home";
 $route['admin'] = "admin/cms/only_admin";
 $route['admin/login'] = "admin/authorize/login";
 $route['admin/logout'] = "admin/authorize/logout";
