@@ -128,12 +128,12 @@ class Tiles extends Controller {
 		
 		if($tile){
 			# if current status is inactive then check if making this active voilates the total allowed count
-			if(!$tile['status']){
+			/*if(!$tile['status']){
 				if($active_tiles >= 2){
 					echo 'error';
 					return;
 				}
-			}
+			}*/
 			$data['status'] = $tile['status'] ? 0 : 1;
 			$this->Tiles_model->update($tile_id,$data);
 			echo 'success';
