@@ -17,8 +17,7 @@
 <link href="<?=base_url()?>css/bootstrap.css" rel="stylesheet" media="screen">
 <link href="<?=base_url()?>css/admin.css" rel="stylesheet" media="screen">
 
-<link rel="stylesheet" href="<?=base_url()?>css/font-awesome.css">
-<link rel="stylesheet" href="http://bared.com.au/css/font-awesome.css">
+<link rel="stylesheet" href="<?=base_url();?>css/font-awesome.css">
 
 <link href="<?=base_url()?>css/bootstrap-responsive.css" rel="stylesheet" media="screen">
 
@@ -48,8 +47,8 @@
     <script src="<?=base_url()?>js/config.js"></script>
     <script src="<?=base_url()?>js/styles.js"></script>
     <!-- <script src="<?=base_url()?>js/build-config.js"></script> -->
-    <script src="<?=base_url()?>ckfinder/ckfinder.js"></script>
-    <script src="<?=base_url()?>ckfinder/config.js"></script>
+    <!-- <script src="<?=base_url()?>ckfinder/ckfinder.js"></script> -->
+    <!-- <script src="<?=base_url()?>ckfinder/config.js"></script> -->
     <!-- <script src="<?=base_url()?>js/bootstrap-datepicker.js"></script> -->
 
 	<!-- start here -->

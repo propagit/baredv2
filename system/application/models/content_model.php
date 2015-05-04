@@ -114,6 +114,16 @@ class Content_model extends Model {
 		$query = $this->db->get('banners');
 		return $query->first_row('array');
 	}
+        
+        function get_banners_by_category($category = 'all')
+	{
+		$sql = "SELECT * FROM banners";
+		if($category != 'all'){
+			$sql .= " WHERE category = ".$category;	
+		}
+		#$sql .= " ORDER BY sort_order ASC";
+		return $this->db->query($sql)->result_array();
+	}
 	
 	function min_lru() {
 		$sql = "SELECT min(`lru`) as `min` FROM `banners`";
