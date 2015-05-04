@@ -115,7 +115,7 @@ class Content_model extends Model {
 		return $query->first_row('array');
 	}
         
-        function get_banners_by_category($category = 'all')
+    function get_banners_by_category($category = 'all')
 	{
 		$sql = "SELECT * FROM banners";
 		if($category != 'all'){
@@ -123,6 +123,15 @@ class Content_model extends Model {
 		}
 		#$sql .= " ORDER BY sort_order ASC";
 		return $this->db->query($sql)->result_array();
+	}
+	
+	function get_active_banners_by_category($category)
+	{
+		$sql = "SELECT * FROM banners
+				WHERE category = " . $category . "	
+				AND actived = 1
+				ORDER BY created DESC";
+		return $this->db->query($sql)->result_array();	
 	}
 	
 	function min_lru() {

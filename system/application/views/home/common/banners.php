@@ -1,24 +1,24 @@
 <div id="banners" class="app-container carousel slide" data-ride="carousel" data-interval="false">
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
-          <div class="item active">
-              <a href="#">
-                  <img src="<?=base_url() . ASSETS;?>img/dummy/banner2.jpg" />
-                  <div class="carousel-caption visible-xs">
-                      <h3>Mobile Caption</h3>
-                  </div>
-              </a>
-          </div>
+      	  <?php if($banners){ 
+		  			$counter = 0;
+		  			foreach($banners as $banner){
+		  ?>
+                      <div class="item <?=!$counter ? 'active' : '';?>">
+                          <a href="#">
+                              <img src="<?=base_url();?>uploads/banners/<?=$banner['name'];?>"  alt="<?=$banner['name'];?>"/>
+                              <div class="carousel-caption visible-xs">
+                                  <h3><?=$banner['caption'];?></h3>
+                              </div>
+                          </a>
+                      </div>
           
-          <div class="item">
-              <a href="#">
-                  <img src="<?=base_url() . ASSETS;?>img/dummy/banner2.jpg" />
-                  <div class="carousel-caption visible-xs">
-                      <h3>Mobile Caption</h3>
-                  </div>
-              </a>
-          </div>
-          
+          <?php
+		  			$counter++; 	
+				} 
+			 } 
+		?> 
       </div>
       
       <!-- Controls -->

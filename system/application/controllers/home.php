@@ -33,21 +33,26 @@ class Home extends Controller {
 		$landing_page = $this->Landing_page_model->get_all();
 		$data['landing_pages'] = $landing_page;
 		$this->load->view('common/header');
-		$this->load->view('home',$data);
+		$this->load->view('home/landing_view',$data);
 		$this->load->view('common/footer');	
 	}
 	
 	function men()
 	{
+		# get mens tiles
+		$data['tiles'] = $this->Tiles_model->get_active_tiles(1);
+		$data['banners'] = $this->Content_model->get_active_banners_by_category(1);
 		$this->load->view('common/header');
-		$this->load->view('home/men');
+		$this->load->view('home/main_view',isset($data) ? $data : NULL);
 		$this->load->view('common/footer');	
 	}
 	
 	function women()
 	{
+		$data['tiles'] = $this->Tiles_model->get_active_tiles(2);
+		$data['banners'] = $this->Content_model->get_active_banners_by_category(2);
 		$this->load->view('common/header');
-		$this->load->view('home/women');
+		$this->load->view('home/main_view',isset($data) ? $data : NULL);
 		$this->load->view('common/footer');		
 	}
 	

@@ -1,15 +1,17 @@
 <div class="app-container tiles br-top">
 	<?php 
-		$btn = array('shop new','MICAH GIANELLI’S TOP PICKS','SUMMER CMPAIGN OUT NOW');
-		$caption = array("'parrot' monk - in navy", "micah gianelli hot pring", "summer flip flops");
-		for($i = 1; $i < 4; $i++){
+		if($tiles){
+			foreach($tiles as $tile){
 	?>
 	<div class="col-sm-4 tile">
-    	<img src="<?=base_url() . ASSETS;?>img/dummy/tile<?=$i;?>.jpg">
-        <div class="tile-btn-wrap"><button class="btn-tile"><?=$btn[$i-1];?></button></div>
+    	<img src="<?=base_url();?>uploads/tiles/<?=$tile['image_name'];?>" alt="<?=$tile['image_name'];?>">
+        <div class="tile-btn-wrap"><button class="btn-tile"><?=$tile['btn_name'];?></button></div>
         <div class="caption">
-        	<h3><?=$caption[$i-1];?></h3>
+        	<h3><?=$tile['caption'];?></h3>
         </div>
     </div>
-    <?php } ?> 
+    <?php 	
+			} 
+		 } 
+	?> 
 </div>

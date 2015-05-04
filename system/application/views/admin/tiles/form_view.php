@@ -64,7 +64,7 @@
                                 <input type="file" name="userfile"></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
                             </div>
                         </div>
-                        <span><em>Ideal image width: 768px - 1170px<br>All image should be of same width & height for optimum result.</em></span>
+                        <span><em>Ideal image width: 633px - 633px<br>All image should be of same width & height for optimum result.</em></span>
                     </div>
               </div>
               
