@@ -76,9 +76,11 @@ get_banners_by_category();
           </select> 
             <h2 style="padding-left: 7px;">Add new banner</h2>
             <p class="desc" style="padding-left: 7px;">
-           <!-- Add a new image banner by browsing your computer and uploading a file. The image files accepted for upload include, (.jpg , .gif , .png) Enter a web link in the space provided to create a click through for you image. Images can be published and unpublished by clicking the tick icon. To delete a banner click the red cross.-->
+            <span><em>Ideal image size: 1300px x 610px<br>All image should be of same width & height for optimum result.</em></span><br><br>
+            
+           Add a new image banner by browsing your computer and uploading a file. The image files accepted for upload include, (.jpg , .gif , .png) Enter a web link in the space provided to create a click through for you image. Images can be published and unpublished by clicking the tick icon. To delete a banner click the red cross.
            	
-            <span><em>Ideal image size: 1300px x 610px<br>All image should be of same width & height for optimum result.</em></span>
+            
             </p>
             <div style="height: 10px; clear: both">&nbsp;</div>
             
