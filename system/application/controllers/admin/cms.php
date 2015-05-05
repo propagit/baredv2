@@ -3103,8 +3103,8 @@ class Cms extends Controller {
 				#$this->advanced_resizephoto($data,"./uploads/banners/","thumb",$width,$height,315,117);
 				#$this->resizephotobig($data,"./uploads/banners/ori","thumb",$width,$height,1200,600);
 				#$this->resizephotobig2($data,"./uploads/banners/ori2","thumb",$width,$height,1200,920);
-				$this->resizephotobig($data,"./uploads/banners/ori","thumb",$width,$height,1912,869);
-				#$this->resizephotobig2($data,"./uploads/banners/ori2","thumb",$width,$height,1912,869);
+				#$this->resizephotobig($data,"./uploads/banners/ori","thumb",$width,$height,1912,869);
+				$this->resizephotobig2($data,"./uploads/banners/ori2","thumb",$width,$height,1912,869);
 				//$this->advanced_resizephoto($data,"./uploads/banners/","thumb",$width,$height,800,600);
 				//$this->resizephoto($name,"./uploads/banners","thumb",315,117);			
 			}
