@@ -1,7 +1,7 @@
 <?
 if (!empty($_SERVER['HTTPS'])) {}else
 {
-	Redirect('https://bared.com.au/store/signin', false);
+	#Redirect('https://bared.com.au/store/signin', false);
 }
 ?>
 
@@ -147,7 +147,7 @@ function login()
 }
 </script>
 
-<div style="font-family: 'open sans'" class="app-container">
+<div style="font-family: 'open sans'" class="app-container content-wrap">
 	
 	
 	<div id="fb-root"></div>
@@ -254,7 +254,7 @@ function login()
 		    	&nbsp;
 		    </div>
 		    <div style="clear: both; height: 10px;"></div>
-		    <div class="visible-tablet visible-phone" style="width: 232px;">
+		    <div class="visible-tablet visible-xs" style="width: 232px;">
 		    	<input onclick="login();" type="button" value="Sign In Now" class="button_primary button_size_fb button-Font"/>
 		    	
                 <div class="body-copy-Font" style="text-align: center; margin-top: 10px; margin-bottom: 10px">
@@ -288,7 +288,7 @@ function login()
 	    	<div class="body-copy-Font" style="float: left; font-weight: bold">
 	    		If you are new to Bared, please click 'Register Now'<br/><br/>
 	    		
-	    		<input class="visible-tablet visible-phone button_primary button_size_fb button-Font" type="button" value="Register Now" onclick="window.location='<?=base_url()?>store/register'" />
+	    		<input class="visible-tablet visible-xs button_primary button_size_fb button-Font" type="button" value="Register Now" onclick="window.location='<?=base_url()?>store/register'" />
 	    	</div>
 	    	<div style="float: right" class="visible-desktop">
 	    		<input onclick="window.location='<?=base_url()?>store/register'" type="button" value="Register Now" class="button_primary button_size_fb button-Font"/>
@@ -379,6 +379,8 @@ function login()
     <!-- Product for IPhone -->   
     
     <!-- End Product for Iphone -->
-		
+	
+    
+    </div><!-- app-container-->	
         
    

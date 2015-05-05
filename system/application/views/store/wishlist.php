@@ -137,7 +137,7 @@ function delete_wishlist(id)
 			{
 			?>
 			<div class="">
-		    	<div class="span3 wishlist-wrapper" >
+		    	<div class="col-sm-3 wishlist-wrapper" >
 		    		<div class="delete-wishlist" style="text-align: right; margin-top: 1%; margin-right: 1%">
 		    			<span onclick="delete_wishlist(<?=$ls['id']?>)" style="cursor: pointer"><i class="icon icon-remove"></i></span>
 		    		</div>
@@ -285,7 +285,7 @@ function delete_wishlist(id)
 			if($cc == 2)
 			{
 			?>
-				<div class="span3" style="background: #f6f5f5; text-align: center; margin-bottom: 20px;">
+				<div class="col-sm-3" style="background: #f6f5f5; text-align: center; margin-bottom: 20px;">
 		    		<div class="delete-wishlist" style="text-align: right; margin-top: 1%; margin-right: 1%">
 		    			<span onclick="delete_wishlist(<?=$ls['id']?>)" style="cursor: pointer"><i class="icon icon-remove"></i></span>
 		    		</div>
@@ -392,7 +392,7 @@ function delete_wishlist(id)
 			if($cc == 3)
 			{
 			?>
-				<div class="span3" style="background: #f6f5f5; text-align: center; margin-bottom: 20px;">
+				<div class="col-sm-3" style="background: #f6f5f5; text-align: center; margin-bottom: 20px;">
 		    		<div class="delete-wishlist" style="text-align: right; margin-top: 1%; margin-right: 1%">
 		    			<span onclick="delete_wishlist(<?=$ls['id']?>)" style="cursor: pointer"><i class="icon icon-remove"></i></span>
 		    		</div>
@@ -499,7 +499,7 @@ function delete_wishlist(id)
 			if($cc == 4)
 			{
 			?>
-				<div class="span3" style="background: #f6f5f5; text-align: center; margin-bottom: 20px;">
+				<div class="col-sm-3" style="background: #f6f5f5; text-align: center; margin-bottom: 20px;">
 		    		<div class="delete-wishlist" style="text-align: right; margin-top: 1%; margin-right: 1%">
 		    			<span onclick="delete_wishlist(<?=$ls['id']?>)" style="cursor: pointer"><i class="icon icon-remove"></i></span>
 		    		</div>
@@ -613,7 +613,7 @@ function delete_wishlist(id)
 		if($cc==2)
 		{
 		?>
-			<div class="span3">
+			<div class="col-sm-3">
 	    		<!-- <div style="margin-left: 8%; margin-right: 8%; width: 84%; margin-top: 7%">
 	    			<img  src="http://placehold.it/710x775"/>
 	    		</div> -->
@@ -625,7 +625,7 @@ function delete_wishlist(id)
 		if($cc==3)
 		{
 		?>
-			<div class="span3">
+			<div class="col-sm-3">
 	    		<!-- <div style="margin-left: 8%; margin-right: 8%; width: 84%; margin-top: 7%">
 	    			<img  src="http://placehold.it/710x775"/>
 	    		</div> -->
@@ -637,7 +637,7 @@ function delete_wishlist(id)
 		if($cc==4)
 		{
 		?>
-				<div class="span3">
+				<div class="col-sm-3">
 		    		<!-- <div style="margin-left: 8%; margin-right: 8%; width: 84%; margin-top: 7%">
 		    			<img  src="http://placehold.it/710x775"/>
 		    		</div> -->

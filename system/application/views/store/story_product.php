@@ -180,8 +180,8 @@ a:hover, a:focus {
     </div>
     
     <!-- Menu for phone mode -->
-    <div class=" visible-phone navbar" >
-		<div class="app-container visible-phone" style="background: #fff; border: 1px solid #989898; margin-left: 5%; margin-right: 5%">
+    <div class=" visible-xs navbar" >
+		<div class="app-container visible-xs" style="background: #fff; border: 1px solid #989898; margin-left: 5%; margin-right: 5%">
 			<!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-header"> -->
 			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#list-prod-nav">
 	        	<!-- <span class="icon-bar"></span>
@@ -216,7 +216,7 @@ a:hover, a:focus {
    	<!--<div class="  " >            
         <div class="col-sm-12">
             <div class="">
-                <div class="span3 hidden-xs">
+                <div class="col-sm-3 hidden-xs">
                     <div class="accordion" id="accordion2">
                          <div class="accordion-group"  style="border-top:none!important;">
                             <div class="accordion-heading">
@@ -781,18 +781,18 @@ a:hover, a:focus {
 											{
 											?>
 											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
-											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
+											<img class="visible-xs" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
 				                            <a href="<?=base_url()?>store/detail_product/<?=$catprod['title']?>/<?=$product['id_title']?>">
 				                            	<? if($hero){?>
 	                                            <img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
-				                            	<img class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>
+				                            	<img class="visible-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>
 	                                            <? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
-	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
+	                                            <img class="visible-xs" src="http://placehold.it/710x775" alt="">
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>
@@ -811,18 +811,18 @@ a:hover, a:focus {
 											{
 											?>
 											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
-											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
+											<img class="visible-xs" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
 				                            <a href="<?=base_url()?>store/detail_product/<?=$catprod['title']?>/<?=$product['id_title']?>">
 				                            	<? if($hero){?>
 	                                            <img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
-				                            	<img class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>											
+				                            	<img class="visible-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>											
 	                                            <? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
-	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
+	                                            <img class="visible-xs" src="http://placehold.it/710x775" alt="">
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>
@@ -841,18 +841,18 @@ a:hover, a:focus {
 											{
 											?>
 											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
-											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
+											<img class="visible-xs" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
 				                            <a href="<?=base_url()?>store/detail_product/<?=$catprod['title']?>/<?=$product['id_title']?>">
 				                            	<? if($hero){?>
 	                                            <img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
-				                            	<img class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/> 
+				                            	<img class="visible-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/> 
 												<? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
-	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
+	                                            <img class="visible-xs" src="http://placehold.it/710x775" alt="">
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>
@@ -928,7 +928,7 @@ a:hover, a:focus {
     <div class="" >            
         <div class="col-sm-12">
             <div class="">
-                <div class="span3 hidden-xs">
+                <div class="col-sm-3 hidden-xs">
                     <div class="accordion" id="accordion2">
                          <div class="accordion-group"  style="border-top:none!important;">
                             <div class="accordion-heading">
@@ -1489,7 +1489,7 @@ a:hover, a:focus {
 											{
 											?>
 											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
-											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
+											<img class="visible-xs" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
@@ -1513,13 +1513,13 @@ a:hover, a:focus {
 				                            	
 				                            	?>
 	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-phone" src="<?=$hrimg_big?>"/>
+				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-xs" src="<?=$hrimg_big?>"/>
 				                            	<!-- <img class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img class="visible-phone" src="<?=$hrimg_big?>"/> -->
+				                            	<img class="visible-xs" src="<?=$hrimg_big?>"/> -->
 	                                            <? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
-	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
+	                                            <img class="visible-xs" src="http://placehold.it/710x775" alt="">
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>
@@ -1564,7 +1564,7 @@ a:hover, a:focus {
 											{
 											?>
 											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
-											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
+											<img class="visible-xs" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
@@ -1588,13 +1588,13 @@ a:hover, a:focus {
 				                            	
 				                            	?>
 	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-phone" src="<?=$hrimg_big?>"/>
+				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-xs" src="<?=$hrimg_big?>"/>
 				                            	<!-- <img class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img class="visible-phone" src="<?=$hrimg_big?>"/>		 -->									
+				                            	<img class="visible-xs" src="<?=$hrimg_big?>"/>		 -->									
 	                                            <? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
-	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
+	                                            <img class="visible-xs" src="http://placehold.it/710x775" alt="">
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>
@@ -1632,7 +1632,7 @@ a:hover, a:focus {
 											{
 											?>
 											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
-											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
+											<img class="visible-xs" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
@@ -1656,13 +1656,13 @@ a:hover, a:focus {
 				                            	
 				                            	?>
 	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-phone" src="<?=$hrimg_big?>"/>
+				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-xs" src="<?=$hrimg_big?>"/>
 				                            	<!-- <img class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img class="visible-phone" src="<?=$hrimg_big?>"/>  -->
+				                            	<img class="visible-xs" src="<?=$hrimg_big?>"/>  -->
 												<? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
-	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
+	                                            <img class="visible-xs" src="http://placehold.it/710x775" alt="">
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>

@@ -165,8 +165,8 @@ a:hover, a:focus {
     </div>
     
     <!-- Menu for phone mode -->
-    <div class=" visible-phone" style="background: #000;">
-		<div class="app-container visible-phone" style="background: #000; padding-left:15px;">
+    <div class=" visible-xs" style="background: #000;">
+		<div class="app-container visible-xs" style="background: #000; padding-left:15px;">
 			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse2" style="float:right;">
 	        	<span class="icon-bar"></span>
 	        	<span class="icon-bar"></span>
@@ -191,8 +191,8 @@ a:hover, a:focus {
 	</div>
     
     <div style="height:10px;"></div>
-    <div class=" visible-phone" style="background: #000;">
-		<div class="app-container visible-phone" style="background: #000;padding-left:15px;">
+    <div class=" visible-xs" style="background: #000;">
+		<div class="app-container visible-xs" style="background: #000;padding-left:15px;">
 			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse3" style="float:right;">
 	        	<span class="icon-bar"></span>
 	        	<span class="icon-bar"></span>
@@ -208,8 +208,8 @@ a:hover, a:focus {
 	</div>
     
     <div style="height:10px;"></div>
-    <div class=" visible-phone" style="background: #000;">
-		<div class="app-container visible-phone" style="background: #000;padding-left:15px;">
+    <div class=" visible-xs" style="background: #000;">
+		<div class="app-container visible-xs" style="background: #000;padding-left:15px;">
 			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse4" style="float:right;">
 	        	<span class="icon-bar"></span>
 	        	<span class="icon-bar"></span>
@@ -225,8 +225,8 @@ a:hover, a:focus {
 	</div>
     
     <div style="height:10px;"></div>
-    <div class=" visible-phone" style="background: #000;">
-		<div class="app-container visible-phone" style="background: #000;padding-left:15px;">
+    <div class=" visible-xs" style="background: #000;">
+		<div class="app-container visible-xs" style="background: #000;padding-left:15px;">
 			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse5" style="float:right;">
 	        	<span class="icon-bar"></span>
 	        	<span class="icon-bar"></span>
@@ -247,7 +247,7 @@ a:hover, a:focus {
    	<div class="  hidden-xs" >            
         <div class="col-sm-12">
             <div class="">
-                <div class="span3 hidden-xs">
+                <div class="col-sm-3 hidden-xs">
                     <div class="accordion" id="accordion2">
                          <div class="accordion-group"  style="border-top:none!important;">
                             <div class="accordion-heading">
@@ -810,18 +810,18 @@ a:hover, a:focus {
 											{
 											?>
 											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
-											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
+											<img class="visible-xs" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
 				                            <a href="<?=base_url()?>store/detail_product/<?=$catprod['title']?>/<?=$product['id_title']?>">
 				                            	<? if($hero){?>
 	                                            <img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
-				                            	<img class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>
+				                            	<img class="visible-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>
 	                                            <? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
-	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
+	                                            <img class="visible-xs" src="http://placehold.it/710x775" alt="">
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>
@@ -840,18 +840,18 @@ a:hover, a:focus {
 											{
 											?>
 											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
-											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
+											<img class="visible-xs" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
 				                            <a href="<?=base_url()?>store/detail_product/<?=$catprod['title']?>/<?=$product['id_title']?>">
 				                            	<? if($hero){?>
 	                                            <img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
-				                            	<img class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>											
+				                            	<img class="visible-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>											
 	                                            <? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
-	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
+	                                            <img class="visible-xs" src="http://placehold.it/710x775" alt="">
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>
@@ -870,18 +870,18 @@ a:hover, a:focus {
 											{
 											?>
 											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
-											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
+											<img class="visible-xs" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
 				                            <a href="<?=base_url()?>store/detail_product/<?=$catprod['title']?>/<?=$product['id_title']?>">
 				                            	<? if($hero){?>
 	                                            <img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
-				                            	<img class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/> 
+				                            	<img class="visible-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/> 
 												<? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
-	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
+	                                            <img class="visible-xs" src="http://placehold.it/710x775" alt="">
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>
@@ -1011,46 +1011,46 @@ a:hover, a:focus {
     <!-- Menu for desktop and Ipad end -->
     
     <!-- Product for IPhone -->   
-    <div class=" visible-phone">
+    <div class=" visible-xs">
     	<div style="height:10px;"></div>
         <div class="">
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="<?=base_url()?>img/product1_large.jpg" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>
             </div>
             <div style="height:20px;"></div>
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="<?=base_url()?>img/product2_large.jpg" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>
             </div>
             <div style="height:20px;"></div>
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="<?=base_url()?>img/product3_large.jpg" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>
             </div>
             <div style="height:20px;"></div>
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="<?=base_url()?>img/product4_large.jpg" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>
             </div>            
             <div style="height:20px;"></div>
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="<?=base_url()?>img/product5_large.jpg" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>
             </div>
             <div style="height:20px;"></div>
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="http://placehold.it/480x530" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>
             </div> 
             <div style="height:20px;"></div>       
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="http://placehold.it/480x530" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>

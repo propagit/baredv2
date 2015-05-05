@@ -1,5 +1,5 @@
 <div class="col-xs-2 x-gutters block">
-    <img src="<?=base_url(). ASSETS ?>img/bared-logo-sml.png" alt="bared-logo-sml.png" title="Bared Logo">
+    <a href="<?=base_url();?>"><img src="<?=base_url(). ASSETS ?>img/bared-logo-sml.png" alt="bared-logo-sml.png" title="Bared Logo"></a>
 </div>
 <div class="col-xs-9 x-l-gutters block">
     <ul class="acc-info">

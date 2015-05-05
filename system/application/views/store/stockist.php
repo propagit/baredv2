@@ -281,7 +281,7 @@ function suburb_change()
 	<div style="height: 20px;"></div>
 	
 	<div class="">
-		<div class="span3">
+		<div class="col-sm-3">
 			<div style="margin-left: 5%">
 				<div>
 					Spencer &amp; Rutherford<br/>
@@ -300,7 +300,7 @@ function suburb_change()
 				</div>
 			</div>
 		</div>
-		<div class="span3" style="border-left: 1px solid #696969">
+		<div class="col-sm-3" style="border-left: 1px solid #696969">
 			<div style="margin-left: 5%">
 				<div>
 					Spencer &amp; Rutherford<br/>
@@ -319,7 +319,7 @@ function suburb_change()
 				</div>
 			</div>
 		</div>
-		<div class="span3" style="border-left: 1px solid #696969">
+		<div class="col-sm-3" style="border-left: 1px solid #696969">
 			<div style="margin-left: 5%">
 				<div>
 					Spencer &amp; Rutherford<br/>
@@ -338,7 +338,7 @@ function suburb_change()
 				</div>
 			</div>
 		</div>
-		<div class="span3" style="border-left: 1px solid #696969">
+		<div class="col-sm-3" style="border-left: 1px solid #696969">
 			<div style="margin-left: 5%">
 				<div>
 					DFO OUTLET<br/>
@@ -370,7 +370,7 @@ function suburb_change()
     	</div>
     </div>
     <div class="" style="background: #f6f5f5; padding-bottom: 20px">
-    	<div class="span3" style="padding-top: 20px">
+    	<div class="col-sm-3" style="padding-top: 20px">
     		<div style="margin-left: 5%">
 	    		<div>
 	    			<select onchange="country_change();" id="country" style="width: 100%">

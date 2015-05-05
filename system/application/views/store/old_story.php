@@ -156,7 +156,7 @@ right:63%; top: 42%;
 				
 				
 				
-				<!--<img class="visible-phone" src="<?=base_url()?>img/big2.jpg" alt="" />-->
+				<!--<img class="visible-xs" src="<?=base_url()?>img/big2.jpg" alt="" />-->
 			</div>
 		</div>
 		

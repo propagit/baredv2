@@ -557,14 +557,14 @@ a:hover, a:focus {
 					{
 				?>
 					<img id="main_hero"  class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb1/<?=$cur_hero['name']?>" />
-    				<img id="main_hero2" class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$cur_hero['name']?>" />
+    				<img id="main_hero2" class="visible-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$cur_hero['name']?>" />
 				<?
 					}
 					else 
 					{
 					?>
 					<img id="main_hero"  class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb1/<?=$hero['name']?>" />
-    				<img id="main_hero2" class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>" />
+    				<img id="main_hero2" class="visible-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>" />
 					<?
 					}
 				}
@@ -572,7 +572,7 @@ a:hover, a:focus {
 				{	
 			?>
 				<img id="main_hero"  class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb1/<?=$hero['name']?>" />
-    			<img id="main_hero2" class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>" />
+    			<img id="main_hero2" class="visible-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>" />
 			<?php
 				}
 			}
@@ -580,7 +580,7 @@ a:hover, a:focus {
 			{
 			?>
 				<img id="main_hero3" class="hidden-xs" src="http://placehold.it/472x515" />
-    			<img class="visible-phone" src="http://placehold.it/710x775" />
+    			<img class="visible-xs" src="http://placehold.it/710x775" />
 			<?php	
 			}
     		?>
@@ -593,16 +593,16 @@ a:hover, a:focus {
     			if(isset($hero['name']))
 				{
 				?>
-					<div class="span3">
+					<div class="col-sm-3">
 	    				<img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb1/<?=$hero['name']?>"/>
 	    			</div>
-	    			<div class="span3">
+	    			<div class="col-sm-3">
 	    				<img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb1/<?=$hero['name']?>"/>
 	    			</div>
-	    			<div class="span3">
+	    			<div class="col-sm-3">
 	    				<img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb1/<?=$hero['name']?>"/>
 	    			</div>
-	    			<div class="span3">
+	    			<div class="col-sm-3">
 	    				<img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb1/<?=$hero['name']?>"/>
 	    			</div>
 				<?php
@@ -610,16 +610,16 @@ a:hover, a:focus {
 				else 
 				{
 				?>
-					<div class="span3">
+					<div class="col-sm-3">
 	    				<img src="http://placehold.it/472x515"/>
 	    			</div>
-	    			<div class="span3">
+	    			<div class="col-sm-3">
 	    				<img src="http://placehold.it/472x515"/>
 	    			</div>
-	    			<div class="span3">
+	    			<div class="col-sm-3">
 	    				<img src="http://placehold.it/472x515"/>
 	    			</div>
-	    			<div class="span3">
+	    			<div class="col-sm-3">
 	    				<img src="http://placehold.it/472x515"/>
 	    			</div>
 				<?php

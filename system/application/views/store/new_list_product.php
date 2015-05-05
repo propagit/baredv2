@@ -283,7 +283,7 @@ function sort_by_name()
 }
 </script>
 
-<div class="app-app-container">
+<div class="app-container content-wrap-15">
 	<div style="height:10px;"></div>     
     
     <div class=" hidden-xs"> 

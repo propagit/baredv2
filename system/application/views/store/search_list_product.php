@@ -324,8 +324,8 @@ function sort_by_name()
     
     
     <!-- Menu for phone mode -->
-    <div class=" visible-phone navbar" >
-		<div class="app-container visible-phone" style="background: #fff; border: 1px solid #989898; margin-left: 5%; margin-right: 5%">
+    <div class=" visible-xs navbar" >
+		<div class="app-container visible-xs" style="background: #fff; border: 1px solid #989898; margin-left: 5%; margin-right: 5%">
 			<!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-header"> -->
 			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#list-prod-nav">
 	        	<!-- <span class="icon-bar"></span>
@@ -357,7 +357,7 @@ function sort_by_name()
 	<?php
 	$url_pages=$_SERVER['REQUEST_URI'];
 	?>
-	<div class=" visible-phone"> 
+	<div class=" visible-xs"> 
     	<div class="col-sm-5" style="text-align: center">
             <ul class="breadcrumb">
                 
@@ -378,7 +378,7 @@ function sort_by_name()
    	<div class="" >            
         <div class="col-sm-12">
             <div class="">
-                <div class="span3 hidden-xs">
+                <div class="col-sm-3 hidden-xs">
                     <div class="accordion" id="accordion2">
                          <div class="accordion-group"  style="border-top:none!important;">
                             <div class="accordion-heading">
@@ -1098,7 +1098,7 @@ function sort_by_name()
 											{
 											?>
 											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
-											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
+											<img class="visible-xs" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
@@ -1122,13 +1122,13 @@ function sort_by_name()
 				                            	
 				                            	?>
 	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-phone" src="<?=$hrimg_big?>"/>
+				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-xs" src="<?=$hrimg_big?>"/>
 				                            	<!-- <img class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img class="visible-phone" src="<?=$hrimg_big?>"/> -->
+				                            	<img class="visible-xs" src="<?=$hrimg_big?>"/> -->
 	                                            <? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
-	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
+	                                            <img class="visible-xs" src="http://placehold.it/710x775" alt="">
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>
@@ -1166,7 +1166,7 @@ function sort_by_name()
 											{
 											?>
 											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
-											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
+											<img class="visible-xs" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
@@ -1190,13 +1190,13 @@ function sort_by_name()
 				                            	
 				                            	?>
 	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-phone" src="<?=$hrimg_big?>"/>		
+				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-xs" src="<?=$hrimg_big?>"/>		
 				                            	<!-- <img class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img class="visible-phone" src="<?=$hrimg_big?>"/>			 -->						
+				                            	<img class="visible-xs" src="<?=$hrimg_big?>"/>			 -->						
 	                                            <? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
-	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
+	                                            <img class="visible-xs" src="http://placehold.it/710x775" alt="">
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>
@@ -1234,7 +1234,7 @@ function sort_by_name()
 											{
 											?>
 											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
-											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
+											<img class="visible-xs" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
@@ -1258,13 +1258,13 @@ function sort_by_name()
 				                            	
 				                            	?>
 	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-phone" src="<?=$hrimg_big?>"/> 
+				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-xs" src="<?=$hrimg_big?>"/> 
 				                            	<!-- <img class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img class="visible-phone" src="<?=$hrimg_big?>"/> -->
+				                            	<img class="visible-xs" src="<?=$hrimg_big?>"/> -->
 												<? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
-	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
+	                                            <img class="visible-xs" src="http://placehold.it/710x775" alt="">
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>
@@ -1457,46 +1457,46 @@ function sort_by_name()
     <!-- Menu for desktop and Ipad end -->
     
     <!-- Product for IPhone -->   
-    <!-- <div class=" visible-phone">
+    <!-- <div class=" visible-xs">
     	<div style="height:10px;"></div>
         <div class="">
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="<?=base_url()?>img/product1_large.jpg" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>
             </div>
             <div style="height:20px;"></div>
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="<?=base_url()?>img/product2_large.jpg" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>
             </div>
             <div style="height:20px;"></div>
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="<?=base_url()?>img/product3_large.jpg" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>
             </div>
             <div style="height:20px;"></div>
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="<?=base_url()?>img/product4_large.jpg" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>
             </div>            
             <div style="height:20px;"></div>
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="<?=base_url()?>img/product5_large.jpg" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>
             </div>
             <div style="height:20px;"></div>
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="http://placehold.it/480x530" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>
             </div> 
             <div style="height:20px;"></div>       
-            <div class="span3">
+            <div class="col-sm-3">
                 <img src="http://placehold.it/480x530" alt="">
                 <div class="prod_title">Name - Colour</div>
                 <div class="prod_title">Description $199</div>

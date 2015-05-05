@@ -241,7 +241,7 @@ function checkout()
 		
 	</div>
     
-    <div style="margin: 0 auto" class="visible-phone">
+    <div style="margin: 0 auto" class="visible-xs">
 		
        <div class="col-sm-12 " style="text-align: center">
             <ul class="breadcrumb linkbreadcrumb breadcrum-Font">
@@ -362,7 +362,7 @@ function checkout()
     </div>
     
     
-    <div class="visible-phone">
+    <div class="visible-xs">
     
 		<table class="table " cellpadding="0" cellspacing="0">		
 		<tbody class="font12normal">
@@ -500,7 +500,7 @@ function checkout()
     	</div>
         
         
-        <!--<div class="span7 visible-phone">
+        <!--<div class="span7 visible-xs">
     		<div style="height: 90px; padding-top: 5px; margin-bottom:5px;" class="secondFont">
 		    	<span class="info-cart-Font info-cart">Shipping Method </span>
                 <div class="controls input-form-Font" id="shipping-method-iphone" style="padding-top:-5px;">                        
@@ -522,7 +522,7 @@ function checkout()
     	<div class="col-sm-2">
         	&nbsp;
     	</div>
-    	<div class="span3 ">
+    	<div class="col-sm-3 ">
     		<div style="text-align:right;margin-top: 10px; width: 238px;" class="payment_shopping info-cart-Font info-cart">
             
 		    	<table width="100%">
@@ -614,7 +614,7 @@ function checkout()
     </div>
     <div style="height: 30px" class="hidden-xs"></div>
     <div class="">
-    	<div class="span8 hidden-xs">
+    	<div class="col-sm-8 hidden-xs">
     		&nbsp;
     	</div>
     	<div class="span4 hidden-xs">
@@ -625,7 +625,7 @@ function checkout()
 				
 			</div>
     	</div>
-        <div class="span4 visible-phone">
+        <div class="span4 visible-xs">
     		<div  style="width:100%;">
 	    		<button onclick="checkout();" class="cnt_btt button_primary button-Font button_size_full">
 					Continue

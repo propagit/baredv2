@@ -2,6 +2,8 @@
 
 	# admin
 		- tiles/list_view	
+		
+	# store/signin - check top of the page to uncomment https
 
 # models	
 

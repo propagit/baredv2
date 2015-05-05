@@ -136,24 +136,24 @@ function format(state) {
 	if (!state.id) return state.text; // optgroup
 	return "<img class='flag' src='<?=base_url()?>img/flag/" + state.id.toLowerCase() + ".png'/> " + state.text;
 }
-$j('.limit_tt').tooltip({
+$('.limit_tt').tooltip({
 		showURL: false
 });
-$j("#currency_select").select2({
+$("#currency_select").select2({
 	minimumResultsForSearch: '-2',
 	formatResult: format,
 	formatSelection: format,
 	escapeMarkup: function(m) { return m; }
 });
 
-$j("#currency_select1").select2({
+$("#currency_select1").select2({
 	minimumResultsForSearch: '-2',
 	formatResult: format,
 	formatSelection: format,
 	escapeMarkup: function(m) { return m; }
 });
 
-$j("#currency_select2").select2({
+$("#currency_select2").select2({
 	minimumResultsForSearch: '-2',
 	formatResult: format,
 	formatSelection: format,

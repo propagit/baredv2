@@ -586,7 +586,7 @@ function add_towishlist()
 			{
 			?>
 				<img id="main_hero3" class="hidden-xs" src="http://placehold.it/472x515" />
-    			<img class="visible-phone" src="http://placehold.it/710x775" />
+    			<img class="visible-xs" src="http://placehold.it/710x775" />
 			<?php	
 			}
     		?>
@@ -782,7 +782,7 @@ function add_towishlist()
 	                                	<div style="margin-left:8px; margin-top:-10px;float:left;">
 	                                		<a href="<?=base_url()?>store/detail_product/<?=$cat_name?>/<?=$ot['id_title']?>">
 	                                			<img class="hidden-xs" style="cursor:pointer; width: 40px" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$ot['id'])?>/thumb4/<?=$hero_new['name']?>" />                                			
-                                                <img class="visible-phone" style="cursor:pointer; width: 35px" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$ot['id'])?>/thumb4/<?=$hero_new['name']?>" />                                			
+                                                <img class="visible-xs" style="cursor:pointer; width: 35px" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$ot['id'])?>/thumb4/<?=$hero_new['name']?>" />                                			
 	                                		</a>
 	                                	</div>								
 	                                <?

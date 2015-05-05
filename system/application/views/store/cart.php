@@ -113,6 +113,8 @@ function checkout()
 </script>
 
 <div class="app-container">
+	<div class="col-sm-12">
+    <div class="col-sm-12">
 	<?php if($this->session->flashdata('error_product_quantity')) { ?>
 	    <div style="margin-top: 20px" class="alert alert-error">
 	    	<button type="button" class="close" onclick="$('.alert-error').fadeOut('slow');">&times;</button>
@@ -136,7 +138,7 @@ function checkout()
 		</button>
 	</div>
     
-    <div style="float:left;" class="visible-phone button-Font">		
+    <div style="float:left;" class="visible-xs button-Font">		
 		<button onclick="window.location='<?=base_url()?>'" style="width: 235px;" class="button_primary button-Font">
 			Continue Shopping
 		</button>
@@ -276,7 +278,7 @@ function checkout()
 			</form>
 		</tbody>
 	</table>
-    <div class=" visible-phone">
+    <div class="visible-xs">
     	<form name="updateCart2" method="post" action="<?=base_url()?>cart/updateitems"> 
         
 			
@@ -383,10 +385,13 @@ function checkout()
         </form>     
     </div>
     
+    </div>
+    </div><!--col-sm-12-->
+    
     <div style="height: 20px;"></div>
     <div class="app-container">
-    <div class="">
-    	<div class="span8">
+    <div class="col-sm-12">
+    	<div class="col-sm-8">
     		<div id="cart-note-shopping" class="note-Font note">
 		    	
                 <table>
@@ -404,9 +409,9 @@ function checkout()
 	    	
 		    </div>
     	</div>
-    	<div class="span1">
+    	<div class="col-sm-1">
     	</div>
-    	<div class="span3 hidden-xs">
+    	<div class="col-sm-3 hidden-xs">
     		<div style="text-align:left; float: right;font-size: 16px; padding-bottom: 10px;  margin-top: 10px; width: 238px;" id="cart-puchase-shopping" class="info-cart-Font">
 		    	<?php
 					$ttl1 = 0;
@@ -446,7 +451,7 @@ function checkout()
             
     	</div>
         
-        <div class="span3 visible-phone">
+        <div class="col-sm-3 visible-xs">
     		<div class="info-cart-Font" id="cart-puchase-shopping">
 		    	<?php
 					$ttl1 = 0;
@@ -468,7 +473,7 @@ function checkout()
 				</button>
 				<div style="height: 10px;"></div>
 				                
-                <button onclick="document.updateCart2.submit();" class="button-Font visible-phone button_secondary button_size_full">
+                <button onclick="document.updateCart2.submit();" class="button-Font visible-xs button_secondary button_size_full">
 					Update Cart
 				</button>                   
 		    </div>

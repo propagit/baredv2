@@ -812,17 +812,17 @@ else{
                         	<?php if(0) { ?>
                 			<? if($cat=='all' || $cat=='single_all'){?>
                             <a class="hidden-xs" style="margin-left:20px" href="<?=base_url()?>store/stories_archive">ARCHIVE</a> 
-                			<!-- <a class="visible-phone" style="margin-left:20px; font-size: 7px;" href="<?=base_url()?>store/stories_archive">ARCHIVE</a> --> 
+                			<!-- <a class="visible-xs" style="margin-left:20px; font-size: 7px;" href="<?=base_url()?>store/stories_archive">ARCHIVE</a> --> 
                 			<span class="divider2 hidden-xs" style="font-size:22px; margin-left:8px; margin-right:3px; font-weight:lighter!important;"> | </span>
                             <? } ?>
-                			<!-- <span class="divider2 visible-phone" style="font-size:12px; margin-left:8px; margin-right:3px; font-weight:lighter!important;"> | </span> -->
+                			<!-- <span class="divider2 visible-xs" style="font-size:12px; margin-left:8px; margin-right:3px; font-weight:lighter!important;"> | </span> -->
                             <? if($cat=='all' || $cat=='single_all'){?>
                             <a class="hidden-xs" href="<?=base_url()?>store/stories_new/all">INDEX</a>
                             <? }else{?>
                             <a class="hidden-xs" href="<?=base_url()?>store/stories_new/<?=$cats?>">INDEX</a>
                             <? } ?>
                 			
-                			<!-- <a class="visible-phone" style="font-size: 7px;" href="<?=base_url()?>store/stories_new/all">INDEX</a> -->
+                			<!-- <a class="visible-xs" style="font-size: 7px;" href="<?=base_url()?>store/stories_new/all">INDEX</a> -->
                             <?php }?>
                 		</td>
                 		<td style="width: 33%; text-align: center; line-height: 11px">
@@ -839,14 +839,14 @@ else{
                         	<?php if(0){?>
                 			<a href="#" onclick="share_with_friend();">
 	                			<img class="hidden-xs story_tt" data-toggle="tooltip" title="SEND TO A FRIEND" src="<?=base_url()?>img/envelope.png"  alt="">
-	                			<!-- <img class="visible-phone" src="<?=base_url()?>img/envelope.png"  alt="" style=""> -->
+	                			<!-- <img class="visible-xs" src="<?=base_url()?>img/envelope.png"  alt="" style=""> -->
                             </a> 
                         	<span class="divider2 hidden-xs" style="vertical-align:top; font-size:22px; margin-left:8px; margin-right:3px;font-weight:lighter!important;"> | </span>
                             <?php } ?>
-                        	<!-- <span class="divider2 visible-phone" style="vertical-align:top; font-size:12px; margin-left:8px; margin-right:3px;font-weight:lighter!important;"> | </span> -->
+                        	<!-- <span class="divider2 visible-xs" style="vertical-align:top; font-size:12px; margin-left:8px; margin-right:3px;font-weight:lighter!important;"> | </span> -->
                             <a href="<?=base_url()?>store/story_product_new/<?=$cat?>/<?=$id?>"> 
                             	<img class="hidden-xs story_tt" data-toggle="tooltip" title="SHOPPING CART" src="<?=base_url()?>img/icon_shopping_bag.png" style="margin-bottom:4px;margin-right:20px;" alt="" >
-                            	<!-- <img class="visible-phone" src="<?=base_url()?>img/icon_shopping_bag.png" style="margin-bottom:4px;margin-right:20px;" alt="" > -->
+                            	<!-- <img class="visible-xs" src="<?=base_url()?>img/icon_shopping_bag.png" style="margin-bottom:4px;margin-right:20px;" alt="" > -->
                             </a>
                 		</td>
                 		
@@ -854,7 +854,7 @@ else{
                 	</tr>
                 </table>
                 
-                <div class="visible-phone" style="padding-left:5%; padding-right: 5%; width:90%">
+                <div class="visible-xs" style="padding-left:5%; padding-right: 5%; width:90%">
                 	
                     <div style="float: left; width: 33.5%; text-align: left; font-size: 9px; line-height:20px;">
                 		<? if($cat=='all' || $cat=='single_all'){?> <a  href="<?=base_url()?>store/stories_archive">ARCHIVE</a> | <? } ?> 
@@ -878,11 +878,11 @@ else{
                 	<div style="float: left; width: 33.5%; text-align: right; font-size: 9px;">
                 		<a style="padding-right: 2px; border-right: 1px solid #222" href="#" onclick="share_with_friend();">
                 			<img class=" story_tt" data-toggle="tooltip" title="SEND TO A FRIEND" src="<?=base_url()?>img/envelope.png"  alt="">
-                			<!-- <img class="visible-phone" src="<?=base_url()?>img/envelope.png"  alt="" style=""> -->
+                			<!-- <img class="visible-xs" src="<?=base_url()?>img/envelope.png"  alt="" style=""> -->
                         </a>
                 		<a style="margin-left: 3px" href="<?=base_url()?>store/story_product_new/<?=$cat?>/<?=$id?>"> 
                         	<img class="story_tt" data-toggle="tooltip" title="SHOP THE BAGAZINE" src="<?=base_url()?>img/icon_shopping_bag.png" alt="" style="margin-top:-5px!important;">
-                        	<!-- <img class="visible-phone" src="<?=base_url()?>img/icon_shopping_bag.png" style="margin-bottom:4px;margin-right:20px;" alt="" > -->
+                        	<!-- <img class="visible-xs" src="<?=base_url()?>img/icon_shopping_bag.png" style="margin-bottom:4px;margin-right:20px;" alt="" > -->
                         </a>
                 	</div>
                 	<div style="clear: both">

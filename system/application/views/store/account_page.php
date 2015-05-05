@@ -98,7 +98,7 @@ function use_billing_address()
 		
 	</div>
     
-    <div style="margin: 0 auto" class="visible-phone">
+    <div style="margin: 0 auto" class="visible-xs">
 		
        <div class="col-sm-12" style="text-align: center">
             <ul class="breadcrumb breadcrum-Font linkbreadcrumb">

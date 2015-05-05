@@ -13,7 +13,7 @@
 </div>
 
 <div class="col-sm-2 logo-wrap">
-    <img src="<?=base_url() . ASSETS;?>img/bared-logo.png" alt="bared-logo.png" title="Bared Footwear Logo">
+    <a href="<?=base_url();?>"><img src="<?=base_url() . ASSETS;?>img/bared-logo.png" alt="bared-logo.png" title="Bared Footwear Logo"></a>
 </div>
 
 <div class="col-sm-5 hdr-block rt">

@@ -1,7 +1,6 @@
 <script src="<?=base_url()?>js/jquery.cycle2.js"></script>
 <script src="<?=base_url()?>js/jquery.cycle2.carousel.js"></script>
-
-<script>$j.fn.cycle.defaults.autoSelector = '.slideshow';</script>
+<script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
 <?php
 	$url_pages=$_SERVER['REQUEST_URI'];
 	$ex_pages=explode("/",$url_pages);
@@ -116,10 +115,10 @@ function addtocart() {
 	}
 	}
 	<? if($product['multiplesize']==1){?>
-	if($j('#sizeproduct').val() == '--')
+	if($('#sizeproduct').val() == '--')
 	{
-		$j('#any_message').html("Please Choose Your Size");
-		$j('#anyModal').modal('show');
+		$('#any_message').html("Please Choose Your Size");
+		$('#anyModal').modal('show');
 		return false;
 	}
 	<? } ?>
@@ -131,12 +130,12 @@ function addtocart() {
 	<?php for($i=0;$i<count($attributes);$i++) 
 	{ ?>
 	 // use json javascript generator and pass value in json format(by Hieu)
-	 //myArray[<?=$i?>] = $j('#attribute-<?=$i?>').val();
-	 myObject.<?=$attributes[$i]['name']?> = $j('#attribute-<?=$i?>').val();
+	 //myArray[<?=$i?>] = $('#attribute-<?=$i?>').val();
+	 myObject.<?=$attributes[$i]['name']?> = $('#attribute-<?=$i?>').val();
 	<?php } ?>
-	if($j('#sizeproduct').length)
+	if($('#sizeproduct').length)
 	{
-	  mul_size = $j('#sizeproduct').val();
+	  mul_size = $('#sizeproduct').val();
 	
 		myObject.Size = mul_size;
 	}
@@ -150,8 +149,8 @@ function addtocart() {
 	dataType: "html",
 	success: function(html) {
 	
-			$j('#any_message').html(html);
-			$j('#anyModal').modal('show');
+			$('#any_message').html(html);
+			$('#anyModal').modal('show');
 			
 			
 			$.ajax({
@@ -161,8 +160,8 @@ function addtocart() {
 			dataType: "html",
 			success: function(html) {
 					//var adding = "<br/><br/>Note: This product will stay in your shopping cart for only 1hour. If you think you may take longer to check out place in your Wish List";
-					$j('.tot_shopbag').text(html);
-					$j('#anyModal').modal('show');
+					$('.tot_shopbag').text(html);
+					$('#anyModal').modal('show');
 			
 			}
 			});
@@ -177,10 +176,10 @@ function add_towishlist()
 	var cat_name = '<?=$curr_cat?>';
 	//alert(cat_name);
 	
-	if($j('#sizeproduct').val() == '--')
+	if($('#sizeproduct').val() == '--')
 	{
-		$j('#any_message').html("Please Choose Your Size");
-		$j('#anyModal').modal('show');
+		$('#any_message').html("Please Choose Your Size");
+		$('#anyModal').modal('show');
 		return false;
 	}
 	var attributes = '';
@@ -191,12 +190,12 @@ function add_towishlist()
 	<?php for($i=0;$i<count($attributes);$i++) 
 	{ ?>
 	 // use json javascript generator and pass value in json format(by Hieu)
-	 //myArray[<?=$i?>] = $j('#attribute-<?=$i?>').val();
-	 myObject.<?=$attributes[$i]['name']?> = $j('#attribute-<?=$i?>').val();
+	 //myArray[<?=$i?>] = $('#attribute-<?=$i?>').val();
+	 myObject.<?=$attributes[$i]['name']?> = $('#attribute-<?=$i?>').val();
 	<?php } ?>
-	if($j('#sizeproduct').length)
+	if($('#sizeproduct').length)
 	{
-	  mul_size = $j('#sizeproduct').val();
+	  mul_size = $('#sizeproduct').val();
 	
 		myObject.Size = mul_size;
 	}
@@ -212,15 +211,15 @@ function add_towishlist()
 		
 		if(html > 0)
 		{
-			$j('#any_message').html('You have successfully saved this item to your Wish List.');
+			$('#any_message').html('You have successfully saved this item to your Wish List.');
 		}
 		else
 		{
-			$j('#any_message').html('Please login to your member account to add this product to your wish list <br> Click <a href="<?=base_url()?>store/signin"> here </a> to sign up or login to your member account.');
+			$('#any_message').html('Please login to your member account to add this product to your wish list <br> Click <a href="<?=base_url()?>store/signin"> here </a> to sign up or login to your member account.');
 		}
 		
 		
-		$j('#anyModal').modal('show');
+		$('#anyModal').modal('show');
 		
 		$.ajax({
 			url: '<?=base_url()?>cart/count_wishlist',
@@ -229,8 +228,8 @@ function add_towishlist()
 			dataType: "html",
 			success: function(html) {
 			
-					$j('.tot_wishlist').text(html);
-					$j('#anyModal').modal('show');
+					$('.tot_wishlist').text(html);
+					$('#anyModal').modal('show');
 			
 			}
 			});
@@ -303,7 +302,7 @@ function active(id)
 
 </style>
 
-<div class="app-container">
+<div class="app-container content-wrap-15">
 	<!-- facebook -->
 	<div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -390,7 +389,7 @@ function active(id)
 	<!-- facebook -->
 
 	<div style="height:10px;"></div>     
-    <div class="">
+    <div class="col-sm-12">
     	<div class="col-sm-12">
     		<ul class="breadcrum-Font breadcrumb">
 			    <li><a href="<?=base_url()?>">Home</a> <span class="divider">></span></li>
@@ -446,12 +445,12 @@ function active(id)
 		</div>
     </div>
     <div style="height:10px;"></div>     
-    <div class="">
+    <div class="col-sm-12">
     	<? if(count($photos)>3){ ?>
         <div class="col-sm-2  hidden-xs">
     		
     		<div style="margin-left: 15%; margin-bottom: 10px">			    
-			    <a href=# id=prev3><img src="<?=base_url()?>img/grey-up-ar.png" alt=""/></a>
+			    <a href=# id=prev3><img src="<?=base_url()?>img/grey-up-arrow.png" alt=""/></a>
 			</div>
 			
 			
@@ -576,7 +575,7 @@ function active(id)
 			</div>
 			
 			<div style="margin-left: 15%; margin-top: 10px">			   
-			    <a href=# id=next3><img src="<?=base_url()?>img/grey-down-ar.png" alt=""/></a>
+			    <a href=# id=next3><img src="<?=base_url()?>img/grey-down-arrow.png" alt=""/></a>
 			</div>
 			
     		<div style="display: none" class="cycle-pager" id=pager4></div>
@@ -667,7 +666,7 @@ function active(id)
 			{
 			?>
 				<img id="main_hero3" class="hidden-xs" src="http://placehold.it/472x515" />
-    			<img class="visible-phone" src="http://placehold.it/710x775" />
+    			<img class="visible-xs" src="http://placehold.it/710x775" />
 			<?php	
 			}
     		?>
@@ -879,7 +878,7 @@ function active(id)
 	                                	<div style="margin-left:8px; margin-top:-10px;float:left;">
 	                                		<a href="<?=base_url()?>store/detail_product/<?=$cat_name?>/<?=$ot['id_title']?>">
 	                                			<img class="hidden-xs" style="cursor:pointer; width: 40px" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$ot['id'])?>/thumb4/<?=$hero_new['name']?>" />                                			
-                                                <img class="visible-phone" style="cursor:pointer; width: 35px" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$ot['id'])?>/thumb4/<?=$hero_new['name']?>" />                                			
+                                                <img class="visible-xs" style="cursor:pointer; width: 35px" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$ot['id'])?>/thumb4/<?=$hero_new['name']?>" />                                			
 	                                		</a>
 	                                	</div>								
 	                                <?
@@ -1160,7 +1159,7 @@ function active(id)
                       })();
                     </script>
                 </div>					
-                <img  class="social-icon" style="cursor: pointer; margin-right: 0px;" onclick="$j('#emailModal').modal('show');" src="<?=base_url()?>img/mail.png" />
+                <img  class="social-icon" style="cursor: pointer; margin-right: 0px;" onclick="$('#emailModal').modal('show');" src="<?=base_url()?>img/mail.png" />
                 
                 
                 <div style="clear: both"></div>
@@ -1328,7 +1327,7 @@ function active(id)
     <?php $this->load->view('common/featured_products'); ?>
     
     <div id="anyModal" class="popup-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="mytop-modal" onclick="$j('#anyModal').modal('hide');">
+    <div class="mytop-modal" onclick="$('#anyModal').modal('hide');">
         <img src="<?=base_url()?>img/close_sign.png" alt=""/>
     </div>
     <div class="modal-body mybody-modal">
@@ -1338,7 +1337,7 @@ function active(id)
 	
 	
 	<div id="emailModal" class="popup-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="mytop-modal" onclick="$j('#emailModal').modal('hide');">
+	<div class="mytop-modal" onclick="$('#emailModal').modal('hide');">
         <img src="<?=base_url()?>img/close_sign.png" alt=""/>
     </div>
 	<form method="post" action="<?=base_url()?>store/send_friend_email">
