@@ -1,4 +1,4 @@
-<div class="container">	
+<div class="app-container">	
 <style>
 .fb_edge_widget_with_comment span.fb_edge_comment_widget iframe.fb_ltr {
     display: none !important;

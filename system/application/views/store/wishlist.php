@@ -106,7 +106,7 @@ function delete_wishlist(id)
 }
 </style>
 
-<div class="container">
+<div class="app-container">
 	
 	
     <div id="anyModal" class="popout-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -136,7 +136,7 @@ function delete_wishlist(id)
 			if($cc == 1)
 			{
 			?>
-			<div class="row-fluid">
+			<div class="">
 		    	<div class="span3 wishlist-wrapper" >
 		    		<div class="delete-wishlist" style="text-align: right; margin-top: 1%; margin-right: 1%">
 		    			<span onclick="delete_wishlist(<?=$ls['id']?>)" style="cursor: pointer"><i class="icon icon-remove"></i></span>
@@ -172,7 +172,7 @@ function delete_wishlist(id)
 		    			<!-- <img  src="http://placehold.it/710x775"/> -->
 		    		</div>
 		    		
-		    		<div class="hidden-tablet" style="margin-left: 8%; margin-right: 8%; width: 84%; margin-top: 5%">
+		    		<div class="hidden-xs" style="margin-left: 8%; margin-right: 8%; width: 84%; margin-top: 5%">
 		    			<a class="feauture-title" href="<?=base_url()?>store/detail_product/<?=$cat['title']?>/<?=$prod['id_title']?>">
 			    			<span class="wishlist-title-Font link-title" style="font-size: 16px;"><?=$prod['title']?></span> 
 	    					<!-- <span class="wishlist-title-Font" style="font-size: 14px; font-weight: 400"><?=$title[1]?></span><br/> -->
@@ -231,8 +231,8 @@ function delete_wishlist(id)
 		    		
 		    		
 		    		
-		    		<div class="hidden-tablet wishlist-title-Font feauture-desc" style="margin-left: 8%; margin-right: 8%; width: 84%;"><?=$prod['short_desc']?></div>
-		    		<div class="hidden-tablet wishlist-title-Font feauture-price" style="margin-left: 8%; margin-right: 8%; width: 84%;"><?=$sign?> <?php echo number_format($cur_price * $cur_val,2,'.',',');?></div>
+		    		<div class="hidden-xs wishlist-title-Font feauture-desc" style="margin-left: 8%; margin-right: 8%; width: 84%;"><?=$prod['short_desc']?></div>
+		    		<div class="hidden-xs wishlist-title-Font feauture-price" style="margin-left: 8%; margin-right: 8%; width: 84%;"><?=$sign?> <?php echo number_format($cur_price * $cur_val,2,'.',',');?></div>
 		    		
 		    		<div class="visible-tablet wishlist-title-Font feauture-desc" style="margin-left: 8%; margin-right: 8%; width: 84%;"><?=$prod['short_desc']?></div>
 		    		<div class="visible-tablet wishlist-title-Font feauture-price" style="margin-left: 8%; margin-right: 8%; width: 84%;"><?=$sign?> <?php echo number_format($cur_price * $cur_val,2,'.',',');?></div>
@@ -270,7 +270,7 @@ function delete_wishlist(id)
                     <?php if($multiple_stock['13us']>0){?><option <?php if($var['Size'] == '13us') print ' selected="selected"';?> value="13us">13 US</option><?php }?>
                 </select>
                 	<?php } ?>
-		    		<div onclick="addtocart(<?=$prod['id']?>,<?=$ls['id']?>)" class="hidden-tablet wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-top: 7%; color: #fff; background: #000; height: 33px; line-height: 33px; cursor: pointer">
+		    		<div onclick="addtocart(<?=$prod['id']?>,<?=$ls['id']?>)" class="hidden-xs wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-top: 7%; color: #fff; background: #000; height: 33px; line-height: 33px; cursor: pointer">
 		    			Add to Shopping Bag
 		    		</div>
 		    		
@@ -319,7 +319,7 @@ function delete_wishlist(id)
 						<? }?>
 		    		</div>
 		    		
-		    		<div class="hidden-tablet" style="margin-left: 8%; margin-right: 8%; width: 84%; margin-top: 5%">
+		    		<div class="hidden-xs" style="margin-left: 8%; margin-right: 8%; width: 84%; margin-top: 5%">
 		    			<a href="<?=base_url()?>store/detail_product/<?=$cat['title']?>/<?=$prod['id_title']?>">
 			    			<span class="wishlist-title-Font" style="font-size: 16px;"><?=$prod['title']?></span> 
 	    					<!-- <span style="font-family: buenard; font-size: 14px; font-weight: 400"><?=$title[1]?></span><br/> -->
@@ -375,9 +375,9 @@ function delete_wishlist(id)
 	    				//echo number_format($cur_price * $cur_val,2,'.',',');
 	    			?>
 		    		
-		    		<div class="hidden-tablet wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-left: 8%; margin-right: 8%; width: 84%;"><?=$prod['short_desc']?></div>
-		    		<div class="hidden-tablet wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-left: 8%; margin-right: 8%; width: 84%;"><?=$sign?> <?php echo number_format($cur_price * $cur_val,2,'.',',');?></div>
-		    		<div onclick="addtocart(<?=$prod['id']?>,<?=$ls['id']?>)" class="hidden-tablet wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-top: 7%; color: #fff; background: #413d3d; height: 33px; line-height: 33px; cursor: pointer">
+		    		<div class="hidden-xs wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-left: 8%; margin-right: 8%; width: 84%;"><?=$prod['short_desc']?></div>
+		    		<div class="hidden-xs wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-left: 8%; margin-right: 8%; width: 84%;"><?=$sign?> <?php echo number_format($cur_price * $cur_val,2,'.',',');?></div>
+		    		<div onclick="addtocart(<?=$prod['id']?>,<?=$ls['id']?>)" class="hidden-xs wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-top: 7%; color: #fff; background: #413d3d; height: 33px; line-height: 33px; cursor: pointer">
 		    			ADD TO SHOPPING BAG
 		    		</div>
 		    		
@@ -426,7 +426,7 @@ function delete_wishlist(id)
 						<? }?>
 		    		</div>
 		    		
-		    		<div class="hidden-tablet" style="margin-left: 8%; margin-right: 8%; width: 84%; margin-top: 5%">
+		    		<div class="hidden-xs" style="margin-left: 8%; margin-right: 8%; width: 84%; margin-top: 5%">
 		    			<a href="<?=base_url()?>store/detail_product/<?=$cat['title']?>/<?=$prod['id_title']?>">
 			    			<span class="wishlist-title-Font" style="font-size: 16px;"><?=$prod['title']?></span> 
 	    					<!-- <span style="font-family: buenard; font-size: 14px; font-weight: 400"><?=$title[1]?></span><br/> -->
@@ -482,9 +482,9 @@ function delete_wishlist(id)
 	    				//echo number_format($cur_price * $cur_val,2,'.',',');
 	    			?>
 		    		
-		    		<div class="hidden-tablet wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-left: 8%; margin-right: 8%; width: 84%;"><?=$prod['short_desc']?></div>
-		    		<div class="hidden-tablet wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-left: 8%; margin-right: 8%; width: 84%;"><?=$sign?> <?php echo number_format($cur_price * $cur_val,2,'.',',');?></div>
-		    		<div onclick="addtocart(<?=$prod['id']?>,<?=$ls['id']?>)" class="hidden-tablet wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-top: 7%; color: #fff; background: #413d3d; height: 33px; line-height: 33px; cursor: pointer">
+		    		<div class="hidden-xs wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-left: 8%; margin-right: 8%; width: 84%;"><?=$prod['short_desc']?></div>
+		    		<div class="hidden-xs wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-left: 8%; margin-right: 8%; width: 84%;"><?=$sign?> <?php echo number_format($cur_price * $cur_val,2,'.',',');?></div>
+		    		<div onclick="addtocart(<?=$prod['id']?>,<?=$ls['id']?>)" class="hidden-xs wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-top: 7%; color: #fff; background: #413d3d; height: 33px; line-height: 33px; cursor: pointer">
 		    			ADD TO SHOPPING BAG
 		    		</div>
 		    		
@@ -533,7 +533,7 @@ function delete_wishlist(id)
 						<? }?>
 		    		</div>
 		    		
-		    		<div class="hidden-tablet" style="margin-left: 8%; margin-right: 8%; width: 84%; margin-top: 5%">
+		    		<div class="hidden-xs" style="margin-left: 8%; margin-right: 8%; width: 84%; margin-top: 5%">
 		    			<a href="<?=base_url()?>store/detail_product/<?=$cat['title']?>/<?=$prod['id_title']?>">
 			    			<span class="wishlist-title-Font" style="font-size: 16px;"><?=$prod['title']?></span>  
 	    					<!-- <span style="font-family: buenard; font-size: 14px; font-weight: 400"><?=$title[1]?></span><br/> -->
@@ -589,9 +589,9 @@ function delete_wishlist(id)
 	    				//echo number_format($cur_price * $cur_val,2,'.',',');
 	    			?>
 		    		
-		    		<div class="hidden-tablet wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-left: 8%; margin-right: 8%; width: 84%;"><?=$prod['short_desc']?></div>
-		    		<div class="hidden-tablet wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-left: 8%; margin-right: 8%; width: 84%;"><?=$sign?> <?php echo number_format($cur_price * $cur_val,2,'.',',');?></div>
-		    		<div onclick="addtocart(<?=$prod['id']?>,<?=$ls['id']?>)" class="hidden-tablet wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-top: 7%; color: #fff; background: #413d3d; height: 33px; line-height: 33px; cursor: pointer">
+		    		<div class="hidden-xs wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-left: 8%; margin-right: 8%; width: 84%;"><?=$prod['short_desc']?></div>
+		    		<div class="hidden-xs wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-left: 8%; margin-right: 8%; width: 84%;"><?=$sign?> <?php echo number_format($cur_price * $cur_val,2,'.',',');?></div>
+		    		<div onclick="addtocart(<?=$prod['id']?>,<?=$ls['id']?>)" class="hidden-xs wishlist-title-Font" style="font-size: 14px; font-weight: 400; margin-top: 7%; color: #fff; background: #413d3d; height: 33px; line-height: 33px; cursor: pointer">
 		    			ADD TO SHOPPING BAG
 		    		</div>
 		    		

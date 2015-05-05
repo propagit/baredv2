@@ -103,10 +103,10 @@ a:hover, a:focus {
 	$scat_name = 'all';
 	
 ?>
-<div class="container">
+<div class="app-container">
 	<div style="height:20px;"></div>         
-     <div class="row hidden-phone"> 
-    	<div class="span5">
+     <div class=" hidden-xs"> 
+    	<div class="col-sm-5">
             <ul class="breadcrumb" style="font-size: 11px; text-transform: uppercase">
 			    <li><a href="<?=base_url()?>">HOME  </a> <span class="divider">></span></li>
 			   <li><a href="<?=base_url()?>store/stories_new/all">The Magazine  </a> </li>
@@ -181,7 +181,7 @@ a:hover, a:focus {
     
     <!-- Menu for phone mode -->
     <div class=" visible-phone navbar" >
-		<div class="container visible-phone" style="background: #fff; border: 1px solid #989898; margin-left: 5%; margin-right: 5%">
+		<div class="app-container visible-phone" style="background: #fff; border: 1px solid #989898; margin-left: 5%; margin-right: 5%">
 			<!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-header"> -->
 			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#list-prod-nav">
 	        	<!-- <span class="icon-bar"></span>
@@ -213,10 +213,10 @@ a:hover, a:focus {
     <!-- Menu Phone End-->
     
     <!-- Menu and Product List for desktop and Ipad version -->
-   	<!--<div class="row-fluid  " >            
-        <div class="span12">
-            <div class="row-fluid">
-                <div class="span3 hidden-phone">
+   	<!--<div class="  " >            
+        <div class="col-sm-12">
+            <div class="">
+                <div class="span3 hidden-xs">
                     <div class="accordion" id="accordion2">
                          <div class="accordion-group"  style="border-top:none!important;">
                             <div class="accordion-heading">
@@ -469,8 +469,8 @@ a:hover, a:focus {
                                     </a>
                                 </div>
                                 <div class="accordion-inner">
-                                	<a href="<?=base_url()?>store/story_product_new/<?=$cat_story_link?>/brown" <? if($curr_opt=='brown'){echo 'class="active_opt"'; }?>>
-                                    Brown
+                                	<a href="<?=base_url()?>store/story_product_new/<?=$cat_story_link?>/bn" <? if($curr_opt=='bn'){echo 'class="active_opt"'; }?>>
+                                    Bn
                                     </a>
                                 </div>
                                 <div class="accordion-inner">
@@ -774,23 +774,23 @@ a:hover, a:focus {
 								if($now == 1)
 								{
 								?>
-									<div class="row-fluid">                        
+									<div class="">                        
 				                        <div class="span4" style="float:left; text-align: center">
 				                        	<?php
 				                        	if($product['sale_price'] < $product['price'])
 											{
 											?>
-											<img class="hidden-phone" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
+											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
 											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
 				                            <a href="<?=base_url()?>store/detail_product/<?=$catprod['title']?>/<?=$product['id_title']?>">
 				                            	<? if($hero){?>
-	                                            <img class="hidden-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
+	                                            <img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
 				                            	<img class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>
 	                                            <? } else { ?>
-												<img class="hidden-phone" src="http://placehold.it/241x262" alt="">
+												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
 	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
 												<? }?>
@@ -810,17 +810,17 @@ a:hover, a:focus {
 				                        	if($product['sale_price'] < $product['price'])
 											{
 											?>
-											<img class="hidden-phone" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
+											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
 											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
 				                            <a href="<?=base_url()?>store/detail_product/<?=$catprod['title']?>/<?=$product['id_title']?>">
 				                            	<? if($hero){?>
-	                                            <img class="hidden-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
+	                                            <img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
 				                            	<img class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>											
 	                                            <? } else { ?>
-												<img class="hidden-phone" src="http://placehold.it/241x262" alt="">
+												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
 	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
 												<? }?>
@@ -840,17 +840,17 @@ a:hover, a:focus {
 				                        	if($product['sale_price'] < $product['price'])
 											{
 											?>
-											<img class="hidden-phone" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
+											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
 											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
 				                            <a href="<?=base_url()?>store/detail_product/<?=$catprod['title']?>/<?=$product['id_title']?>">
 				                            	<? if($hero){?>
-	                                            <img class="hidden-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
+	                                            <img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
 				                            	<img class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/> 
 												<? } else { ?>
-												<img class="hidden-phone" src="http://placehold.it/241x262" alt="">
+												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
 	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
 												<? }?>
@@ -898,7 +898,7 @@ a:hover, a:focus {
                    
                     
                 </div>
-                <div class="span5">
+                <div class="col-sm-5">
             
         		</div>
 		        <div class="span7" style="float: right;  margin-right: 0px;">
@@ -925,10 +925,10 @@ a:hover, a:focus {
          	</div>  -->                      
             
     <? $cat_name = 'Womens'; ?>
-    <div class="row-fluid" >            
-        <div class="span12">
-            <div class="row-fluid">
-                <div class="span3 hidden-phone">
+    <div class="" >            
+        <div class="col-sm-12">
+            <div class="">
+                <div class="span3 hidden-xs">
                     <div class="accordion" id="accordion2">
                          <div class="accordion-group"  style="border-top:none!important;">
                             <div class="accordion-heading">
@@ -1229,8 +1229,8 @@ a:hover, a:focus {
                                     </a>
                                 </div>
                                 <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/colour/tan-brown" <? if($curr_opt=='tan-brown'){echo 'class="active_opt"'; }?>>
-                                    Tan / Brown
+                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/colour/tan-bn" <? if($curr_opt=='tan-bn'){echo 'class="active_opt"'; }?>>
+                                    Tan / Bn
                                     </a>
                                 </div>
                                 <div class="accordion-inner shopby-Font">
@@ -1301,8 +1301,8 @@ a:hover, a:focus {
                                     </a>
                                 </div>
                                 <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/features/narrow_feet" <? if($curr_opt=='narrow_feet'){echo 'class="active_opt"'; }?>>
-                                    Best for Narrow Feet
+                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/features/nar_feet" <? if($curr_opt=='nar_feet'){echo 'class="active_opt"'; }?>>
+                                    Best for Nar Feet
                                     </a>
                                 </div>
                                 
@@ -1482,13 +1482,13 @@ a:hover, a:focus {
 								if($now == 1)
 								{
 								?>
-									<div class="row-fluid prod-list">                        
+									<div class=" prod-list">                        
 				                        <div class="span4" style="float:left; text-align: center">
 				                        	<?php
 				                        	if($product['sale_price'] < $product['price'])
 											{
 											?>
-											<img class="hidden-phone" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
+											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
 											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
@@ -1512,12 +1512,12 @@ a:hover, a:focus {
 													}
 				                            	
 				                            	?>
-	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-phone" src="<?=$hrimg_ltl?>"/>
+	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-xs" src="<?=$hrimg_ltl?>"/>
 				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-phone" src="<?=$hrimg_big?>"/>
-				                            	<!-- <img class="hidden-phone" src="<?=$hrimg_ltl?>"/>
+				                            	<!-- <img class="hidden-xs" src="<?=$hrimg_ltl?>"/>
 				                            	<img class="visible-phone" src="<?=$hrimg_big?>"/> -->
 	                                            <? } else { ?>
-												<img class="hidden-phone" src="http://placehold.it/241x262" alt="">
+												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
 	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
 												<? }?>
@@ -1563,7 +1563,7 @@ a:hover, a:focus {
 				                        	if($product['sale_price'] < $product['price'])
 											{
 											?>
-											<img class="hidden-phone" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
+											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
 											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
@@ -1587,12 +1587,12 @@ a:hover, a:focus {
 													}
 				                            	
 				                            	?>
-	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-phone" src="<?=$hrimg_ltl?>"/>
+	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-xs" src="<?=$hrimg_ltl?>"/>
 				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-phone" src="<?=$hrimg_big?>"/>
-				                            	<!-- <img class="hidden-phone" src="<?=$hrimg_ltl?>"/>
+				                            	<!-- <img class="hidden-xs" src="<?=$hrimg_ltl?>"/>
 				                            	<img class="visible-phone" src="<?=$hrimg_big?>"/>		 -->									
 	                                            <? } else { ?>
-												<img class="hidden-phone" src="http://placehold.it/241x262" alt="">
+												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
 	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
 												<? }?>
@@ -1631,7 +1631,7 @@ a:hover, a:focus {
 				                        	if($product['sale_price'] < $product['price'])
 											{
 											?>
-											<img class="hidden-phone" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
+											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
 											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
@@ -1655,12 +1655,12 @@ a:hover, a:focus {
 													}
 				                            	
 				                            	?>
-	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-phone" src="<?=$hrimg_ltl?>"/>
+	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-xs" src="<?=$hrimg_ltl?>"/>
 				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-phone" src="<?=$hrimg_big?>"/>
-				                            	<!-- <img class="hidden-phone" src="<?=$hrimg_ltl?>"/>
+				                            	<!-- <img class="hidden-xs" src="<?=$hrimg_ltl?>"/>
 				                            	<img class="visible-phone" src="<?=$hrimg_big?>"/>  -->
 												<? } else { ?>
-												<img class="hidden-phone" src="http://placehold.it/241x262" alt="">
+												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
 	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
 												<? }?>
@@ -1723,7 +1723,7 @@ a:hover, a:focus {
 						}
                 	?>
                 	           
-                    <!-- <div class="row-fluid">                        
+                    <!-- <div class="">                        
                         <div class="span4" style="float:left;">
                             <img src="<?=base_url()?>img/product1_large.jpg" alt="">
                             <div style="height:10px;"></div>
@@ -1744,7 +1744,7 @@ a:hover, a:focus {
                         </div>      
                     </div>   --> 
                      
-                    <!-- <div class="row-fluid">                        
+                    <!-- <div class="">                        
                         <div class="span4" style="float:left;">
                             <img src="<?=base_url()?>img/product4_large.jpg" alt="">
                             <div style="height:10px;"></div>
@@ -1765,7 +1765,7 @@ a:hover, a:focus {
                         </div> 
                     </div> -->
                     <!-- <div style="height:20px;"></div>
-                    <div class="row-fluid">    
+                    <div class="">    
                         <div class="span4" style="float:left;">
                             <img src="http://placehold.it/240x283" alt="">
                             <div style="height:10px;"></div>
@@ -1779,7 +1779,7 @@ a:hover, a:focus {
                     <div style="height:20px;"></div> -->
                     
                 </div>
-                <div class="span5">
+                <div class="col-sm-5">
             
         		</div>
 		        <div class="span7" style="float: right;  margin-right: 0px;">

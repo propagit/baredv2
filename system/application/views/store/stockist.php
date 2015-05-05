@@ -273,14 +273,14 @@ function suburb_change()
 }
 </script>
 
-<div class="container">
+<div class="app-container">
 	
 	<div style="height: 30px;"></div>
     <?=$pages['content']?>
     <!-- <div>SPENCER &amp; RUTHERFORD STORES</div>
 	<div style="height: 20px;"></div>
 	
-	<div class="row-fluid">
+	<div class="">
 		<div class="span3">
 			<div style="margin-left: 5%">
 				<div>
@@ -362,14 +362,14 @@ function suburb_change()
 	
 	<div style="height: 30px;"></div>
     
-    <div class="row-fluid" style="background: #f6f5f5; ">
-    	<div class="span12" style="padding-top: 10px; padding-bottom: 10px">
+    <div class="" style="background: #f6f5f5; ">
+    	<div class="col-sm-12" style="padding-top: 10px; padding-bottom: 10px">
     		<div style="margin-left: 1.3%">
     			Find a Spencer &amp; Rutherford Stockist
     		</div>
     	</div>
     </div>
-    <div class="row-fluid" style="background: #f6f5f5; padding-bottom: 20px">
+    <div class="" style="background: #f6f5f5; padding-bottom: 20px">
     	<div class="span3" style="padding-top: 20px">
     		<div style="margin-left: 5%">
 	    		<div>
@@ -393,7 +393,7 @@ function suburb_change()
     		</div>
     	</div>
     	<div class="span9" id="result_stockist">
-    		<!-- <div class="row-fluid" style="border-bottom: 1px solid #000; padding-bottom: 10px; margin-bottom: 10px">
+    		<!-- <div class="" style="border-bottom: 1px solid #000; padding-bottom: 10px; margin-bottom: 10px">
 	    		<div class="span4" style="border-left: 1px solid #696969">
 		    		<div style="margin-left: 5%; padding-top: 20px">
 		    			<div>
@@ -441,7 +441,7 @@ function suburb_change()
 		    	</div>
 	    	</div> -->
 	    	
-	    	<!-- <div class="row-fluid" style="padding-bottom: 10px; margin-bottom: 10px">
+	    	<!-- <div class="" style="padding-bottom: 10px; margin-bottom: 10px">
 	    		<div class="span4" style="border-left: 1px solid #696969">
 		    		<div style="margin-left: 5%; padding-top: 20px">
 		    			<div>

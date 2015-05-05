@@ -284,7 +284,7 @@ a.text-register:hover{
 
 /*@media screen and (-webkit-min-device-pixel-ratio:0)
 {
-	.container {margin-top: 30px;}	
+	.app-container {margin-top: 30px;}	
 	body{margin-top:-65px;}
 	html{padding-top: 0px ! important;}
 }*/
@@ -320,7 +320,7 @@ a.text-register:hover{
   	width:108.1px;
   }
   
-  /*.row [class*="span"]:first-child {
+  /*. [class*="span"]:first-child {
     margin-left: 30px;*/
 }
 
@@ -350,7 +350,7 @@ a.text-register:hover{
   {
   	margin-top:32px !important;
   }
-  /*.row [class*="span"]:first-child {
+  /*. [class*="span"]:first-child {
     	margin-left: 20px;
 	}*/
 }
@@ -376,7 +376,7 @@ a.text-register:hover{
   {
   	height: 84px; margin-left: 210px; position: absolute; width: 305px; cursor:pointer;
   }
-	/*.row [class*="span"]:first-child {
+	/*. [class*="span"]:first-child {
     	margin-left: 20px;
 	}*/
 	
@@ -427,7 +427,7 @@ a.text-register:hover{
 <script>
 //alert(navigator.userAgent + "<br>");
 
-//Detect browser and write the corresponding name
+//Detect bser and write the corresponding name
 
 var new_style = '';
 if (navigator.userAgent.search("MSIE") >= 0){
@@ -441,10 +441,10 @@ if (navigator.userAgent.search("MSIE") >= 0){
     }
 }
 else if (navigator.userAgent.search("Chrome") >= 0){
-	//alert('"Google Chrome ');// For some reason in the browser identification Chrome contains the word "Safari" so when detecting for Safari you need to include Not Chrome
+	//alert('"Google Chrome ');// For some reason in the bser identification Chrome contains the word "Safari" so when detecting for Safari you need to include Not Chrome
 	
 	// new_style += '<style> ';
-	// new_style += '.container {margin-top: 30px;} ';
+	// new_style += '.app-container {margin-top: 30px;} ';
 	// new_style += 'body{margin-top:-65px;} ';
 	// new_style += 'html{padding-top: 0px ! important;} ';
 	// new_style += '</style>';
@@ -496,7 +496,7 @@ else{
 	
 	
 
-<!-- <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button> -->
+<!-- <fb:login-button show-faces="true" width="200" max-s="1"></fb:login-button> -->
 
 	
 	
@@ -615,7 +615,7 @@ else{
     // Invoke the plugin
     $('.inputp').placeholder();
     // That’s it, really.
-    // Now display a message if the browser supports placeholder natively
+    // Now display a message if the bser supports placeholder natively
     
    });
 	</script>

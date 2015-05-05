@@ -1313,7 +1313,7 @@ class Product_model extends Model {
 				{
 					$prod[]['id']=$ps['id'];
 					$prod_all[]=$ps['id'];
-					$j++;
+					#$j++;
 				}			
 			}
 			//print_r(count($prod));

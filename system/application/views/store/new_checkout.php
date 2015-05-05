@@ -34,8 +34,8 @@ function updatediscountcost()
 		 else
 		 {
 		 	jQuery('#discount-cost').html(html);
-			jQuery('#discount-tr').css('display','table-row');
-			jQuery('#price-gap').css('display','table-row');
+			jQuery('#discount-tr').css('display','table-');
+			jQuery('#price-gap').css('display','table-');
 		 }
 	  }
 	})
@@ -144,14 +144,14 @@ function checkcoupon() {
 				jQuery('#discount-tr').html(html);	
 				//addcoupon(code); 
 				gettotalprice(code);
-				jQuery('#discount-tr').css('display','table-row');
+				jQuery('#discount-tr').css('display','table-');
 			}
 			else if(html=="CODEOK")
 			{
 				//jQuery('#discount-area').html(html);
 				addcoupon(code); 
 				gettotalprice(code);
-				jQuery('#discount-tr').css('display','table-row');
+				jQuery('#discount-tr').css('display','table-');
 			}
 			
 		  }
@@ -211,10 +211,10 @@ function checkout()
 
 </script>
 
-<div class="container">	    
+<div class="app-container">	    
     <div style="height: 20px;"></div>
     <div style="width: 100%">
-	<div style="margin: 0 auto" class="hidden-phone linkbreadcrumb">
+	<div style="margin: 0 auto" class="hidden-xs linkbreadcrumb">
 		<table align="center" cellpadding="0" cellspacing="0" class="body-copy-Font">
 			<tr style="text-align: center">
 				<td style="padding-bottom: 5px">Shopping Bag</td>
@@ -243,7 +243,7 @@ function checkout()
     
     <div style="margin: 0 auto" class="visible-phone">
 		
-       <div class="span12 " style="text-align: center">
+       <div class="col-sm-12 " style="text-align: center">
             <ul class="breadcrumb linkbreadcrumb breadcrum-Font">
                 <li class="active2">Shopping Bag <span class="divider">></span></li>
                 <li class="active2">Account Details <span class="divider">></span></li>
@@ -259,7 +259,7 @@ function checkout()
 	<h4>Order Summary </h4>
 	<form name="orderForm" method="post" <? if($this->session->userdata('userloggedin')==1){?> action="<?=base_url()?>store_admin/checkout_order" <? }else{ ?> action="<?=base_url()?>cart/checkout_order"<? }?> > 
 	<div style="clear: both;"></div>
-	<div class="hidden-phone">
+	<div class="hidden-xs">
     <table class="table" cellpadding="0" cellspacing="0">		
 		<tbody class="header-cart">
 
@@ -467,8 +467,8 @@ function checkout()
     
     
     
-    <div style="height: 20px;" class="hidden-phone"></div>
-    <div class="row-fluid ">
+    <div style="height: 20px;" class="hidden-xs"></div>
+    <div class=" ">
     	<div class="span7">
     		<div style="height: 90px; padding-top: 40px; ">
 		    	<table>
@@ -485,7 +485,7 @@ function checkout()
                     </tr>
                     <tr>
                     	<td>
-                        	<input type="text" id="coupon-code" name="coupon-code" placeholder="Promo Code " class="span2 iipad inputp input-form-Font" style="height:33px;margin-bottom:0px!important; width:100%;">	
+                        	<input type="text" id="coupon-code" name="coupon-code" placeholder="Promo Code " class="col-sm-2 iipad inputp input-form-Font" style="height:33px;margin-bottom:0px!important; width:100%;">	
                         </td>
                         <td width="20"></td>
                         <td>
@@ -510,7 +510,7 @@ function checkout()
 						width:100%!important;
 					}
 				</style>
-                <input type="text" id="coupon-code-phone" name="coupon-code-phone" placeholder="Promo Code " class="span2 inputp input-form-Font" style="width:100%;height:33px;">	
+                <input type="text" id="coupon-code-phone" name="coupon-code-phone" placeholder="Promo Code " class="col-sm-2 inputp input-form-Font" style="width:100%;height:33px;">	
                 <button onclick="checkcoupon();" class="button_primary button-Font button_size_full" >
 					Update
 				</button>
@@ -519,7 +519,7 @@ function checkout()
     	</div>
         -->
         
-    	<div class="span2">
+    	<div class="col-sm-2">
         	&nbsp;
     	</div>
     	<div class="span3 ">
@@ -612,12 +612,12 @@ function checkout()
     </form>
     <div style="clear: both">
     </div>
-    <div style="height: 30px" class="hidden-phone"></div>
-    <div class="row-fluid">
-    	<div class="span8 hidden-phone">
+    <div style="height: 30px" class="hidden-xs"></div>
+    <div class="">
+    	<div class="span8 hidden-xs">
     		&nbsp;
     	</div>
-    	<div class="span4 hidden-phone">
+    	<div class="span4 hidden-xs">
     		<div class="payment_shopping" style="width:100%;">
 	    		<button onclick="checkout();" class="cnt_btt button_primary button-Font" style="width:235px;float:right;">
 					Continue

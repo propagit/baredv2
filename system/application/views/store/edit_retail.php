@@ -51,7 +51,7 @@ function register()
 
 
 
-<div class="container">
+<div class="app-container">
 <script>
 function check_form()
 {

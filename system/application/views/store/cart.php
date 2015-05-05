@@ -112,7 +112,7 @@ function checkout()
 }
 </script>
 
-<div class="container">
+<div class="app-container">
 	<?php if($this->session->flashdata('error_product_quantity')) { ?>
 	    <div style="margin-top: 20px" class="alert alert-error">
 	    	<button type="button" class="close" onclick="$('.alert-error').fadeOut('slow');">&times;</button>
@@ -129,7 +129,7 @@ function checkout()
     
     <h4>Welcome To Your Shopping Bag</h4>
 	
-	<div style="float:right;" class="hidden-phone" >		
+	<div style="float:right;" class="hidden-xs" >		
 		<button onclick="window.location='<?=base_url()?>'" 
         	class="button_primary button-Font" style="width: 235px;">
 			Continue Shopping
@@ -143,7 +143,7 @@ function checkout()
 	</div>
     
 	<div style="clear: both; height: 20px;"></div>
-	<table class="table hidden-phone">
+	<table class="table hidden-xs">
 		<thead class="header-cart-Font">
 			<tr>
 				<th style="width: 8.33%">
@@ -171,10 +171,10 @@ function checkout()
 			<?php
 		    	$ttl = 0;
 				$total_items = count($cart);
-				$cart_row_counter = 0;
+				$cart__counter = 0;
 		    	foreach($cart as $c)
 				{
-					$cart_row_counter++;
+					$cart__counter++;
 					$itemprice = $c['price'] * $c['quantity'];
 					$ttl += $itemprice;
 					$pro = $this->Product_model->identify($c['product_id']);
@@ -183,7 +183,7 @@ function checkout()
 					if($pro['deleted'] == 0)
 					{
 				?>
-				<tr class="cart-<?=$c['id']?> <?=$cart_row_counter < $total_items ? 'cart_item_divider' : '';?>">
+				<tr class="cart-<?=$c['id']?> <?=$cart__counter < $total_items ? 'cart_item_divider' : '';?>">
 					<td>
 						
 						<?  $categories = $this->Product_model->get_categories_single($c['product_id']);
@@ -276,7 +276,7 @@ function checkout()
 			</form>
 		</tbody>
 	</table>
-    <div class="row-fluid visible-phone">
+    <div class=" visible-phone">
     	<form name="updateCart2" method="post" action="<?=base_url()?>cart/updateitems"> 
         
 			
@@ -293,7 +293,7 @@ function checkout()
 					{
 				?>
 				
-						<div class="span12 cart-<?=$c['id']?>" style="float:left; text-align: center" >
+						<div class="col-sm-12 cart-<?=$c['id']?>" style="float:left; text-align: center" >
 						<?  $categories = $this->Product_model->get_categories_single($c['product_id']);
 							$category = $this->Category_model->identify($categories['category_id']);
 						?>
@@ -384,8 +384,8 @@ function checkout()
     </div>
     
     <div style="height: 20px;"></div>
-    <div class="container">
-    <div class="row-fluid">
+    <div class="app-container">
+    <div class="">
     	<div class="span8">
     		<div id="cart-note-shopping" class="note-Font note">
 		    	
@@ -406,7 +406,7 @@ function checkout()
     	</div>
     	<div class="span1">
     	</div>
-    	<div class="span3 hidden-phone">
+    	<div class="span3 hidden-xs">
     		<div style="text-align:left; float: right;font-size: 16px; padding-bottom: 10px;  margin-top: 10px; width: 238px;" id="cart-puchase-shopping" class="info-cart-Font">
 		    	<?php
 					$ttl1 = 0;
@@ -438,7 +438,7 @@ function checkout()
 					Proceed to Purchase
 				</button>
 				<div style="height: 10px;"></div>
-				<button onclick="document.updateCart.submit();"style="width: 235px;" class="button-Font hidden-phone button_secondary">
+				<button onclick="document.updateCart.submit();"style="width: 235px;" class="button-Font hidden-xs button_secondary">
 					Update Cart
 				</button>                   
                                 

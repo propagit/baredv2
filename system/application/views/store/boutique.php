@@ -161,12 +161,12 @@ a:hover, a:focus {
 
 </script>
 
-<div style="font-family: 'open sans'" class="container">
+<div style="font-family: 'open sans'" class="app-container">
 	
 	
     <h4>SPENCER &amp; RUTHERFORD MELBOURNE CITY</h4>
     
-   	<div class="row-fluid">
+   	<div class="">
    		<div class="span6">
    			<h4>INFORMATION</h4>
    			<div style="height: 15px"></div>

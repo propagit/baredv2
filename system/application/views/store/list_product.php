@@ -291,11 +291,11 @@ function sort_by_name()
 }
 </script>
 
-<div class="container">
+<div class="app-container">
 	<div style="height:10px;"></div>     
     
-    <div class="row hidden-phone"> 
-    	<div class="span5">
+    <div class=" hidden-xs"> 
+    	<div class="col-sm-5">
             <ul class="breadcrumb" style="font-size: 11px; text-transform: uppercase">
 			    <li><a href="<?=base_url()?>">HOME</a> <span class="divider">></span></li>
 			    <? if( !isset($sub_category)){ ?>
@@ -369,7 +369,7 @@ function sort_by_name()
     
     <!-- Menu for phone mode -->
     <div class=" visible-phone navbar" >
-		<div class="container visible-phone" style="background: #fff; border: 1px solid #989898; margin-left: 5%; margin-right: 5%">
+		<div class="app-container visible-phone" style="background: #fff; border: 1px solid #989898; margin-left: 5%; margin-right: 5%">
 			<!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-header"> -->
 			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#list-prod-nav">
 	        	<!-- <span class="icon-bar"></span>
@@ -401,8 +401,8 @@ function sort_by_name()
 	<?php
 	$url_pages=$_SERVER['REQUEST_URI'];
 	?>
-	<div class="row visible-phone"> 
-    	<div class="span5" style="text-align: center">
+	<div class=" visible-phone"> 
+    	<div class="col-sm-5" style="text-align: center">
             <ul class="breadcrumb">
                 <li class="active"><a href="javascript:sort_by_latest();">SORT BY LATEST</a> <span class="divider">|</span></li>
                 <li class="active"><a href="javascript:sort_by_price();">PRICE</a> <span class="divider">|</span></li>
@@ -414,7 +414,7 @@ function sort_by_name()
     
     <!-- <div style="height:10px;"></div>
     <div class=" visible-phone" style="background: #000;">
-		<div class="container visible-phone" style="background: #000;padding-left:15px;">
+		<div class="app-container visible-phone" style="background: #000;padding-left:15px;">
 			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse3" style="float:right;">
 	        	<span class="icon-bar"></span>
 	        	<span class="icon-bar"></span>
@@ -431,7 +431,7 @@ function sort_by_name()
     
     <div style="height:10px;"></div>
     <div class=" visible-phone" style="background: #000;">
-		<div class="container visible-phone" style="background: #000;padding-left:15px;">
+		<div class="app-container visible-phone" style="background: #000;padding-left:15px;">
 			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse4" style="float:right;">
 	        	<span class="icon-bar"></span>
 	        	<span class="icon-bar"></span>
@@ -448,7 +448,7 @@ function sort_by_name()
     
     <div style="height:10px;"></div>
     <div class=" visible-phone" style="background: #000; margin-bottom: 20px">
-		<div class="container visible-phone" style="background: #000;padding-left:15px;">
+		<div class="app-container visible-phone" style="background: #000;padding-left:15px;">
 			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse5" style="float:right;">
 	        	<span class="icon-bar"></span>
 	        	<span class="icon-bar"></span>
@@ -466,10 +466,10 @@ function sort_by_name()
     <!-- Menu Phone End-->
     
     <!-- Menu and Product List for desktop and Ipad version -->
-   	<div class="row-fluid" >            
-        <div class="span12">
-            <div class="row-fluid">
-                <div class="span3 hidden-phone">
+   	<div class="" >            
+        <div class="col-sm-12">
+            <div class="">
+                <div class="span3 hidden-xs">
                     <div class="accordion" id="accordion2">
                          <div class="accordion-group"  style="border-top:none!important;">
                             <div class="accordion-heading">
@@ -734,8 +734,8 @@ function sort_by_name()
                                     </a>
                                 </div>
                                 <div class="accordion-inner">
-                                	<a href="<?=base_url()?>store/products/<?=$cat_name?>/colour/brown" <? if($curr_opt=='brown'){echo 'class="active_opt"'; }?>>
-                                    Brown
+                                	<a href="<?=base_url()?>store/products/<?=$cat_name?>/colour/bn" <? if($curr_opt=='bn'){echo 'class="active_opt"'; }?>>
+                                    Bn
                                     </a>
                                 </div>
                                 <div class="accordion-inner">
@@ -1038,23 +1038,23 @@ function sort_by_name()
 								if($now == 1)
 								{
 								?>
-									<div class="row-fluid">                        
+									<div class="">                        
 				                        <div class="span4" style="float:left; text-align: center">
 				                        	<?php
 				                        	if($product['sale_price'] < $product['price'])
 											{
 											?>
-											<img class="hidden-phone" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
+											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
 											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
 				                            <a href="<?=base_url()?>store/detail_product/<?=$category['name']?>/<?=$product['id_title']?>">
 				                            	<? if($hero){?>
-	                                            <img class="hidden-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
+	                                            <img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
 				                            	<img class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>
 	                                            <? } else { ?>
-												<img class="hidden-phone" src="http://placehold.it/241x262" alt="">
+												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
 	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
 												<? }?>
@@ -1074,17 +1074,17 @@ function sort_by_name()
 				                        	if($product['sale_price'] < $product['price'])
 											{
 											?>
-											<img class="hidden-phone" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
+											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
 											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
 				                            <a href="<?=base_url()?>store/detail_product/<?=$category['name']?>/<?=$product['id_title']?>">
 				                            	<? if($hero){?>
-	                                            <img class="hidden-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
+	                                            <img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
 				                            	<img class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>											
 	                                            <? } else { ?>
-												<img class="hidden-phone" src="http://placehold.it/241x262" alt="">
+												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
 	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
 												<? }?>
@@ -1104,17 +1104,17 @@ function sort_by_name()
 				                        	if($product['sale_price'] < $product['price'])
 											{
 											?>
-											<img class="hidden-phone" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
+											<img class="hidden-xs" style="position: absolute" src="<?=base_url()?>img/ssale-sign.png" />
 											<img class="visible-phone" style="position: absolute" src="<?=base_url()?>img/sale-sign.png" />
 											<?php
 											}
 				                        	?>
 				                            <a href="<?=base_url()?>store/detail_product/<?=$category['name']?>/<?=$product['id_title']?>">
 				                            	<? if($hero){?>
-	                                            <img class="hidden-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
+	                                            <img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>"/>
 				                            	<img class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/> 
 												<? } else { ?>
-												<img class="hidden-phone" src="http://placehold.it/241x262" alt="">
+												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
 	                                            <img class="visible-phone" src="http://placehold.it/710x775" alt="">
 												<? }?>
@@ -1157,7 +1157,7 @@ function sort_by_name()
 						}
                 	?>
                 	           
-                    <!-- <div class="row-fluid">                        
+                    <!-- <div class="">                        
                         <div class="span4" style="float:left;">
                             <img src="<?=base_url()?>img/product1_large.jpg" alt="">
                             <div style="height:10px;"></div>
@@ -1178,7 +1178,7 @@ function sort_by_name()
                         </div>      
                     </div>   --> 
                      
-                    <!-- <div class="row-fluid">                        
+                    <!-- <div class="">                        
                         <div class="span4" style="float:left;">
                             <img src="<?=base_url()?>img/product4_large.jpg" alt="">
                             <div style="height:10px;"></div>
@@ -1199,7 +1199,7 @@ function sort_by_name()
                         </div> 
                     </div> -->
                     <!-- <div style="height:20px;"></div>
-                    <div class="row-fluid">    
+                    <div class="">    
                         <div class="span4" style="float:left;">
                             <img src="http://placehold.it/240x283" alt="">
                             <div style="height:10px;"></div>
@@ -1266,9 +1266,9 @@ function sort_by_name()
     <!-- Menu for desktop and Ipad end -->
     
     <!-- Product for IPhone -->   
-    <!-- <div class="row visible-phone">
+    <!-- <div class=" visible-phone">
     	<div style="height:10px;"></div>
-        <div class="row-fluid">
+        <div class="">
             <div class="span3">
                 <img src="<?=base_url()?>img/product1_large.jpg" alt="">
                 <div class="prod_title">Name - Colour</div>

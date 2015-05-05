@@ -116,7 +116,7 @@ right:590px; top: 375px;
 
     margin-left: 10px;
 }
-.row [class*="span"]:first-child {
+. [class*="span"]:first-child {
     margin-left: 30px;
 }
 .nav1{
@@ -140,7 +140,7 @@ right:444px; top: 360px;
 
     margin-left: 10px;
 }
-.row [class*="span"]:first-child {
+. [class*="span"]:first-child {
     margin-left: 20px;
 }
 .big-font{
@@ -247,7 +247,7 @@ right:63%; top: 42%;
 
 </style>
 
-	<div class="container">
+	<div class="app-container">
 		<div style="height: 10px;"></div>
         <ul class="breadcrumb" style="font-size: 11px; text-transform: uppercase">
 			    <li><a href="<?=base_url()?>">HOME</a> <span class="divider">></span></li>
@@ -257,8 +257,8 @@ right:63%; top: 42%;
         <div style="height: 10px;"></div>
         <div class="text-bagazine">The Bagazine</div>			
         <div style="height: 50px;"></div>
-		<div class="row">
-			<div class="span12" style="background:#fafafa;">
+		<div class="">
+			<div class="col-sm-12" style="background:#fafafa;">
 				<div id="myCarousel2" class="carousel slide" style="padding:10px;">
                                         
                     <div class="carousel-inner">
@@ -277,10 +277,10 @@ right:63%; top: 42%;
 						?>						
                         
 						<div class="item active" id="id<?=$i?>">
-						<div class="row">
-                            <div class="span12" style="background:#fafafa;">
-                               <div class="row-fluid">
-                               <div class="span12">
+						<div class="">
+                            <div class="col-sm-12" style="background:#fafafa;">
+                               <div class="">
+                               <div class="col-sm-12">
 								<div style="height:8px; clear:both"></div>
 							   <? 
 							   $now=1;
@@ -291,7 +291,7 @@ right:63%; top: 42%;
 								$pr_image=$str['image'];
 							   	if($now == 1){   ?> 
                                 		<div style="height:20px; clear:both"></div>
-                                        <div class="row-fluid" >                                                                                                         
+                                        <div class="" >                                                                                                         
                                         
                                         <div class="span4" style="margin-left:0px!important;">
                                             <div style="text-align: center;">                                            	
@@ -360,10 +360,10 @@ right:63%; top: 42%;
                     <div style="clear:both"></div>
                     
                     <a class="left carousel-control" data-slide="prev" href="#myCarousel2" style="background: none; border: none; opacity: 1" onclick="check_html()">
-						<img src="<?=base_url()?>img/white-left-arrow.png"/>
+						<img src="<?=base_url()?>img/white-left-ar.png"/>
 					</a>
 					<a class="right carousel-control" data-slide="next" href="#myCarousel2" style="background: none; border: none; opacity: 1" onclick="check_html_right()">
-						<img src="<?=base_url()?>img/white-right-arrow.png"/>
+						<img src="<?=base_url()?>img/white-right-ar.png"/>
 					</a>
 				</div>
                 <div style="height: 20px;"></div>

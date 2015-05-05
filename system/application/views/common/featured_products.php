@@ -1,4 +1,3 @@
-<div class="app-container relative bar bg-black text-white"><h3>our latest range</h3></div>
 <div id="featured" class="app-container br-top carousel slide multi-carousel featured" data-ride="carousel" data-type="multi" data-interval="false">
       <!-- Wrapper for slides -->
       <div class="carousel-inner">

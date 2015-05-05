@@ -107,10 +107,10 @@ function forgot()
 	});
 }
 </script>
-<div class="container">
+<div class="app-container">
 	<div style="height:10px;"></div>     
-		<div class="row-fluid">        	
-            <div class="span12">
+		<div class="">        	
+            <div class="col-sm-12">
             <h1> Sign In </h1>
             <p>Existing members login to your account by entering your username and password. <br>If you have forgotten your password click the link below and a password will be sent to your email account.</p>
                 <div style="height:10px;"></div> 
@@ -152,8 +152,8 @@ function forgot()
         </div>
         <div style="height: 0px; clear: both; border-top:1px solid #ccc">&nbsp;</div>
         <div style="height:10px;"></div>     
-        <div class="row-fluid">        	
-            <div class="span12">
+        <div class="">        	
+            <div class="col-sm-12">
             	<h1>Sign Up</h1>
                 <p >If you don't have a member account simply fill in the below form and click sign up. <br>
                 After signing up you will be directed through to checkout so you can purchase your goods.</p>
@@ -162,7 +162,7 @@ function forgot()
   					<button type="button" class="close" data-dismiss="alert">&times;</button>
   					<strong>Warning!</strong> You've already sign up. 
 				</div>
-                <div class="row-fluid">        	
+                <div class="">        	
             	<div class="span6">
                 <form class="form-horizontal" id="registerForm" name="registerForm" method="post" action="javascript:register();" autocomplete="off">
                     <div class="control-group">

@@ -8,6 +8,29 @@
 <link rel="stylesheet" href="<?=base_url() . ASSETS;?>bootstrap-3.2.2/css/bootstrap.min.css">
 <!-- FA -->
 <link rel="stylesheet" href="<?=base_url() . ASSETS;?>font-awesome-4.3.0/css/font-awesome.min.css">
+
+
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<link href="<?=base_url()?>css/select2.css" rel="stylesheet" media="screen">
+<link href="<?=base_url()?>css/zoome-min.css" rel="stylesheet" media="screen">
+<link href="<?=base_url()?>css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="<?=base_url()?>css/font-awesome.css">
+<link rel="stylesheet" href="<?=base_url()?>css/magiczoom.css">
+<link href="<?=base_url()?>css/font-style.css" rel="stylesheet" media="screen">
+<link href="<?=base_url()?>css/bared.css" rel="stylesheet" media="screen">
+<link href="<?=base_url()?>css/bared-product.css" rel="stylesheet" media="screen">
+<link href="<?=base_url()?>css/bared-page.css" rel="stylesheet" media="screen">
+<link href="<?=base_url()?>css/bared-footer.css" rel="stylesheet" media="screen">
+<link href="<?=base_url()?>css/competition.css" rel="stylesheet" media="screen">
+
+
+
+
 <!-- app css -->
 <link rel="stylesheet" href="<?=base_url() . ASSETS;?>css/app.css">
 
@@ -21,6 +44,127 @@
 <!--app js-->
 <script type="text/javascript" src="<?=base_url() . ASSETS;?>js/app/app.js"></script>
 
+
+
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37760446-1']);
+  _gaq.push(['_setDomainName', 'bared.com.au']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+var yotpo_app_key = "87cmugsJWWCvn4YdAy3U9AcGnlYiUwvpv1TKwE5Z";
+(function(){function e(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//staticwww.yotpo.com/js/yQuery.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}window.attachEvent?window.attachEvent("onload",e):window.addEventListener("load",e,!1)})();
+</script>
+<script>
+function open_window(url) {
+	day = new Date();
+	id = day.getTime();	
+	URL = url;
+	eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=825,height=600,left = 240,top = 125');");
+}
+
+</script>
+
+<script src="<?=base_url()?>js/select2/select2.js"></script>
+<script src="<?=base_url()?>js/zoome.js"></script>
+<script src="<?=base_url()?>js/bootstrap-datetimepicker.min.js"></script>
+<script src="<?=base_url()?>js/jquery.placeholder.js"></script>
+<script src="<?=base_url()?>js/magiczoom.js"></script>
+<!-- <fb:login-button show-faces="true" width="200" max-s="1"></fb:login-button> -->
+<script>
+function change_currency()
+{
+	var cur = $('#currency_select').val();
+			
+	jQuery.ajax({
+		url: '<?=base_url()?>store/change_currency/'+cur,
+		type: 'POST',
+		dataType: "html",
+		success: function(html) {
+			location.reload(); 
+		}
+	})	
+}
+
+function change_currency1()
+{
+	var cur = $('#currency_select1').val();
+	
+	jQuery.ajax({
+		url: '<?=base_url()?>store/change_currency/'+cur,
+		type: 'POST',
+		// data: ({id:id}),
+		dataType: "html",
+		success: function(html) {
+			location.reload(); 
+		}
+	})	
+}
+
+function change_currency2()
+{
+	var cur = $('#currency_select2').val();
+	
+	jQuery.ajax({
+		url: '<?=base_url()?>store/change_currency/'+cur,
+		type: 'POST',
+		// data: ({id:id}),
+		dataType: "html",
+		success: function(html) {
+			location.reload(); 
+		}
+	})	
+}
+
+
+
+jQuery(document).ready(function() {
+function format(state) {
+	if (!state.id) return state.text; // optgroup
+	return "<img class='flag' src='<?=base_url()?>img/flag/" + state.id.toLowerCase() + ".png'/> " + state.text;
+}
+$j('.limit_tt').tooltip({
+		showURL: false
+});
+$j("#currency_select").select2({
+	minimumResultsForSearch: '-2',
+	formatResult: format,
+	formatSelection: format,
+	escapeMarkup: function(m) { return m; }
+});
+
+$j("#currency_select1").select2({
+	minimumResultsForSearch: '-2',
+	formatResult: format,
+	formatSelection: format,
+	escapeMarkup: function(m) { return m; }
+});
+
+$j("#currency_select2").select2({
+	minimumResultsForSearch: '-2',
+	formatResult: format,
+	formatSelection: format,
+	escapeMarkup: function(m) { return m; }
+});
+
+
+
+});
+
+</script>
 
 </head>
 

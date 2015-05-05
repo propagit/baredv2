@@ -28,7 +28,7 @@ jQuery(function() {
 
     margin-left: 10px;
 }
-.row [class*="span"]:first-child {
+. [class*="span"]:first-child {
     margin-left: 30px;
 }
 }
@@ -44,7 +44,7 @@ jQuery(function() {
 
     margin-left: 10px;
 }
-.row [class*="span"]:first-child {
+. [class*="span"]:first-child {
     margin-left: 20px;
 }
 }
@@ -60,11 +60,11 @@ jQuery(function() {
 }	
 
 </style>
-	<div class="container">
+	<div class="app-container">
 		<div style="height: 10px;"></div>
        
-		<div class="row">
-			<div class="span12">
+		<div class="">
+			<div class="col-sm-12">
 				<div id="myCarousel2" class="carousel slide">
                     <ol class="carousel-indicators" style="right:590px; top: 455px">
                         <? 
@@ -113,7 +113,7 @@ jQuery(function() {
                         }?>  
                         
                         <div class="item" id="id10">
-                        	<div class="row" style="height:400px; background-image:url(http://odessa.net.au/cart_v1/uploads/images/honey_im_subtle.png);">
+                        	<div class="" style="height:400px; background-image:url(http://odessa.net.au/cart_v1/uploads/images/honey_im_subtle.png);">
 <div class="span4">
 <div style="text-align: center; margin: 10px 0 10px 0; padding: 10px 0 10px 0;"><img alt="" src="http://odessa.net.au/cart_v1/uploads/images/bag2(1).png" style="height:auto; width:270px" /></div>
 </div>
@@ -130,7 +130,7 @@ jQuery(function() {
 
 <div class="span4">
 <div style="text-align: left; font-family: buenard; font-size:16px; margin:5%x; padding:5%;">
-<p><a href="#" style="line-height: 1.6em; color: rgb(236, 0, 140);">Cassidy</a> is a medium size trapeze shaped shopper tote, spacious enough to store magazines, documents and other essentials. This versatile design is made to meet the demands of a busy schedule and is crafted from chevron pattern in chocolate brown and hot pink fabric.</p>
+<p><a href="#" style="line-height: 1.6em; color: rgb(236, 0, 140);">Cassidy</a> is a medium size trapeze shaped shopper tote, spacious enough to store magazines, documents and other essentials. This versatile design is made to meet the demands of a busy schedule and is crafted from chevron pattern in chocolate bn and hot pink fabric.</p>
 
 <p>She featuring faux-leather flap with zigzag trim and an enamel coated button masking a magnetic closure and long shoulder handles for ease of wear. She also features a hidden zipper at the top of the bag to safeguard belongings.<br />
 <a href="#"><img alt="" src="http://odessa.net.au/cart_v1/uploads/images/button.png" style="border-style:solid; border-width:0px; height:33px; padding:15px 5px 0 0; width:130px" /></a></p>
@@ -152,16 +152,16 @@ jQuery(function() {
                     <!-- <a class="left carousel-control" data-slide="prev" href="#myCarousel2">‹</a>
                     <a class="right carousel-control" data-slide="next" href="#myCarousel2">›</a> -->
                     <a class="left carousel-control" data-slide="prev" href="#myCarousel2" style="background: none; border: none; opacity: 1">
-								<img src="<?=base_url()?>img/white-left-arrow.png"/>
+								<img src="<?=base_url()?>img/white-left-ar.png"/>
 							</a>
 							<a class="right carousel-control" data-slide="next" href="#myCarousel2" style="background: none; border: none; opacity: 1">
-								<img src="<?=base_url()?>img/white-right-arrow.png"/>
+								<img src="<?=base_url()?>img/white-right-ar.png"/>
 							</a>
 				</div>
                         
                 
                 
-                <!--<img class="hidden-phone" src="<?=base_url()?>img/big1.jpg" alt="" />-->
+                <!--<img class="hidden-xs" src="<?=base_url()?>img/big1.jpg" alt="" />-->
 				
 				
 				

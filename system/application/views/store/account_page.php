@@ -68,10 +68,10 @@ function use_billing_address()
 }
 </script>
 
-<div class="container">
+<div class="app-container">
 	<div style="height: 20px;"></div>
 	<div style="width: 100%">
-	<div style="margin: 0 auto" class="hidden-phone linkbreadcrumb">
+	<div style="margin: 0 auto" class="hidden-xs linkbreadcrumb">
 		<table align="center" cellpadding="0" cellspacing="0" class="body-copy-Font">
 			<tr style="text-align: center">
 				<td style="padding-bottom: 5px">Shopping Bag</td>
@@ -100,7 +100,7 @@ function use_billing_address()
     
     <div style="margin: 0 auto" class="visible-phone">
 		
-       <div class="span12" style="text-align: center">
+       <div class="col-sm-12" style="text-align: center">
             <ul class="breadcrumb breadcrum-Font linkbreadcrumb">
                 <li class="active2">Shopping Bag <span class="divider">></span></li>
                 <li class="active2">Account Details <span class="divider">></span></li>
@@ -114,7 +114,7 @@ function use_billing_address()
 	</div>
 	
     
-    <div class="row-fluid delivery-details-wrap">
+    <div class=" delivery-details-wrap">
     	 <!-- delivery details -->
         
 		<div class="span7 shipping-tabs">
@@ -137,7 +137,7 @@ function use_billing_address()
                             </label>
                             <div class="controls">
                                 <div id="stitle">
-                                    <input class="input-form-Font span12" type="text" id="input-stitle" name="input-stitle" placeholder="Title">
+                                    <input class="input-form-Font col-sm-12" type="text" id="input-stitle" name="input-stitle" placeholder="Title">
                                 </div>
                             </div>
                         </div>
@@ -149,7 +149,7 @@ function use_billing_address()
                             </label>
                             <div class="controls">
                                 <div id="sfirstname">
-                                    <input class="input-form-Font span12" type="text" id="input-sfirstname" name="input-sfirstname" placeholder="First name" required>
+                                    <input class="input-form-Font col-sm-12" type="text" id="input-sfirstname" name="input-sfirstname" placeholder="First name" required>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +161,7 @@ function use_billing_address()
                             </label>
                             <div class="controls">
                                 <div id="slastname">
-                                    <input class="input-form-Font span12" type="text" id="input-slastname" name="input-slastname" placeholder="Last name" required>
+                                    <input class="input-form-Font col-sm-12" type="text" id="input-slastname" name="input-slastname" placeholder="Last name" required>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +173,7 @@ function use_billing_address()
                             </label>
                             <div class="controls">
                                 <div id="saddress">
-                                    <input class="input-form-Font span12" type="text" id="input-saddress" name="input-saddress" placeholder="Shipping Addres" required>
+                                    <input class="input-form-Font col-sm-12" type="text" id="input-saddress" name="input-saddress" placeholder="Shipping Addres" required>
                                 </div>
                             </div>
                         </div>
@@ -185,7 +185,7 @@ function use_billing_address()
                             </label>
                             <div class="controls">
                                 <div id="saddress2">
-                                    <input class="input-form-Font span12" type="text" id="input-saddress2" name="input-saddress2" placeholder="Shipping Address2">
+                                    <input class="input-form-Font col-sm-12" type="text" id="input-saddress2" name="input-saddress2" placeholder="Shipping Address2">
                                 </div>
                             </div>
                         </div>
@@ -197,7 +197,7 @@ function use_billing_address()
                             </label>
                             <div class="controls">
                                 <div id="ssuburb">
-                                    <input class="input-form-Font span12" type="text" id="input-ssuburb" name="input-ssuburb" placeholder="Suburb" required>
+                                    <input class="input-form-Font col-sm-12" type="text" id="input-ssuburb" name="input-ssuburb" placeholder="Suburb" required>
                                 </div>
                             </div>
                         </div>
@@ -209,7 +209,7 @@ function use_billing_address()
                             </label>
                             <div class="controls">
                                 <div id="scountry">
-                                    <select class="input-form-Font span12" name="input-scountry" id="input-scountry" required onchange="change_country()">
+                                    <select class="input-form-Font col-sm-12" name="input-scountry" id="input-scountry" required onchange="change_country()">
                                         <?php 
         
                                         foreach($countries_all as $ct) {
@@ -230,7 +230,7 @@ function use_billing_address()
                             </label>
                             <div class="controls">
                                 <div id="sstate">
-                                    <select class="input-form-Font span12" name="input-sstate" id="input-sstate" required onchange="check_postcode()">
+                                    <select class="input-form-Font col-sm-12" name="input-sstate" id="input-sstate" required onchange="check_postcode()">
                                         <?php
                                             foreach($states as $state)
                                             {
@@ -251,7 +251,7 @@ function use_billing_address()
                             </label>
                             <div class="controls">
                                 <div id="spostcode">
-                                    <input class="input-form-Font span12" type="text" id="input-spostcode" name="input-spostcode" placeholder="Postcode" required onChange="check_postcode()" >
+                                    <input class="input-form-Font col-sm-12" type="text" id="input-spostcode" name="input-spostcode" placeholder="Postcode" required onChange="check_postcode()" >
                                 </div>
                             </div>
                         </div>
@@ -312,7 +312,7 @@ function use_billing_address()
 				    <div class="controls">
 				    	<div id="title">
 				    		<div class="input-form-Font hide-contact-information"><?=$cust['title']?></div>
-				    		<input class="input-form-Font edit-contact-information span12" style="display: none" type="text" id="input-title" name="input-title" placeholder="title" value="<?=$cust['title']?>">
+				    		<input class="input-form-Font edit-contact-information col-sm-12" style="display: none" type="text" id="input-title" name="input-title" placeholder="title" value="<?=$cust['title']?>">
 				    	</div>
 				    </div>
 			    </div>
@@ -326,7 +326,7 @@ function use_billing_address()
 				    	<div id="dob">
 				    		<div class="input-form-Font hide-contact-information"><?=$cust['date_dob']?> <?=date("F", mktime(0, 0, 0, $cust['month_dob'], 10))?></div>
 				    		<div id="dob1" class="input-append edit-contact-information" style="display: none">
-							<input class="input-form-Font span12" data-format="dd-MM-yyyy" type="text" name="input-dob" id="input-dob" value="<?=date('d-m-Y',strtotime($cust['birthday']))?>"></input>
+							<input class="input-form-Font col-sm-12" data-format="dd-MM-yyyy" type="text" name="input-dob" id="input-dob" value="<?=date('d-m-Y',strtotime($cust['birthday']))?>"></input>
 							<span style="cursor: pointer" class="add-on">
 							  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
 							  </i>
@@ -351,7 +351,7 @@ function use_billing_address()
 				    <div class="controls">
 				    	<div id="firstname">
 				    		<div class="input-form-Font hide-contact-information"><?=$cust['firstname']?></div>
-				    		<input class="input-form-Font edit-contact-information span12" style="display: none" type="text" id="input-firstname" name="input-firstname" placeholder="First name" value="<?=$cust['firstname']?>">
+				    		<input class="input-form-Font edit-contact-information col-sm-12" style="display: none" type="text" id="input-firstname" name="input-firstname" placeholder="First name" value="<?=$cust['firstname']?>">
 				    	</div>
 				    </div>
 			    </div>
@@ -364,7 +364,7 @@ function use_billing_address()
 				    <div class="controls">
 				    	<div id="lastname">
 				    		<div class="input-form-Font hide-contact-information"><?=$cust['lastname']?></div>
-				    		<input class="input-form-Font edit-contact-information span12" style="display: none" type="text" id="input-lastname" name="input-lastname" placeholder="Last name" value="<?=$cust['lastname']?>">
+				    		<input class="input-form-Font edit-contact-information col-sm-12" style="display: none" type="text" id="input-lastname" name="input-lastname" placeholder="Last name" value="<?=$cust['lastname']?>">
 				    	</div>
 				    </div>
 			    </div>
@@ -377,7 +377,7 @@ function use_billing_address()
 				    <div class="controls">
 				    	<div id="email">
 				    		<div class="input-form-Font hide-contact-information"><?=$cust['email']?></div>
-				    		<input class="input-form-Font edit-contact-information span12" style="display: none" type="email" id="input-email" name="input-email" placeholder="Email" value="<?=$cust['email']?>">
+				    		<input class="input-form-Font edit-contact-information col-sm-12" style="display: none" type="email" id="input-email" name="input-email" placeholder="Email" value="<?=$cust['email']?>">
 				    	</div>
 				    </div>
 			    </div>
@@ -390,7 +390,7 @@ function use_billing_address()
 				    <div class="controls">
 				    	<div id="phone">
 				    		<div class="input-form-Font hide-contact-information"><?=$cust['phone']?></div>
-				    		<input class="input-form-Font edit-contact-information span12" style="display: none" type="text" id="input-phone" name="input-phone" placeholder="Phone" value="<?=$cust['phone']?>">
+				    		<input class="input-form-Font edit-contact-information col-sm-12" style="display: none" type="text" id="input-phone" name="input-phone" placeholder="Phone" value="<?=$cust['phone']?>">
 				    	</div>
 				    </div>
 			    </div>
@@ -403,7 +403,7 @@ function use_billing_address()
 				    <div class="controls">
 				    	<div id="mobile">
 				    		<div class="input-form-Font hide-contact-information"><?=$cust['mobile']?></div>
-				    		<input class="input-form-Font edit-contact-information span12" style="display: none" type="text" id="input-mobile" name="input-mobile" placeholder="Mobile" value="<?=$cust['mobile']?>">
+				    		<input class="input-form-Font edit-contact-information col-sm-12" style="display: none" type="text" id="input-mobile" name="input-mobile" placeholder="Mobile" value="<?=$cust['mobile']?>">
 				    	</div>
 				    </div>
 			    </div>
@@ -464,7 +464,7 @@ function use_billing_address()
 				    <div class="controls">
 				    	<div id="baddress">
 				    		<div class="input-form-Font hide-billing-information"><?=$cust['address']?></div>
-				    		<input class="input-form-Font edit-billing-information span12" style="display: none" type="text" id="input-baddress" name="input-baddress" placeholder="Billing Addres" value="<?=$cust['address']?>">
+				    		<input class="input-form-Font edit-billing-information col-sm-12" style="display: none" type="text" id="input-baddress" name="input-baddress" placeholder="Billing Addres" value="<?=$cust['address']?>">
 				    	</div>
 				    </div>
 			    </div>
@@ -477,7 +477,7 @@ function use_billing_address()
 				    <div class="controls">
 				    	<div id="baddress2">
 				    		<div class="input-form-Font hide-billing-information"><?=$cust['address2']?></div>
-				    		<input class="input-form-Font edit-billing-information span12" style="display: none" type="text" id="input-baddress2" name="input-baddress2" placeholder="Billing Address2" value="<?=$cust['address2']?>">
+				    		<input class="input-form-Font edit-billing-information col-sm-12" style="display: none" type="text" id="input-baddress2" name="input-baddress2" placeholder="Billing Address2" value="<?=$cust['address2']?>">
 				    	</div>
 				    </div>
 			    </div>
@@ -490,7 +490,7 @@ function use_billing_address()
 				    <div class="controls">
 				    	<div id="bsuburb">
 				    		<div class="input-form-Font hide-billing-information"><?=$cust['suburb']?></div>
-				    		<input class="input-form-Font edit-billing-information span12" style="display: none" type="text" id="input-bsuburb" name="input-bsuburb" placeholder="Suburb" value="<?=$cust['suburb']?>">
+				    		<input class="input-form-Font edit-billing-information col-sm-12" style="display: none" type="text" id="input-bsuburb" name="input-bsuburb" placeholder="Suburb" value="<?=$cust['suburb']?>">
 				    	</div>
 				    </div>
 			    </div>
@@ -503,7 +503,7 @@ function use_billing_address()
 				    <div class="controls">
 				    	<div id="bcountry">
 				    		<div class="input-form-Font hide-billing-information"><?=$cust['country']?></div>
-				    		<select class="input-form-Font edit-billing-information span12" name="input-bcountry" id="input-bcountry" style="display: none">
+				    		<select class="input-form-Font edit-billing-information col-sm-12" name="input-bcountry" id="input-bcountry" style="display: none">
 								<option value="" selected="selected">Select Country</option> 
 								<option value="United States">United States</option> 
 								<option value="United Kingdom">United Kingdom</option> 
@@ -762,7 +762,7 @@ function use_billing_address()
 				    <div class="controls">
 				    	<div id="bstate">
 				    		<div class="input-form-Font hide-billing-information"><?=$state?></div>
-				    		<select class="input-form-Font edit-billing-information span12" name="input-bstate" id="input-bstate" style="display: none">
+				    		<select class="input-form-Font edit-billing-information col-sm-12" name="input-bstate" id="input-bstate" style="display: none">
 								<?php
 									foreach($states as $state)
 									{
@@ -788,7 +788,7 @@ function use_billing_address()
 				    <div class="controls">
 				    	<div id="bpostcode">
 				    		<div class="input-form-Font hide-billing-information"><?=$cust['postcode']?></div>
-				    		<input class="input-form-Font edit-billing-information span12" style="display: none" type="text" id="input-bpostcode" name="input-bpostcode" placeholder="Postcode" value="<?=$cust['postcode']?>">
+				    		<input class="input-form-Font edit-billing-information col-sm-12" style="display: none" type="text" id="input-bpostcode" name="input-bpostcode" placeholder="Postcode" value="<?=$cust['postcode']?>">
 				    	</div>
 				    </div>
 			    </div>

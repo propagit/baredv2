@@ -186,7 +186,7 @@ function deletecart(id)
 }
 </script>
 
-<div class="container">
+<div class="app-container">
 	
 	
     

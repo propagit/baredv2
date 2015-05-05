@@ -295,13 +295,13 @@ function change_country()
 	font-size:18px!important; font-weight: 700!important;
 }
 </style>
-<div class="container">
+<div class="app-container">
 	<div style="height:10px;"></div>     	
 	<form method="post" action="<?=base_url()?>store/order_trade" id="orderForm" name="orderForm" >	    
-        <div class="row-fluid">        	
-            <div class="span12">
+        <div class="">        	
+            <div class="col-sm-12">
             	
-                <div class="row-fluid">        	
+                <div class="">        	
             	<div class="span6">
                 	<h4 style="font-family: open sans">YOUR ORDER</h4>
                     <div style="min-height:567px; background: #f5f5f5;">
@@ -474,7 +474,7 @@ function change_country()
                         <div class="control-group">
                             <label class="control-label" style="text-align:left;" for="message">Message</label>
                             <div class="controls">
-                                <textarea name="message" id="message" rows="3"></textarea>
+                                <textarea name="message" id="message" s="3"></textarea>
                             </div>
                         </div>
                         
@@ -544,7 +544,7 @@ function change_country()
 	                        <div class="control-group">
 	                            <label class="control-label" style="text-align:left;" for="gnote">Gift Note</label>
 	                            <div class="controls">
-	                                <textarea name="gnote" id="gnote" rows="3"></textarea>
+	                                <textarea name="gnote" id="gnote" s="3"></textarea>
 	                            </div>
 	                        </div>
                         </div>

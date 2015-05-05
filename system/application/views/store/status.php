@@ -1,4 +1,4 @@
-<div class="container">
+<div class="app-container">
 	<div style="height:10px;"></div>   
     		<div class="page-content">
             <?php if($result == "success") { ?>

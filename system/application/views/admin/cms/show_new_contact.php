@@ -61,10 +61,10 @@ $(function() {
 	
 </style>
 
-<div class="container" id="page-additional">
+<div class="app-container" id="page-additional">
 	<div style="height:20px;"></div>   
-    <div class="row">
-	<div class="span8">	
+    <div class="col-sm-12">
+	<div class="col-sm-8">	
 		
 		<?=$pages['content']?>	
 		<!-- <h1 style="font-family: lato; font-size: 36px; font-weight: 700;">CONTACT US</h1> -->
@@ -156,7 +156,7 @@ $(function() {
 					<tr>
 						<td style="width: 100px; padding-bottom: 10px; vertical-align: top; padding-top: 7px">Message<span style="color: red">*</span></td>
 						<td style="padding-bottom: 10px;">
-							<textarea id="message" name="message" rows="3">
+							<textarea id="message" name="message" s="3">
 							</textarea>
 						</td>
 					</tr>
@@ -169,8 +169,8 @@ $(function() {
 		</p>
         <div style="clear:both"></div>
         <div style="clear:both"></div>
-<div class="row">
-	<div class="span8">	
+<div class="">
+	<div class="col-sm-8">	
 <?php
 	$photos = $this->Gallery_model->get_photos($pages['gallery']);
 	if(count($photos) > 0)
@@ -182,8 +182,8 @@ $(function() {
 		if($cc == 1)
 		{
 		?>
-		<div style="margin-top: 20px;" class="row fluid ">
-			<div class="span2">
+		<div style="margin-top: 20px;" class=" ">
+			<div class="col-sm-2">
 				<?php
 				if($photo['video'] == 0)
 				{
@@ -193,7 +193,7 @@ $(function() {
 					</a> -->
 					<div class="gallery slideshow">
 					<a href="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>" rel="prettyPhoto[pp_gal]" title="<?=$photo['title'];?>">
-						<img class="hidden-phone" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails2/<?php print $photo['name'];?>"  alt="" />
+						<img class="hidden-xs" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails2/<?php print $photo['name'];?>"  alt="" />
                         <img class="visible-phone"style="margin-bottom:20px;"  src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>"  alt="" />
 					</a>
 					</div>
@@ -222,7 +222,7 @@ $(function() {
 		elseif($cc == 4)
 		{
 		?>
-			<div class="span2">
+			<div class="col-sm-2">
 				<?php
 				if($photo['video'] == 0)
 				{
@@ -232,7 +232,7 @@ $(function() {
 					</a> -->
 					<div class="gallery slideshow">
 					<a href="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>" rel="prettyPhoto[pp_gal]" title="<?=$photo['title'];?>">
-						<img class="hidden-phone" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails2/<?php print $photo['name'];?>"  alt="" />
+						<img class="hidden-xs" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails2/<?php print $photo['name'];?>"  alt="" />
                         <img class="visible-phone"  src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>"  alt="" />
 					</a>
 					</div>
@@ -262,7 +262,7 @@ $(function() {
 		else 
 		{
 		?>
-			<div class="span2">
+			<div class="col-sm-2">
 				<?php
 				if($photo['video'] == 0)
 				{
@@ -272,7 +272,7 @@ $(function() {
 					</a> -->
 					<div class="gallery slideshow">
 					<a href="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>" rel="prettyPhoto[pp_gal]" title="<?=$photo['title'];?>">
-						<img class="hidden-phone" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails2/<?php print $photo['name'];?>"  alt="" />
+						<img class="hidden-xs" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails2/<?php print $photo['name'];?>"  alt="" />
                         <img class="visible-phone" style="margin-bottom:20px;" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>"  alt="" />
 					</a>
 					</div>
@@ -306,7 +306,7 @@ $(function() {
 		for($i=0;$i<$cc;$i++)
 		{
 		?>
-			<div class="span2">
+			<div class="col-sm-2">
 				&nbsp;
 			</div>
 		<?
@@ -320,45 +320,45 @@ $(function() {
 </div>
 </div>
     </div>
-    <div class="span1" >
-    	<div class="row">&nbsp;</div>
+    <div class="col-sm-1" >
+    	<div class="">&nbsp;</div>
     </div>
-    <div class="span3 hidden-phone" style="float:right;" >
-    	<div class="row">
-        	<div class="span3"><div style="height:20px;"></div></div>
+    <div class="col-sm-3 hidden-xs" style="float:right;" >
+    	<div class="">
+        	<div class="col-sm-3"><div style="height:20px;"></div></div>
         </div>
-        <div class="row">
-        	<div class="span3">
+        <div class="">
+        	<div class="col-sm-3">
         		<a href="<?=base_url()?>store/page/34"><img class="left-page-image" src="<?=base_url()?>img/The-Bared-Difference-Orange.jpg" alt="Bared Difference"></a>
         		<!-- <img class="left-page-image visible-desktop show-medium hidden-large" style="width:80%" src="<?=base_url()?>img/logo/bared-difference.png" alt="Bared Difference"> -->
         		<!-- <img class="left-page-image visible-tablet" src="<?=base_url()?>img/The-Bared-Difference-Orange.jpg" alt="Bared Difference"> --> 
         	</div>
         </div>
-        <div class="row">
-        	<div class="span3"><div class="left-page-image-gap"></div></div>
+        <div class="">
+        	<div class="col-sm-3"><div class="left-page-image-gap"></div></div>
         </div>
-        <div class="row">
-        	<div class="span3">
+        <div class="">
+        	<div class="col-sm-3">
         		<a href="<?=base_url()?>store/page/36"><img class="left-page-image" src="<?=base_url()?>img/Famous-Footbed-Icon-ornage.jpg" alt="Famous Footbed"></a>
         	</div>
-        	<!-- <div class="span3"><img class="left-page-image visible-tablet" src="<?=base_url()?>img/Famous-Footbed-Icon-ornage.jpg" alt="Famous Footbed"> </div> -->
+        	<!-- <div class="col-sm-3"><img class="left-page-image visible-tablet" src="<?=base_url()?>img/Famous-Footbed-Icon-ornage.jpg" alt="Famous Footbed"> </div> -->
         </div>
-        <div class="row">
-        	<div class="span3"><div class="left-page-image-gap"></div></div>
+        <div class="">
+        	<div class="col-sm-3"><div class="left-page-image-gap"></div></div>
         </div>
-        <div class="row">
-        	<div class="span3">
+        <div class="">
+        	<div class="col-sm-3">
         		<a href="<?=base_url()?>store/page/37"><img class="left-page-image" src="<?=base_url()?>img/Fitting-Icon-Orange.jpg" alt="Fitting System"></a>
         	</div>
-        	<!-- <div class="span3"><img class="left-page-image visible-tablet" src="<?=base_url()?>img/Fitting-Icon-Orange.jpg" alt="Fitting System"> </div> -->
+        	<!-- <div class="col-sm-3"><img class="left-page-image visible-tablet" src="<?=base_url()?>img/Fitting-Icon-Orange.jpg" alt="Fitting System"> </div> -->
         </div>
     </div>
     </div>   
 
 <div style="clear:both"></div>
 <!--
-<div class="row">
-	<div class="span8">	
+<div class="">
+	<div class="col-sm-8">	
 <?php
 	/*
 	$photos = $this->Gallery_model->get_photos($pages['gallery']);
@@ -371,8 +371,8 @@ $(function() {
 		if($cc == 1)
 		{
 		?>
-		<div style="margin-top: 20px;" class="row fluid ">
-			<div class="span2">
+		<div style="margin-top: 20px;" class=" ">
+			<div class="col-sm-2">
 				<?php
 				if($photo['video'] == 0)
 				{
@@ -408,7 +408,7 @@ $(function() {
 		elseif($cc == 4)
 		{
 		?>
-			<div class="span2">
+			<div class="col-sm-2">
 				<?php
 				if($photo['video'] == 0)
 				{
@@ -445,7 +445,7 @@ $(function() {
 		else 
 		{
 		?>
-			<div class="span2">
+			<div class="col-sm-2">
 				<?php
 				if($photo['video'] == 0)
 				{
@@ -486,7 +486,7 @@ $(function() {
 		for($i=0;$i<$cc;$i++)
 		{
 		?>
-			<div class="span2">
+			<div class="col-sm-2">
 				&nbsp;
 			</div>
 		<?

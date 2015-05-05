@@ -1,7 +1,7 @@
-<div class="container">
+<div class="app-container">
     <div style="height: 20px;"></div>
     <div style="width: 100%">
-	<div style="margin: 0 auto" class="hidden-phone linkbreadcrumb">
+	<div style="margin: 0 auto" class="hidden-xs linkbreadcrumb">
 		<table align="center" cellpadding="0" cellspacing="0" class="body-copy-Font">
 			<tr style="text-align: center">
 				<td style="padding-bottom: 5px">Shopping Bag</td>
@@ -29,7 +29,7 @@
 	</div>
     <div style="margin: 0 auto" class="visible-phone">
 		
-       <div class="span12" style="text-align: center">
+       <div class="col-sm-12" style="text-align: center">
             <ul class="breadcrumb linkbreadcrumb breadcrumb-Font">
                 <li class="active2">Shopping Bag <span class="divider">></span></li>
                 <li class="active2">Account Details <span class="divider">></span></li>
@@ -45,8 +45,8 @@
 	<h4>CONFIRMATION</h4>
     <div style="height: 20px;"></div>
     
-	<div class="row-fluid">
-		<div class="span12">
+	<div class="">
+		<div class="col-sm-12">
 			<div class="body-copy-Font font18semibold checkout_result_msg">THANK YOU... WE HAVE SUCCESSFULLY RECEIVED YOUR ORDER</div>
 			<div style="height: 50px;"></div>
 			<div class="body-copy-Font">

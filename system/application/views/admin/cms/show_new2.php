@@ -67,10 +67,10 @@ jQuery(document).ready(function() {
 }
 </style>
 
-<div class="container" id="page-additional">
+<div class="app-container" id="page-additional">
 	<div style="height:20px;"></div>   
-    <div class="row">
-	<div class="span12">		
+    <div class="col-sm-12">
+	<div class="col-sm-12">		
 		<?=$pages['content']?>		
     </div>
     </div>   
@@ -87,8 +87,8 @@ jQuery(document).ready(function() {
 		if($cc == 1)
 		{
 		?>
-		<div style="margin-top: 20px;" class="row fluid ">
-			<div class="span2">
+		<div style="margin-top: 20px;" class=" fluid ">
+			<div class="col-sm-2">
 				<?php
 				if($photo['video'] == 0)
 				{
@@ -96,8 +96,8 @@ jQuery(document).ready(function() {
 					<div class="gallery slideshow">
 					<a href="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>" class="img_display" title="<?=$photo['title'];?>">
 						
-                        <img class="visible-phone" style="width:100%;margin-bottom:10px;" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
-                        <img class="hidden-phone" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
+                        <img class="visible-xs" style="width:100%;margin-bottom:10px;" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
+                        <img class="hidden-xs" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
 					</a>
 					</div>
 				<?
@@ -121,15 +121,15 @@ jQuery(document).ready(function() {
 		elseif($cc == 6)
 		{
 		?>
-			<div class="span2">
+			<div class="col-sm-2">
 				<?php
 				if($photo['video'] == 0)
 				{
 				?>				
 					<div class="gallery slideshow">
 					<a href="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>" class="img_display" title="<?=$photo['title'];?>">
-						<img class="visible-phone" style="width:100%;margin-bottom:10px;" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
-                        <img class="hidden-phone" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
+						<img class="visible-xs" style="width:100%;margin-bottom:10px;" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
+                        <img class="hidden-xs" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
 					</a>
 					</div>
 				<?
@@ -155,15 +155,15 @@ jQuery(document).ready(function() {
 		else 
 		{
 		?>
-			<div class="span2">
+			<div class="col-sm-2">
 				<?php
 				if($photo['video'] == 0)
 				{
 				?>				
 					<div class="gallery slideshow">
 					<a href="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>" class="img_display" title="<?=$photo['title'];?>">
-						<img class="visible-phone" style="width:100%;margin-bottom:10px;" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
-                        <img class="hidden-phone" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
+						<img class="visible-xs" style="width:100%;margin-bottom:10px;" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
+                        <img class="hidden-xs" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
 					</a>
 					</div>
 				<?
@@ -195,7 +195,7 @@ jQuery(document).ready(function() {
 		for($i=0;$i<$cc;$i++)
 		{
 		?>
-			<div class="span2">
+			<div class="col-sm-2">
 				&nbsp;
 			</div>
 		<?

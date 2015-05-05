@@ -327,6 +327,8 @@ body {
 .carousel {
   overflow: hidden;
   /*carousel-caption*/ }
+  .carousel .carousel-inner .item a img {
+    width: 100%; }
   .carousel .carousel-indicators {
     bottom: 70px; }
     .carousel .carousel-indicators li {
@@ -524,6 +526,25 @@ body {
         font-weight: 400;
         border: 1.5px solid white;
         padding: 0 25px; }
+
+.landing-page .tile {
+  max-height: none; }
+  .landing-page .tile:first-child {
+    padding-left: 0;
+    padding-right: 4.5px; }
+  .landing-page .tile:last-child {
+    padding-left: 4.5px;
+    padding-right: 0; }
+  .landing-page .tile .tile-btn-wrap {
+    top: 40% !important; }
+    .landing-page .tile .tile-btn-wrap .btn-tile {
+      /*font-size: 3.50vw !important;*/
+      font-size: 2.548vw;
+      line-height: 5.30833vw;
+      font-weight: 700;
+    	/*padding-left:5%;
+  	padding-right:5%;*/
+      min-width: 50%; }
 
 .bar {
   text-align: center; }
@@ -966,6 +987,10 @@ body {
     .tiles .tile .tile-btn-wrap .btn-tile {
       font-size: 5.4145vw;
       line-height: 9.555vw; }
+
+  .landing-page .tile {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
 
   .gallery {
     /* carousel-inner*/ }

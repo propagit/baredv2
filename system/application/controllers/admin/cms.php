@@ -3033,15 +3033,15 @@ class Cms extends Controller {
 		$this->load->view('admin/common/footer');
 	}
         
-        function ajax_get_banners_by_category()
+    function ajax_get_banners_by_category()
 	{
 		$category = $this->input->post('category');
 		echo $this->row_view($category);	
 	}
         
-        function row_view($category, $temp = 1, $site = 'Retail')
+    function row_view($category, $temp = 1, $site = 'Retail')
 	{
-                $data['temp']=$temp;
+        $data['temp']=$temp;
 		$data['site']=$site;
 		$data['banners'] = $this->Content_model->get_banners_by_category($category);
 		return $this->load->view('admin/cms/row_view_banners',$data,true);
@@ -3101,8 +3101,10 @@ class Cms extends Controller {
 				# Create thumbnails
 				
 				$this->advanced_resizephoto($data,"./uploads/banners/","thumb",$width,$height,315,117);
-				$this->resizephotobig($data,"./uploads/banners/ori","thumb",$width,$height,1200,600);
-				$this->resizephotobig2($data,"./uploads/banners/ori2","thumb",$width,$height,1200,920);
+				#$this->resizephotobig($data,"./uploads/banners/ori","thumb",$width,$height,1200,600);
+				#$this->resizephotobig2($data,"./uploads/banners/ori2","thumb",$width,$height,1200,920);
+				$this->resizephotobig($data,"./uploads/banners/ori","thumb",$width,$height,1912,869);
+				$this->resizephotobig2($data,"./uploads/banners/ori2","thumb",$width,$height,1912,869);
 				//$this->advanced_resizephoto($data,"./uploads/banners/","thumb",$width,$height,800,600);
 				//$this->resizephoto($name,"./uploads/banners","thumb",315,117);			
 			}

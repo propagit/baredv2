@@ -222,7 +222,7 @@ function add_towishlist()
 
 
 
-<div class="container">
+<div class="app-container">
 	<!-- facebook -->
 	<div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -265,7 +265,7 @@ function add_towishlist()
       // FB.login() to prompt them to do so. 
       // In real-life usage, you wouldn't want to immediately prompt someone to login 
       // like this, for two reasons:
-      // (1) JavaScript created popup windows are blocked by most browsers unless they 
+      // (1) JavaScript created popup windows are blocked by most bsers unless they 
       // result from direct user interaction (such as a mouse click)
       // (2) it is a bad experience to be continually prompted to login upon page load.
       FB.login();
@@ -309,8 +309,8 @@ function add_towishlist()
 	<!-- facebook -->
 
 	<div style="height:10px;"></div>     
-    <div class="row-fluid">
-    	<div class="span12">
+    <div class="">
+    	<div class="col-sm-12">
     		<ul class="breadcrum-Font breadcrumb">
 			    <li><a href="<?=base_url()?>">Home</a> <span class="divider">></span></li>
 			    <?php
@@ -365,17 +365,17 @@ function add_towishlist()
 		</div>
     </div>
     <div style="height:10px;"></div>     
-    <div class="row-fluid">
+    <div class="">
     	<? if(count($photos)>3){ ?>
-        <div class="span2  hidden-phone">
+        <div class="col-sm-2  hidden-xs">
     		
     		<div style="margin-left: 15%; margin-bottom: 10px">			    
-			    <a href=# id=prev3><img src="<?=base_url()?>img/grey-up-arrow.png" alt=""/></a>
+			    <a href=# id=prev3><img src="<?=base_url()?>img/grey-up-ar.png" alt=""/></a>
 			</div>
 			
 			
     		
-    		<div class="slideshow vertical-big hidden-tablet hide-small" 
+    		<div class="slideshow vertical-big hidden-xs hide-small" 
 			    data-cycle-fx=carousel
 			    data-cycle-timeout=0
 			    data-cycle-next="#prev3"
@@ -416,7 +416,7 @@ function add_towishlist()
 			</div>
             
 			
-			<div class="slideshow vertical-small hidden-tablet show-small" 
+			<div class="slideshow vertical-small hidden-xs show-small" 
 			    data-cycle-fx=carousel
 			    data-cycle-timeout=0
 			    data-cycle-next="#prev3"
@@ -495,7 +495,7 @@ function add_towishlist()
 			</div>
 			
 			<div style="margin-left: 15%; margin-top: 10px">			   
-			    <a href=# id=next3><img src="<?=base_url()?>img/grey-down-arrow.png" alt=""/></a>
+			    <a href=# id=next3><img src="<?=base_url()?>img/grey-down-ar.png" alt=""/></a>
 			</div>
 			
     		<div style="display: none" class="cycle-pager" id=pager4></div>
@@ -505,7 +505,7 @@ function add_towishlist()
 		else
 		{
 			if(count($photos)>0){
-			?><div class="span2  hidden-phone"><?
+			?><div class="col-sm-2  hidden-xs"><?
 			if($this->session->userdata('prod_hero_'.$product['id']))
 			{
 				$now_hero_id = $this->session->userdata('prod_hero_'.$product['id']);
@@ -534,11 +534,11 @@ function add_towishlist()
 			}
 			else
 			{?>
-			<div class="span2  hidden-phone"></div>
+			<div class="col-sm-2  hidden-xs"></div>
 			<? }
 	
 		}?>
-    	<div class="span5">    		
+    	<div class="col-sm-5">    		
     		<?php
     		if($product['sale_price'] < $product['price'])
 			{
@@ -585,7 +585,7 @@ function add_towishlist()
 			else
 			{
 			?>
-				<img id="main_hero3" class="hidden-phone" src="http://placehold.it/472x515" />
+				<img id="main_hero3" class="hidden-xs" src="http://placehold.it/472x515" />
     			<img class="visible-phone" src="http://placehold.it/710x775" />
 			<?php	
 			}
@@ -595,7 +595,7 @@ function add_towishlist()
     			Hover To Zoom
     		</div>
     	</div>
-    	<div class="span5">
+    	<div class="col-sm-5">
     		<div style="font-size: 16px; font-weight: 700">
     			<?php
     			$title = explode('-',$product['title']);
@@ -781,7 +781,7 @@ function add_towishlist()
 									?>
 	                                	<div style="margin-left:8px; margin-top:-10px;float:left;">
 	                                		<a href="<?=base_url()?>store/detail_product/<?=$cat_name?>/<?=$ot['id_title']?>">
-	                                			<img class="hidden-phone" style="cursor:pointer; width: 40px" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$ot['id'])?>/thumb4/<?=$hero_new['name']?>" />                                			
+	                                			<img class="hidden-xs" style="cursor:pointer; width: 40px" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$ot['id'])?>/thumb4/<?=$hero_new['name']?>" />                                			
                                                 <img class="visible-phone" style="cursor:pointer; width: 35px" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$ot['id'])?>/thumb4/<?=$hero_new['name']?>" />                                			
 	                                		</a>
 	                                	</div>								
@@ -975,7 +975,7 @@ function add_towishlist()
             	<div class="gcard-form-label label-form-Font">Message</div>
             	<div class="gcard-form-input">
             		
-            		<textarea name="g_note" id="g_note" rows="3" class="gcard-input input-form-Font"></textarea>
+            		<textarea name="g_note" id="g_note" s="3" class="gcard-input input-form-Font"></textarea>
             	</div>
             	<!-- <div style="clear: both; height: 10px;"></div> -->
             </div>
@@ -1038,18 +1038,18 @@ function add_towishlist()
     	</div>
     </div>
     <div style="height: 20px;"></div>
-    <div class="row hidden-phone">
-    	<div class="span12">
+    <div class=" hidden-xs">
+    	<div class="col-sm-12">
     		<div class="body-copy-Font also-like" >You may also like...</div>
     	</div>
     </div>
     <div style="height: 10px;"></div>
-    <div class="hidden-phone" style="height: 10px;"></div>
+    <div class="hidden-xs" style="height: 10px;"></div>
     
     
     
-    <div class="row hidden-phone">
-        <div class="carousel slide span12 hidden-phone" id="myCarousel4">
+    <div class=" hidden-xs">
+        <div class="carousel slide col-sm-12 hidden-xs" id="myCarousel4">
             <div class="carousel-inner">
 						<? 
 						$j=0;
@@ -1085,7 +1085,7 @@ function add_towishlist()
 								if($prod)
 							    {                                                          
                                     ?>
-                                    <li class="span2">
+                                    <li class="col-sm-2">
 		                            <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
                                 		<?php
 							    		
@@ -1100,7 +1100,7 @@ function add_towishlist()
 		                                	if($hero)
 		                                	{
 		                                	?>
-		                                		<a href="<?=base_url()?>store/detail_product/quick_link/<?=$prod['id_title']?>"><img class="hidden-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$prod['id'])?>/thumb5/<?=$hero['name']?>"/></a>
+		                                		<a href="<?=base_url()?>store/detail_product/quick_link/<?=$prod['id_title']?>"><img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$prod['id'])?>/thumb5/<?=$hero['name']?>"/></a>
 		                                	<?
 		                                	}
 											else
@@ -1182,10 +1182,10 @@ function add_towishlist()
            	</div>
             
             <a class="left carousel-control" data-slide="prev" href="#myCarousel4" style="background: none; border: none; opacity: 1">
-                <img style="margin-left: -100px" src="<?=base_url()?>img/white-left-arrow.png"/>
+                <img style="margin-left: -100px" src="<?=base_url()?>img/white-left-ar.png"/>
             </a>
             <a class="right carousel-control" data-slide="next" href="#myCarousel4" style="background: none; border: none; opacity: 1">
-                <img style="margin-right: -100px" src="<?=base_url()?>img/white-right-arrow.png"/>
+                <img style="margin-right: -100px" src="<?=base_url()?>img/white-right-ar.png"/>
             </a>
         </div>
     </div>

@@ -64,15 +64,15 @@ jQuery(document).ready(function() {
 	
 </style>
 
-<div class="container" id="page-additional">
+<div class="app-container" id="page-additional">
 	<div style="height:20px;"></div>   
-    <div class="row">
-	<div class="span8">		
+    <div class="col-sm-12">
+	<div class="col-sm-8">		
 		<?=$pages['content']?>
         <div style="clear:both"></div>
         <div style="clear:both"></div>
-<div class="row">
-	<div class="span8">	
+<div class="">
+	<div class="col-sm-8">	
 <?php
 	$photos = $this->Gallery_model->get_photos($pages['gallery']);
 	if(count($photos) > 0)
@@ -84,8 +84,8 @@ jQuery(document).ready(function() {
 		if($cc == 1)
 		{
 		?>
-		<div style="margin-top: 20px;" class="row fluid ">
-			<div class="span2">
+		<div style="margin-top: 20px;" class=" fluid ">
+			<div class="col-sm-2">
 				<?php
 				if($photo['video'] == 0)
 				{
@@ -93,7 +93,7 @@ jQuery(document).ready(function() {
 					<div class="gallery slideshow">
 					<a href="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>" class="img_display" title="<?=$photo['title'];?>">
 						<img class="visible-phone" style="width:100%;margin-bottom:10px;" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
-                        <img class="hidden-phone" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
+                        <img class="hidden-xs" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
 					</a>
 					</div>
 				<?
@@ -121,7 +121,7 @@ jQuery(document).ready(function() {
 		elseif($cc == 4)
 		{
 		?>
-			<div class="span2">
+			<div class="col-sm-2">
 				<?php
 				if($photo['video'] == 0)
 				{
@@ -129,7 +129,7 @@ jQuery(document).ready(function() {
 					<div class="gallery slideshow">
 					<a href="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>" class="img_display" title="<?=$photo['title'];?>">
 						<img class="visible-phone" style="width:100%;margin-bottom:10px;" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
-                        <img class="hidden-phone" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
+                        <img class="hidden-xs" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
 					</a>
 					</div>
 				<?
@@ -154,7 +154,7 @@ jQuery(document).ready(function() {
 		else 
 		{
 		?>
-			<div class="span2">
+			<div class="col-sm-2">
 				<?php
 				if($photo['video'] == 0)
 				{
@@ -162,7 +162,7 @@ jQuery(document).ready(function() {
 					<div class="gallery slideshow">
 					<a href="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>" class="img_display" title="<?=$photo['title'];?>">
 						<img class="visible-phone" style="width:100%;margin-bottom:10px;" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
-                        <img class="hidden-phone" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
+                        <img class="hidden-xs" src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails/<?php print $photo['name'];?>"  alt="" />
                         
 					</a>
 					</div>
@@ -195,7 +195,7 @@ jQuery(document).ready(function() {
 		for($i=0;$i<$cc;$i++)
 		{
 		?>
-			<div class="span2">
+			<div class="col-sm-2">
 				&nbsp;
 			</div>
 		<?
@@ -209,39 +209,36 @@ jQuery(document).ready(function() {
 </div>
 </div>
     </div>
-    <div class="span1" >
-    	<div class="row">&nbsp;</div>
+    <div class="col-sm-1" >
+    	<div class="">&nbsp;</div>
     </div>
     
     <? if($pages['category_id']!=7){ ?>
-    <div class="span3 hidden-phone" style="float:right;" >
-    	<div class="row">
-        	<div class="span3"><div style="height:20px;"></div></div>
+    <div class="col-sm-3 hidden-xs" style="float:right;" >
+    	<div class="">
+        	<div class="col-sm-3"><div style="height:20px;"></div></div>
         </div>
-        <div class="row">
-        	<div class="span3">
+        <div class="">
+        	<div class="col-sm-3">
         		<a href="<?=base_url()?>page/The-Bared-Difference"><img class="left-page-image" src="<?=base_url()?>img/The-Bared-Difference-Orange.jpg" alt="Bared Difference"></a>        		
         	</div>
         </div>
-        <div class="row">
-        	<div class="span3"><div class="left-page-image-gap"></div></div>
+        <div class="">
+        	<div class="col-sm-3"><div class="left-page-image-gap"></div></div>
         </div>
-        <div class="row">
-        	<div class="span3">
+        <div class="">
+        	<div class="col-sm-3">
         		<a href="<?=base_url()?>page/Our-Famous-Footbed"><img class="left-page-image" src="<?=base_url()?>img/Famous-Footbed-Icon-ornage.jpg" alt="Famous Footbed"></a>
         	</div>        	
         </div>
-        <div class="row">
-        	<div class="span3"><div class="left-page-image-gap"></div></div>
+        <div class="">
+        	<div class="col-sm-3"><div class="left-page-image-gap"></div></div>
         </div>
-        <div class="row">
-        	<div class="span3">
+        <div class="">
+        	<div class="col-sm-3">
         		<a href="<?=base_url()?>page/The-Bared-Fitting-Difference"><img class="left-page-image" src="<?=base_url()?>img/Fitting-Icon-Orange.jpg" alt="Fitting System"></a>
         	</div>
         </div>
     </div>
     <? }?>
     </div>   
-
-<div style="clear:both"></div>
-<div style="clear:both;"></div>

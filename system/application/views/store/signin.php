@@ -147,7 +147,7 @@ function login()
 }
 </script>
 
-<div style="font-family: 'open sans'" class="container">
+<div style="font-family: 'open sans'" class="app-container">
 	
 	
 	<div id="fb-root"></div>
@@ -182,7 +182,7 @@ function login()
       // FB.login() to prompt them to do so. 
       // In real-life usage, you wouldn't want to immediately prompt someone to login 
       // like this, for two reasons:
-      // (1) JavaScript created popup windows are blocked by most browsers unless they 
+      // (1) JavaScript created popup windows are blocked by most bsers unless they 
       // result from direct user interaction (such as a mouse click)
       // (2) it is a bad experience to be continually prompted to login upon page load.
       FB.login();
@@ -261,7 +261,7 @@ function login()
 		    	Or
 		    	</div>
 		    	<!-- <input type="button" value="" style="background: url('<?=base_url()?>img/fb-signin.png'); color: #fff; width: 232px; height: 41px; border:none; font-size: 16px;"/> -->
-		    	<div class="fb-login-button" data-show-faces="false" data-size="xlarge" data-scope="email,user_birthday" data-width="232" data-max-rows="1">Login Facebook</div>
+		    	<div class="fb-login-button" data-show-faces="false" data-size="xlarge" data-scope="email,user_birthday" data-width="232" data-max-s="1">Login Facebook</div>
 		    	<!-- <img style="cursor: pointer" onclick="fb_login();" src="<?=base_url()?>img/fb-signin.png" alt=""/> -->
 		    	<!-- <fb:login-button size="xlarge"
 	                 onlogin="require('./log').info('onlogin callback')">
@@ -278,7 +278,7 @@ function login()
 	    	</div>
 	    	<!-- <input type="button" value="" style="background: url('<?=base_url()?>img/fb-signin.png'); color: #fff; width: 232px; height: 41px; border:none; font-size: 16px;"/> -->
 	    	<!-- <img style="cursor: pointer" onclick="fb_login();" src="<?=base_url()?>img/fb-signin.png" alt=""/> -->
-	    	<div class="fb-login-button" data-show-faces="false" data-size="xlarge" data-scope="email,user_birthday" data-width="232" data-max-rows="1">Login Facebook</div>
+	    	<div class="fb-login-button" data-show-faces="false" data-size="xlarge" data-scope="email,user_birthday" data-width="232" data-max-s="1">Login Facebook</div>
 	    </div>
     </div>
     <div style="clear: both; height: 20px;"></div>

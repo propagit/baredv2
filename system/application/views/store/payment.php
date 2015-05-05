@@ -24,10 +24,10 @@ if (navigator.userAgent.search("MSIE") >= 0){
     }
 }
 else if (navigator.userAgent.search("Chrome") >= 0){
-	//alert('"Google Chrome ');// For some reason in the browser identification Chrome contains the word "Safari" so when detecting for Safari you need to include Not Chrome
+	//alert('"Google Chrome ');// For some reason in the bser identification Chrome contains the word "Safari" so when detecting for Safari you need to include Not Chrome
 	
 	// new_style += '<style> ';
-	// new_style += '.container {margin-top: 30px;} ';
+	// new_style += '.app-container {margin-top: 30px;} ';
 	// new_style += 'body{margin-top:-65px;} ';
 	// new_style += 'html{padding-top: 0px ! important;} ';
 	// new_style += '</style>';
@@ -185,13 +185,13 @@ function check_payment()
 }
 </script>
 
-<div class="container">
+<div class="app-container">
 	
 	
     
     <div style="height: 20px;"></div>
     <div style="width: 100%">
-	<div style="margin: 0 auto" class="hidden-phone linkbreadcrumb">
+	<div style="margin: 0 auto" class="hidden-xs linkbreadcrumb">
 		<table align="center" cellpadding="0" cellspacing="0" class="body-copy-Font">
 			<tr style="text-align: center">
 				<td style="padding-bottom: 5px">Shopping Bag</td>
@@ -220,7 +220,7 @@ function check_payment()
 	
 	<div style="margin: 0 auto" class="visible-phone">
 		
-       <div class="span12" style="text-align: center">
+       <div class="col-sm-12" style="text-align: center">
             <ul class="breadcrumb linkbreadcrumb breadcrumb-Font">
                 <li class="active2">Shopping Bag <span class="divider">></span></li>
                 <li class="active2">Account Details <span class="divider">></span></li>
@@ -236,7 +236,7 @@ function check_payment()
 	<form method="post" action="<?=base_url()?>cart/save_payment" id="payment_form" name="payment_form">
     <h4>Payment</h4>
 	<div style="height: 20px;"></div>
-    <div class="row-fluid">
+    <div class="">
 			<!-- <div class="span6">
 				<div class="body-copy-Font account-header" style="border-bottom: 1px solid #59595C;">Is this a gift?</div>
 				<div class="p-margin-left label-form-Font">
@@ -326,7 +326,7 @@ function check_payment()
 							Your Message
 						</div>
 						<div class="input-space">
-							<textarea class="input-form-Font" name="gnote" id="gnote" rows="3"><? if($this->session->userdata('gnote')){?> <?=$this->session->userdata('gnote')?> <? }?></textarea>
+							<textarea class="input-form-Font" name="gnote" id="gnote" s="3"><? if($this->session->userdata('gnote')){?> <?=$this->session->userdata('gnote')?> <? }?></textarea>
 						</div>
 						<div style="clear: both"></div>
                         <button onclick="show_ecard();" class="input-space button_primary button-Font" type="button" style="width: 195px;">
@@ -351,7 +351,7 @@ function check_payment()
                 <div class="p-margin-left">
 					
                      <div style="display:block;">
-                        <div style="float: left; height: 28px; line-height: 28px;" class="hidden-phone label-form-Font">
+                        <div style="float: left; height: 28px; line-height: 28px;" class="hidden-xs label-form-Font">
                             Pay with Paypal
                         </div>
                         <a onclick="paypal_payment();" style="cursor:pointer;">
@@ -427,7 +427,7 @@ function check_payment()
 					</div>
                     
 					<div class="input-space">
-						<textarea class="input-form-Font" name="pmsg" id="pmsg" rows="3"></textarea>
+						<textarea class="input-form-Font" name="pmsg" id="pmsg" s="3"></textarea>
 					</div>
 					
                     <div style="clear: both;"></div>

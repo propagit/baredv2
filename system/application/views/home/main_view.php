@@ -1,4 +1,5 @@
 <?php $this->load->view('home/common/banners'); ?>
-<?php $this->load->view('home/common/tiles',array('tiles' => $tiles)); ?>
-<?php $this->load->view('home/common/featured_products'); ?>
+<?php $this->load->view('home/common/tiles');?>
+<div class="app-container relative bar bg-black text-white"><h3>our latest range</h3></div>
+<?php $this->load->view('common/featured_products'); ?>
 <?php $this->load->view('home/common/instagram_carousel'); ?>

@@ -341,7 +341,7 @@ right:590px; top: 375px;
 
     margin-left: 10px;
 }
-.row [class*="span"]:first-child {
+. [class*="span"]:first-child {
     margin-left: 30px;
 }
 .nav1{
@@ -365,7 +365,7 @@ right:444px; top: 360px;
 
     margin-left: 10px;
 }
-.row [class*="span"]:first-child {
+. [class*="span"]:first-child {
     margin-left: 20px;
 }
 .big-font{
@@ -475,7 +475,7 @@ right:63%; top: 42%;
 <script>
 //alert(navigator.userAgent + "<br>");
 
-//Detect browser and write the corresponding name
+//Detect bser and write the corresponding name
 
 var new_style = '';
 if (navigator.userAgent.search("MSIE") >= 0){
@@ -489,10 +489,10 @@ if (navigator.userAgent.search("MSIE") >= 0){
     }
 }
 else if (navigator.userAgent.search("Chrome") >= 0){
-	//alert('"Google Chrome ');// For some reason in the browser identification Chrome contains the word "Safari" so when detecting for Safari you need to include Not Chrome
+	//alert('"Google Chrome ');// For some reason in the bser identification Chrome contains the word "Safari" so when detecting for Safari you need to include Not Chrome
 	
 	// new_style += '<style> ';
-	// new_style += '.container {margin-top: 30px;} ';
+	// new_style += '.app-container {margin-top: 30px;} ';
 	// new_style += 'body{margin-top:-65px;} ';
 	// new_style += 'html{padding-top: 0px ! important;} ';
 	// new_style += '</style>';
@@ -547,7 +547,7 @@ else{
 
 </script>
 
-	<div class="container">
+	<div class="app-container">
 		<div style="height: 10px;"></div>
         <ul class="breadcrumb" style="font-size: 11px; text-transform: uppercase">
         		<!-- <?=$cat?> -->
@@ -599,8 +599,8 @@ else{
         <div class="text-bagazine" id="story_header"><?=$story_single['title']?></div>		
         <? }?>
         <div style="height: 50px;"></div>
-		<div class="row">
-			<div class="span12" style="background:#fafafa;">
+		<div class="">
+			<div class="col-sm-12" style="background:#fafafa;">
 				<div id="myCarousel2" class="carousel slide" style="padding:10px;">                    
                     <div class="carousel-inner">
                         <? 	$i=1;
@@ -621,10 +621,10 @@ else{
 						?>
 						<div class="item" id="id<?=$i?>#0">
 
-						<div class="row">
-                            <div class="span12" style="background:#fafafa;">
-                               <div class="row-fluid all_s">
-                               <div class="span12">
+						<div class="">
+                            <div class="col-sm-12" style="background:#fafafa;">
+                               <div class=" all_s">
+                               <div class="col-sm-12">
 								<div style="height:8px; clear:both"></div>
 							   <? 
 							   $now=1;
@@ -639,7 +639,7 @@ else{
 								
 							   	if($now == 1){   ?> 
                                 		<div style="height:20px; clear:both"></div>
-                                        <div class="row-fluid" >                                                                                                         
+                                        <div class="" >                                                                                                         
                                         
                                         <div class="span4" style="margin-left:0px!important;">
                                             <div style="text-align: center;">                                            	
@@ -754,8 +754,8 @@ else{
 									<? $s_parent = $this->System_model->get_story_id($story_html['story_id']);?>
                                     <input type="hidden" id="title_story<?=$story_html['id']?>" value="<?=$story_html['title']?>" />
                                     <input type="hidden" id="title_story_parent<?=$story_html['id']?>" value="<?=$s_parent['title']?>" />
-									<div class="row">
-										<div class="span12">
+									<div class="">
+										<div class="col-sm-12">
 											<?=$story_html['content']?>                               
 										</div>
 									</div>
@@ -771,10 +771,10 @@ else{
                     <div style="clear:both"></div>
                     
                     <a class="left carousel-control" data-slide="prev" href="#myCarousel2" style="background: none; border: none; opacity: 1" onclick="check_html()">
-						<img src="<?=base_url()?>img/white-left-arrow.png"/>
+						<img src="<?=base_url()?>img/white-left-ar.png"/>
 					</a>
 					<a class="right carousel-control" data-slide="next" href="#myCarousel2" style="background: none; border: none; opacity: 1" onclick="check_html_right()">
-						<img src="<?=base_url()?>img/white-right-arrow.png"/>
+						<img src="<?=base_url()?>img/white-right-ar.png"/>
 					</a>
 				</div>
                 <div style="height: 20px;"></div>
@@ -806,20 +806,20 @@ else{
                     <li><a href="<?=base_url()?>store/story_product_new/<?=$cat?>/<?=$id?>"> <img alt="" src="<?=base_url()?>img/icon_shopping_bag.png"  style="margin-top:-5px; vertical-align:top!important;"></a> </li>
 				</ul>                                                                                           
                 -->
-                <table class="hidden-phone" width="100%" style="font-size: 11px; text-transform: uppercase;font-weight:600; " align="center">
+                <table class="hidden-xs" width="100%" style="font-size: 11px; text-transform: uppercase;font-weight:600; " align="center">
                 	<tr>
                 		<td style="width: 33.5%; text-align: left;" >
                         	<?php if(0) { ?>
                 			<? if($cat=='all' || $cat=='single_all'){?>
-                            <a class="hidden-phone" style="margin-left:20px" href="<?=base_url()?>store/stories_archive">ARCHIVE</a> 
+                            <a class="hidden-xs" style="margin-left:20px" href="<?=base_url()?>store/stories_archive">ARCHIVE</a> 
                 			<!-- <a class="visible-phone" style="margin-left:20px; font-size: 7px;" href="<?=base_url()?>store/stories_archive">ARCHIVE</a> --> 
-                			<span class="divider2 hidden-phone" style="font-size:22px; margin-left:8px; margin-right:3px; font-weight:lighter!important;"> | </span>
+                			<span class="divider2 hidden-xs" style="font-size:22px; margin-left:8px; margin-right:3px; font-weight:lighter!important;"> | </span>
                             <? } ?>
                 			<!-- <span class="divider2 visible-phone" style="font-size:12px; margin-left:8px; margin-right:3px; font-weight:lighter!important;"> | </span> -->
                             <? if($cat=='all' || $cat=='single_all'){?>
-                            <a class="hidden-phone" href="<?=base_url()?>store/stories_new/all">INDEX</a>
+                            <a class="hidden-xs" href="<?=base_url()?>store/stories_new/all">INDEX</a>
                             <? }else{?>
-                            <a class="hidden-phone" href="<?=base_url()?>store/stories_new/<?=$cats?>">INDEX</a>
+                            <a class="hidden-xs" href="<?=base_url()?>store/stories_new/<?=$cats?>">INDEX</a>
                             <? } ?>
                 			
                 			<!-- <a class="visible-phone" style="font-size: 7px;" href="<?=base_url()?>store/stories_new/all">INDEX</a> -->
@@ -838,14 +838,14 @@ else{
                 		<td style="width: 33.5%; text-align: right">
                         	<?php if(0){?>
                 			<a href="#" onclick="share_with_friend();">
-	                			<img class="hidden-phone story_tt" data-toggle="tooltip" title="SEND TO A FRIEND" src="<?=base_url()?>img/envelope.png"  alt="">
+	                			<img class="hidden-xs story_tt" data-toggle="tooltip" title="SEND TO A FRIEND" src="<?=base_url()?>img/envelope.png"  alt="">
 	                			<!-- <img class="visible-phone" src="<?=base_url()?>img/envelope.png"  alt="" style=""> -->
                             </a> 
-                        	<span class="divider2 hidden-phone" style="vertical-align:top; font-size:22px; margin-left:8px; margin-right:3px;font-weight:lighter!important;"> | </span>
+                        	<span class="divider2 hidden-xs" style="vertical-align:top; font-size:22px; margin-left:8px; margin-right:3px;font-weight:lighter!important;"> | </span>
                             <?php } ?>
                         	<!-- <span class="divider2 visible-phone" style="vertical-align:top; font-size:12px; margin-left:8px; margin-right:3px;font-weight:lighter!important;"> | </span> -->
                             <a href="<?=base_url()?>store/story_product_new/<?=$cat?>/<?=$id?>"> 
-                            	<img class="hidden-phone story_tt" data-toggle="tooltip" title="SHOPPING CART" src="<?=base_url()?>img/icon_shopping_bag.png" style="margin-bottom:4px;margin-right:20px;" alt="" >
+                            	<img class="hidden-xs story_tt" data-toggle="tooltip" title="SHOPPING CART" src="<?=base_url()?>img/icon_shopping_bag.png" style="margin-bottom:4px;margin-right:20px;" alt="" >
                             	<!-- <img class="visible-phone" src="<?=base_url()?>img/icon_shopping_bag.png" style="margin-bottom:4px;margin-right:20px;" alt="" > -->
                             </a>
                 		</td>

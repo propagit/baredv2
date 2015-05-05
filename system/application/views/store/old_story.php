@@ -30,7 +30,7 @@ right:590px; top: 455px;
 
     margin-left: 10px;
 }
-.row [class*="span"]:first-child {
+. [class*="span"]:first-child {
     margin-left: 30px;
 }
 }
@@ -49,7 +49,7 @@ right:444px; top: 360px;
 
     margin-left: 10px;
 }
-.row [class*="span"]:first-child {
+. [class*="span"]:first-child {
     margin-left: 20px;
 }
 .big-font{
@@ -88,11 +88,11 @@ right:63%; top: 42%;
 }	
 
 </style>
-	<div class="container">
+	<div class="app-container">
 		<div style="height: 10px;"></div>
        
-		<div class="row">
-			<div class="span12">
+		<div class="">
+			<div class="col-sm-12">
 				<div id="myCarousel2" class="carousel slide">
                     <ol class="carousel-indicators indi" >
                         <? 
@@ -143,16 +143,16 @@ right:63%; top: 42%;
                     <!-- <a class="left carousel-control" data-slide="prev" href="#myCarousel2">‹</a>
                     <a class="right carousel-control" data-slide="next" href="#myCarousel2">›</a> -->
                     <a class="left carousel-control" data-slide="prev" href="#myCarousel2" style="background: none; border: none; opacity: 1">
-								<img src="<?=base_url()?>img/white-left-arrow.png"/>
+								<img src="<?=base_url()?>img/white-left-ar.png"/>
 							</a>
 							<a class="right carousel-control" data-slide="next" href="#myCarousel2" style="background: none; border: none; opacity: 1">
-								<img src="<?=base_url()?>img/white-right-arrow.png"/>
+								<img src="<?=base_url()?>img/white-right-ar.png"/>
 							</a>
 				</div>
                         
                 
                 
-                <!--<img class="hidden-phone" src="<?=base_url()?>img/big1.jpg" alt="" />-->
+                <!--<img class="hidden-xs" src="<?=base_url()?>img/big1.jpg" alt="" />-->
 				
 				
 				

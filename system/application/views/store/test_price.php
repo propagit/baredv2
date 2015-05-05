@@ -339,10 +339,10 @@ a:hover, a:focus {
 
 
 
-<div class="container">
+<div class="app-container">
 	<div style="height:10px;"></div>     
-    <div class="row-fluid">
-    	<div class="span12">
+    <div class="">
+    	<div class="col-sm-12">
     		<ul class="breadcrumb" style="font-size: 11px; text-transform: uppercase">
 			    <li><a href="<?=base_url()?>">HOME</a> <span class="divider">></span></li>
 			    <?php
@@ -374,17 +374,17 @@ a:hover, a:focus {
 		</div>
     </div>
     <div style="height:10px;"></div>     
-    <div class="row-fluid">
-    	<div class="span2  hidden-phone">
+    <div class="">
+    	<div class="col-sm-2  hidden-xs">
     		
     		<div style="margin-left: 15%; margin-bottom: 10px">
 			    <!-- <a href=# id=prev3><i class="icon-chevron-up icon-2x"></i></a> -->
-			    <a href=# id=prev3><img src="<?=base_url()?>img/grey-up-arrow.png" alt=""/></a>
+			    <a href=# id=prev3><img src="<?=base_url()?>img/grey-up-ar.png" alt=""/></a>
 			</div>
 			
 			
     		
-    		<div class="slideshow vertical-big hidden-tablet hide-small" 
+    		<div class="slideshow vertical-big hidden-xs hide-small" 
 			    data-cycle-fx=carousel
 			    data-cycle-timeout=0
 			    data-cycle-next="#prev3"
@@ -432,7 +432,7 @@ a:hover, a:focus {
 			    
 			</div>
 			
-			<div class="slideshow vertical-small hidden-tablet show-small" 
+			<div class="slideshow vertical-small hidden-xs show-small" 
 			    data-cycle-fx=carousel
 			    data-cycle-timeout=0
 			    data-cycle-next="#prev3"
@@ -528,13 +528,13 @@ a:hover, a:focus {
 			
 			<div style="margin-left: 15%; margin-top: 10px">
 			    <!-- <a href=# id=next3><i class="icon-chevron-down icon-2x"></i></a> -->
-			    <a href=# id=next3><img src="<?=base_url()?>img/grey-down-arrow.png" alt=""/></a>
+			    <a href=# id=next3><img src="<?=base_url()?>img/grey-down-ar.png" alt=""/></a>
 			</div>
 
     		<!-- <div class="cycle-pager" id=pager3></div> -->
     	
     	</div>
-    	<div class="span5">
+    	<div class="col-sm-5">
     		<!-- <img src="<?=base_url()?>img/temp_product.jpg"/> -->
     		<!-- <img  src="http://placehold.it/472x515"/>
     		<img  src="http://placehold.it/710x775"/> -->
@@ -556,14 +556,14 @@ a:hover, a:focus {
 					if(isset($cur_hero['name']))
 					{
 				?>
-					<img id="main_hero"  class="hidden-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb1/<?=$cur_hero['name']?>" />
+					<img id="main_hero"  class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb1/<?=$cur_hero['name']?>" />
     				<img id="main_hero2" class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$cur_hero['name']?>" />
 				<?
 					}
 					else 
 					{
 					?>
-					<img id="main_hero"  class="hidden-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb1/<?=$hero['name']?>" />
+					<img id="main_hero"  class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb1/<?=$hero['name']?>" />
     				<img id="main_hero2" class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>" />
 					<?
 					}
@@ -571,7 +571,7 @@ a:hover, a:focus {
 				else
 				{	
 			?>
-				<img id="main_hero"  class="hidden-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb1/<?=$hero['name']?>" />
+				<img id="main_hero"  class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb1/<?=$hero['name']?>" />
     			<img id="main_hero2" class="visible-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>" />
 			<?php
 				}
@@ -579,7 +579,7 @@ a:hover, a:focus {
 			else
 			{
 			?>
-				<img id="main_hero3" class="hidden-phone" src="http://placehold.it/472x515" />
+				<img id="main_hero3" class="hidden-xs" src="http://placehold.it/472x515" />
     			<img class="visible-phone" src="http://placehold.it/710x775" />
 			<?php	
 			}
@@ -588,7 +588,7 @@ a:hover, a:focus {
     		<div style="width: 100%; margin-top: 10px; margin-bottom: 10px; text-align: center; font-family: 'open sans'; font-size: 12px">
     			HOVER TO ZOOM
     		</div>
-    		<!-- <div class="row-fluid  hidden-phone">
+    		<!-- <div class="  hidden-xs">
     			<?php
     			if(isset($hero['name']))
 				{
@@ -628,7 +628,7 @@ a:hover, a:focus {
     			
     		</div> -->
     	</div>
-    	<div class="span5">
+    	<div class="col-sm-5">
     		<div style="font-size: 16px; font-weight: 700">
     			<?php
     			$title = explode('-',$product['title']);
@@ -735,10 +735,10 @@ a:hover, a:focus {
     		<div style="height: 20px"></div>
     			
     		</div>
-    		<!-- <div onclick="addtocart();" class="hidden-phone" style="background: none repeat scroll 0 0 #000000; color: #FFFFFF; height: 30px; line-height: 30px; text-align: center; width: 180px; cursor: pointer">ADD TO SHOPPING BAG</div> -->
+    		<!-- <div onclick="addtocart();" class="hidden-xs" style="background: none repeat scroll 0 0 #000000; color: #FFFFFF; height: 30px; line-height: 30px; text-align: center; width: 180px; cursor: pointer">ADD TO SHOPPING BAG</div> -->
     		<div onclick="addtocart();" style="font-size:12px; font-weight: 700; letter-spacing: 2px; background: none repeat scroll 0 0 #070707; color: #FFFFFF; height: 30px; line-height: 30px; text-align: center; width: 100%; cursor: pointer">ADD TO SHOPPING BAG</div>
     		<div style="height: 5px;"></div>
-    		<!-- <div class="hidden-phone" style="background: none repeat scroll 0 0 #000000; color: #FFFFFF; height: 30px; line-height: 30px; text-align: center; width: 180px; cursor: pointer">ADD TO WISH LIST</div> -->
+    		<!-- <div class="hidden-xs" style="background: none repeat scroll 0 0 #000000; color: #FFFFFF; height: 30px; line-height: 30px; text-align: center; width: 180px; cursor: pointer">ADD TO WISH LIST</div> -->
     		<div onclick="add_towishlist()" style="font-size:12px; font-weight: 700; letter-spacing: 2px; background: none repeat scroll 0 0 #878382; color: #FFFFFF; height: 30px; line-height: 30px; text-align: center; width: 100%; cursor: pointer">ADD TO WISH LIST</div>
     		<div style="height: 15px;"></div>
     		<div style="height: 10px; border-top: dashed 1px #000;"></div>
@@ -850,20 +850,20 @@ a:hover, a:focus {
     	</div>
     </div>
     <div style="height: 20px;"></div>
-    <div class="row hidden-phone">
-    	<div class="span12">
+    <div class=" hidden-xs">
+    	<div class="col-sm-12">
     		<div style="font-size: 22px; font-weight: 400; text-align: center">YOU MAY ALSO LIKE...</div>
     	</div>
     </div>
     <div style="height: 10px;"></div>
-    <div class="hidden-phone" style="height: 10px;"></div>
-    <div class="row hidden-phone">
-        <div class="carousel slide span12 hidden-phone" id="myCarousel3">
+    <div class="hidden-xs" style="height: 10px;"></div>
+    <div class=" hidden-xs">
+        <div class="carousel slide col-sm-12 hidden-xs" id="myCarousel3">
             <div class="carousel-inner">
               <div class="item active">
                     <ul class="thumbnails">
                     	
-                        <!-- <li class="span2">
+                        <!-- <li class="col-sm-2">
                             <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
                                 <img src="<?=base_url()?>img/product-1.jpg" alt="" width="156px">
                                 <div style="height:10px;"></div>     
@@ -872,7 +872,7 @@ a:hover, a:focus {
                                 <div class="feat_price">$ 0.00</div>
                             </div>
                         </li>
-                        <li class="span2">
+                        <li class="col-sm-2">
                             <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
                                 <img src="<?=base_url()?>img/product-2.jpg" alt="" width="156px">
                                 <div style="height:10px;"></div>     
@@ -881,7 +881,7 @@ a:hover, a:focus {
                                 <div class="feat_price">$ 0.00</div>
                             </div>
                         </li>
-                        <li class="span2">
+                        <li class="col-sm-2">
                             <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
                                 <img src="<?=base_url()?>img/product-3.jpg" alt="" width="156px">
                                 <div style="height:10px;"></div>     
@@ -890,7 +890,7 @@ a:hover, a:focus {
                                 <div class="feat_price">$ 0.00</div>
                             </div>
                         </li>
-                        <li class="span2">
+                        <li class="col-sm-2">
                             <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
                                 <img src="<?=base_url()?>img/product-4.jpg" alt="" width="156px">
                                 <div style="height:10px;"></div>     
@@ -899,7 +899,7 @@ a:hover, a:focus {
                                 <div class="feat_price">$ 0.00</div>
                             </div>
                         </li>
-                        <li class="span2">
+                        <li class="col-sm-2">
                             <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
                                 <img src="<?=base_url()?>img/product-5.jpg" alt="" width="156px">
                                 <div style="height:10px;"></div>     
@@ -908,7 +908,7 @@ a:hover, a:focus {
                                 <div class="feat_price">$ 0.00</div>
                             </div>
                         </li>
-                        <li class="span2">
+                        <li class="col-sm-2">
                             <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
                                 <img src="<?=base_url()?>img/product-6.jpg" alt="" width="156px">
                                 <div style="height:10px;"></div>     
@@ -927,7 +927,7 @@ a:hover, a:focus {
 							$hero = $this->Product_model->get_hero($item['id']);
 							$title = explode('-',$prod['title']);
 							?>
-								<li class="span2">
+								<li class="col-sm-2">
 		                            <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
 		                            	<?php
 							    		if($prod['sale_price'] < $prod['price'])
@@ -941,7 +941,7 @@ a:hover, a:focus {
 		                                	if($hero)
 		                                	{
 		                                	?>
-		                                		<a href="<?=base_url()?>store/detail_product/quick_link/<?=$prod['id_title']?>"><img class="hidden-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$prod['id'])?>/thumb5/<?=$hero['name']?>"/></a>
+		                                		<a href="<?=base_url()?>store/detail_product/quick_link/<?=$prod['id_title']?>"><img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$prod['id'])?>/thumb5/<?=$hero['name']?>"/></a>
 		                                	<?
 		                                	}
 											else
@@ -1012,7 +1012,7 @@ a:hover, a:focus {
 							$hero = $this->Product_model->get_hero($item['id']);
 							$title = explode('-',$prod['title']);
 							?>
-								<li class="span2">
+								<li class="col-sm-2">
 		                            <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
 		                            	<?php
 							    		if($prod['sale_price'] < $prod['price'])
@@ -1026,7 +1026,7 @@ a:hover, a:focus {
 		                                	if($hero)
 		                                	{
 		                                	?>
-		                                		<a href="<?=base_url()?>store/detail_product/quick_link/<?=$prod['id_title']?>"><img class="hidden-phone" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$prod['id'])?>/thumb5/<?=$hero['name']?>"/></a>
+		                                		<a href="<?=base_url()?>store/detail_product/quick_link/<?=$prod['id_title']?>"><img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$prod['id'])?>/thumb5/<?=$hero['name']?>"/></a>
 		                                	<?
 		                                	}
 											else
@@ -1081,7 +1081,7 @@ a:hover, a:focus {
 						}
                     	
                     	?>
-                        <!-- <li class="span2">
+                        <!-- <li class="col-sm-2">
                             <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
                                 <img src="<?=base_url()?>img/product-7.jpg" alt="" width="156px">
                                 <div style="height:10px;"></div>     
@@ -1090,7 +1090,7 @@ a:hover, a:focus {
                                 <div class="feat_price">$ 0.00</div>
                             </div>
                         </li>
-                        <li class="span2">
+                        <li class="col-sm-2">
                             <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
                                 <img src="<?=base_url()?>img/product-8.jpg" alt="" width="156px">
                                 <div style="height:10px;"></div>     
@@ -1099,7 +1099,7 @@ a:hover, a:focus {
                                 <div class="feat_price">$ 0.00</div>
                             </div>
                         </li>
-                        <li class="span2">
+                        <li class="col-sm-2">
                             <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
                                 <img src="<?=base_url()?>img/product-9.jpg" alt="" width="156px">
                                 <div style="height:10px;"></div>     
@@ -1108,7 +1108,7 @@ a:hover, a:focus {
                                 <div class="feat_price">$ 0.00</div>
                             </div>
                         </li>
-                        <li class="span2">
+                        <li class="col-sm-2">
                             <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
                                 <img src="<?=base_url()?>img/product-10.jpg" alt="" width="156px">
                                 <div style="height:10px;"></div>     
@@ -1117,7 +1117,7 @@ a:hover, a:focus {
                                 <div class="feat_price">$ 0.00</div>
                             </div>
                         </li>
-                        <li class="span2">
+                        <li class="col-sm-2">
                             <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
                                 <img src="<?=base_url()?>img/product-11.jpg" alt="" width="156px">
                                 <div style="height:10px;"></div>     
@@ -1126,7 +1126,7 @@ a:hover, a:focus {
                                 <div class="feat_price">$ 0.00</div>
                             </div>
                         </li>
-                        <li class="span2">
+                        <li class="col-sm-2">
                             <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
                                 <img src="<?=base_url()?>img/product-12.jpg" alt="" width="156px">
                                 <div style="height:10px;"></div>     
@@ -1144,10 +1144,10 @@ a:hover, a:focus {
             <a data-slide="next" href="#myCarousel3" class="right carousel-control">›</a> -->
             
             <a class="left carousel-control" data-slide="prev" href="#myCarousel3" style="background: none; border: none; opacity: 1">
-								<img src="<?=base_url()?>img/grey-left-arrow.png"/>
+								<img src="<?=base_url()?>img/grey-left-ar.png"/>
 							</a>
 							<a class="right carousel-control" data-slide="next" href="#myCarousel3" style="background: none; border: none; opacity: 1">
-								<img src="<?=base_url()?>img/grey-right-arrow.png"/>
+								<img src="<?=base_url()?>img/grey-right-ar.png"/>
 							</a>
         </div>
     </div>
