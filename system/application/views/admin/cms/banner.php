@@ -76,7 +76,9 @@ get_banners_by_category();
           </select> 
             <h2 style="padding-left: 7px;">Add new banner</h2>
             <p class="desc" style="padding-left: 7px;">
-            Add a new image banner by browsing your computer and uploading a file. The image files accepted for upload include, (.jpg , .gif , .png) Enter a web link in the space provided to create a click through for you image. Images can be published and unpublished by clicking the tick icon. To delete a banner click the red cross.
+           <!-- Add a new image banner by browsing your computer and uploading a file. The image files accepted for upload include, (.jpg , .gif , .png) Enter a web link in the space provided to create a click through for you image. Images can be published and unpublished by clicking the tick icon. To delete a banner click the red cross.-->
+           	
+            <span><em>Ideal image size: 1300px x 610px<br>All image should be of same width & height for optimum result.</em></span>
             </p>
             <div style="height: 10px; clear: both">&nbsp;</div>
             
@@ -102,8 +104,8 @@ get_banners_by_category();
             </div>
             <div style="height: 5px; clear: both">&nbsp;</div>
             <div style="padding-left: 7px;">
-                <div style="width: 20%; float: left; height: 30px; line-height: 30px;">Template Homepage</div>
-                <div style="width: 80%; float: right">						
+                <div style="width: 20%; float: left; height: 30px; line-height: 30px; display:none;">Template Homepage</div>
+                <div style="width: 80%; float: right; display:none;">						
                     <select name="banner_template" id="banner_template" onchange="change_banner()">
                     	<option value=1 <? if($temp==1){?> selected="selected" <? } ?>>Template 1 (1200 x 600)</option>
                         <option value=2 <? if($temp==2){?> selected="selected" <? } ?>>Template 2 (1200 x 920)</option>

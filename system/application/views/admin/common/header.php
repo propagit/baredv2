@@ -17,7 +17,7 @@
 <link href="<?=base_url()?>css/bootstrap.css" rel="stylesheet" media="screen">
 <link href="<?=base_url()?>css/admin.css" rel="stylesheet" media="screen">
 
-<link rel="stylesheet" href="<?=base_url();?>css/font-awesome.css">
+<link rel="stylesheet" href="<?=base_url()?>css/font-awesome.css">
 
 <link href="<?=base_url()?>css/bootstrap-responsive.css" rel="stylesheet" media="screen">
 

@@ -7,7 +7,8 @@
 		  ?>
                       <div class="item <?=!$counter ? 'active' : '';?>">
                           <a href="#">
-                              <img src="<?=base_url();?>uploads/banners/ori/<?=$banner['name'];?>"  alt="<?=$banner['name'];?>"/>
+                              <!--<img src="<?=base_url();?>uploads/banners/ori/<?=$banner['name'];?>"  alt="<?=$banner['name'];?>"/>-->
+                              <img src="<?=base_url() . ASSETS ?>img/dummy/banner3.jpg"  alt="<?=$banner['name'];?>"/>
                               <div class="carousel-caption visible-xs">
                                   <h3><?=$banner['caption'];?></h3>
                               </div>
