@@ -47,7 +47,7 @@ function add_feature_products(){
 			dateType:'html',
 			data:$('#featureForm').serialize(),
 			success:function(html){
-				location.reload();
+				//location.reload();
 			}
 		});	
 }
