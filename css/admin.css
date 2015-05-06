@@ -144,3 +144,33 @@ a.anchor:hover{
 .female{
 	color:#e6394c;	
 }
+.app-list{
+	width:100%;
+	float:left;
+}
+.app-list .th{
+	font-size:15px;
+}
+.app-list .th,
+.app-list .tr{
+	padding: 8px 0;
+	  line-height: 20px;
+	  text-align: left;
+	  vertical-align: top;
+	  border-top: 1px solid #dddddd;
+	  float:left;
+	  width:100%;
+}
+.app-list .td{
+	box-sizing: border-box;
+	padding-left:7px;
+}
+.td-name{
+	width:85%;
+	float:left;	
+}
+.td-checkbox{
+	text-align:center;
+	width:15%;
+	float:left;	
+}
