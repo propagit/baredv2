@@ -1,4 +1,4 @@
-<form name="featureForm" method="post" action="<?=base_url();?>admin/store/addfeature">
+<form name="featureForm" id="featureForm">
     <h2 style="padding-left:7px;">Products List</h2>
     <div style="margin-top: 10px;" class="list_line"></div>
     <table class="table table-hover">
@@ -33,6 +33,22 @@
             <option  value="<?=MEN?>">Male</option>
             <option  value="<?=WOMEN?>">Female</option>
         </select> 
-        <button class="btn btn-primary" type="button" onClick="document.featureForm.submit()">Add Products</button>
+        <button class="btn btn-primary" type="button" onclick="add_feature_products();">Add Products</button>
     </p>        
 </form>
+
+
+
+<script>
+function add_feature_products(){
+	$.ajax({
+			url:'<?=base_url();?>admin/store/addfeature',
+			type:'POST',
+			dateType:'html',
+			data:$('#featureForm').serialize(),
+			success:function(html){
+				location.reload();
+			}
+		});	
+}
+</script>
