@@ -2109,6 +2109,19 @@ class Product_model extends Model {
 		return $query->result_array();
 	}
 	
+	function get_features_by_category($category) {
+		$sql = "SELECT `products`.*
+				FROM `products`,`products_features` 
+				WHERE `products`.`id` = `products_features`.`product_id` 
+				AND `products`.`deleted` = 0 
+				AND `products`.`status` = 1 
+				AND `products_features`.`home_category` = " . $category . " 
+				ORDER  BY `products_features`.`order` ASC";
+                #echo $sql;return;
+		$query = $this->db->query($sql);
+		return $query->result_array();
+	}
+	
 	function get_features1() {
 //		$sql = "SELECT `products`.* FROM `products`,`products_features` WHERE `products`.`id` = `products_features`.`product_id` ORDER  BY `products_features`.`order` ASC ";
 		$sql = "SELECT `products`.* FROM `products`,`products_features` WHERE `products`.`id` = `products_features`.`product_id` and `products`.`deleted` = 0 and `products`.`status` = 1 ORDER  BY `products_features`.`order` ASC LIMIT 0,6";

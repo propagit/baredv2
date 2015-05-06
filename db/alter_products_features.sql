@@ -1,0 +1,1 @@
+ALTER TABLE `products_features` ADD `home_category` TINYINT NOT NULL DEFAULT '1' COMMENT 'Flags which home page ''men'' or ''women'' does this belong to. 1 Mens: 2 Female' AFTER `order`;

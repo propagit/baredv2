@@ -43,8 +43,8 @@
                   <div class="form-label">Category</div>
                   <div class="form-control">
                       <select name="category" id="category">
-                          <option <?=(isset($tile['category']) ? ($tile['category'] == 1 ? 'selected="selected"' : '') : 'selected="selected"');?> value="1">Male</option>
-                          <option <?=(isset($tile['category']) ? ($tile['category'] == 2 ? 'selected="selected"' : '') : '');?> value="2">Female</option>
+                          <option <?=(isset($tile['category']) ? ($tile['category'] == MEN ? 'selected="selected"' : '') : 'selected="selected"');?> value="<?=MEN?>">Male</option>
+                          <option <?=(isset($tile['category']) ? ($tile['category'] == WOMEN ? 'selected="selected"' : '') : '');?> value="<?=WOMEN?>">Female</option>
                       </select> 
                   </div>
               </div> 

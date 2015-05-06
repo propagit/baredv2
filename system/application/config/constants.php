@@ -81,6 +81,11 @@ define('FACEBOOK','https://facebook.com');
 define('TWITTER','https://twitter.com');
 define('PINTEREST','https://pinterest.com');
 define('INSTAGRAM','https://instagram.com');
+# Home Category
+define('MEN',1);
+define('WOMEN',2);
+
+
 /*
 |--------------------------------------------------------------------------
 | File Stream Modes

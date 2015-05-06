@@ -302,7 +302,7 @@ function active(id)
 
 </style>
 
-<div class="app-container content-wrap-15">
+<div class="app-container">
 	<!-- facebook -->
 	<div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -1323,8 +1323,8 @@ function active(id)
     
     
     <?php } ?>
-    <div class="app-container relative bar bg-black text-white"><h3>you may also like</h3></div>
-    <?php $this->load->view('common/featured_products'); ?>
+   <!-- <div class="app-container relative bar bg-black text-white"><h3>you may also like</h3></div>-->
+    <?php #$this->load->view('common/products/featured_products'); ?>
     
     <div id="anyModal" class="popup-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="mytop-modal" onclick="$('#anyModal').modal('hide');">

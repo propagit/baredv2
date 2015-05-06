@@ -40,8 +40,9 @@ class Home extends Controller {
 	function men()
 	{
 		# get mens tiles
-		$data['tiles'] = $this->Tiles_model->get_active_tiles(1);
-		$data['banners'] = $this->Content_model->get_active_banners_by_category(1);
+		$data['tiles'] = $this->Tiles_model->get_active_tiles(MEN);
+		$data['banners'] = $this->Content_model->get_active_banners_by_category(MEN);
+		$data['feature_products'] = $this->Product_model->get_features_by_category(MEN);
 		$this->load->view('common/header');
 		$this->load->view('home/main_view',isset($data) ? $data : NULL);
 		$this->load->view('common/footer');	
@@ -49,8 +50,9 @@ class Home extends Controller {
 	
 	function women()
 	{
-		$data['tiles'] = $this->Tiles_model->get_active_tiles(2);
-		$data['banners'] = $this->Content_model->get_active_banners_by_category(2);
+		$data['tiles'] = $this->Tiles_model->get_active_tiles(WOMEN);
+		$data['banners'] = $this->Content_model->get_active_banners_by_category(WOMEN);
+		$data['feature_products'] = $this->Product_model->get_features_by_category(WOMEN);
 		$this->load->view('common/header');
 		$this->load->view('home/main_view',isset($data) ? $data : NULL);
 		$this->load->view('common/footer');		

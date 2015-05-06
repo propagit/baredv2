@@ -3036,6 +3036,7 @@ class Cms extends Controller {
     function ajax_get_banners_by_category()
 	{
 		$category = $this->input->post('category');
+		$this->session->set_userdata('banner_cur_category',$category);
 		echo $this->row_view($category);	
 	}
         
@@ -3056,7 +3057,8 @@ class Cms extends Controller {
 	}
 	function updatebanner() {
 		$this->Content_model->update_banner($_POST['banner_id'],array('url' => $_POST['url'],'category' => $_POST['banners-category'],'caption' => $_POST['caption']));
-		redirect('admin/cms/banner');
+		#redirect('admin/cms/banner');
+		echo 'ok';
 	}
 
 	function uploadbanner() {
@@ -3112,9 +3114,15 @@ class Cms extends Controller {
 		redirect('admin/cms/banner/'.$_POST['banner_template']);
 	}
 	
-	function activebanner($id="",$temp="2") {
+	function activebanner(){
+		$id = $this->input->post('banner_id');
 		$this->Content_model->active_banner($id);
-		redirect('admin/cms/banner/'.$temp);
+		echo 'ok';
+	}
+	
+	function _old_activebanner($id="",$temp="2") {
+		$this->Content_model->active_banner($id);
+		#redirect('admin/cms/banner/'.$temp);
 		//echo 'test';
 	}
 	function advanced_resizephoto($data,$directory,$sub,$width,$height,$resize_width,$resize_height) 
@@ -3774,62 +3782,24 @@ class Cms extends Controller {
 		$this->load->view('admin/product/feature',$data);
 		$this->load->view('admin/common/footer');
 	}
-        function ajax_get_feature_product_by_category()
-	{
-		$category = $this->input->post('category');
-		echo $this->row_view($category);	
-	}
         
-        function feature_product_view($category, $temp = 1, $site = 'Retail')
+    function feature_product_view()
 	{
-                $data['temp']=$temp;
-		$data['site']=$site;
-		$data['banners'] = $this->Content_model->get_banners_by_category($category);
-		return $this->load->view('admin/cms/row_view_banners',$data,true);
+	    $category = $this->input->post('category');  
+		$this->session->set_userdata('feature_product_cur_filter',$category);        
+		$data['features'] = $this->Product_model->get_features_by_category($category);
+        echo $this->load->view('admin/product/feature_products/list_view',$data,true);
 	}
 	function searchfeature() {
 		$keyword = $_POST['keyword'];
 		$category = $_POST['category'];
-		$products = $this->Product_model->search($keyword,$category,true);		
-		$out = '
-    <div class="box">
-    <form name="featureForm" method="post" action="'.base_url().'admin/store/addfeature">
-        <h2 style="padding-left:7px;">Products List</h2>
-        <div style="margin-top: 10px;" class="list_line"></div>
-		<table class="table table-hover">
-		<thead>
-			<tr style="font-size: 15px">
-				<th style="width: 85%">Product name</th>
-				<th style="width: 15%; text-align: center;">Add</th>				
-			</tr>
-		</thead>
-				
-		<tbody id="subcat">';			        
-		
-		foreach($products as $product) { 
-			if (!$this->Product_model->is_feature($product['id']) && $product['deleted'] == 0 && $product['status'] == 1) {
-			$out .= '			
-			<tr>
-				<td>'.$product['title'].'</td>
-				<td style="text-align: center;">
-					&nbsp; <input type="checkbox" value="'.$product['id'].'" name="products[]" /> &nbsp;
-				</td>
-			</tr> 
-			
-			';
-            	} 
-			}
-		$out .= '
-		</tbody>		
-		</table>
-
-    	<p align="right">
-			
-			<button class="btn btn-primary" type="button" onClick="document.featureForm.submit()">Add Products</button>
-		</p>        
-    </div>
-    </form>';
-		print $out;
+		$products = $this->Product_model->search($keyword,$category,true);
+		$data = array(
+						'keyword' => $keyword,
+						'category' => $category,
+						'products' => $products
+					);		
+		echo $this->load->view('admin/product/feature_products/add/search_view', $data, true);
 	}
 	function addfeature() {
 		$n = $this->Product_model->count_features();

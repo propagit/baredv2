@@ -1533,7 +1533,7 @@ Case Construction Online Merchandise Store
 				$this->session->set_flashdata('addft_true',true);
 			} else
 				foreach($products as $product_id) {
-					$feature_id = $this->Product_model->add_feature(array('product_id' => $product_id));
+					$feature_id = $this->Product_model->add_feature(array('product_id' => $product_id, 'home_category' => $_POST['home_category']));
 					$this->Product_model->update_feature($feature_id,array('order' => $feature_id));
 				}
 		}

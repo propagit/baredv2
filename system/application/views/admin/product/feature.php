@@ -20,7 +20,7 @@ function searchproduct() {
 function get_feature_products_by_category(){
 	var category = jQuery('#product-filter').val();
 	jQuery.ajax({
-			url:'<?=base_url();?>admin/cms/ajax_get_feature_product_by_category',
+			url:'<?=base_url();?>admin/cms/feature_product_view',
 			type:'POST',
 			dateType:'html',
 			data:{category:category},
@@ -31,8 +31,7 @@ function get_feature_products_by_category(){
 }
 
 jQuery(function(){
-get_products_by_category();
-
+	get_feature_products_by_category();
 });
 </script>
 <div class="span9">
@@ -40,46 +39,24 @@ get_products_by_category();
 		<div style="padding: 20px">
 			<!-- start here -->
 			<h1 style="padding-left: 7px">Feature Products</h1>
-                        <h2 style="padding-left: 7px;">Filter Banners</h2>
+                        <h2 style="padding-left: 7px;">Filter</h2>
+                        <?php
+						  $feature_product_cur_filter = MEN; 
+						  if($this->session->userdata('feature_product_cur_filter')){
+							  $feature_product_cur_filter = $this->session->userdata('feature_product_cur_filter');
+						  }
+						?>
                         <select name="product-category" id="product-filter" onChange="get_feature_products_by_category();" style="display: inherit; margin-bottom: 10px;">
-                            <option  value="all">All</option>
-                            <option  value="1">Male</option>
-                            <option  value="2">Female</option>
+                             <option  value="<?=MEN?>" <?=$feature_product_cur_filter == MEN ? 'selected="selected"' : '';?>>Male</option>
+                 			 <option  value="<?=WOMEN?>" <?=$feature_product_cur_filter == WOMEN ? 'selected="selected"' : '';?>>Female</option>
                         </select> 
                         <div id="feature-products">
-            <?php $n = 0; if($features) 
-					foreach($features as $product) 
-					{ $n++; ?>
-                  <div class="box_container" style="padding-left:7px; float: left">
-                    <div class="item" style="float:left;padding-right:10px;">
-                    <?php $hero = $this->Product_model->get_hero($product['id']); 
-                        if ($hero) 
-						{ ?>
-                        <img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb3/<?=$hero['name']?>" />                
-                        <?php } else { ?>
-                        <img src="http://placehold.it/89x97"/> 
-                        <?php } ?>
-                        
-                    <div class="nav" style="margin-top:10px;" >
-                            <a href="javascript:removefeature(<?=$product['id']?>)" style="text-decoration:none;" data-toggle="tooltip" title="Remove this item"><i class="icon-trash icon-2x"></i></a>
-							<?php if($n>1) { ?><a style="text-decoration:none;" data-toggle="tooltip" title="Move this item" href="<?=base_url()?>admin/store/movefeature/<?=$product['id']?>/-1"><i class="icon-circle-arrow-left icon-2x"></i></a><?php } ?>
-							<?php if($n<count($features)) { ?><a style="text-decoration:none;" data-toggle="tooltip" title="Move this item" href="<?=base_url()?>admin/store/movefeature/<?=$product['id']?>/1"><i class="icon-circle-arrow-right icon-2x"></i></a><?php } ?>
-                    </div>
-                    </div>
-                    
-                  </div>
+                            
                         </div>
-                    <?php 
-					} ?>
-                    
-                    <?php if($this->session->flashdata('addft_true')) { ?>
-                    <p class="error">Error: maximum 6 features products in the homepage</p>
-                    <?php 
-					} ?>                    
                 
                 <div style="height: 5px; clear: both">&nbsp;</div>
                 <div style="height: 0px; clear: both; border-top:1px solid #ccc">&nbsp;</div>
-                <div class="box bgw">
+                <div class="bgw">
             		<h2 style="padding-left:7px;">Search Product</h3>
                 
                     <div style="padding-left: 7px;">

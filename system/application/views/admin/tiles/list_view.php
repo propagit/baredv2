@@ -16,9 +16,9 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
         
        <h1 class="page-header-alt">Filter</h1>
           <select id="tile-filter" onChange="get_tiles_by_category();">
-              <option <?php #echo $category == 'all' ? 'selected="selected"' : '';?> value="all">All</option>
-              <option <?php #echo $category == '1' ? 'selected="selected"' : '';?> value="1">Male</option>
-              <option <?php #echo $category == '2' ? 'selected="selected"' : '';?> value="2">Female</option>
+              <option value="all">All</option>
+              <option  value="<?=MEN?>">Male</option>
+           	  <option  value="<?=WOMEN?>">Female</option>
           </select>        
         <hr>
         
