@@ -1537,7 +1537,8 @@ Case Construction Online Merchandise Store
 					$this->Product_model->update_feature($feature_id,array('order' => $feature_id));
 				}
 		}
-		redirect('admin/store/feature');
+		echo 'ok';
+		#redirect('admin/store/feature');
 	}
 	function removefeature($product_id="") {
 		$this->Product_model->remove_feature($product_id);
