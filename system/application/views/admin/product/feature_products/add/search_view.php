@@ -11,12 +11,13 @@
         
         <?php 
 		if($products){
+		#echo '<pre>'.print_r($products,true).'</pre>';exit;
 		foreach($products as $product) { 
 			if (!$this->Product_model->is_feature($product['id']) && $product['deleted'] == 0 && $product['status'] == 1) {		
 		?>
         
         	<div class="tr">
-                <div class="td td-name"><?=$product['title'];?></div>
+                <div class="td td-name"><?=$product['title'] . ' - ' . $product['short_desc'];?></div>
                 <div class="td td-checkbox"><input type="checkbox" value="<?=$product['id'];?>" name="products[]" /></div>
             </div>
 		<?php		}
