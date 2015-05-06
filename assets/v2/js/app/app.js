@@ -70,10 +70,10 @@ var app = {
 	swiper:function(selector){
 		$(selector).swiperight(function() {  
       		$(selector).carousel('prev');  
-		 });  
-		 $(selector).swipeleft(function() {  
+		});  
+		$(selector).swipeleft(function() {  
 			$(selector).carousel('next');  
-		 });  
+		});  
 	}
 	
 		

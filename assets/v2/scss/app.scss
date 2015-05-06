@@ -1255,11 +1255,34 @@ $font_weights: 100,300,400,700,900;
 	}
 	
 	.carousel{
+		
+		/*.carousel-inner{
+			.item{
+				&::before{
+					content:url('../img/swipe.png');	
+					position: absolute;
+					z-index: 100;
+					top: 30%;
+					text-align: center;
+					left: 0;
+					right: 0;
+					opacity: 0.75;
+				}
+			}
+		}*/
 		.slide-btn{
 			display:none;  
 					 
 		}	
+		
 	} /*carousel*/
+	
+	#banners{
+		.carousel-caption{
+			position:relative;
+			background:$color1;	
+		}
+	}
 	
 	#top-nav{
 		padding-left:0;
