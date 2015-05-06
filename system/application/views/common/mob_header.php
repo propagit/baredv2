@@ -13,6 +13,6 @@
     </ul>
 </div>
 <div class="col-xs-1 x-gutters block">
-    <button class="btn app-btn pull mob-nav-btn" data-target="#top-nav" data-toggle="collapse" ><i class="fa fa-bars"></i></button>
+    <button class="btn pull mob-nav-btn" data-target="#top-nav" data-toggle="collapse" ><i class="fa fa-bars"></i></button>
 </div>
 
