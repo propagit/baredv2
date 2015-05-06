@@ -934,23 +934,17 @@ body {
   .caption h3, .carousel .carousel-caption h3, .tiles .tile .caption h3 {
     font-weight: 400; }
 
-  .carousel {
-    /*.carousel-inner{
-    	.item{
-    		&::before{
-    			content:url('../img/swipe.png');	
-    			position: absolute;
-    			z-index: 100;
-    			top: 30%;
-    			text-align: center;
-    			left: 0;
-    			right: 0;
-    			opacity: 0.75;
-    		}
-    	}
-    }*/ }
-    .carousel .slide-btn {
-      display: none; }
+  .carousel .carousel-inner .swapper::before {
+    content: url("../img/swipe.png");
+    position: absolute;
+    z-index: 100;
+    top: 30%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    opacity: 0.75; }
+  .carousel .slide-btn {
+    display: none; }
 
   /*carousel*/
   #banners .carousel-caption {

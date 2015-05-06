@@ -1256,8 +1256,8 @@ $font_weights: 100,300,400,700,900;
 	
 	.carousel{
 		
-		/*.carousel-inner{
-			.item{
+		.carousel-inner{
+			.swapper{
 				&::before{
 					content:url('../img/swipe.png');	
 					position: absolute;
@@ -1269,7 +1269,7 @@ $font_weights: 100,300,400,700,900;
 					opacity: 0.75;
 				}
 			}
-		}*/
+		}
 		.slide-btn{
 			display:none;  
 					 

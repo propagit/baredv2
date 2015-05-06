@@ -10,7 +10,7 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
           <?php for($i = 1;$i < 7; $i++){ ?>
-          <div class="item <?=$i == 1 ? 'active' : '';?>">
+          <div class="item swapper <?=$i == 1 ? 'active' : '';?>">
               <a href="#" data-toggle="modal" data-target="#myModal">
               <div class="col-sm-2">
                   <img src="<?=base_url() . ASSETS;?>img/dummy/instagram<?=$i;?>.jpg" />

@@ -12,7 +12,7 @@
 					$normal_price_arr = explode('.',$prod['price']);
 					$sale_price_arr = explode('.',$prod['sale_price']);
 		  ?>
-                     <div class="item <?=!$counter ? 'active' : '';?>">
+                     <div class="item swapper <?=!$counter ? 'active' : '';?>">
                           <a href="<?=base_url()?>store/detail_product/quick_link/<?=$prod['id_title']?>">
                           <div class="col-sm-2 product">
                               <img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$prod['id'])?>/thumb5/<?=$hero['name']?>" />

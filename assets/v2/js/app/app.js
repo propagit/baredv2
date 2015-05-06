@@ -70,9 +70,11 @@ var app = {
 	swiper:function(selector){
 		$(selector).swiperight(function() {  
       		$(selector).carousel('prev');  
+			$(selector).find('.item').removeClass('swapper');
 		});  
 		$(selector).swipeleft(function() {  
 			$(selector).carousel('next');  
+			$(selector).find('.item').removeClass('swapper');
 		});  
 	}
 	
