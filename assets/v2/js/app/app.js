@@ -61,7 +61,10 @@ $(function(){
 	 
 	 //carousel swipe
 	 
-	 
+	 $('.search-btn').click(function(){
+		  var form_id = $(this).attr('form-id'); 
+		  $('#'+form_id).submit();
+	 });
 	 
 }); // ready
 

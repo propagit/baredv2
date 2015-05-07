@@ -5,11 +5,12 @@
         <span class="hidden-lg">AU wide on order over $150!</span>
     </span>
     
-    
+    <form id="search-form" method="post" action="<?=base_url()?>store/search">
     <div class="form-group has-feedback col-xs-5 x-gutters search-form">
-      <input type="text" class="form-control app-form-control search-product" placeholder="Search Products...">
-      <span class="form-control-feedback pointer"><i class="fa fa-search"></i></span>
+      <input type="text" name="keyword" class="form-control app-form-control search-product" placeholder="Search Products...">
+      <span class="form-control-feedback pointer search-btn" form-id="search-form"><i class="fa fa-search"></i></span>
     </div>
+    </form>
 </div>
 
 <div class="col-sm-2 logo-wrap">

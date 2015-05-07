@@ -68,23 +68,6 @@
 
 <?php } ?>
 <?php
-	// if($this->session->userdata('look_by'))
-	// {
-		// $curr_page = $this->session->userdata('look_by');
-	// }
-	// else 
-	// {
-		// $curr_page = '';
-	// }
-// 	
-	// if($this->session->userdata('text_keyword'))
-	// {
-		// $curr_opt = $this->session->userdata('text_keyword');
-	// }
-	// else 
-	// {
-		// $curr_opt = '';
-	// }
 	
 	$curr_page = $look_by;
 	$curr_opt = $text_key;
@@ -99,11 +82,6 @@
 		if($curr_page=='' && $curr_opt=='')
 		{
 			$curr_page='shop_by';
-			//if($ex_pages[4]=='Handbags'){$curr_opt = 'All_Handbags';}
-			//if($ex_pages[4]=='Wallets'){$curr_opt = 'All_Wallets_and_Purses';}
-			//if($ex_pages[4]=='Travel'){$curr_opt = 'All_Travel_Bags';}
-			//if($ex_pages[4]=='Accessories'){$curr_opt = 'All_Accessories';}
-			
 		}
 	}
 	
@@ -283,7 +261,7 @@ function sort_by_name()
 }
 </script>
 
-<div class="app-container content-wrap-15">
+<div class="app-container">
 	<div style="height:10px;"></div>     
     
     <div class=" hidden-xs"> 
@@ -334,39 +312,10 @@ function sort_by_name()
 		    </ul>
         </div>
         <div class="col-sm-7 visible-sm">
-            <!-- <ul class="breadcrum-Font breadcrumb" style="font-size: 11px; text-transform: uppercase; padding-right: 2px">
-                
-                
-                <li class="active"><a class="a-secondary" href="javascript:void(0);" onclick="sort_by_latest()">SORT BY LATEST</a> <span class="divider">|</span></li>
-                <li class="active"><a class="a-secondary" href="javascript:void(0);" onclick="sort_by_price()">PRICE</a> <span class="divider">|</span></li>
-                <li class="active"><a class="a-secondary" href="javascript:void(0);" onclick="sort_by_name()">NAME</a></li>
-            
-            	<li style="float:right" id="pagin">
-				<? if (isset($links))
-                {
-                    echo $links; 
-                }
-                ?>
-                </li>                                                
-                <?
-	              	$url_pages=$_SERVER['REQUEST_URI'];
-					$ex_pages=explode("/",$url_pages);
-					//print_r($ex_pages);
-				?>
-                <li style="float:right" class="active"><a class="a-secondary" href="<?=base_url()?><?='store/products/'.$cat_name.'/'.$scat_name.'/'.$look_by.'/'.$text_key.'/'.'/36'?>">36</a> </li>
-                <li style="float:right" class="active"><a class="a-secondary" href="<?=base_url()?><?='store/products/'.$cat_name.'/'.$scat_name.'/'.$look_by.'/'.$text_key.'/'.'/24'?>">24</a> <span class="divider" style="padding:2px;">&nbsp;</span> </li>
-                <li style="float:right" class="active"><a class="a-secondary" href="<?=base_url()?><?='store/products/'.$cat_name.'/'.$scat_name.'/'.$look_by.'/'.$text_key.'/'.'/12'?>">12</a> <span class="divider" style="padding:2px;">&nbsp;</span> </li>
-                <li style="float:right" class="active">VIEW <span class="divider" style="padding:2px;">&nbsp;</span></li>
-                
-            </ul> -->
+          
             
             <ul class="breadcrum-Font breadcrumb" >
-                <!-- <li class="active"><a href="<?=base_url()?>store/search_product_sort_by/<?=$s_keyword?>/<?=$look_by?>/<?=$text_key?>/latest">SORT BY LATEST</a> <span class="divider">|</span></li>
-                <li class="active"><a href="<?=base_url()?>store/search_product_sort_by/<?=$s_keyword?>/<?=$look_by?>/<?=$text_key?>/price">PRICE</a> <span class="divider">|</span></li>
-                <li class="active"><a href="<?=base_url()?>store/search_product_sort_by/<?=$s_keyword?>/<?=$look_by?>/<?=$text_key?>/name">NAME</a></li> -->
-                
-                
-            
+              
             	<li style="float:right" id="pagin">
 				<? if (isset($links))
                 {
@@ -379,11 +328,7 @@ function sort_by_name()
 					$ex_pages=explode("/",$url_pages);
 					//print_r($ex_pages);
 				?>
-                <!--<li style="float:right" class="active"><a class="a-secondary" href="<?=base_url()?><?='store/products/'.$cat_name.'/'.$scat_name.'/'.$look_by.'/'.$text_key.'/'.'/36'?>">36</a> </li>
-                <li style="float:right" class="active"><a class="a-secondary" href="<?=base_url()?><?='store/products/'.$cat_name.'/'.$scat_name.'/'.$look_by.'/'.$text_key.'/'.'/24'?>">24</a> <span class="divider" style="padding:2px;">&nbsp;</span> </li>
-                <li style="float:right" class="active"><a class="a-secondary" href="<?=base_url()?><?='store/products/'.$cat_name.'/'.$scat_name.'/'.$look_by.'/'.$text_key.'/'.'/12'?>">12</a> <span class="divider" style="padding:2px;">&nbsp;</span> </li>
-                <li style="float:right" class="active">VIEW <span class="divider" style="padding:2px;">&nbsp;</span></li>-->
-                
+               
                 <li style="float:right; margin-right: 30px;" class="active"><a href="javascript:void(0);" onclick="sort_by_name()">Name</a></li>
                 <li style="float:right" class="active"><a href="javascript:void(0);" onclick="sort_by_price()">Price</a> <span class="divider">|</span></li>
                 
@@ -392,9 +337,7 @@ function sort_by_name()
         </div>        
         <div class="col-sm-7 hidden-desktop">
             <ul class="breadcrumb" style="font-size: 10px; text-transform: uppercase; padding-right: 2px">
-                <!-- <li class="active"><a href="<?=base_url()?>store/product_sort_by/<?=$cat_name?>/<?=$scat_name?>/<?=$look_by?>/<?=$text_key?>/latest">SORT BY LATEST</a> <span class="divider">|</span></li>
-                <li class="active"><a href="<?=base_url()?>store/product_sort_by/<?=$cat_name?>/<?=$scat_name?>/<?=$look_by?>/<?=$text_key?>/price">PRICE</a> <span class="divider">|</span></li>
-                <li class="active"><a href="<?=base_url()?>store/product_sort_by/<?=$cat_name?>/<?=$scat_name?>/<?=$look_by?>/<?=$text_key?>/name">NAME</a></li> -->
+               
                 
                 <li class="active"><a class="a-secondary" href="javascript:void(0);" onclick="sort_by_latest()">SORT BY LATEST</a> <span class="divider">|</span></li>
                 <li class="active"><a class="a-secondary" href="javascript:void(0);" onclick="sort_by_price()">PRICE</a> <span class="divider">|</span></li>
@@ -412,42 +355,14 @@ function sort_by_name()
 					$ex_pages=explode("/",$url_pages);
 					//print_r($ex_pages);
 				?>
-                <!--<li style="float:right" class="active"><a class="a-secondary" href="<?=base_url()?><?='store/products/'.$cat_name.'/'.$scat_name.'/'.$look_by.'/'.$text_key.'/'.'/36'?>">36</a> </li>
-                <li style="float:right" class="active"><a class="a-secondary" href="<?=base_url()?><?='store/products/'.$cat_name.'/'.$scat_name.'/'.$look_by.'/'.$text_key.'/'.'/24'?>">24</a> <span class="divider" style="padding:2px;">&nbsp;</span> </li>
-                <li style="float:right" class="active"><a class="a-secondary" href="<?=base_url()?><?='store/products/'.$cat_name.'/'.$scat_name.'/'.$look_by.'/'.$text_key.'/'.'/12'?>">12</a> <span class="divider" style="padding:2px;">&nbsp;</span> </li>
-                <li style="float:right" class="active">VIEW <span class="divider" style="padding:2px;">&nbsp;</span></li>-->
+               
                 
             </ul>
         </div>        
     </div>
     
     
-    <!-- Menu for phone mode -->
-    <!-- <div class=" visible-xs navbar" >
-		<div class="app-container visible-xs" style="background: #fff; border: 1px solid #989898; margin-left: 5%; margin-right: 5%">
-			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#list-prod-nav">
-	        	<i class="icon icon-chevron-down"></i>
-	        </button>
-	        <a class="brand" href="#" style="color:#989898; font-weight: 700">Shop By</a>
-	        <div class="nav-collapse collapse" id="list-prod-nav">
-	            <ul class="nav">
-	              <?
-	              	$url_pages=$_SERVER['REQUEST_URI'];
-					$ex_pages=explode("/",$url_pages);
-	              	 if($ex_pages[3]!='search_result')
-					 {
-	              foreach($shop_by as $shopby){ ?>                  
-                  <li>
-                  		<a class="a-nav" href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/shop_by/<?=$shopby['text']?>/<?=$shopby['id']?>">
-							<?=$shopby['name']?>
-                        </a>
-                  </li>
-
-                  <? }}?>
-	            </ul>
-	        </div>
-		</div>
-	</div> -->
+   
 	<div style="height:10px;"></div>
 	<?php
 	$url_pages=$_SERVER['REQUEST_URI'];
@@ -455,10 +370,6 @@ function sort_by_name()
 	<div class=" visible-xs"> 
     	<div class="col-sm-5" style="text-align: center">
             <ul class="breadcrumb">
-                <!-- <li class="active"><a href="<?=base_url()?>store/product_sort_by/<?=$cat_name?>/<?=$scat_name?>/latest">SORT BY LATEST</a> <span class="divider">|</span></li>
-                <li class="active"><a href="<?=base_url()?>store/product_sort_by/<?=$cat_name?>/<?=$scat_name?>/price">PRICE</a> <span class="divider">|</span></li>
-                <li class="active"><a href="<?=base_url()?>store/product_sort_by/<?=$cat_name?>/<?=$scat_name?>/name">NAME</a></li> -->
-                
                 <li class="active"><a class="a-secondary" href="javascript:void(0);" onclick="sort_by_latest()">SORT BY LATEST</a> <span class="divider">|</span></li>
                 <li class="active"><a class="a-secondary" href="javascript:void(0);" onclick="sort_by_price()">PRICE</a> <span class="divider">|</span></li>
                 <li class="active"><a class="a-secondary" href="javascript:void(0);" onclick="sort_by_name()">NAME</a></li>
@@ -487,153 +398,6 @@ function sort_by_name()
                                                            
                             </div>
                          </div>                         
-                         <? //if($cat_name != 'Accessories'){?>
-                         <!--
-                         <div class="accordion-group">
-                         	<div class="accordion-heading shopby-Font">
-                            	<a style="display: block" onclick="click_line(1)" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                                	<div class="a-secondary" style="float:left;">STYLE</div>
-									<div id="line1-down" style="float: right; margin-top: 5px"> <i class="icon icon-angle-down"></i> </div>
-									<div id="line1-right" style="display:none; float: right; margin-top: 5px"> <i class="icon icon-angle-right"></i> </div>
-									<div style="clear: both"></div>
-                                </a>
-                            </div>
-                            <div id="collapseTwo" class="accordion-body collapse <?php if($curr_page=='shop_by' || $curr_page=='style') {echo "in";}?>">                                                                
-                                
-                                <? //if($cat_name == 'Womens'){?>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by_reset/<?=$cat_name?>/<?=$scat_name?>">
-                                    View All
-                                    </a>
-                                </div>
-                                
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/new_arrivals" <? if($curr_opt=='new_arrivals'){echo 'class="active_opt"'; }?> >
-                                    New arrivals
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/ballets_flat" <? if($curr_opt=='ballets_flats'){echo 'class="active_opt"'; }?>>
-                                    Ballet Flats
-                                    </a>
-                                </div>                                
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/lace_up" <? if($curr_opt=='lace_ups'){echo 'class="active_opt"'; }?>>
-                                    Lace Ups
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/loafers" <? if($curr_opt=='loafers'){echo 'class="active_opt"'; }?>>
-                                    Loafers
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/ankle_boot" <? if($curr_opt=='ankle_boots'){echo 'class="active_opt"'; }?>>
-                                    Ankle Boots
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/knee_high_boot" <? if($curr_opt=='kee_high_boots'){echo 'class="active_opt"'; }?>>
-                                    Knee High Boots
-                                    </a>
-                                </div>-->
-                                <!--<div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/sandal" <? if($curr_opt=='sandals'){echo 'class="active_opt"'; }?>>
-                                    Sandals
-                                    </a>
-                                </div> -->
-                                <!--
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/wedge" <? if($curr_opt=='wedges'){echo 'class="active_opt"'; }?>>
-                                    Wedges
-                                    </a>
-                                </div>-->
-                                <!-- <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/heel" <? if($curr_opt=='heels'){echo 'class="active_opt"'; }?>>
-                                    Heels
-                                    </a>
-                                </div> -->
-                                <!--
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/casual" <? if($curr_opt=='casual'){echo 'class="active_opt"'; }?>>
-                                    Casual
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/accessories" <? if($curr_opt=='accessories'){echo 'class="active_opt"'; }?>>
-                                    Accessories
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/gift_card" <? if($curr_opt=='gift_cards'){echo 'class="active_opt"'; }?>>
-                                    Gift Cards
-                                    </a>
-                                </div>
-                                <? //} ?>
-                                
-                                <? //if($cat_name == 'Mens'){?>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by_reset/<?=$cat_name?>/<?=$scat_name?>" <? if($curr_opt=='view_all'){echo 'class="active_opt"'; }?>>
-                                    View All
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/new_arrivals" <? if($curr_opt=='new_arrivals'){echo 'class="active_opt"'; }?>>
-                                    New arrivals
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/brogues" <? if($curr_opt=='brogues'){echo 'class="active_opt"'; }?>>
-                                    Brogues
-                                    </a>
-                                </div>                                
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/boat_shoe" <? if($curr_opt=='boat_shoes'){echo 'class="active_opt"'; }?>>
-                                    Boat Shoes
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/loafers" <? if($curr_opt=='loafers'){echo 'class="active_opt"'; }?>>
-                                    Loafers
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/derby_oxford" <? if($curr_opt=='derby_oxford'){echo 'class="active_opt"'; }?>>
-                                    Derby &amp; Oxfords
-                                    </a>
-                                </div>-->
-                                <!-- <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/work" <? if($curr_opt=='work'){echo 'class="active_opt"'; }?>>
-                                    Work
-                                    </a>
-                                </div> -->
-                                <!-- <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/boot" <? if($curr_opt=='boots'){echo 'class="active_opt"'; }?>>
-                                    Boots
-                                    </a>
-                                </div> -->
-                                <!--
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/dress_shoes" <? if($curr_opt=='dress_shoes'){echo 'class="active_opt"'; }?>>
-                                    Dress Shoes
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/accessories" <? if($curr_opt=='accessories'){echo 'class="active_opt"'; }?>>
-                                    Accessories
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/style/gift_card" <? if($curr_opt=='gift_card'){echo 'class="active_opt"'; }?>>
-                                    Gift Card
-                                    </a>
-                                </div>
-                                <? //} ?>
-                                
-                                
-                            </div>                              
-                         </div>-->
-                         <? //} ?>
                          <? if($cat_name != 'Accessories'){?>
                          <div class="accordion-group">
                          	<div class="accordion-heading shopby-Font">
@@ -647,7 +411,6 @@ function sort_by_name()
                             <div id="collapseThree" class="accordion-body collapse  <? if($curr_page=='size'){echo 'in';}?>">
                             	
                                 
-                                <? //if($cat_name == 'Womens'){?>
                                 <div class="accordion-inner shopby-Font">
                                 	<a <? if($curr_opt=='view_all'){echo 'class="active_opt"'; }?> href="<?=base_url()?>store/product_by_reset/<?=$cat_name?>/<?=$scat_name?>">
                                     View All
@@ -704,37 +467,6 @@ function sort_by_name()
                                     43
                                     </a>
                                 </div>
-                                
-                                <? // } ?>
-                                
-                                <? //if($cat_name == 'Mens'){?>
-                                <!--
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by_reset/<?=$cat_name?>/<?=$scat_name?>" <? if($curr_opt=='view_all'){echo 'class="active_opt"'; }?>>
-                                    View All
-                                    </a>
-                                </div>
-                                
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/size/40" <? if($curr_opt=='40'){echo 'class="active_opt"'; }?> >
-                                    40
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/size/41" <? if($curr_opt=='41'){echo 'class="active_opt"'; }?> >
-                                    41
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/size/42" <? if($curr_opt=='42'){echo 'class="active_opt"'; }?> >
-                                    42
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/size/43" <? if($curr_opt=='43'){echo 'class="active_opt"'; }?> >
-                                    43
-                                    </a>
-                                </div>-->
                                 <div class="accordion-inner shopby-Font">
                                 	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/size/44" <? if($curr_opt=='44'){echo 'class="active_opt"'; }?> >
                                     44
@@ -750,14 +482,14 @@ function sort_by_name()
                                     46
                                     </a>
                                 </div>
-                                <? //} ?>                      
+                                     
                                                                 
                            	</div>
                          </div>
                          <? } ?>
                          
                          
-                         <? //if($cat_name == 'Womens') { ?>
+                 
                          <div class="accordion-group">
                          	<div class="accordion-heading shopby-Font">
                             	<a onclick="click_line(3)" style="display: block" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
@@ -868,9 +600,7 @@ function sort_by_name()
                                                                                                                                 
                              </div>
                          </div>
-                         <? //} ?>
-                         
-                         <? //if($cat_name == 'Womens') { ?>
+   
                          <div class="accordion-group">
                          	<div class="accordion-heading shopby-Font">
                             	<a onclick="click_line(3)" style="display: block" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseNine">
@@ -912,49 +642,7 @@ function sort_by_name()
                          </div>
                          <? //} ?>
                          
-                         <? if($cat_name == 'Mens') { ?>
-                         <!--
-                         <div class="accordion-group">
-                         	<div class="accordion-heading shopby-Font">
-                            	<a onclick="click_line(3)" style="display: block" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
-                                	<div style="float:left;">GENERIC</div>
-									<div id="line3-down" style="display:none; float: right; margin-top: 5px"> <i class="icon icon-angle-down"></i> </div>
-									<div id="line3-right" style="float: right; margin-top: 5px"> <i class="icon icon-angle-right"></i> </div>
-									<div style="clear: both"></div>
-                                </a>
-                            </div>
-                            <div id="collapseSix" class="accordion-body collapse  <? if($curr_page=='features'){echo 'in';}?>">
-                            	
-								<? if($cat_name == 'Mens'){?>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by_reset/<?=$cat_name?>/<?=$scat_name?>" <? if($curr_opt=='view_all'){echo 'class="active_opt"'; }?>>
-                                    View All
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/generic/newin" <? if($curr_opt=='newin'){echo 'class="active_opt"'; }?>>
-                                	New In
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/generic/men" <? if($curr_opt=='men'){echo 'class="active_opt"'; }?>>
-                                    Men's
-                                    </a>
-                                </div>
-                                <div class="accordion-inner shopby-Font">
-                                	<a href="<?=base_url()?>store/product_by/<?=$cat_name?>/<?=$scat_name?>/generic/women" <? if($curr_opt=='women'){echo 'class="active_opt"'; }?>>
-                                    Women's
-                                    </a>
-                                </div>
-                                
-                                <? } ?>
-                                
-                                
-                                                                                                                                
-                             </div>
-                         </div>
-                         -->
-                         <? } ?>
+
                          
                          <div class="accordion-group">
                          	<div class="accordion-heading shopby-Font">
@@ -1205,8 +893,7 @@ function sort_by_name()
 				                            	?>
 	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-xs" src="<?=$hrimg_ltl?>"/>
 				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-xs" src="<?=$hrimg_big?>"/>
-				                            	<!-- <img class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img class="visible-xs" src="<?=$hrimg_big?>"/>		 -->									
+											
 	                                            <? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
@@ -1214,7 +901,7 @@ function sort_by_name()
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>
-				                            <!-- <div class="prod_title secondFont font14normal" style="font-size: 14px;"><a href="<?=base_url()?>store/detail_product/<?=$category['name']?>/<?=$product['id_title']?>"><span class="font18bold"><?=trim($title[0])?></span> <?=trim($title[1])?></a></div> -->
+				                           
 				                            <div class="feauture-title" style="font-size: 14px;"><a class="link_title" href="<?=base_url()?>store/detail_product/<?=$category['name']?>/<?=$product['id_title']?>"><?=$product['title']?></a></div>
 				                            <div class="feauture-desc" style="font-size: 14px;"><?=$product['short_desc']?></div>
 				                            <div class="feauture-price" style="font-size: 14px;">
@@ -1288,8 +975,7 @@ function sort_by_name()
 				                            	?>
 	                                            <img onmouseover="this.src='<?=$mdimg_ltl?>'" onmouseout="this.src='<?=$hrimg_ltl?>'" class="hidden-xs" src="<?=$hrimg_ltl?>"/>
 				                            	<img onmouseover="this.src='<?=$mdimg_big?>'" onmouseout="this.src='<?=$hrimg_big?>'" class="visible-xs" src="<?=$hrimg_big?>"/>
-				                            	<!-- <img class="hidden-xs" src="<?=$hrimg_ltl?>"/>
-				                            	<img class="visible-xs" src="<?=$hrimg_big?>"/>  -->
+				                  
 												<? } else { ?>
 												<img class="hidden-xs" src="http://placehold.it/241x262" alt="">
 	                                            
@@ -1297,7 +983,7 @@ function sort_by_name()
 												<? }?>
 				                            </a>
 				                            <div style="height:10px;"></div>
-				                            <!-- <div class="prod_title secondFont font14normal" style="font-size: 14px;"><a href="<?=base_url()?>store/detail_product/<?=$category['name']?>/<?=$product['id_title']?>"><span class="font18bold"><?=trim($title[0])?></span> <?=trim($title[1])?></a></div> -->
+				                            
 				                            <div class="feauture-title" style="font-size: 14px;"><a class="link_title" href="<?=base_url()?>store/detail_product/<?=$category['name']?>/<?=$product['id_title']?>"><?=$product['title']?></a></div>
 				                            <div class="feauture-desc" style="font-size: 14px;"><?=$product['short_desc']?></div>
 				                            <div class="feauture-price" style="font-size: 14px;">
@@ -1368,60 +1054,7 @@ function sort_by_name()
 						}
                 	?>
                 	           
-                    <!-- <div class="">                        
-                        <div class="col-sm-4" style="float:left;">
-                            <img src="<?=base_url()?>img/product1_large.jpg" alt="">
-                            <div style="height:10px;"></div>
-                            <div class="prod_title">Name - Colour</div>
-                            <div class="prod_title">Description $199</div>
-                        </div>                        
-                        <div class="col-sm-4" style="float:right;">
-                            <img src="<?=base_url()?>img/product2_large.jpg" alt="">
-                            <div style="height:10px;"></div>
-                            <div class="prod_title">Name - Colour</div>
-                            <div class="prod_title">Description $199</div>
-                        </div>                        
-                        <div class="col-sm-4" style="float:right;">
-                            <img src="<?=base_url()?>img/product3_large.jpg" alt="">
-                            <div style="height:10px;"></div>
-                            <div class="prod_title">Name - Colour</div>
-                            <div class="prod_title">Description $199</div>
-                        </div>      
-                    </div>   --> 
-                     
-                    <!-- <div class="">                        
-                        <div class="col-sm-4" style="float:left;">
-                            <img src="<?=base_url()?>img/product4_large.jpg" alt="">
-                            <div style="height:10px;"></div>
-                            <div class="prod_title">Name - Colour1</div>
-                            <div class="prod_title">Description $199</div>
-                        </div>      
-                        <div class="col-sm-4" style="float:right;">
-                            <img src="http://placehold.it/240x283" alt="">                            
-                            <div style="height:10px;"></div>
-                            <div class="prod_title">Name - Colour2</div>
-                            <div class="prod_title">Description $199</div>
-                        </div>      
-                        <div class="col-sm-4" style="float:right;">
-                            <img src="<?=base_url()?>img/product5_large.jpg" alt="">
-                            <div style="height:10px;"></div>
-                            <div class="prod_title">Name - Colour3</div>
-                            <div class="prod_title">Description $199</div>
-                        </div> 
-                    </div> -->
-                    <!-- <div style="height:20px;"></div>
-                    <div class="">    
-                        <div class="col-sm-4" style="float:left;">
-                            <img src="http://placehold.it/240x283" alt="">
-                            <div style="height:10px;"></div>
-                            <div class="prod_title">Name - Colour2</div>
-                            <div class="prod_title">Description $199</div>
-                        </div>     
-                        <div class="col-sm-4" style="float:right;"></div>
-                        <div class="col-sm-4" style="float:right;"></div>
-
-                    </div>
-                    <div style="height:20px;"></div> -->
+                   
                     
                 </div>
                 <div class="col-sm-5">
@@ -1442,10 +1075,7 @@ function sort_by_name()
 							$ex_pages=explode("/",$url_pages);
 							//print_r($ex_pages);
 						?>
-		                <!--<li style="float:right" class="active"><a class="a-secondary" href="<?=base_url()?><?='store/products/'.$cat_name.'/'.$scat_name.'/'.$look_by.'/'.$text_key.'/'.'/36'?>">36</a> </li>
-                <li style="float:right" class="active"><a class="a-secondary" href="<?=base_url()?><?='store/products/'.$cat_name.'/'.$scat_name.'/'.$look_by.'/'.$text_key.'/'.'/24'?>">24</a> <span class="divider" style="padding:2px;">&nbsp;</span> </li>
-                <li style="float:right" class="active"><a class="a-secondary" href="<?=base_url()?><?='store/products/'.$cat_name.'/'.$scat_name.'/'.$look_by.'/'.$text_key.'/'.'/12'?>">12</a> <span class="divider" style="padding:2px;">&nbsp;</span> </li>
-                <li style="float:right" class="active">VIEW <span class="divider" style="padding:2px;">&nbsp;</span></li>-->
+		               
 		            </ul>
 		        </div>
          	</div> 
