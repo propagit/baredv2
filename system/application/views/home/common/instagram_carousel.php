@@ -9,15 +9,19 @@
 <div id="instagram" class="app-container br-top carousel slide multi-carousel gallery" data-ride="carousel" data-type="multi" data-interval="false">
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
-          <?php for($i = 1;$i < 7; $i++){ ?>
-          <div class="item swapper <?=$i == 1 ? 'active' : '';?>">
-              <a href="#" data-toggle="modal" data-target="#myModal">
-              <div class="col-sm-2">
-                  <img src="<?=base_url() . ASSETS;?>img/dummy/instagram<?=$i;?>.jpg" />
-              </div>
-              </a>
-          </div>
-          <?php } ?>
+      	  <?php 
+		  	$counter = 0;
+		  	foreach($instagram_gallery as $gallery){ 
+		  		
+		  ?>
+      			<div class="item swapper <?=!$counter ? 'active' : '';?>">
+                  <a href="javascript:get_modal_view(<?=$gallery['instagram_gallery_id'];?>,<?=$gallery['product_id'];?>);">
+                      <div class="col-sm-2">
+                          <img src="<?=base_url();?>uploads/instagram/<?=$gallery['image'];?>" />
+                      </div>
+                  </a>
+               </div>
+          <?php $counter++; } ?>
       </div>
       
       <!-- Controls -->
@@ -30,40 +34,26 @@
 </div>
 
 
-<div class="modal fade app-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade app-modal" id="instagramModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-body">
-        	<div class="col-sm-8 x-gutters left hidden-xs">
-            	<img src="<?=base_url() . ASSETS;?>img/dummy/instagram-featured.jpg">
-            </div>
-            <div class="col-sm-4 x-gutters right">
-            	 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                 
-                 <div class="product">
-                 	<img class="hidden-sm" src="<?=base_url() . ASSETS;?>img/dummy/instagram-featured-thumb.jpg">
-                    <div class="product-info">
-                        <h3>starling</h3>
-                        <h4>gold leopard calf hair smoking loafer</h4>
-                        <h4>au 
-                            <span class="price">
-                                <span class="normal-price">$229.<sub>00</sub></span>
-                                <span class="sale-price">$179.<sub>00</sub></span>
-                            </span>
-                        </h4>
-                        <span class="raiting">
-                        	<i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star off"></i>
-                        </span>
-                    </div>
-                    
-                    <button class="btn btn-app">buy now</button>
-                 </div>
-            </div>
+      <div class="modal-body" id="instagram-modal-content">
+
       </div>
     </div>
   </div>
 </div>
+<script>
+function get_modal_view(instagram_gallery_id,product_id){
+	$('#instagramModal').modal('show');
+	$.ajax({
+		url:'<?=base_url();?>home/get_instagram_product',
+		type:'POST',
+		dateType:'html',
+		data:{instagram_gallery_id:instagram_gallery_id,product_id:product_id},
+		success:function(html){
+			$('#instagram-modal-content').html(html);
+		}
+	});	
+}
+</script>

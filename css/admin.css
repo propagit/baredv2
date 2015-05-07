@@ -82,6 +82,19 @@ th
 h1.page-header-alt{
 	padding-left:7px;	
 }
+.page-padding{
+	padding-left:7px;	
+}
+.page-breaker{
+	height: 20px;
+  	/* clear: both; */
+ 	 border-top: 1px solid #ccc;
+  	/* padding-top: 20px; */
+  	margin-top: 20px;
+  	float: left;
+  	width: 100%;
+  	margin-top: 20px;
+}
 .box{
 	min-height: 365px; 
 	border: 1px solid #d6d6d6; 
@@ -173,4 +186,7 @@ a.anchor:hover{
 	text-align:center;
 	width:15%;
 	float:left;	
+}
+.app-select2{
+	width:100%;	
 }

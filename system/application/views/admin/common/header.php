@@ -19,6 +19,7 @@
 
 <link href="<?=base_url()?>css/bootstrap-responsive.css" rel="stylesheet" media="screen">
 
+<!--<link href="<?=base_url()?>css/select2.css" rel="stylesheet" media="screen">-->
 <link href="<?=base_url()?>css/bootstrap-select.css" rel="stylesheet" media="screen">
 <link href="<?=base_url()?>css/bootstrap-tree.css" rel="stylesheet" media="screen">
 <!-- <link href="<?=base_url()?>css/datepicker.css" rel="stylesheet" media="screen"> -->
@@ -27,6 +28,7 @@
 
 <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic,300,300italic,400,400italic,600,600italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
+<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
 
 </head>
 
@@ -44,13 +46,14 @@
     <script src="<?=base_url()?>js/ckeditor.js"></script>
     <script src="<?=base_url()?>js/config.js"></script>
     <script src="<?=base_url()?>js/styles.js"></script>
+<!--    <script src="<?=base_url()?>js/select2/select2.js"></script>-->
     <!-- <script src="<?=base_url()?>js/build-config.js"></script> -->
     <!-- <script src="<?=base_url()?>ckfinder/ckfinder.js"></script> -->
     <!-- <script src="<?=base_url()?>ckfinder/config.js"></script> -->
     <!-- <script src="<?=base_url()?>js/bootstrap-datepicker.js"></script> -->
 
 	<!-- start here -->
-	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
     <script>
 	function logout()
 	{

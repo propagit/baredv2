@@ -294,6 +294,12 @@ function click_active(id)
       <div class="accordion-inner <?php if($curr_page == 'galleries'){echo $active_page2;} else {echo $not_active_page2;}?>" id="inner-4">
         <a href="<?=base_url()?>admin/gallery/galleries" <?php if($curr_page == 'galleries'){echo $active_page;} else {echo $not_active_page;}?>><i class="icon-chevron-right"></i>Create Image Galleries</a>
       </div>
+      
+      
+      <div class="accordion-inner <?php if($curr_page == 'instagram-gallery'){echo $active_page2;} else {echo $not_active_page2;}?>" id="inner-4">
+        <a href="<?=base_url()?>admin/instagram_gallery" <?php if($curr_page == 'instagram-gallery'){echo $active_page;} else {echo $not_active_page;}?>><i class="icon-chevron-right"></i>Manage Instagram Galleries</a>
+      </div>
+      
       <div class="accordion-inner <?php if($curr_page == 'category'){echo $active_page2;} else {echo $not_active_page2;}?>">
         <a href="<?=base_url()?>admin/cms/category" <?php if($curr_page == 'category'){echo $active_page;} else {echo $not_active_page;}?>><i class="icon-chevron-right"></i>Manage Categories</a>
       </div>
