@@ -1,6 +1,7 @@
 <?php
 
 # Controller: Competition
+# Author: kaushtuvgurung@gmail.com
 
 class Competition extends Controller {
 

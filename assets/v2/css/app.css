@@ -730,7 +730,7 @@ body {
         .app-modal .modal-dialog .modal-content .modal-body .left img {
           width: 100%; }
         .app-modal .modal-dialog .modal-content .modal-body .right .product {
-          margin-top: 51%;
+          margin-top: 25%;
           text-align: center; }
           .app-modal .modal-dialog .modal-content .modal-body .right .product img {
             width: auto; }
@@ -915,6 +915,17 @@ body {
 .margin-auto {
   margin: auto; }
 
+@media (min-width: 768px) and (max-width: 1400px) {
+  .app-modal {
+    /*modal-dialog*/ }
+    .app-modal .modal-dialog .modal-content .modal-body .right .product {
+      margin-top: 20%; }
+      .app-modal .modal-dialog .modal-content .modal-body .right .product img {
+        max-height: 180px; }
+      .app-modal .modal-dialog .modal-content .modal-body .right .product .btn-app {
+        min-width: inherit; }
+
+  /* app-modal */ }
 @media (min-width: 768px) {
   #top-nav {
     height: 46px !important;
@@ -1068,8 +1079,13 @@ body {
     /*modal-dialog*/ }
     .app-modal .modal-dialog {
       width: 100%; }
-      .app-modal .modal-dialog .modal-content .modal-body .right .product img {
-        width: 100%; }
+      .app-modal .modal-dialog .modal-content .modal-body .right .product {
+        margin-top: 0;
+        padding-bottom: 20px; }
+        .app-modal .modal-dialog .modal-content .modal-body .right .product img {
+          width: 100%; }
+        .app-modal .modal-dialog .modal-content .modal-body .right .product .btn-app {
+          min-width: 100%; }
 
   /* app-modal */
   .subscribe-box .form-group {

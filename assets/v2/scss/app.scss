@@ -977,7 +977,7 @@ $tile_caption_height:95px;
 				.right{
 					
 					.product{
-						margin-top:51%;
+						margin-top:25%;
 						text-align:center;
 						
 						
@@ -1212,6 +1212,50 @@ $font_weights: 100,300,400,700,900;
 }
 .margin-auto{
 	margin:auto;
+}
+
+@media (min-width: 768px) and (max-width:1400px){
+	.app-modal{
+		
+		.modal-dialog{
+			
+			.modal-content{
+				
+				.modal-body{
+					
+					
+					button.close{
+						
+					}
+					
+					.left{
+						img{
+							
+						}
+					}
+					
+					.right{
+						
+						.product{
+							margin-top:20%;
+							
+							img{
+								max-height:180px;
+							}
+							
+							.btn-app{
+								min-width:inherit;
+							}
+						}
+					}
+				}
+				
+					
+			}
+			
+		} /*modal-dialog*/
+		
+	} /* app-modal */	
 }
 
 @media (min-width: 768px){
@@ -1564,13 +1608,15 @@ $font_weights: 100,300,400,700,900;
 					.right{
 						
 						.product{
-	
+							margin-top:0;
+							padding-bottom:20px;
+							
 							img{
 								width:100%;	
 							}
 							
-							.btn{
-								
+							.btn-app{
+								min-width:100%;
 							}
 						}
 					}

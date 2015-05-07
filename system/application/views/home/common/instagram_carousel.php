@@ -34,14 +34,14 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body">
-        	<div class="col-sm-8 x-gutters left">
+        	<div class="col-sm-8 x-gutters left hidden-xs">
             	<img src="<?=base_url() . ASSETS;?>img/dummy/instagram-featured.jpg">
             </div>
             <div class="col-sm-4 x-gutters right">
             	 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                  
                  <div class="product">
-                 	<img src="<?=base_url() . ASSETS;?>img/dummy/instagram-featured-thumb.jpg">
+                 	<img class="hidden-sm" src="<?=base_url() . ASSETS;?>img/dummy/instagram-featured-thumb.jpg">
                     <div class="product-info">
                         <h3>starling</h3>
                         <h4>gold leopard calf hair smoking loafer</h4>
