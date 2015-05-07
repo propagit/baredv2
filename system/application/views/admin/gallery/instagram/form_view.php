@@ -18,7 +18,7 @@
 					foreach($active_products as $product){ 
 					$hero = $this->Product_model->get_hero($product['id']);
 				?>
-                	<optgroup><option value="<?=$product['id']?>" data-hero="<?=$hero['name'];?>"><?=$product['title'] . ' - ' . $product['short_desc'];?></option></optgroup>
+                	<option value="<?=$product['id']?>" data-hero="<?=$hero['name'];?>"><?=$product['title'] . ' - ' . $product['short_desc'];?></option>
                 <?php } ?>
             </select> 
         </div>
