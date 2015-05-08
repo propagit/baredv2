@@ -7,7 +7,7 @@
 		  ?>
                       <div class="item swapper <?=!$counter ? 'active' : '';?>">
                           <a href="#">
-                              <img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$p['name']?>"/>
+                              <img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$p['name']?>"/>
                           </a>
                       </div>
           
