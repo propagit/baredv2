@@ -108,7 +108,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('Company_profile_model');
+$autoload['model'] = array('Company_profile_model','Common_model');
 
 
 

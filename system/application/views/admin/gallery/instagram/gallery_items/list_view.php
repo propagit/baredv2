@@ -19,9 +19,9 @@ if($this->session->userdata('insta_cur_cat')){
     
         <thead>
             <tr>
-                <th style="width: 20%">Name</th>			    			
-                <th style="width: 50%;">Attached Product</th>
-                <th class="center" style="width: 10%;">Category</th>
+                <th style="width: 20%;">Name</th>			    			
+                <th style="width: 45%;">Attached Product</th>
+                <th class="center" style="width: 5%;">Category</th>
                 <th class="center" style="width: 10%;">Image</th>
                 <th class="center" style="width: 10%;">Status</th>
                 <th class="center" style="width: 10%;">Delete</th>

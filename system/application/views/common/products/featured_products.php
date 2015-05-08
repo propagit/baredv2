@@ -5,20 +5,20 @@
           <?php 
 		  		$counter = 0;
 				#echo '<pre>' . print_r($feature_products,true) . '</pre>';
-		  	 	foreach($feature_products as $product){
-					$prod = $this->Product_model->identify($product['id']);
-					$hero = $this->Product_model->get_hero($product['id']);
-					$on_sale = $prod['sale_price'] < $prod['price'] ? 'on-sale' : '';
-					$normal_price_arr = explode('.',$prod['price']);
-					$sale_price_arr = explode('.',$prod['sale_price']);
+		  	 	foreach($feature_products as $p){
+					$product = $this->Product_model->identify($p['id']);
+					$hero = $this->Product_model->get_hero($p['id']);
+					$on_sale = $product['sale_price'] < $product['price'] ? 'on-sale' : '';
+					$normal_price_arr = explode('.',$product['price']);
+					$sale_price_arr = explode('.',$product['sale_price']);
 		  ?>
                      <div class="item swapper <?=!$counter ? 'active' : '';?>">
-                          <a href="<?=base_url()?>store/detail_product/quick_link/<?=$prod['id_title']?>">
+                          <a href="<?=base_url()?>store/detail_product/quick_link/<?=$product['id_title']?>">
                           <div class="col-sm-2 product">
-                              <img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$prod['id'])?>/thumb5/<?=$hero['name']?>" />
+                              <img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>" />
                               <div class="carousel-caption product-info <?=$on_sale;?>">
-                                  <h3>Kiwi 2</h3>
-                                  <h4>Back & Patent</h4>
+                                  <h3><?=$product['title'];?></h3>
+                                  <h4><?=$product['short_desc'];?></h4>
                                   <h4><span class="currency">au</span> 
                                     <span class="price">
                                         <span class="normal-price">$<?=$normal_price_arr[0];?>.<sub><?=$normal_price_arr[1];?></sub></span>

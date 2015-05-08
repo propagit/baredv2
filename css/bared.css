@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic);
+/*@import url(//fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic);*/
 .body-copy-Font{
 	font-family: 'Lato', sans-serif;
 	letter-spacing:0.4pt;
@@ -64,8 +64,8 @@
 	letter-spacing:0.4pt;
 }
 .breadcrum-Font{
-	font-family: 'Lato', sans-serif;
-	letter-spacing:0.4pt;
+	font-weight: 400;
+    text-transform: uppercase !important;
 }
 .product-header-info-Font{
 	font-family: 'Lato', sans-serif;
@@ -121,8 +121,9 @@
 }
 .shopby-Font
 {
-	font-family: 'Lato', sans-serif;
-	letter-spacing:0.4pt;
+	 font-size: 12px;
+ 	 line-height: 20px;
+	 text-transform:uppercase;
 }
 h4
 {
@@ -178,9 +179,21 @@ a,a:focus,a:hover
 }
 
 .accordion-heading .accordion-toggle {
-	padding-left:0px!important;
+	/*padding-left:0px!important;*/
 	color:#000;
 	font-weight:700;
+	padding:10px 0 6px 0;
+	
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+.filter-heading{
+	padding-bottom:10px;	
+}
+.filter-heading a{
+	font-size:12px !important;
+	text-transform:uppercase;	
 }
 
 .accordion-inner:first-child {
@@ -784,7 +797,7 @@ div.vertical-tablet { height: 260px !important}
 	    background-color: transparent;
 		padding-left:0px;
 		font-size:12px;
-		margin-bottom:0px!important;
+		margin-bottom:20px!important;
 		padding-right: 0;
 	}
 	.breadcrumb a

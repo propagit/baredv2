@@ -386,10 +386,10 @@ function sort_by_name()
    	<div class="" >            
         <div class="col-sm-12">
             <div class="">
-                <div class="col-sm-3 hidden-xs">
+                <div class="col-sm-2 hidden-xs">
                     <div class="accordion" id="accordion2">
                          <div class="accordion-group"  style="border-top:none!important;">
-                            <div class="accordion-heading">
+                            <div class="accordion-heading filter-heading">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
                                     Filter By
                                 </a>
@@ -685,11 +685,10 @@ function sort_by_name()
                          </div>
                     </div>                                                    
                 </div>
-                <div class="col-sm-9" style="float:right;">         
+                <div class="col-sm-10" style="float:right;">         
                 	
                 	<?php
-                		$on = 0;
-												
+                		$on = 0;					
                 		foreach($products as $pt)
 						{
 							if($def=='pos'){$product=$this->Position_model->identify_product($pt['id']);}
@@ -708,18 +707,18 @@ function sort_by_name()
 							if($product['status']==1 && $product['deleted']==0 )
 							{
 								$hero = $this->Product_model->get_hero($product['id']);
-								
 								$modal = $this->Product_model->get_modal($product['id']);
-								
 								$category = $this->Category_model->identify($product['main_category']);
-							
 								$title = explode('-',$product['title']);
-								
 								$cur_user = $this->session->userdata('userloggedin');
+								
+								$on_sale = $product['sale_price'] < $product['price'] ? 'on-sale' : '';
+								$normal_price_arr = explode('.',$product['price']);
+								$sale_price_arr = explode('.',$product['sale_price']);
 					
 								//echo $cur_user['level'];
 								
-								if($cur_user['level'] == 1)
+								/*if($cur_user['level'] == 1)
 								{
 									$bef_price = $product['price'];
 								}
@@ -764,10 +763,41 @@ function sort_by_name()
 									{
 										$cur_price = $product['price'];
 									}
-								}
-								//$hero = $this->Product_model->get_hero($product['product_id']);
-								//$pro = $this->Product_model->identify($product['product_id']);
-								if($now == 4){$now = 1;}
+								}*/
+								?>
+                                 <div class="col-xs-6 col-sm-4 col-md-3 product list-view">
+                                      <img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>" />
+                                      <div class="product-info <?=$on_sale;?>">
+                                          <h3><?=$product['title'];?></h3>
+                                          <h4><?=$product['short_desc'];?></h4>
+                                          <h4><span class="currency">au</span> 
+                                            <span class="price">
+                                                <span class="normal-price">$<?=$normal_price_arr[0];?>.<sub><?=$normal_price_arr[1];?></sub></span>
+                                                <span class="sale-price">$<?=$sale_price_arr[0];?>.<sub><?=$sale_price_arr[1];?></sub></span>
+                                            </span>
+                                          </h4>
+                                          <div class="rating">
+                                                <div class="yotpo bottomLine"
+                                                    data-appkey="87cmugsJWWCvn4YdAy3U9AcGnlYiUwvpv1TKwE5Z"
+                                                    data-domain="bared.com.au"
+                                                    data-product-id="<?=$product['review_category']?>"
+                                                    data-product-models="<?=$product['title']?>"
+                                                    data-name="<?=$product['title']?> <?=$product['short_desc']?>"
+                                                    data-url="<?=base_url()?>store/detail_product/<?=$category['name']?>/<?=$product['id_title']?>"
+                                                    data-image-url="The product image url. Url escaped"
+                                                    data-description="<?=$product['long_desc']?>"
+                                                    data-bread-crumbs="Product categories"
+                                                    data-images-star_empty="<?=base_url()?>img/star_empty.png"
+                                                    data-images-star_half="<?=base_url()?>img/star_half.png"
+                                                    data-images-star_full="<?=base_url()?>img/star_full.png">                                                                            
+                                               </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                <?php	
+								
+								if(0){	
+									if($now == 4){$now = 1;}
 								if($now == 1)
 								{
 								?>
@@ -1026,31 +1056,9 @@ function sort_by_name()
 								<?php
 								}
 								$now ++;
+								} # if 0
 							}
 							
-						}
-						if($now == 2)
-						{
-						?>
-								<div class="col-sm-4" style="float:left;">
-		                            
-		                        </div> 
-		                        <div class="col-sm-4" style="float:right;">
-		                            
-		                        </div> 
-		                	</div>
-		                	<div style="height:20px;"></div>
-						<?php
-						}
-						if($now == 3)
-						{
-						?>
-								<div class="col-sm-4" style="float:right;">
-		                            
-		                        </div> 
-		                	</div>
-		                	<div style="height:20px;"></div>
-						<?php
 						}
                 	?>
                 	           
