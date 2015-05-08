@@ -701,6 +701,7 @@ function sort_by_name()
 						}
                 		if(count($products)==0 || $on==0){echo "<div class='body-copy-Font'>The system was unable to find any search results. Please try again.</div>";}
 						$now = 1;
+						$counter = 1;
                 		foreach($products as $pt)
 						{
 							if($def=='pos'){$product=$this->Position_model->identify_product($pt['id']);}else{$product=$this->Position_model->identify_product($pt['id']);}
@@ -796,11 +797,19 @@ function sort_by_name()
                                           </div>
                                       </div>
                                   </div>
-                                  
+                                 
+                                 
+                                <?php
+									if($counter%2 == 0){
+										echo '<div class="break-list"></div>';	
+									}
+									$counter++;
+								?> 
+                                 
                                 <?php	
 								
 								if(0){	
-									if($now == 4){$now = 1;}
+								if($now == 4){$now = 1;}
 								if($now == 1)
 								{
 								?>

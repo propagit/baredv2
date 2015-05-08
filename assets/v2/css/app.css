@@ -950,6 +950,10 @@ body {
     padding-left: 0;
     padding-right: 0; }
 
+  .break-list {
+    float: left;
+    width: 100%; }
+
   #header {
     height: 75px;
     background-color: #191919; }

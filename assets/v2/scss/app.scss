@@ -1314,6 +1314,10 @@ $font_weights: 100,300,400,700,900;
 		padding-left:0;
 		padding-right:0;	
 	}
+	.break-list{
+		float:left;
+		width:100%;	
+	}
 	#header{
 		height:$mob_header_height;
 		background-color:$color1;		
