@@ -517,7 +517,7 @@ function active(id)
     			Hover To Zoom
     		</div>
     	</div>
-    	<div class="col-sm-5">
+    	<div class="col-sm-5 push">
     		<div style="font-size: 16px; font-weight: 700">
     			<?php
     			$title = explode('-',$product['title']);
