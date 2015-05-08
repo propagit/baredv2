@@ -68,6 +68,7 @@ $(function(){
 	app.swiper('#instagram');
 	app.swiper('#featured');
 	app.swiper('#banners');
+	app.swiper('#product-gallery');
 });
 </script>
 </body>

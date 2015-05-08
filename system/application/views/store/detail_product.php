@@ -446,96 +446,14 @@ function active(id)
     </div>
     <div style="height:10px;"></div>     
     <div class="col-sm-12">
-    	<? if(count($photos)>3){ ?>
+ 
         <div class="col-sm-2  hidden-xs">
     		
-    		<div style="margin-left: 15%; margin-bottom: 10px">			    
+    		<div style="margin-bottom: 10px">			    
 			    <a href=# id=prev3><img src="<?=base_url()?>img/grey-up-arrow.png" alt=""/></a>
 			</div>
-			
-			
-    		
-    		<div class="slideshow vertical-big hidden-xs hide-small" 
-			    data-cycle-fx=carousel
-			    data-cycle-timeout=0
-			    data-cycle-next="#prev3"
-			    data-cycle-prev="#next3"
-			    data-cycle-pager="#pager3"
-			    data-cycle-carousel-visible=3
-			    data-cycle-carousel-vertical=true>
-			    <?php
-			    	if($this->session->userdata('prod_hero_'.$product['id']))
-					{
-						$now_hero_id = $this->session->userdata('prod_hero_'.$product['id']);
-					}
-					else 
-					{
-						$now_hero_id = $hero['id'];
-					}					
-					foreach($photos as $photo)
-					{
-						if(isset($photo))
-						{
-							$p = $photo;
-							if($p['id'] != $now_hero_id)
-							{
-								?>
-									<img onclick="change_img(<?=$p['id']?>)" style="cursor:pointer; margin-bottom: 15px !important;" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb2/<?=$p['name']?>"/>
-								<?							
-							}
-							else
-							{}
-						}
-						else 
-						{}
-					}
-					
-			    ?>
-			   
-			    
-			</div>
             
-			
-			<div class="slideshow vertical-small hidden-xs show-small" 
-			    data-cycle-fx=carousel
-			    data-cycle-timeout=0
-			    data-cycle-next="#prev3"
-			    data-cycle-prev="#next3"
-			    data-cycle-pager="#pager3"
-			    data-cycle-carousel-visible=3
-			    data-cycle-carousel-vertical=true>
-			    <?php
-			    	if($this->session->userdata('prod_hero_'.$product['id']))
-					{
-						$now_hero_id = $this->session->userdata('prod_hero_'.$product['id']);
-					}
-					else 
-					{
-						$now_hero_id = $hero['id'];
-					}
-					foreach($photos as $photo)
-					{
-						if(isset($photo))
-						{
-							$p = $photo;
-							if($p['id'] != $now_hero_id)
-							{
-							?>
-								<img onclick="change_img(<?=$p['id']?>)" style="cursor:pointer; margin-bottom: 18px !important;" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb3/<?=$p['name']?>"/>
-							<?
-							
-							}
-							else
-							{}
-						}
-						else 
-						{}
-					}
-			    ?>
-			    
-			</div>
-			
-			<div class="slideshow vertical-tablet visible-tablet" 
+			<div class="slideshow product-gallery" 
 			    data-cycle-fx=carousel
 			    data-cycle-timeout=0
 			    data-cycle-next="#prev3"
@@ -545,80 +463,39 @@ function active(id)
 			    data-cycle-carousel-vertical=true
 			    >
 			    <?php
-			    	if($this->session->userdata('prod_hero_'.$product['id']))
-					{
-						$now_hero_id = $this->session->userdata('prod_hero_'.$product['id']);
-					}
-					else 
-					{
-						$now_hero_id = $hero['id'];
-					}
 					foreach($photos as $photo)
 					{
 						if(isset($photo))
 						{
 							$p = $photo;
-							if($p['id'] != $now_hero_id)
+							if($p['id'] != $hero['id'])
 							{
 							?>
-								<img onclick="change_img(<?=$p['id']?>)" style="cursor:pointer; margin-bottom: 18px !important;" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb4/<?=$p['name']?>"/>
+								<img onclick="load_image('<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$p['name']?>')" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb4/<?=$p['name']?>"/>
 							<?							
 							}
-							else
-							{}
 						}
-						else 
-						{}
+	
 					}
 			    ?>
 			    
 			</div>
 			
-			<div style="margin-left: 15%; margin-top: 10px">			   
+			<div style=" margin-top: 10px">			   
 			    <a href=# id=next3><img src="<?=base_url()?>img/grey-down-arrow.png" alt=""/></a>
 			</div>
 			
     		<div style="display: none" class="cycle-pager" id=pager4></div>
     	
     	</div>
-        <? } 
-		else
-		{
-			if(count($photos)>0){
-			?><div class="col-sm-2  hidden-xs"><?
-			if($this->session->userdata('prod_hero_'.$product['id']))
-			{
-				$now_hero_id = $this->session->userdata('prod_hero_'.$product['id']);
-			}
-			else 
-			{
-				$now_hero_id = $hero['id'];
-			}
-			for($i=0;$i<4;$i++)
-			{
-				if(isset($photos[$i]))
-				{
-					$photo = $photos[$i];
-					if($photo['id'] != $now_hero_id)
-					{
-					?>
-						<img onclick="change_img(<?=$photo['id']?>)" style="cursor:pointer; margin-bottom: 15px !important;" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb2/<?=$photo['name']?>"/>
-					<?
-					}
-					
-				}
-				
-			}
-			?> </div><?
-            
-			}
-			else
-			{?>
-			<div class="col-sm-2  hidden-xs"></div>
-			<? }
-	
-		}?>
-    	<div class="col-sm-5">    		
+        
+        <!-- mobile gallery -->
+        <div class="col-sm-5 visible-xs">
+        	<?php $this->load->view('store/product/gallery_view'); ?>
+        </div>
+        <!-- mobile gallery -->
+
+    	<div class="col-sm-5 hidden-xs">    		
     		<?php
     		if($product['sale_price'] < $product['price'])
 			{
@@ -627,49 +504,14 @@ function active(id)
 			<?php
 			}
     		?>
-    		<?php
-    		
-    		if(isset($hero['name']))
-			{
-				if($this->session->userdata('prod_hero_'.$product['id']))
-				{
-					$cur_hero = $this->Product_model->get_photo($this->session->userdata('prod_hero_'.$product['id']));
-					if(isset($cur_hero['name']))
-					{
-				?>					
-    				<a href="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$cur_hero['name']?>" class="MagicZoom" rel="zoom-position: inner">
-    					<img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$cur_hero['name']?>"/>
-    				</a>
-				<?
-					}
-					else 
-					{
-					?>
-					
-    				<a href="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>" class="MagicZoom" rel="zoom-position: inner">
-    					<img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>
-    				</a>
-					<?
-					}
-				}
-				else
-				{	
-			?>
-				
-    			<a href="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>" class="MagicZoom" rel="zoom-position: inner">
-    					<img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>
-    				</a>
-			<?php
-				}
-			}
-			else
-			{
-			?>
-				<img id="main_hero3" class="hidden-xs" src="http://placehold.it/472x515" />
-    			<img class="visible-xs" src="http://placehold.it/710x775" />
-			<?php	
-			}
-    		?>
+            <span id="prod-hero-shot">
+            	<?php if(isset($hero['name'])){ ?>
+            	<a href="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>" class="MagicZoom" rel="zoom-position: inner">
+                    <img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$hero['name']?>"/>
+                </a>
+                <?php } ?>
+            </span>
+
     		
     		<div class="body-copy-Font" id="hover-zoom">
     			Hover To Zoom
@@ -1395,6 +1237,13 @@ function active(id)
     
     <script>
 	
+	function load_image(path)
+	{
+		//console.log(path);
+		var new_image = '<a href="'+ path + '" class="MagicZoom" rel="zoom-position: inner"><img src="' + path + '"/></a>';	
+		$('#prod-hero-shot').html(new_image);
+		MagicZoom.start();
+	}
 	
 	function change_img(id)
 	{	
@@ -1437,20 +1286,4 @@ function active(id)
 		.yotpo .yoForm, .yotpo-testimonails .yoForm {
 			color:#000!important;
 		}
-	</style>
-    
-    
-    
-    <!-- Menu Phone End-->
-    
-    <!-- Menu and Product List for desktop and Ipad version -->
-   	
-    
-    <!-- Menu for desktop and Ipad end -->
-    
-    <!-- Product for IPhone -->   
-    
-    <!-- End Product for Iphone -->
-		
-        
-   
+	</style>   

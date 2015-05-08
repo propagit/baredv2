@@ -329,6 +329,13 @@ div.vertical-tablet { height: 260px !important}
 	float:right;	
 }
 
+/* Full Screen Layout Edits */
+.product-gallery{
+		
+}
+.product-gallery .cycle-carousel-wrap{
+	
+}
 
 @media (min-width: 980px) and (max-width: 1199px) {
 	
