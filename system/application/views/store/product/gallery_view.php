@@ -5,7 +5,7 @@
 		  			$counter = 0;
 		  			foreach($photos as $p){
 		  ?>
-                      <div class="item <?=!$counter ? 'active' : '';?>">
+                      <div class="item swapper <?=!$counter ? 'active' : '';?>">
                           <a href="#">
                               <img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/<?=$p['name']?>"/>
                           </a>
