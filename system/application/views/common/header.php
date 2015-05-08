@@ -147,15 +147,29 @@ $("#currency_select2").select2({
 });
 
 </script>
+<?php
+	$count_shopbag	= 0;
+	$session_id = $this->session->userdata('session_id');
+	$count_shopbag = count($this->Cart_model->all($session_id));	
+	$count_wishlist = 0;
+	$user = $this->session->userdata('userloggedin');
+	if($user){
+		$count_wishlist = count($this->Cart_model->get_wishlist($user['id']));
+	}
+	$hdr_data = array(
+						'count_shopbag' => $count_shopbag,
+						'count_wishlist' => $count_wishlist
+					);
 
+?>
 </head>
 
 <body>
 
 <header>
 	<div id="header" class="app-container">
-    	<div class="hidden-xs desktop"><?=$this->load->view('common/desktop_header');?></div>
-    	<div class="visible-xs mob"><?=$this->load->view('common/mob_header');?></div>
+    	<div class="hidden-xs desktop"><?=$this->load->view('common/desktop_header',$hdr_data);?></div>
+    	<div class="visible-xs mob"><?=$this->load->view('common/mob_header',$hdr_data);?></div>
     </div>    
 </header> 
 

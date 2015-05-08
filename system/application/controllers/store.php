@@ -40,13 +40,6 @@ class Store extends Controller {
 			}
 		}
 	}
-	
-	function index()
-	{
-		$this->load->view('common/header');
-		$this->load->view('home/men');
-		$this->load->view('common/footer');	
-	}
 
 	
 	function _index() {

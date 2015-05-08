@@ -686,6 +686,12 @@ body {
       width: auto !important; }
     .product .product-info .rating .off {
       opacity: 0.15; }
+  .product.product-detail-view .product-info:before {
+    display: none; }
+  .product.product-detail-view .product-info.on-sale:before {
+    content: "";
+    background-color: white;
+    display: none; }
 
 .featured {
   padding-top: 20px;
@@ -886,6 +892,9 @@ body {
 .push {
   float: left; }
 
+.push-text {
+  text-align: left; }
+
 .pull-text {
   text-align: right; }
 
@@ -918,6 +927,9 @@ body {
 
 .margin-auto {
   margin: auto; }
+
+.x-border {
+  border: 0; }
 
 @media (min-width: 768px) and (max-width: 1400px) {
   .app-modal {

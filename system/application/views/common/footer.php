@@ -15,7 +15,7 @@
                     <h5>subscribe to our vip mailing list</h5>
                     <div class="form-group has-feedback col-xs-5 x-gutters">
                       <input type="text" class="form-control app-form-control" id="subscribe" placeholder="your email...">
-                      <span class="form-control-feedback pointer"><i class="fa fa-envelope"></i></span>
+                      <span class="form-control-feedback pointer susbcribe-btn"><i class="fa fa-envelope"></i></span>
                     </div>
                 </div>
                 
@@ -63,13 +63,85 @@
         </div>
     </div>
 </footer>
+
+
+<div class="modal fade" id="anyModalFooter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header x-border">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+     <div class="modal-body mybody-modal">
+    	<p id="any_message_footer" class="body-copy-Font"></p>
+     </div>
+     
+    </div>
+  </div>
+</div>
+
+
 <script>
 $(function(){
 	app.swiper('#instagram');
 	app.swiper('#featured');
 	app.swiper('#banners');
 	app.swiper('#product-gallery');
+	
+	$('.susbcribe-btn').click(function(){
+		subscribe();
+	});
+	
+	
+	
 });
+
+// old funcs
+function subscribe()
+{
+	var email = $('#subscribe').val();
+	if(email==''){ 
+		jQuery('#any_message_footer').html('Please enter email address');
+	  	jQuery('#anyModalFooter').modal('show');
+		return false;
+	}
+	
+	if(email!='')
+	{
+		var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+		if(reg.test(email) == false) {
+		
+		  jQuery('#any_message_footer').html('Invalid Email Address');
+		  jQuery('#anyModalFooter').modal('show');	
+	   }
+	   else
+	   {
+		  $.ajax({
+				url: '<?=base_url()?>cart/newsletter_subscribe',
+				type: 'POST',
+				data: ({email:email}),
+				dataType: "html",
+				success: function(html) {
+				
+						if(html != 0)
+						{
+							if(html == -1)
+							{
+								jQuery('#any_message_footer').html('Your are already in our subscription list.');
+								jQuery('#anyModalFooter').modal('show');
+							}
+							else
+							{
+								jQuery('#any_message_footer').html('Thank you for subscribing with us.');
+								jQuery('#anyModalFooter').modal('show');
+							}
+							
+						}
+				
+				}
+				});
+	   }
+	}
+}
 </script>
 </body>
 </html>

@@ -517,11 +517,13 @@ function active(id)
     			Hover To Zoom
     		</div>
     	</div>
-    	<div class="col-sm-5 push">
+    	<div class="col-sm-5 push product push-text product-detail-view">
     		<div style="font-size: 16px; font-weight: 700">
     			<?php
     			$title = explode('-',$product['title']);
-				
+				$on_sale = $product['sale_price'] < $product['price'] ? 'on-sale' : '';
+				$normal_price_arr = explode('.',$product['price']);
+				$sale_price_arr = explode('.',$product['sale_price']);
 				
 				if($product['limited'] == 'Y')
 				{
@@ -540,6 +542,7 @@ function active(id)
 				else
 				{}
 				?>
+                <?php if(0){ ?>
     			<span class="product-title-Font product-title-primary"><?=$product['title']?></span> 
                 <div class="yotpo bottomLine"
                     data-appkey="87cmugsJWWCvn4YdAy3U9AcGnlYiUwvpv1TKwE5Z"
@@ -555,8 +558,39 @@ function active(id)
                     data-images-star_half="<?=base_url()?>img/star_half.png"
                     data-images-star_full="<?=base_url()?>img/star_full.png">                                                                            
                </div>
+				 <?php } ?>
+               
+               <div class="product-info <?=$on_sale;?>">
+                    <h3>
+						<?=$product['title'];?>
+                    	<div class="yotpo bottomLine"
+                            data-appkey="87cmugsJWWCvn4YdAy3U9AcGnlYiUwvpv1TKwE5Z"
+                            data-domain="bared.com.au"
+                            data-product-id="<?=$product['review_category']?>"
+                            data-product-models="<?=$product['title']?>"
+                            data-name="<?=$product['title']?> <?=$product['short_desc']?>"
+                            data-url="<?=base_url()?>store/detail_product/<?=$cat['title']?>/<?=$product['id_title']?>"
+                            data-image-url="The product image url. Url escaped"
+                            data-description="<?=$product['long_desc']?>"
+                            data-bread-crumbs="Product categories"
+                            data-images-star_empty="<?=base_url()?>img/star_empty.png"
+                            data-images-star_half="<?=base_url()?>img/star_half.png"
+                            data-images-star_full="<?=base_url()?>img/star_full.png">                                                                            
+                       </div>
+                    </h3> 
+                    
+                    <h4><?=$product['short_desc'];?></h4>
+                    <h4><span class="currency">au</span> 
+                      <span class="price">
+                          <span class="normal-price">$<?=$normal_price_arr[0];?>.<sub><?=$normal_price_arr[1];?></sub></span>
+                          <span class="sale-price">$<?=$sale_price_arr[0];?>.<sub><?=$sale_price_arr[1];?></sub></span>
+                      </span>
+                    </h4>
+                </div>
     			
     		</div>
+            <?php if(0){ ?>
+            
     		<div style="height: 3px"></div>
     		<div class="product-desc-Font product-desc"><?=$product['short_desc']?></div>
     		<div style="height: 3px"></div>
@@ -619,51 +653,12 @@ function active(id)
 					<?
 					}
     			?>    			
-    		<?php
-			/*
-    		if($product['stock'] <= 5)
-			{
-				if($product['stock'] == 1)
-				{
-				?>
-					<div style="height: 10px"></div>
-		    		<div class="product-warning-Font color_active product-warning" >
-		    			Low in stock, 1 item remaining
-		    		</div>
-		    		<div style="height: 10px"></div>
-				<?
-				}
-				elseif($product['stock'] == 0 && $product['multiplesize'] == 0)
-				{
-				?>
-					<div style="height: 10px"></div>
-		    		<div class="product-warning-Font color_active product-warning" >
-		    			Out of stock
-		    		</div>
-		    		<div style="height: 10px"></div>
-				<?	
-				}
-				elseif($product['multiplesize'] == 0) 
-				{
-				?>
-					<div style="height: 10px"></div>
-		    		<div class="product-warning-Font color_active product-warning">
-		    			Low in stock
-		    		</div>
-		    		<div style="height: 10px"></div>
-				<?
-				}
-			}
-			else 
-			{
-			?>
-			<div style="height: 10px"></div>
-			<?	
-			}*/
-    		?>
+
     		
     			
     		</div>
+            
+            <?php } ?>
             <div style="height: 15px;"></div>
     		<div style="border-top:1px solid #d9d9d9;"></div>
     		
@@ -704,33 +699,7 @@ function active(id)
 						}
 					?>
 					</div>
-                    <div style="clear:both; margin-top:10px; float:left;" class="hidden-desktop">	
                     
-				<?
-                    	
-						if(count($other)>0){
-							$cc = 0;
-							foreach($other as $ot)
-							{
-								if($cc<6)
-								{	
-									$hero_new = $this->Product_model->get_hero($ot['id']);
-									if(count($hero_new)>0){
-									?>
-	                                	<div style="margin-left:8px; margin-top:-10px;float:left;">
-	                                		<a href="<?=base_url()?>store/detail_product/<?=$cat_name?>/<?=$ot['id_title']?>">
-	                                			<img class="hidden-xs" style="cursor:pointer; width: 40px" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$ot['id'])?>/thumb4/<?=$hero_new['name']?>" />                                			
-                                                <img class="visible-xs" style="cursor:pointer; width: 35px" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$ot['id'])?>/thumb4/<?=$hero_new['name']?>" />                                			
-	                                		</a>
-	                                	</div>								
-	                                <?
-	                                $cc++;
-									}
-								}
-							}
-						}
-					?>
-					</div>
                   
 					<?php
     				if($product['first_edition'] == 'Y')
@@ -1167,58 +1136,65 @@ function active(id)
     <?php } ?>
    <!-- <div class="app-container relative bar bg-black text-white"><h3>you may also like</h3></div>-->
     <?php #$this->load->view('common/products/featured_products'); ?>
+   
     
-    <div id="anyModal" class="popup-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="mytop-modal" onclick="$('#anyModal').modal('hide');">
-        <img src="<?=base_url()?>img/close_sign.png" alt=""/>
+    <div class="modal fade" id="anyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          	  <div class="modal-header x-border">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+          	<div class="modal-body mybody-modal">
+                <p id="any_message"></p>
+            </div>
+         
+        </div>
+      </div>
     </div>
-    <div class="modal-body mybody-modal">
-        <p id="any_message"></p>
+    
+    <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          	  <div class="modal-header x-border">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+          	<div class="modal-body mybody-modal">
+                <form method="post" action="<?=base_url()?>store/send_friend_email">
+					<input type="hidden" name="prod_id" value="<?=$product['id']?>">
+                    <table>
+                        <tr>
+                            <td class="label-form-Font" style="width: 150px; height: 30px; line-height: 30px; vertical-align: top">Name of your friend</td>
+                            <td><input class="input-form-Font" type="text" name="friend_name"/></td>
+                        </tr>
+                        <tr>
+                            <td class="label-form-Font" style="height: 30px; line-height: 30px; vertical-align: top">E-mail of your friend</td>
+                            <td><input class="input-form-Font" type="email" name="friend_email" required /></td>
+                        </tr>
+                        <tr>
+                            <td class="label-form-Font" style="height: 30px; line-height: 30px; vertical-align: top">Your name</td>
+                            <td><input class="input-form-Font" type="text" name="name"/></td>
+                        </tr>
+                        <tr>
+                            <td class="label-form-Font" style="height: 30px; line-height: 30px; vertical-align: top">Your e-mail</td>
+                            <td><input class="input-form-Font" type="email" name="email" required /></td>
+                        </tr>
+                        <tr>
+                            <td class="label-form-Font" style="height: 30px; line-height: 30px; vertical-align: top">Your message</td>
+                            <td><textarea class="input-form-Font" name="message"><?=$product['title']?></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                                <button class="button-Font button_primary button_size_full" aria-hidden="true" type="submit">Send</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+         
+        </div>
+      </div>
     </div>
-    </div>
-	
-	
-	<div id="emailModal" class="popup-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="mytop-modal" onclick="$('#emailModal').modal('hide');">
-        <img src="<?=base_url()?>img/close_sign.png" alt=""/>
-    </div>
-	<form method="post" action="<?=base_url()?>store/send_friend_email">
-	<input type="hidden" name="prod_id" value="<?=$product['id']?>">
-	<div class="modal-body mybody-modal-left">
-	    <table>
-	    	<tr>
-	    		<td class="label-form-Font" style="width: 150px; height: 30px; line-height: 30px; vertical-align: top">Name of your friend</td>
-	    		<td><input class="input-form-Font" type="text" name="friend_name"/></td>
-	    	</tr>
-	    	<tr>
-	    		<td class="label-form-Font" style="height: 30px; line-height: 30px; vertical-align: top">E-mail of your friend</td>
-	    		<td><input class="input-form-Font" type="email" name="friend_email" required /></td>
-	    	</tr>
-	    	<tr>
-	    		<td class="label-form-Font" style="height: 30px; line-height: 30px; vertical-align: top">Your name</td>
-	    		<td><input class="input-form-Font" type="text" name="name"/></td>
-	    	</tr>
-	    	<tr>
-	    		<td class="label-form-Font" style="height: 30px; line-height: 30px; vertical-align: top">Your e-mail</td>
-	    		<td><input class="input-form-Font" type="email" name="email" required /></td>
-	    	</tr>
-	    	<tr>
-	    		<td class="label-form-Font" style="height: 30px; line-height: 30px; vertical-align: top">Your message</td>
-	    		<td><textarea class="input-form-Font" name="message"><?=$product['title']?></textarea></td>
-	    	</tr>
-            <tr>
-            	<td>&nbsp;</td>
-                <td>
-          	    	<button class="button-Font button_primary button_size_full" aria-hidden="true" type="submit">Send</button>
-                </td>
-            </tr>
-	    </table>
-
-
-
-	</div>
-	</form>
-	</div>
     
     <script>
    

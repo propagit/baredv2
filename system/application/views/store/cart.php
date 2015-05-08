@@ -3,26 +3,27 @@ var choose = 0;
 
 function move_to_wishlist(id,cid)
 {
-	if($j('#sizeproduct-'+cid).val() == '--')
+	if($('#sizeproduct-'+cid).val() == '--')
 	{
-		$j('#any_message').html("Please Choose Your Size");
-		$j('#anyModal').modal('show');
+		$('#any_message').html("Please Choose Your Size");
+		$('#anyModal').modal('show');
 		return false;
 	}
 	var attributes = '';
 	
 	var myObject = new Object();
 	var num = 0;
-	
+	<?php if(0){ ?>
 	<?php for($i=0;$i<count($attributes);$i++) 
 	{ ?>
 	 // use json javascript generator and pass value in json format(by Hieu)
 	 //myArray[<?=$i?>] = $j('#attribute-<?=$i?>').val();
-	 myObject.<?=$attributes[$i]['name']?> = $j('#attribute-<?=$i?>').val();
+	 myObject.<?=$attributes[$i]['name']?> = $('#attribute-<?=$i?>').val();
 	<?php } ?>
-	if($j('#sizeproduct-'+cid).length)
+	<?php } ?>
+	if($('#sizeproduct-'+cid).length)
 	{
-	  mul_size = $j('#sizeproduct-'+cid).val();
+	  mul_size = $('#sizeproduct-'+cid).val();
 	
 		myObject.Size = mul_size;
 	}
@@ -494,31 +495,40 @@ function checkout()
 
     
     
-    <div id="deleteModal" class="popout-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="mytop-modal" onclick="jQuery('#deleteModal').modal('hide');">
-        <img src="<?=base_url()?>img/close_sign.png" alt=""/>
-    </div>
-	<div class="modal-body mybody-modal">
-	    <p>Are you sure to delete this item?</p>
-	    <div>
-	    	<button onclick="deletecart(choose);" class="button-Font button_primary button_size_full">
-				Delete
-			</button>
-	    </div>
-	</div>
-	
-	</div>
-	
-	
-	
-	<div id="anyModal" class="popout-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="mytop-modal" onclick="jQuery('#anyModal').modal('hide');">
-        <img src="<?=base_url()?>img/close_sign.png" alt=""/>
-    </div>
-    <div class="modal-body mybody-modal">
-        <p id="any_message" class="body-copy-Font"></p>
-    </div>
+    
+
+	 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          	  <div class="modal-header x-border">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+                <div class="modal-body mybody-modal">
+                    <p>Are you sure to delete this item?</p>
+                      <div>
+                          <button onclick="deletecart(choose);" class="button-Font button_primary button_size_full">
+                              Delete
+                          </button>
+                      </div>            
+                </div>
+     
+        </div>
+      </div>
     </div>
 
+      
+    <div class="modal fade" id="anyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          	  <div class="modal-header x-border">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+          	<div class="modal-body mybody-modal">
+                <p id="any_message"></p>
+            </div>
+         
+        </div>
+      </div>
+    </div>
         
    

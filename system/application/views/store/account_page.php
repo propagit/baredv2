@@ -117,7 +117,7 @@ function use_billing_address()
     <div class=" delivery-details-wrap">
     	 <!-- delivery details -->
         
-		<div class="span7 shipping-tabs">
+		<div class="col-sm-7 shipping-tabs">
 			<h4>Delivery Details</h4>
 			<div style="clear:both;height:20px;"></div>
             <ul class="nav nav-tabs">
@@ -296,7 +296,7 @@ function use_billing_address()
         
         
         <!-- account details -->
-        <div class="span4 offset1">
+        <div class="col-sm-4 offset1">
         	<h4>Account Details</h4>
 			<div style="clear:both;height:20px;"></div>
             
@@ -761,7 +761,7 @@ function use_billing_address()
 				    </label>
 				    <div class="controls">
 				    	<div id="bstate">
-				    		<div class="input-form-Font hide-billing-information"><?=$state?></div>
+				    		<div class="input-form-Font hide-billing-information"><? #$state?></div>
 				    		<select class="input-form-Font edit-billing-information col-sm-12" name="input-bstate" id="input-bstate" style="display: none">
 								<?php
 									foreach($states as $state)

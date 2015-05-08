@@ -11,7 +11,7 @@
             </div>
             </form>
         </li>
-        <li><i class="fa fa-shopping-cart"></i> <span class="badge app-badge shopping-cart-items">2</span></li>
+        <li><a class="app-link" href="<?=base_url()?>cart/list_cart"><i class="fa fa-shopping-cart"></i> <span class="badge app-badge shopping-cart-items tot_shopbag"><?=$count_shopbag;?></span></a></li>
     </ul>
 </div>
 <div class="col-xs-1 x-gutters block">

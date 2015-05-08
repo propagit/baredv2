@@ -18,18 +18,28 @@
 </div>
 
 <div class="col-sm-5 hdr-block rt">
-    <span class="h6 fw-700 block acc-access"><i class="fa fa-unlock-alt"></i> <a class="app-link" href="#">Register</a> / <a class="app-link" href="#">Login</a></span>
-    
+    <span class="h6 fw-700 block acc-access"><i class="fa fa-unlock-alt"></i> 
+        <a class="app-link" href="<?=base_url()?>store/register">Register</a> /
+        <?php if($this->session->userdata('userloggedin')){?>
+        <a class="app-link" href="<?=base_url()?>store/signout">Logout</a>
+        <?php }else{ 	?>
+        <a class="app-link" href="<?=base_url()?>store/signin">Login</a>
+        <?php } ?>
+    </span>
     <ul class="acc-info h6">
         <li>
-            <i class="fa fa-heart"></i> 
-            <span class="hidden-md hidden-sm hidden-xs">Wish List </span>
-            <span class="badge app-badge wish-list">19</span>
+            <a class="app-link" href="<?=base_url()?>cart/wishlist">
+                <i class="fa fa-heart"></i> 
+                <span class="hidden-md hidden-sm hidden-xs">Wish List </span>
+                <span class="badge app-badge wish-list tot_wishlist"><?=$count_wishlist;?></span>
+            </a>
         </li>
         <li>
-            <i class="fa fa-shopping-cart"></i> 
-            <span class="hidden-md hidden-sm hidden-xs">Shopping Cart </span>
-            <span class="badge app-badge shopping-cart-items">2</span>
+        	<a class="app-link" href="<?=base_url()?>cart/list_cart">
+                <i class="fa fa-shopping-cart"></i> 
+                <span class="hidden-md hidden-sm hidden-xs">Shopping Cart </span>
+                <span class="badge app-badge shopping-cart-items tot_shopbag"><?=$count_shopbag;?></span>
+            </a>
         </li>
     </ul>
 </div>
