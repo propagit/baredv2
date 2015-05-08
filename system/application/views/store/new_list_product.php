@@ -768,6 +768,7 @@ function sort_by_name()
                                  <div class="col-xs-6 col-sm-4 col-md-3 product list-view">
                                  <a href="<?=base_url()?>store/detail_product/<?=$category['name']?>/<?=$product['id_title']?>">
                                       <img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>" />
+                                 </a>
                                       <div class="product-info <?=$on_sale;?>">
                                           <h3><?=$product['title'];?></h3>
                                           <h4><?=$product['short_desc'];?></h4>
@@ -795,7 +796,7 @@ function sort_by_name()
                                           </div>
                                       </div>
                                   </div>
-                                  </a>
+                                  
                                 <?php	
 								
 								if(0){	
