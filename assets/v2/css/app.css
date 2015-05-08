@@ -946,6 +946,10 @@ body {
 
   /*top-nav*/ }
 @media (max-width: 767px) {
+  .xs-x-gutters {
+    padding-left: 0;
+    padding-right: 0; }
+
   #header {
     height: 75px;
     background-color: #191919; }
@@ -1063,7 +1067,8 @@ body {
       line-height: 7.9625vw; }
 
   .product {
-    /* product-info */ }
+    /* product-info */
+    /* list-view */ }
     .product .product-info h3 {
       font-size: 5.4145vw;
       line-height: 6.90083vw;
@@ -1082,6 +1087,26 @@ body {
       .product .product-info .price sub {
         font-size: 2.65417vw;
         line-height: 2.65417vw; }
+    .product.list-view {
+      min-height: 240px; }
+      .product.list-view h3 {
+        font-size: 11px;
+        line-height: 12px;
+        font-weight: 600; }
+      .product.list-view h4 {
+        font-size: 10px;
+        line-height: 11px;
+        font-weight: 400; }
+      .product.list-view .currency {
+        font-size: 8px;
+        line-height: 9px; }
+      .product.list-view .price {
+        font-size: 11px;
+        line-height: 12px;
+        font-weight: 600; }
+        .product.list-view .price sub {
+          font-size: 8px;
+          line-height: 9px; }
 
   .app-modal {
     /*modal-dialog*/ }

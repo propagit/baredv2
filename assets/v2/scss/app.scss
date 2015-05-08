@@ -1310,7 +1310,10 @@ $font_weights: 100,300,400,700,900;
 }
 
 @media (max-width: 767px) {
-	
+	.xs-x-gutters{
+		padding-left:0;
+		padding-right:0;	
+	}
 	#header{
 		height:$mob_header_height;
 		background-color:$color1;		
@@ -1603,6 +1606,42 @@ $font_weights: 100,300,400,700,900;
 			  }
 			  
 		} /* product-info */
+		
+		&.list-view{
+			  min-height:240px;
+			   
+			  h3{
+				 font-size:11px;
+				 line-height:12px;
+				 font-weight:600;
+			  }
+			  
+			  h4{
+				 font-size:10px;
+				 line-height:11px;
+				 font-weight:400;
+			  }
+			  
+			  .currency{
+				  font-size:8px;
+				  line-height:9px;	  
+			  }
+			  
+			  
+			  .price{
+				  font-size:11px;
+				  line-height:12px;
+				  font-weight:600;
+				  sub{
+					 font-size:8px;
+				  	 line-height:9px; 	
+				  }
+				  .sale-price{
+					  
+				  }
+			  }
+			  
+		} /* list-view */
 	}
 	
 	.app-modal{

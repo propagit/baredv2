@@ -685,7 +685,7 @@ function sort_by_name()
                          </div>
                     </div>                                                    
                 </div>
-                <div class="col-sm-10" style="float:right;">         
+                <div class="col-sm-10 xs-x-gutters" style="float:right;">         
                 	
                 	<?php
                 		$on = 0;					
