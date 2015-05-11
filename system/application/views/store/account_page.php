@@ -68,7 +68,7 @@ function use_billing_address()
 }
 </script>
 
-<div class="app-container">
+<div class="app-container content-wrap">
 	<div style="height: 20px;"></div>
 	<div style="width: 100%">
 	<div style="margin: 0 auto" class="hidden-xs linkbreadcrumb">
@@ -129,140 +129,97 @@ function use_billing_address()
               <div class="tab-pane <?=$this->session->userdata('store_pickup') ? '' : 'active';?>" id="delivery">
                   	<h4 class="body-copy-Font account-header">Shipping Address (<a  class="body-copy-Font account-header-link" href="javascript:use_billing_address();">Use billing address</a>)</h4>
                     <form class="form-horizontal sa-toggle" method="post" action="<?=base_url()?>cart/save_account_page" id="form-acc" onsubmit="return check_phone();" style=" <?=$this->session->userdata('store_pickup') ? 'display:none;' : '';?>">
-                        <div class="control-group">
-                            <label class="label-form-Font control-label" for="stitle">
-                                <div class="header-form">
-                                    Title:
-                                </div>
-                            </label>
-                            <div class="controls">
-                                <div id="stitle">
-                                    <input class="input-form-Font col-sm-12" type="text" id="input-stitle" name="input-stitle" placeholder="Title">
-                                </div>
+                       
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Title:</label>
+                            <div class="col-sm-6" id="stitle">
+                              <input class="form-control" type="text" id="input-stitle" name="input-stitle" placeholder="Title">
                             </div>
                         </div>
-                        <div class="control-group">
-                            <label class="label-form-Font control-label" for="sfirstname">
-                                <div class="header-form">
-                                    First name:
-                                </div>
-                            </label>
-                            <div class="controls">
-                                <div id="sfirstname">
-                                    <input class="input-form-Font col-sm-12" type="text" id="input-sfirstname" name="input-sfirstname" placeholder="First name" required>
-                                </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">First name:</label>
+                            <div class="col-sm-6" id="sfirstname">
+                              <input class="form-control" type="text" id="input-sfirstname" name="input-sfirstname" placeholder="First name" required>
                             </div>
                         </div>
-                        <div class="control-group">
-                            <label class="label-form-Font control-label" for="slastname">
-                                <div class="header-form">
-                                    Last name:
-                                </div>
-                            </label>
-                            <div class="controls">
-                                <div id="slastname">
-                                    <input class="input-form-Font col-sm-12" type="text" id="input-slastname" name="input-slastname" placeholder="Last name" required>
-                                </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Last name:</label>
+                            <div class="col-sm-6" id="slastname">
+                              <input class="form-control" type="text" id="input-slastname" name="input-slastname" placeholder="Last name" required>
                             </div>
                         </div>
-                        <div class="control-group">
-                            <label class="label-form-Font control-label" for="saddress">
-                                <div class="header-form">
-                                    Address:
-                                </div>
-                            </label>
-                            <div class="controls">
-                                <div id="saddress">
-                                    <input class="input-form-Font col-sm-12" type="text" id="input-saddress" name="input-saddress" placeholder="Shipping Addres" required>
-                                </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Address:</label>
+                            <div class="col-sm-6" id="saddress">
+                              <input class="form-control" type="text" id="input-saddress" name="input-saddress" placeholder="Shipping Addres" required>
                             </div>
                         </div>
-                        <div class="control-group">
-                            <label class="label-form-Font control-label" for="saddress2">
-                                <div class="header-form">
-                                    Address Line 2:
-                                </div>
-                            </label>
-                            <div class="controls">
-                                <div id="saddress2">
-                                    <input class="input-form-Font col-sm-12" type="text" id="input-saddress2" name="input-saddress2" placeholder="Shipping Address2">
-                                </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Address Line 2:</label>
+                            <div class="col-sm-6" id="saddress2">
+                              <input class="form-control" type="text" id="input-saddress2" name="input-saddress2" placeholder="Shipping Address2">
                             </div>
                         </div>
-                        <div class="control-group">
-                            <label class="label-form-Font control-label" for="ssuburb">
-                                <div class="header-form">
-                                    City/Suburb:
-                                </div>
-                            </label>
-                            <div class="controls">
-                                <div id="ssuburb">
-                                    <input class="input-form-Font col-sm-12" type="text" id="input-ssuburb" name="input-ssuburb" placeholder="Suburb" required>
-                                </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">City/Suburb:</label>
+                            <div class="col-sm-6" id="ssuburb">
+                              <input class="form-control" type="text" id="input-ssuburb" name="input-ssuburb" placeholder="Suburb" required>
                             </div>
                         </div>
-                        <div class="control-group">
-                            <label class="label-form-Font control-label" for="scountry">
-                                <div class="header-form">
-                                    Country:
-                                </div>
-                            </label>
-                            <div class="controls">
-                                <div id="scountry">
-                                    <select class="input-form-Font col-sm-12" name="input-scountry" id="input-scountry" required onchange="change_country()">
-                                        <?php 
-        
-                                        foreach($countries_all as $ct) {
-                                            if($ct['id'] != 238) 
-                                            {
-                                        ?>
-                                            <option value="<?=$ct['id']?>"<?php if($ct['code'] == "AU") print ' selected="selected"'; ?>><?=$ct['name']?></option>
-                                        <?php }} ?>	
-                                    </select>
-                                </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Country:</label>
+                            <div class="col-sm-6" id="scountry">
+                              <select class="form-control" name="input-scountry" id="input-scountry" required onchange="change_country()">
+								  <?php 
+  
+                                  foreach($countries_all as $ct) {
+                                      if($ct['id'] != 238) 
+                                      {
+                                  ?>
+                                      <option value="<?=$ct['id']?>"<?php if($ct['code'] == "AU") print ' selected="selected"'; ?>><?=$ct['name']?></option>
+                                  <?php }} ?>	
+                              </select>
                             </div>
                         </div>
-                        <div class="control-group" id="a_state">
-                            <label class="label-form-Font control-label" for="sstate">
-                                <div class="header-form">
-                                    State/Province:
-                                </div>
-                            </label>
-                            <div class="controls">
-                                <div id="sstate">
-                                    <select class="input-form-Font col-sm-12" name="input-sstate" id="input-sstate" required onchange="check_postcode()">
-                                        <?php
-                                            foreach($states as $state)
-                                            {
-                                            ?>
-                                            <option value="<?=$state['id']?>"><?=$state['name']?></option>		
-                                            <?php
-                                            }
-                                        ?>
-                                    </select>
-                                </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">State/Province:</label>
+                            <div class="col-sm-6" id="sstate">
+                              <select class="form-control" name="input-sstate" id="input-sstate" required onchange="check_postcode()">
+								  <?php
+                                      foreach($states as $state)
+                                      {
+                                      ?>
+                                      <option value="<?=$state['id']?>"><?=$state['name']?></option>		
+                                      <?php
+                                      }
+                                  ?>
+                              </select>
                             </div>
                         </div>
-                        <div class="control-group">
-                            <label class="label-form-Font  control-label" for="spostcode">
-                                <div class="header-form">
-                                    Postal Code/Zip:
-                                </div>
-                            </label>
-                            <div class="controls">
-                                <div id="spostcode">
-                                    <input class="input-form-Font col-sm-12" type="text" id="input-spostcode" name="input-spostcode" placeholder="Postcode" required onChange="check_postcode()" >
-                                </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Postal Code/Zip:</label>
+                            <div class="col-sm-6" id="spostcode">
+                              <input class="form-control" type="text" id="input-spostcode" name="input-spostcode" placeholder="Postcode" required onChange="check_postcode()" >
                             </div>
                         </div>
-                        <div style="height: 10px;"></div>
-                        <div class="control-group">
-                            <div class="controls">
-                                <button type="submit" style="float: right;" class="app-btn button-Font button_primary">
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">&nbsp;</label>
+                            <div class="col-sm-6">
+                              <button type="submit" style="float: right;" class="app-btn button-Font button_primary">
                                     Continue
                                 </button>
                             </div>
                         </div>
+                        
                     </form>
               
               </div>

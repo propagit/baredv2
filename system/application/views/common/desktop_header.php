@@ -18,11 +18,18 @@
 </div>
 
 <div class="col-sm-5 hdr-block rt">
-    <span class="h6 fw-700 block acc-access"><i class="fa fa-unlock-alt"></i> 
-        <a class="app-link" href="<?=base_url()?>store/register">Register</a> /
-        <?php if($this->session->userdata('userloggedin')){?>
+    <span class="h6 fw-700 block acc-access">
+        
+        <?php 
+			if($this->session->userdata('userloggedin')){
+			$user = $this->session->userdata('userloggedin');
+			$cust = $this->Customer_model->identify($user['customer_id']);
+		?>
+        <a class="app-link" href="<?=base_url()?>store/edit_detail_retail/<?=$cust['id']?>"><i class="fa fa-user"></i>  Welcome - <?=$cust['firstname']?></a> /
         <a class="app-link" href="<?=base_url()?>store/signout">Logout</a>
         <?php }else{ 	?>
+        <i class="fa fa-unlock-alt"></i> 
+        <a class="app-link" href="<?=base_url()?>store/register">Register</a> /
         <a class="app-link" href="<?=base_url()?>store/signin">Login</a>
         <?php } ?>
     </span>

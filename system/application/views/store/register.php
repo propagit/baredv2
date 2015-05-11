@@ -96,16 +96,12 @@ function check_heardus()
 
 </script>
 
-
-
-
-
 <div class="app-container">
 	
 	
     
     <div style="height: 20px;"></div>
-    <h4>Create an Account With Bared</h4>
+    <h4 class="content-wrap">Create an Account With Bared</h4>
     <div style="height: 20px;"></div>
     <div class="signup-background">
     <span class="body-copy-Font">
@@ -115,134 +111,117 @@ function check_heardus()
     </span>
     <div style="margin-top: 20px"></div>
     <form class="form-horizontal" id="registerForm"  name="registerForm" method="post" action="javascript:register();" autocomplete="off">
-    <div class="label-form-Font signup-label">
-    	Email Address*
-    </div>
-    <div class="signup-input-space">
-    	<input type="email" id="email" class="signup-input input-form-Font" value="<?=$sub_email?>" required/>
-    </div>
     
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Title*
-    </div>
-    <div class="signup-input-space">
-    	<select class="input-form-Font" style="width: 105%; float: left;" name="title" id="title" required>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Email Address*</label>
+        <div class="col-sm-6">
+          <input type="email" id="email" class="form-control" id="email" value="<?=$sub_email?>" required>
+        </div>
+  	</div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Title*</label>
+        <div class="col-sm-6">
+          <select class="form-control" name="title" id="title" required>
         	<option value="">Select One</option>
 			<option value="Mr">Mr</option>
             <option value="Miss" >Miss</option>
             <option value="Mrs">Mrs</option>
             <option value="Ms">Ms</option>
 		</select>
-    </div>
+        </div>
+  	</div>
     
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	First Name*
-    </div>
-    <div class="signup-input-space">
-    	<input  type="text" id="firstname" class="signup-input input-form-Font" required/>
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Surname*
-    </div>
-    <div class="signup-input-space">
-    	<input  type="text" id="lastname" class="signup-input input-form-Font" required/>
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Date of Birth
-    </div>
-    <div class="signup-input-space-birth">
-    	<!-- <div id="dob1" class="input-append">
-		<input data-format="dd-MM-yyyy" type="text" name="dob" id="dob" style="width: 273px;" required></input>
-		<span style="cursor: pointer" class="add-on">
-		  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-		  </i>
-		</span>
-		</div>
-		<script type="text/javascript">
-		  $(function() {
-		    $('#dob1').datetimepicker({
-		      pickTime: false
-		    });
-		  });
-		</script> -->
-		
-		<select class="input-form-Font" style="width: 50%; float: left; margin-right: 3.5%" name="date_dob" id="date_dob" required>
-			<?php
-				for($i=1;$i<=31;$i++)
-				{
-				?>
-				<option value="<?=$i?>"><?=$i?></option>
-				<?
-				}
-			?>
-		</select>
-		<select class="input-form-Font" style="width: 45%; float: left;" name="month_dob" id="month_dob" required>
-			<option value="1">January</option>
-			<option value="2">February</option>
-			<option value="3">March</option>
-			<option value="4">April</option>
-			<option value="5">May</option>
-			<option value="6">June</option>
-			<option value="7">July</option>
-			<option value="8">August</option>
-			<option value="9">September</option>
-			<option value="10">October</option>
-			<option value="11">November</option>
-			<option value="12">December</option>
-		</select>
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Password*
-    </div>
-    <div class="signup-input-space">
-    	<input id="password" type="password" class="signup-input input-form-Font" required/>
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Retype your password*
-    </div>
-    <div class="signup-input-space">
-    	<input id="password2" type="password" class="signup-input input-form-Font"/>
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Phone*
-    </div>
-    <div class="signup-input-space">
-    	<input type="text" id="phone" class="signup-input input-form-Font" required/>
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Mobile
-    </div>
-    <div class="signup-input-space">
-    	<input type="text" id="mobile" class="signup-input input-form-Font"/>
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Address1
-    </div>
-    <div class="signup-input-space">
-    	<input type="text" id="address1" class="signup-input input-form-Font" />
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Address2
-    </div>
-    <div class="signup-input-space">
-    	<input type="text" id="address2" class="signup-input input-form-Font"/>
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Select your country
-    </div>
-    <div class="signup-input-space">
-    	<select class="input-form-Font" onchange="country_change();" style="width: 105%" name="country" id="country" >
+    <div class="form-group">
+        <label class="col-sm-2 control-label">First Name*</label>
+        <div class="col-sm-6">
+          <input type="text" id="firstname" class="form-control" required>
+        </div>
+  	</div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Surname*</label>
+        <div class="col-sm-6">
+          <input type="text" id="lastname" class="form-control" required>
+        </div>
+  	</div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Date of Birth</label>
+        <div class="col-sm-6">
+           <div class="col-sm-6 x-l-gutter">	
+              <select class="form-control" name="date_dob" id="date_dob" required>
+                <?php for($i=1;$i<=31;$i++){?>
+                    <option value="<?=$i?>"><?=$i?></option>
+                <? }?>
+              </select>
+            </div>
+            <div class="col-sm-6 x-r-gutter">
+                <select class="form-control" name="month_dob" id="month_dob" required>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>  
+            </div>
+        </div>
+  	</div>
+  	
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Passowrd*</label>
+        <div class="col-sm-6">
+          <input type="password" id="password" class="form-control" required>
+        </div>
+  	</div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Retype your password*</label>
+        <div class="col-sm-6">
+          <input type="password" id="password2" class="form-control" required>
+        </div>
+  	</div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Phone*</label>
+        <div class="col-sm-6">
+          <input type="text" id="phone" class="form-control" required>
+        </div>
+  	</div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Mobile*</label>
+        <div class="col-sm-6">
+          <input type="text" id="mobile" class="form-control" required>
+        </div>
+  	</div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Address1</label>
+        <div class="col-sm-6">
+          <input type="text" id="address1" class="form-control">
+        </div>
+  	</div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Address2</label>
+        <div class="col-sm-6">
+          <input type="text" id="address2" class="form-control">
+        </div>
+  	</div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Select your country</label>
+        <div class="col-sm-6">
+          <select class="form-control" onchange="country_change();" name="country" id="country" >
 			<option value="" selected="selected">Select Country</option> 
 			<option value="United States">United States</option> 
 			<option value="United Kingdom">United Kingdom</option> 
@@ -486,13 +465,13 @@ function check_heardus()
 			<option value="Zambia">Zambia</option> 
 			<option value="Zimbabwe">Zimbabwe</option>		
 		</select>
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Select your state*
-    </div>
-    <div class="signup-input-space">
-	    <select class="input-form-Font" style="width: 105%" name="province" id="province" required>
+        </div>
+  	</div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Select your state*</label>
+        <div class="col-sm-6">
+          <select class="form-control" name="province" id="province" required>
 			<option value="" selected="selected">Select State</option>
 			<?php
 				foreach($states as $state)
@@ -503,28 +482,28 @@ function check_heardus()
 				}
 			?>
 			<option value="0">Other</option>
-		</select>	
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Suburb
-    </div>
-    <div class="signup-input-space">
-    	<input id="suburb" type="text" class="signup-input input-form-Font" />
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Postcode
-    </div>
-    <div class="signup-input-space">
-    	<input id="postcode" type="text" class="signup-input input-form-Font" />
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	Heard about us
-    </div>
-    <div class="signup-input-space">
-    	<select onchange="check_heardus();" class="input-form-Font" style="width: 105%" name="heardus" id="heardus" required>
+		</select>
+        </div>
+  	</div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Suburb</label>
+        <div class="col-sm-6">
+          <input type="text" id="suburb" class="form-control" >
+        </div>
+  	</div>
+   
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Postcode</label>
+        <div class="col-sm-6">
+          <input type="text" id="postcode" class="form-control" >
+        </div>
+  	</div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Heard about us</label>
+        <div class="col-sm-6">
+          <select onchange="check_heardus();" class="form-control" name="heardus" id="heardus">
     		<option value="Google">Google</option>
     		<option value="Facebook">Facebook</option>
     		<option value="Instagram">Instagram</option>
@@ -532,23 +511,24 @@ function check_heardus()
     		<option value="Personal Referral">Personal Referral</option>
     		<!-- <option value="Other">Other</option> -->
     	</select>
-    </div>
-    <div style="display: none" id="when_personal_referral">
-    	<div style="clear: both; height: 10px;"></div>
-	    <div class="label-form-Font signup-label">
-	    	Personal Referral
-	    </div>
-	    <div class="signup-input-space">
-	    	<input id="personal_referral" type="text" class="signup-input input-form-Font" />
-	    </div>
-    </div>
-    <div style="clear: both; height: 10px;"></div>
-    <div class="label-form-Font signup-label">
-    	&nbsp;
-    </div>
-    <div class="signup-input-space">
-    	<input type="submit" value="Register Now" class="button_primary button_size_fb button-Font"/>
-    </div>
+        </div>
+  	</div>
+   
+    <div class="form-group" style="display:none;" id="when_personal_referral">
+        <label class="col-sm-2 control-label">Personal Referral</label>
+        <div class="col-sm-6">
+          <input type="text" id="personal_referral" class="form-control" >
+        </div>
+  	</div>
+
+	<div class="form-group">
+        <label class="col-sm-2 control-label">&nbsp;</label>
+        <div class="col-sm-6">
+          <input type="submit" value="Register Now" class="button_primary button_size_fb button-Font"/>
+        </div>
+  	</div>
+    
+    
     <div style="clear: both; height: 10px;"></div>
     </form>
     </div>
@@ -561,16 +541,7 @@ function check_heardus()
         <p id="any_message"></p>
     </div>
     </div>
-    <!-- Menu Phone End-->
-    
-    <!-- Menu and Product List for desktop and Ipad version -->
-   	
-    
-    <!-- Menu for desktop and Ipad end -->
-    
-    <!-- Product for IPhone -->   
-    
-    <!-- End Product for Iphone -->
+   
 		
         
    

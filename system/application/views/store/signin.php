@@ -232,20 +232,24 @@ function login()
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
 				<strong>Warning!</strong> Wrong username/password. Please try again!.
 			</div> -->
-		    <div style="margin-top: 20px"></div>
-		    <div class="signin-label label-form-Font" >
-		    	Enter your email
-		    </div>
-		    <div class="signin-input input-form-Font" >
-		    	<input class="signin-input-text" id="username" type="email" style=""/>
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
-		    <div class="signin-label label-form-Font" >
-		    	Enter your password
-		    </div>
-		    <div class="signin-input input-form-Font">
-		    	<input class="signin-input-text" id="password-login" type="password"/>
-		    </div>
+            <div style="clear: both; height: 20px;"></div>
+            
+            <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-6 control-label">Enter your email</label>
+                <div class="col-sm-6">
+                  <input type="email" id="username" class="form-control">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-6 control-label">Enter your password</label>
+                <div class="col-sm-6">
+                  <input type="password" id="password-login" class="form-control">
+                </div>
+            </div>
+            </form>
+		   
 		    <div style="clear: both; height: 10px;"></div>
 		    <div class="signin-label body-copy-Font">
 		    	<a class="body-copy-Font link_title" href="#" onclick="jQuery('#forgot1Modal').modal('show');">Forgot your password?</a>
