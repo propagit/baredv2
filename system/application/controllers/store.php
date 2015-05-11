@@ -2385,6 +2385,9 @@ Warm Regards,<br/>
 		
 		//$data['page_title'] = 'Bared Footware - '. $cat_name .' - '. $product['title'];
 		
+		$data['cross_sale'] = $this->Product_model->get_crosssales_products($all_other_ori);
+		
+		
 		$this->load->view('common/header',$data);
 		//$this->load->view('common/header');
 		if($product['gift_card'] != 1)

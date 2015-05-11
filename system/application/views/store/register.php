@@ -113,14 +113,14 @@ function check_heardus()
     <form class="form-horizontal" id="registerForm"  name="registerForm" method="post" action="javascript:register();" autocomplete="off">
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Email Address*</label>
+        <label class="col-sm-3 control-label">Email Address*</label>
         <div class="col-sm-6">
           <input type="email" id="email" class="form-control" id="email" value="<?=$sub_email?>" required>
         </div>
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Title*</label>
+        <label class="col-sm-3 control-label">Title*</label>
         <div class="col-sm-6">
           <select class="form-control" name="title" id="title" required>
         	<option value="">Select One</option>
@@ -133,21 +133,21 @@ function check_heardus()
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">First Name*</label>
+        <label class="col-sm-3 control-label">First Name*</label>
         <div class="col-sm-6">
           <input type="text" id="firstname" class="form-control" required>
         </div>
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Surname*</label>
+        <label class="col-sm-3 control-label">Surname*</label>
         <div class="col-sm-6">
           <input type="text" id="lastname" class="form-control" required>
         </div>
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Date of Birth</label>
+        <label class="col-sm-3 control-label">Date of Birth</label>
         <div class="col-sm-6">
            <div class="col-sm-6 x-l-gutter">	
               <select class="form-control" name="date_dob" id="date_dob" required>
@@ -177,49 +177,49 @@ function check_heardus()
   	
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Passowrd*</label>
+        <label class="col-sm-3 control-label">Passowrd*</label>
         <div class="col-sm-6">
           <input type="password" id="password" class="form-control" required>
         </div>
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Retype your password*</label>
+        <label class="col-sm-3 control-label">Retype your password*</label>
         <div class="col-sm-6">
           <input type="password" id="password2" class="form-control" required>
         </div>
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Phone*</label>
+        <label class="col-sm-3 control-label">Phone*</label>
         <div class="col-sm-6">
           <input type="text" id="phone" class="form-control" required>
         </div>
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Mobile*</label>
+        <label class="col-sm-3 control-label">Mobile*</label>
         <div class="col-sm-6">
           <input type="text" id="mobile" class="form-control" required>
         </div>
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Address1</label>
+        <label class="col-sm-3 control-label">Address1</label>
         <div class="col-sm-6">
           <input type="text" id="address1" class="form-control">
         </div>
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Address2</label>
+        <label class="col-sm-3 control-label">Address2</label>
         <div class="col-sm-6">
           <input type="text" id="address2" class="form-control">
         </div>
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Select your country</label>
+        <label class="col-sm-3 control-label">Select your country</label>
         <div class="col-sm-6">
           <select class="form-control" onchange="country_change();" name="country" id="country" >
 			<option value="" selected="selected">Select Country</option> 
@@ -469,7 +469,7 @@ function check_heardus()
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Select your state*</label>
+        <label class="col-sm-3 control-label">Select your state*</label>
         <div class="col-sm-6">
           <select class="form-control" name="province" id="province" required>
 			<option value="" selected="selected">Select State</option>
@@ -487,21 +487,21 @@ function check_heardus()
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Suburb</label>
+        <label class="col-sm-3 control-label">Suburb</label>
         <div class="col-sm-6">
           <input type="text" id="suburb" class="form-control" >
         </div>
   	</div>
    
     <div class="form-group">
-        <label class="col-sm-2 control-label">Postcode</label>
+        <label class="col-sm-3 control-label">Postcode</label>
         <div class="col-sm-6">
           <input type="text" id="postcode" class="form-control" >
         </div>
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label">Heard about us</label>
+        <label class="col-sm-3 control-label">Heard about us</label>
         <div class="col-sm-6">
           <select onchange="check_heardus();" class="form-control" name="heardus" id="heardus">
     		<option value="Google">Google</option>
@@ -515,14 +515,14 @@ function check_heardus()
   	</div>
    
     <div class="form-group" style="display:none;" id="when_personal_referral">
-        <label class="col-sm-2 control-label">Personal Referral</label>
+        <label class="col-sm-3 control-label">Personal Referral</label>
         <div class="col-sm-6">
           <input type="text" id="personal_referral" class="form-control" >
         </div>
   	</div>
 
 	<div class="form-group">
-        <label class="col-sm-2 control-label">&nbsp;</label>
+        <label class="col-sm-3 control-label">&nbsp;</label>
         <div class="col-sm-6">
           <input type="submit" value="Register Now" class="button_primary button_size_fb button-Font"/>
         </div>

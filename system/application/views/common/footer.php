@@ -21,6 +21,9 @@
                 
                 <hr>
                 
+                <?php $this->load->view('common/nav/footer/quick_links'); ?>
+                <?php if(0){ ?>
+                
                 <div class="col-sm-4">
                     <ul class="quick-links">
         				<li><h5>customer care</h5></li>
@@ -52,7 +55,7 @@
                         <li><a href="#">wish list</a></li>
                     </ul>  
                 </div>
-                
+                <?php } ?>
                 <hr>
                 <div class="col-sm-12">
                     <p class="disclaimer">

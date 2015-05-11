@@ -284,23 +284,6 @@ function active(id)
 </script>
 
 
-<style>
-
-
-
-
-
-
-
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-
-</style>
 
 <div class="app-container">
 	<!-- facebook -->
@@ -447,7 +430,7 @@ function active(id)
     <div style="height:10px;"></div>     
     <div class="col-sm-12">
  
-        <div class="col-sm-2  hidden-xs">
+        <div class="col-sm-1  hidden-xs">
     		
     		<div style="margin-bottom: 10px">			    
 			    <a href=# id=prev3><img src="<?=base_url()?>img/grey-up-arrow.png" alt=""/></a>
@@ -490,12 +473,12 @@ function active(id)
     	</div>
         
         <!-- mobile gallery -->
-        <div class="col-sm-5 visible-xs">
+        <div class="col-sm-6 visible-xs">
         	<?php $this->load->view('store/product/gallery_view'); ?>
         </div>
         <!-- mobile gallery -->
 
-    	<div class="col-sm-5 hidden-xs">    		
+    	<div class="col-sm-6 hidden-xs">    		
     		<?php
     		if($product['sale_price'] < $product['price'])
 			{
@@ -542,23 +525,7 @@ function active(id)
 				else
 				{}
 				?>
-                <?php if(0){ ?>
-    			<span class="product-title-Font product-title-primary"><?=$product['title']?></span> 
-                <div class="yotpo bottomLine"
-                    data-appkey="87cmugsJWWCvn4YdAy3U9AcGnlYiUwvpv1TKwE5Z"
-                    data-domain="bared.com.au"
-                    data-product-id="<?=$product['review_category']?>"
-                    data-product-models="<?=$product['title']?>"
-                    data-name="<?=$product['title']?> <?=$product['short_desc']?>"
-                    data-url="<?=base_url()?>store/detail_product/<?=$cat['title']?>/<?=$product['id_title']?>"
-                    data-image-url="The product image url. Url escaped"
-                    data-description="<?=$product['long_desc']?>"
-                    data-bread-crumbs="Product categories"
-                    data-images-star_empty="<?=base_url()?>img/star_empty.png"
-                    data-images-star_half="<?=base_url()?>img/star_half.png"
-                    data-images-star_full="<?=base_url()?>img/star_full.png">                                                                            
-               </div>
-				 <?php } ?>
+                
                
                <div class="product-info <?=$on_sale;?>">
                     <h3>
@@ -810,7 +777,7 @@ function active(id)
             <div class="product-info-Font product-info" style="float:right;">
                 <?php $multiple_stock = json_decode($product['size'],true);?>
                 <!-- Please change as well in cart page-->
-                <select class="product-size" name="sizeproduct" id="sizeproduct"  >
+                <select class="product-size form-control" name="sizeproduct" id="sizeproduct"  >
                 	<option value="--">Please Select</option>
 					<?php if($multiple_stock['34eu']>0){?><option value="34eu">34 EU</option><?php }?>
                     <?php if($multiple_stock['35eu']>0){?><option value="35eu">35 EU</option><?php }?>
@@ -969,8 +936,9 @@ function active(id)
                         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
                       })();
                     </script>
-                </div>					
-                <img  class="social-icon" style="cursor: pointer; margin-right: 0px;" onclick="$('#emailModal').modal('show');" src="<?=base_url()?>img/mail.png" />
+                </div>
+                <i onclick="$('#emailModal').modal('show');"  style="cursor: pointer; margin-right: 0px; font-size: 22px;color: grey;" class="fa fa-envelope"></i>					
+                
                 
                 
                 <div style="clear: both"></div>
@@ -980,162 +948,11 @@ function active(id)
     	</div>
     </div>
    
-    <?php if(0){ # linked products ?>
-     <div style="height: 20px;"></div>
-    <div class=" hidden-xs">
-    	<div class="col-sm-12">
-    		<div class="body-copy-Font also-like" >You may also like...</div>
-    	</div>
-    </div>
-    <div style="height: 10px;"></div>
-    <div class="hidden-xs" style="height: 10px;"></div>
     
-    <div class=" hidden-xs">
-        <div class="carousel slide col-sm-12 hidden-xs" id="myCarousel4">
-            <div class="carousel-inner">
-						<? 
-						$j=0;
-						$lf=array();
-						foreach($like_feature as $ot)
-						{
-							$lf[$j]=$ot;
-							$j++;														
-						}
-						//$ij=1;
-						//if(count($like_feature)>0){
-							$i=0;
-							$k=0;
-							//for($i=0; $i<12; $i++)
-							for($i=0; $i<12; $i++)
-							{																																	
-								if($i==0 || $i==6 || $i==12){
-								?>
-                                	<div class="item <? if($i==0){?>active <? }?>">
-                                    <ul class="thumbnails">  
-                                    
-                             <? }
-							 	if($i!= 0 || $i!=7){ 
-								if(isset($lf[$i])){
-								$prod = $this->Product_model->identify($lf[$i]);
-								$hero = $this->Product_model->get_hero($lf[$i]);
-								$titles = explode('-',$prod['title']);
-								}
-								else {
-									$prod = false;
-								}
-								
-								if($prod)
-							    {                                                          
-                                    ?>
-                                    <li class="col-sm-2">
-		                            <div class="thumbnail" style="border:none; border-radius: none; box-shadow: none; padding: 0">
-                                		<?php
-							    		
-										if($prod['sale_price'] < $prod['price'])
-										{
-										?>
-										<img style="position: absolute; z-index: 999;" src="<?=base_url()?>img/ssale-sign.png" />
-										<?php
-										}
-							    		?>
-		                                <?php
-		                                	if($hero)
-		                                	{
-		                                	?>
-		                                		<a href="<?=base_url()?>store/detail_product/quick_link/<?=$prod['id_title']?>"><img class="hidden-xs" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$prod['id'])?>/thumb5/<?=$hero['name']?>"/></a>
-		                                	<?
-		                                	}
-											else
-											{
-											?>
-												<a href="<?=base_url()?>store/detail_product/quick_link/<?=$prod['id_title']?>"><img src="http://placehold.it/223x262" alt=""></a>											
-											<?
-											}
-											
-											$cur_user = $this->session->userdata('userloggedin');
-											if($cur_user['level'] == 1)
-											{
-												if($prod['sale_price'] < $prod['price'])
-												{
-													$cur_price = $prod['sale_price'];
-												}
-												else 
-												{
-													$cur_price = $prod['price'];
-												}
-											}
-											elseif($cur_user['level'] == 2)
-											{
-												if($prod['sale_price_trade'] < $prod['price_trade'])
-												{
-													$cur_price = $prod['sale_price_trade'];
-												}
-												else 
-												{
-													$cur_price = $prod['price_trade'];
-												}
-											}
-											else
-											{
-												if($prod['sale_price'] < $prod['price'])
-												{
-													$cur_price = $prod['sale_price'];
-												}
-												else 
-												{
-													$cur_price = $prod['price'];
-												}
-											}
-		                                ?>
-                                	</div>	
-                                    <div style="height:10px;"></div>    
-                                     <? 	//$num = strlen($titles[0])+strlen($titles[1]); 
-										// $word=trim($titles[1]);
-										// if($num > 20)
-										// {
-											// $x=20-strlen($titles[0]);
-											// $word=substr($titles[1], 0, $x).'...';	
- 											
-										// }
-										$num_desc = strlen($prod['short_desc']);
-										$word_desc=$prod['short_desc'];
-										if($num_desc > 20)
-										{
-											$word_desc=substr($prod['short_desc'],0, 15).'...';	
-										}
-									?> 
-		                            <div class="feature-title-Font feauture-title" ><?=$prod['title']?></div>
-		                                <div class="feature-desc-Font feauture-desc" ><?=$word_desc?></div>
-		                                <div class="feature-price-Font feauture-price"><?=$sign?><?php echo number_format($cur_price * $cur_val,2,'.',',');?></div>
-                                    </li>
-                                <? }}
-								
-								
-								if($i==5 || $i==11 ){?> 
-                                    </ul>
-                                    </div>					
-	
-                                <? }                                								
-								
-							}
-																															
-						?>			
-                       						
-           	</div>
-            
-            <a class="left carousel-control" data-slide="prev" href="#myCarousel4" style="background: none; border: none; opacity: 1">
-                <img style="margin-left: -100px" src="<?=base_url()?>img/white-left-ar.png"/>
-            </a>
-            <a class="right carousel-control" data-slide="next" href="#myCarousel4" style="background: none; border: none; opacity: 1">
-                <img style="margin-right: -100px" src="<?=base_url()?>img/white-right-ar.png"/>
-            </a>
-        </div>
-    </div>
-    
-    
-    <?php } ?>
-   <!-- <div class="app-container relative bar bg-black text-white"><h3>you may also like</h3></div>-->
-    <?php #$this->load->view('common/products/featured_products'); ?>
+    <div class="app-container relative bar bg-black text-white"><h3>you may also like</h3></div>
+    <?php 
+		$this->load->view('common/products/featured_products',array('feature_products' => $cross_sale)); 
+	?>
   
     
     <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

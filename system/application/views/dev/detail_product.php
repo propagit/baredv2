@@ -301,25 +301,6 @@ function active(id)
 
 </script>
 
-
-<style>
-
-
-
-
-
-
-
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-
-</style>
-
 <div class="container">
 	<!-- facebook -->
 	<div id="fb-root"></div>
@@ -408,7 +389,7 @@ function active(id)
 
 	<div style="height:10px;"></div>     
     <div class="row-fluid">
-    	<div class="span12">
+    	<div class="col-sm-12">
     		<ul class="breadcrum-Font breadcrumb">
 			    <li><a href="<?=base_url()?>">Home</a> <span class="divider">></span></li>
 			    <?php

@@ -92,7 +92,7 @@ function check_form()
     </span> -->
      <div style="height: 20px;"></div>
 
-    	<div id="left-side" class="col-sm-9 col-xs-12">
+    	<div id="left-side" class="col-sm-12 col-xs-12 x-gutters">
 		    <form class="form-horizontal" id="registerForm" onsubmit="return check_form();"  name="registerForm" method="post" action="<?=base_url()?>store/update_retail" autocomplete="off">
 		    <input type="hidden" name="id" value="<?=$cust['id']?>"/>
 		    <div class="body-copy-Font mandatory" style="">
@@ -103,7 +103,7 @@ function check_form()
 
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Title *</label>
+                <label class="col-sm-3 control-label">Title *</label>
                 <div class="col-sm-6">
                   <select class="form-control" name="title" id="title" required>
                 	<?php if($cust['title'] == '') { ?>
@@ -118,21 +118,21 @@ function check_form()
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">First Name*</label>
+                <label class="col-sm-3 control-label">First Name*</label>
                 <div class="col-sm-6">
                   <input type="text" id="firstname" name="firstname" class="form-control" value="<?=$cust['firstname']?>" required/>
                 </div>
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Surname*</label>
+                <label class="col-sm-3 control-label">Surname*</label>
                 <div class="col-sm-6">
                   <input type="text" class="form-control" id="lastname" name="lastname" value="<?=$cust['lastname']?>" required/>
                 </div>
             </div>
            	
             <div class="form-group">
-                <label class="col-sm-2 control-label">Date of Birth</label>
+                <label class="col-sm-3 control-label">Date of Birth</label>
                 <div class="col-sm-6">
                   	<div class="col-sm-6 x-l-gutter">	
                       <select class="form-control" name="date_dob" id="date_dob" required>
@@ -166,70 +166,70 @@ function check_form()
             </div>
 		   
             <div class="form-group">
-                <label class="col-sm-2 control-label">Email Address*</label>
+                <label class="col-sm-3 control-label">Email Address*</label>
                 <div class="col-sm-6">
                   <input type="text" class="form-control" id="email" name="email"  value="<?=$cust['email']?>" required/>
                 </div>
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Password</label>
+                <label class="col-sm-3 control-label">Password</label>
                 <div class="col-sm-6">
                   <input type="password" class="form-control" id="password" name="password" />
                 </div>
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Retype your password</label>
+                <label class="col-sm-3 control-label">Retype your password</label>
                 <div class="col-sm-6">
                   <input type="password" class="form-control" id="password2" name="password2" />
                 </div>
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Phone*</label>
+                <label class="col-sm-3 control-label">Phone*</label>
                 <div class="col-sm-6">
                   <input type="text" class="form-control" id="phone" name="phone"  value="<?=$cust['phone']?>" placeholder="+61 3 9536 8777" required/>
                 </div>
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Mobile</label>
+                <label class="col-sm-3 control-label">Mobile</label>
                 <div class="col-sm-6">
                   <input type="text" class="form-control" id="mobile" name="mobile"  value="<?=$cust['mobile']?>" placeholder="0400 111 222"/>
                 </div>
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Address1*</label>
+                <label class="col-sm-3 control-label">Address1*</label>
                 <div class="col-sm-6">
                   <input type="text" class="form-control" id="address1" name="address1" value="<?=$cust['address']?>" required/>
                 </div>
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Address2</label>
+                <label class="col-sm-3 control-label">Address2</label>
                 <div class="col-sm-6">
                   <input type="text" class="form-control" id="address2" name="address2" value="<?=$cust['address2']?>"/>
                 </div>
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Suburb*</label>
+                <label class="col-sm-3 control-label">Suburb*</label>
                 <div class="col-sm-6">
                   <input type="text" class="form-control" id="suburb" name="suburb" value="<?=$cust['suburb']?>" required/>
                 </div>
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Postcode*</label>
+                <label class="col-sm-3 control-label">Postcode*</label>
                 <div class="col-sm-6">
                   <input type="text" class="form-control" id="postcode" name="postcode" value="<?=$cust['postcode']?>" required/>
                 </div>
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Select your country*</label>
+                <label class="col-sm-3 control-label">Select your country*</label>
                 <div class="col-sm-6">
                   <select class="form-control" name="country" id="country" required>
 					<option value="" selected="selected">Select Country</option> 
@@ -483,7 +483,7 @@ function check_form()
 		   
 		   
             <div class="form-group">
-                <label class="col-sm-2 control-label">Select your state*</label>
+                <label class="col-sm-3 control-label">Select your state*</label>
                 <div class="col-sm-6">
                   <select class="form-control" name="province" id="province" required>
 					<option value="" selected="selected">Select State</option>
@@ -513,7 +513,7 @@ function check_form()
             
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">&nbsp;</label>
+                <label class="col-sm-3 control-label">&nbsp;</label>
                 <div class="col-sm-6">
                   <input type="submit" value="Update" class="button_primary button-Font pull app-btn" />
                 </div>

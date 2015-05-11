@@ -695,7 +695,7 @@ class Cms extends Controller {
 							$option = '';
 							foreach($galleries as $g)
 							{
-								
+								$select = "";
 								if($page['gallery']==$g){$select = "selected='selected'";}
 								$option .= '<option value="'.$g['id'].'" '.$select.'>'.$g['title'].'</option>';
 							}

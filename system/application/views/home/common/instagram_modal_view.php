@@ -3,6 +3,7 @@
 	$on_sale = $product['sale_price'] < $product['price'] ? 'on-sale' : '';
 	$normal_price_arr = explode('.',$product['price']);
 	$sale_price_arr = explode('.',$product['sale_price']);
+	$cat = $this->Category_model->identify($product['main_category']);
 ?>
 <div class="col-sm-8 x-gutters left hidden-xs">
     <img src="<?=base_url();?>uploads/instagram/<?=$gallery['image'];?>" />
@@ -21,15 +22,22 @@
                      <span class="sale-price">$<?=$sale_price_arr[0];?>.<sub><?=$sale_price_arr[1];?></sub></span>
                 </span>
             </h4>
-            <span class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star off"></i>
-            </span>
+            <div class="yotpo bottomLine"
+                data-appkey="87cmugsJWWCvn4YdAy3U9AcGnlYiUwvpv1TKwE5Z"
+                data-domain="bared.com.au"
+                data-product-id="<?=$product['review_category']?>"
+                data-product-models="<?=$product['title']?>"
+                data-name="<?=$product['title']?> <?=$product['short_desc']?>"
+                data-url="<?=base_url()?>store/detail_product/<?=$cat['title']?>/<?=$product['id_title']?>"
+                data-image-url="The product image url. Url escaped"
+                data-description="<?=$product['long_desc']?>"
+                data-bread-crumbs="Product categories"
+                data-images-star_empty="<?=base_url()?>img/star_empty.png"
+                data-images-star_half="<?=base_url()?>img/star_half.png"
+                data-images-star_full="<?=base_url()?>img/star_full.png">                                                                            
+           </div>
         </div>
         
-        <button class="btn btn-app">buy now</button>
+        <a href="<?=base_url()?>store/detail_product/quick_link/<?=$product['id_title']?>"><div class="btn btn-app">buy now</div>
      </div>
 </div>

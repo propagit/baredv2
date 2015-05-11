@@ -345,7 +345,26 @@ div.vertical-tablet { height: 260px !important}
 	margin:auto;
 	float:none;	
 }
-
+.yotpo, .yotpo div, .yotpo span, .yotpo p, .yotpo a, .yotpo img, .yotpo i, .yotpo strong, .yotpo sup, .yotpo ul, .yotpo li, .yotpo form, .yotpo label {
+	font-family: 'Lato', sans-serif!important;
+	letter-spacing:0.4pt!important;
+	color:#000!important;
+}
+.yotpo .yoBottom, .yotpo .yoQuestionsBottom, .yotpo-testimonails .yoBottom, .yotpo-testimonails .yoQuestionsBottom {
+	float:left!important;
+}
+.number_results{
+	display:none!important;
+}
+.yotpo .yoNumber_like .yoLiking, .yotpo .yoLike:hover, .yotpo-testimonails .yoNumber_like .yoLiking, .yotpo-testimonails .yoLike:hover {
+	background: url("../img/vote_like.png") no-repeat scroll right top rgba(0, 0, 0, 0);
+}
+.yotpo .yoNumber_unlike .yoUnliking, .yotpo .yoUnlike:hover, .yotpo-testimonails .yoNumber_unlike .yoUnliking, .yotpo-testimonails .yoUnlike:hover {
+	background: url("../img/vote_unlike.png") no-repeat scroll right top rgba(0, 0, 0, 0);
+}
+.yotpo .yoForm, .yotpo-testimonails .yoForm {
+	color:#000!important;
+}
 @media (min-width: 980px) and (max-width: 1199px) {
 	
 	
@@ -693,7 +712,7 @@ div.vertical-tablet { height: 260px !important}
 		/* background: none repeat scroll 0 0 #F1F0F1; */ 
 		float: left; 
 		padding: 10px 2.5% 20px; 
-		width: 95%;
+		width: 100%;
 		border:1px solid #ccc;
 		
 		

@@ -131,49 +131,49 @@ function use_billing_address()
                     <form class="form-horizontal sa-toggle" method="post" action="<?=base_url()?>cart/save_account_page" id="form-acc" onsubmit="return check_phone();" style=" <?=$this->session->userdata('store_pickup') ? 'display:none;' : '';?>">
                        
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Title:</label>
+                            <label class="col-sm-4 control-label">Title:</label>
                             <div class="col-sm-6" id="stitle">
                               <input class="form-control" type="text" id="input-stitle" name="input-stitle" placeholder="Title">
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">First name:</label>
+                            <label class="col-sm-4 control-label">First name:</label>
                             <div class="col-sm-6" id="sfirstname">
                               <input class="form-control" type="text" id="input-sfirstname" name="input-sfirstname" placeholder="First name" required>
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Last name:</label>
+                            <label class="col-sm-4 control-label">Last name:</label>
                             <div class="col-sm-6" id="slastname">
                               <input class="form-control" type="text" id="input-slastname" name="input-slastname" placeholder="Last name" required>
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Address:</label>
+                            <label class="col-sm-4 control-label">Address:</label>
                             <div class="col-sm-6" id="saddress">
                               <input class="form-control" type="text" id="input-saddress" name="input-saddress" placeholder="Shipping Addres" required>
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Address Line 2:</label>
+                            <label class="col-sm-4 control-label">Address Line 2:</label>
                             <div class="col-sm-6" id="saddress2">
                               <input class="form-control" type="text" id="input-saddress2" name="input-saddress2" placeholder="Shipping Address2">
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">City/Suburb:</label>
+                            <label class="col-sm-4 control-label">City/Suburb:</label>
                             <div class="col-sm-6" id="ssuburb">
                               <input class="form-control" type="text" id="input-ssuburb" name="input-ssuburb" placeholder="Suburb" required>
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Country:</label>
+                            <label class="col-sm-4 control-label">Country:</label>
                             <div class="col-sm-6" id="scountry">
                               <select class="form-control" name="input-scountry" id="input-scountry" required onchange="change_country()">
 								  <?php 
@@ -189,7 +189,7 @@ function use_billing_address()
                         </div>
                         
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">State/Province:</label>
+                            <label class="col-sm-4 control-label">State/Province:</label>
                             <div class="col-sm-6" id="sstate">
                               <select class="form-control" name="input-sstate" id="input-sstate" required onchange="check_postcode()">
 								  <?php
@@ -205,14 +205,14 @@ function use_billing_address()
                         </div>
                         
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Postal Code/Zip:</label>
+                            <label class="col-sm-4 control-label">Postal Code/Zip:</label>
                             <div class="col-sm-6" id="spostcode">
                               <input class="form-control" type="text" id="input-spostcode" name="input-spostcode" placeholder="Postcode" required onChange="check_postcode()" >
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">&nbsp;</label>
+                            <label class="col-sm-4 control-label">&nbsp;</label>
                             <div class="col-sm-6">
                               <button type="submit" style="float: right;" class="app-btn button-Font button_primary">
                                     Continue
@@ -261,49 +261,49 @@ function use_billing_address()
 			
 		    <form class="form-horizontal">
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Title:</label>
+                    <label class="col-sm-4 control-label">Title:</label>
                     <div class="col-sm-6">
                       	<?=$cust['title']?>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Date of Birth:</label>
+                    <label class="col-sm-4 control-label">Date of Birth:</label>
                     <div class="col-sm-6">
                       	<?=$cust['date_dob']?> <?=date("F", mktime(0, 0, 0, $cust['month_dob'], 10))?>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">First Name:</label>
+                    <label class="col-sm-4 control-label">First Name:</label>
                     <div class="col-sm-6">
                       	<?=$cust['firstname']?>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Last Name:</label>
+                    <label class="col-sm-4 control-label">Last Name:</label>
                     <div class="col-sm-6">
                       	<?=$cust['lastname']?>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Email:</label>
+                    <label class="col-sm-4 control-label">Email:</label>
                     <div class="col-sm-6">
                       	<?=$cust['email']?>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Phone:</label>
+                    <label class="col-sm-4 control-label">Phone:</label>
                     <div class="col-sm-6">
                       	<?=$cust['phone']?>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Mobile:</label>
+                    <label class="col-sm-4 control-label">Mobile:</label>
                     <div class="col-sm-6">
                       	<?=$cust['mobile']?>
                     </div>
@@ -319,56 +319,56 @@ function use_billing_address()
 		    <form class="form-horizontal">
                 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Title:</label>
+                    <label class="col-sm-4 control-label">Title:</label>
                     <div class="col-sm-6">
                       	<?=$cust['title']?>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">First Name:</label>
+                    <label class="col-sm-4 control-label">First Name:</label>
                     <div class="col-sm-6">
                       	<?=$cust['firstname']?>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Last Name:</label>
+                    <label class="col-sm-4 control-label">Last Name:</label>
                     <div class="col-sm-6">
                       	<?=$cust['lastname']?>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Address:</label>
+                    <label class="col-sm-4 control-label">Address:</label>
                     <div class="col-sm-6">
                       	<?=$cust['address']?>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Address Line 2:</label>
+                    <label class="col-sm-4 control-label">Address Line 2:</label>
                     <div class="col-sm-6">
                       	<?=$cust['address2']?>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">City/Suburb:</label>
+                    <label class="col-sm-4 control-label">City/Suburb:</label>
                     <div class="col-sm-6">
                       	<?=$cust['suburb']?>
                     </div>
                 </div>
                 
 			    <div class="form-group">
-                    <label class="col-sm-3 control-label">Country:</label>
+                    <label class="col-sm-4 control-label">Country:</label>
                     <div class="col-sm-6">
                       	<?=$cust['country']?>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Postal Code/Zip:</label>
+                    <label class="col-sm-4 control-label">Postal Code/Zip:</label>
                     <div class="col-sm-6">
                       	<?=$cust['postcode']?>
                     </div>

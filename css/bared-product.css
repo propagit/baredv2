@@ -293,6 +293,7 @@ width: 50%; margin-bottom: 0px; text-align: center; border:1px solid #F1F0F1;
 .control-label
 {
 	text-align:left !important;
+	text-transform:uppercase;
 }
 .control-group{
 	margin-bottom:5px !important;
@@ -372,6 +373,10 @@ width: 50%; margin-bottom: 0px; text-align: center; border:1px solid #F1F0F1;
 	.plabel
 	{
 		width: 100%;
+	}
+	.list-other{
+		float:left;
+		width:100%;	
 	}
 }
 @media (max-width: 480px) 
@@ -584,6 +589,7 @@ width: 50%; margin-bottom: 0px; text-align: center; border:1px solid #F1F0F1;
 {
 	text-align: center !important; 
 	padding: 5px 50px 20px !important;
+	  text-transform: uppercase;
 }
 .mybody-modal-left
 {

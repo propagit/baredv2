@@ -2375,5 +2375,12 @@ AND a.status =1';
 		return $query->result_array();
 		
 	}
+	
+	function get_crosssales_products($product_ids)
+	{
+		$sql = "SELECT * FROM products
+				WHERE id IN (" . implode(",",$product_ids) . ")";
+		return $this->db->query($sql)->result_array();	
+	}
 }
 ?>
