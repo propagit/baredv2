@@ -1191,14 +1191,7 @@ function add_towishlist()
     </div>
     
     
-    <div id="anyModal" class="popup-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="mytop-modal" onclick="$j('#anyModal').modal('hide');">
-        <img src="<?=base_url()?>img/close_sign.png" alt=""/>
-    </div>
-    <div class="modal-body mybody-modal">
-        <p id="any_message"></p>
-    </div>
-    </div>
+    
 	
 	
 	<div id="emailModal" class="popup-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

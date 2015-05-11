@@ -27,13 +27,13 @@ class Cart extends Controller {
 	
 	function check_session()
 	{
-		if($this->session->userdata('previous'))
+		/*if($this->session->userdata('previous'))
 		{
 			if(basename($_SERVER['PHP_SELF']) != $this->session->userdata('previous'))
 			{
 				$this->session->destroy();
 			}
-		}
+		}*/
 	}
 		
 	
@@ -1222,7 +1222,7 @@ class Cart extends Controller {
 		else{
 			$methods = $this->System_model->get_shippings_country_state_suburb($_POST['country_id'],$_POST['state_id'],$_POST['postcode']);
 		}
-		$out = '<select id="method" style="width:292px; margin-top:10px;" onChange="updateshippingcost()" name="shipping_method">';
+		$out = '<select id="method" class="form-control" style="width:292px; margin-top:10px;" onChange="updateshippingcost()" name="shipping_method">';
 		foreach($methods as $method) {
 			$out .= '<option value="'.$method['id'].'">'.$method['name'].'</option>';
 		}
@@ -3451,7 +3451,6 @@ class Cart extends Controller {
 	*/
 	function save_account_page()
 	{
-		
 		
 		if($_POST['input-spostcode']==''|| $_POST['input-scountry']!=13){$methods = $this->System_model->get_shippings_country_state($_POST['input-scountry'],$_POST['input-sstate']);
 			

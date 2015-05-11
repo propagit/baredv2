@@ -349,18 +349,7 @@ function login()
     </script>
     
     
-	<!-- <div class="modal-header">
-	<button style="color: #E3007B" type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-	<h3 id="myModalLabel">Message</h3>
-	</div> -->
-	<div id="anyModal" class="modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="mytop-modal" onclick="jQuery('#anyModal').modal('hide');">
-        <img src="<?=base_url()?>img/close_sign.png" alt=""/>
-    </div>
-    <div class="modal-body mybody-modal">
-        <p id="any_message" class="body-copy-Font"></p>
-    </div>
-    </div>
+	
     
     <div id="forgot1Modal" class="modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="mytop-modal" onclick="jQuery('#forgot1Modal').modal('hide');">
@@ -373,16 +362,7 @@ function login()
         </p>
     </div>
     </div>
-    <!-- Menu Phone End-->
-    
-    <!-- Menu and Product List for desktop and Ipad version -->
-   	
-    
-    <!-- Menu for desktop and Ipad end -->
-    
-    <!-- Product for IPhone -->   
-    
-    <!-- End Product for Iphone -->
+
 	
     
     </div><!-- app-container-->	

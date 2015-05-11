@@ -360,11 +360,10 @@ width: 50%; margin-bottom: 0px; text-align: center; border:1px solid #F1F0F1;
 	
 	
 }
-<!-- -->
 
 <!-- Payment Page -->
 .p-margin-left{margin-left:5%;}
-.input-space{float:right;}
+.input-space{float:right; margin-bottom:12px;}
 @media (max-width: 767px) 
 {
 	.p-margin-left{margin-left:0;}

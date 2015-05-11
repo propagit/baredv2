@@ -9,7 +9,7 @@
 
 	
 # controllers
-	
+	- cart/check_session - very funny function uncomment on live one
 
 
 # css

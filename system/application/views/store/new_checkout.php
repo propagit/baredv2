@@ -211,7 +211,7 @@ function checkout()
 
 </script>
 
-<div class="app-container">	    
+<div class="app-container content-wrap">	    
     <div style="height: 20px;"></div>
     <div style="width: 100%">
 	<div style="margin: 0 auto" class="hidden-xs linkbreadcrumb">
@@ -264,7 +264,6 @@ function checkout()
 		<tbody class="header-cart">
 
             <tr class="header-cart-Font header-cart">
-				<td style="width: 3%">&nbsp;</td>
                 <td style="width: 40%">
 					<div class="header-cart" style="margin-top:10px;">PRODUCT NAME</div>
 				</td>
@@ -294,9 +293,7 @@ function checkout()
 					{
 				?>
 				<tr class="detail-cart-Font detail-cart" id="cart-<?=$c['id']?>">
-					<td style="width: 20">&nbsp;</td>
 					
-					</td>
                     <td>						
 						<div class="detail-cart" style="margin-top: 0px;">
 							<?=$pro['title']?> <?=$pro['short_desc']?>
@@ -469,7 +466,7 @@ function checkout()
     
     <div style="height: 20px;" class="hidden-xs"></div>
     <div class=" ">
-    	<div class="span7">
+    	<div class="col-sm-7">
     		<div style="height: 90px; padding-top: 40px; ">
 		    	<table>
                 	
@@ -485,7 +482,7 @@ function checkout()
                     </tr>
                     <tr>
                     	<td>
-                        	<input type="text" id="coupon-code" name="coupon-code" placeholder="Promo Code " class="col-sm-2 iipad inputp input-form-Font" style="height:33px;margin-bottom:0px!important; width:100%;">	
+                        	<input type="text" id="coupon-code" name="coupon-code" placeholder="Promo Code " class="col-sm-2 form-control" style="height:33px;margin-bottom:0px!important; width:100%;">	
                         </td>
                         <td width="20"></td>
                         <td>
@@ -500,7 +497,7 @@ function checkout()
     	</div>
         
         
-        <!--<div class="span7 visible-xs">
+        <!--<div class="col-sm-7 visible-xs">
     		<div style="height: 90px; padding-top: 5px; margin-bottom:5px;" class="secondFont">
 		    	<span class="info-cart-Font info-cart">Shipping Method </span>
                 <div class="controls input-form-Font" id="shipping-method-iphone" style="padding-top:-5px;">                        
@@ -617,7 +614,7 @@ function checkout()
     	<div class="col-sm-8 hidden-xs">
     		&nbsp;
     	</div>
-    	<div class="span4 hidden-xs">
+    	<div class="col-sm-4 hidden-xs">
     		<div class="payment_shopping" style="width:100%;">
 	    		<button onclick="checkout();" class="cnt_btt button_primary button-Font" style="width:235px;float:right;">
 					Continue
@@ -625,7 +622,7 @@ function checkout()
 				
 			</div>
     	</div>
-        <div class="span4 visible-xs">
+        <div class="col-sm-4 visible-xs">
     		<div  style="width:100%;">
 	    		<button onclick="checkout();" class="cnt_btt button_primary button-Font button_size_full">
 					Continue
@@ -647,7 +644,7 @@ function checkout()
     <div style="height: 40px;"></div>
     
     <!-- Menu for phone mode -->
-    
+    </div>
     
     <div id="deleteModal" class="popup-Font modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-header">
@@ -664,14 +661,7 @@ function checkout()
 	</div>
 	</div>
 	
-	<div id="anyModal" class="popup-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="mytop-modal" onclick="$('#anyModal').modal('hide');">
-        <img src="<?=base_url()?>img/close_sign.png" alt=""/>
-    </div>
-    <div class="modal-body mybody-moda body-copy-Font">
-        <p id="any_message"></p>
-    </div>
-    </div>
+	
     
     
     <div id="shipping-modal" class="popup-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

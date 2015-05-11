@@ -15,7 +15,7 @@ var count=1;
 var new_style = '';
 if (navigator.userAgent.search("MSIE") >= 0){
     //alert('"MS Internet Explorer ');
-    var position = navigator.userAgent.search("MSIE") + 5;
+    var position = navigator.userAgent.search("MSIE") + 5;0
     var end = navigator.userAgent.search("; Windows");
     var version = navigator.userAgent.substring(position,end);
     if(version < 9)
@@ -185,7 +185,7 @@ function check_payment()
 }
 </script>
 
-<div class="app-container">
+<div class="app-container content-wrap">
 	
 	
     
@@ -234,10 +234,10 @@ function check_payment()
 	</div>
 	
 	<form method="post" action="<?=base_url()?>cart/save_payment" id="payment_form" name="payment_form">
-    <h4>Payment</h4>
+    <!--<h4 class="header-center">Payment</h4>-->
 	<div style="height: 20px;"></div>
     <div class="">
-			<!-- <div class="span6">
+			<!-- <div class="col-sm-6">
 				<div class="body-copy-Font account-header" style="border-bottom: 1px solid #59595C;">Is this a gift?</div>
 				<div class="p-margin-left label-form-Font">
 					<div>
@@ -337,7 +337,7 @@ function check_payment()
 				</div>
 				
 			</div> -->
-			<div class="span6">
+			<div class="col-sm-6 x-gutters center-wrap">
 				<div class="body-copy-Font account-header" id="need_spacing" style="border-bottom: 1px solid #59595C;">Payment Details </div>
 				<? if($this->session->userdata('stotal')>0){?>
                 
@@ -355,7 +355,7 @@ function check_payment()
                             Pay with Paypal
                         </div>
                         <a onclick="paypal_payment();" style="cursor:pointer;">
-                        <button type="button" class="input-space button_primary chrome_button button-Font" style="width: 195px;"  >
+                        <button type="button" class="input-space button_primary chrome_button button-Font" style="width: 245px;"  >
                             Checkout With Paypal
                         </button>
                         </a>
@@ -367,8 +367,8 @@ function check_payment()
 					<div style="float: left" class="plabel label-form-Font">
 						Pay by Credit Card*
 					</div>
-					<div class="input-space">
-						<select class="selectpicker input-form-Font" name="cardtype" id="cardtype" required>
+					<div class="input-space col-sm-6 col-xs-12 x-gutters">
+						<select class="selectpicker input-form-Font form-control" name="cardtype" id="cardtype" required>
 							<option value="">Select card</option>
 							<option value="Visa Card">Visa Card</option>
 		                    <option value="Master Card">Master Card</option>       
@@ -378,22 +378,23 @@ function check_payment()
 					<div style="float: left" class="plabel label-form-Font">
 						Card number*
 					</div>
-					<div class="input-space">
-						<input class="input-form-Font" type="text" name="cardnumber" id="cardnumber" required/>
+					<div class="input-space col-sm-6 col-xs-12 x-gutters">
+						<input class="input-form-Font form-control" type="text" name="cardnumber" id="cardnumber" required/>
 					</div>
 					<div style="clear: both; height: 0px"></div>
 					<div style="float: left" class="plabel label-form-Font">
 						Cardholder's name*
 					</div>
-					<div class="input-space">
-						<input class="input-form-Font" type="text" name="cardname" id="cardname" required/>
+					<div class="input-space col-sm-6 col-xs-12 x-gutters">
+						<input class="input-form-Font form-control" type="text" name="cardname" id="cardname" required/>
 					</div>
 					<div style="clear: both; height: 0px"></div>
 					<div style="float: left" class="plabel label-form-Font">
 						Expiration date*
 					</div>
-					<div class="input-space">
-						<select class="selectpicker month input-form-Font" name="expmonth" id="expmonth" style="width:108px;" required>
+					<div class="input-space col-sm-6 col-xs-12 x-gutters">
+                    	<div class="col-sm-5 x-gutters">
+						<select class="selectpicker month input-form-Font form-control fw" style="width:100%;" name="expmonth" id="expmonth" required>
 		                    <option value="1">01</option>
 		                    <option value="2">02</option>
 		                    <option value="3">03</option>
@@ -407,18 +408,21 @@ function check_payment()
 		                    <option value="11">11</option>
 		                    <option value="12">12</option>                                                       
 		                </select>
-		                <select class="selectpicker year input-form-Font" name="expyear" id="expyear" style="width:108px;" required>
+                        </div>
+                        <div class="col-sm-5 col-sm-offset-2 col-xs-12 x-gutters">
+		                <select class="selectpicker year input-form-Font form-control fw" style="width:100%;" name="expyear" id="expyear"  required>
 		                    <?php for($i=date('Y');$i<(date('Y')+10);$i++) { ?>
 		                    <option value="<?=$i?>"><?=$i?></option>
 		                    <?php } ?>                                                     
 		                </select>
+                        </div>
 					</div>
 					<div style="clear: both; height: 0px"></div>
 					<div style="float: left" class="plabel label-form-Font">
 						Security Code (3-4 Digits)* <a class="body-copy-Font" href='#' onclick="jQuery('#cvv').modal('show');	" data-toggle="modal" style="font-size:10px; font-style:italic;">(What is this?)</a>
 					</div>
-					<div class="input-space">
-						<input type="text" name="cvvnumber" id="cvvnumber" required/>
+					<div class="input-space col-sm-6 col-xs-12 x-gutters">
+						<input type="text" name="cvvnumber" id="cvvnumber" class="form-control" required/>
 					</div>
 					<div style="clear: both; height: 5px; border-bottom: 1px solid #59595C; margin-bottom: 15px"></div>
 					
@@ -426,8 +430,8 @@ function check_payment()
 						Notes - Please give us information about your feet. For example; I have wide feet, I wear a full length orthotic etc. This will ensure that we send you the right fitting options for your feet.
 					</div>
                     
-					<div class="input-space">
-						<textarea class="input-form-Font" name="pmsg" id="pmsg" s="3"></textarea>
+					<div class="input-space col-sm-6 col-xs-12 x-gutters">
+						<textarea class="input-form-Font form-control" name="pmsg" id="pmsg" s="3"></textarea>
 					</div>
 					
                     <div style="clear: both;"></div>
@@ -467,6 +471,7 @@ function check_payment()
 </div>
 
 </div>	
+</div>
     
 
 		

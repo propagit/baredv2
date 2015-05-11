@@ -51,7 +51,7 @@ function register()
 
 
 
-<div class="app-container">
+<div class="app-container content-wrap">
 <script>
 function check_form()
 {
@@ -91,8 +91,8 @@ function check_form()
     	<span style="font-style: italic">*All form field are mandatory</span>
     </span> -->
      <div style="height: 20px;"></div>
-    <div class="edit_retail_bg">
-    	<div id="left-side" style="float: left">
+
+    	<div id="left-side" class="col-sm-9 col-xs-12">
 		    <form class="form-horizontal" id="registerForm" onsubmit="return check_form();"  name="registerForm" method="post" action="<?=base_url()?>store/update_retail" autocomplete="off">
 		    <input type="hidden" name="id" value="<?=$cust['id']?>"/>
 		    <div class="body-copy-Font mandatory" style="">
@@ -100,11 +100,12 @@ function check_form()
 		    </div>
             
 		    <div style="clear: both; height: 20px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	Title*
-		    </div>
-		    <div class="signup-input-space">
-		    	<select class="input-form-Font" style="width: 105%; float: left;" name="title" id="title" required>
+
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Title *</label>
+                <div class="col-sm-6">
+                  <select class="form-control" name="title" id="title" required>
                 	<?php if($cust['title'] == '') { ?>
                 	<option value="">Select One</option>
                     <?php } ?>
@@ -113,137 +114,124 @@ function check_form()
                     <option value="Mrs" <?=$cust['title'] == 'Mrs' ? 'selected="selected"' : '';?>>Mrs</option>
                     <option value="Ms" <?=$cust['title'] == 'Ms' ? 'selected="selected"' : '';?>>Ms</option>
                 </select>
-		    </div>
+                </div>
+            </div>
             
-		    <div style="clear: both; height: 10px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	First Name*
-		    </div>
-		    <div class="signup-input-space">
-		    	<input type="text" id="firstname" name="firstname" class="signup-input input-form-Font" value="<?=$cust['firstname']?>" required/>
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	Surname*
-		    </div>
-		    <div class="signup-input-space">
-		    	<input type="text" id="lastname" name="lastname" class="signup-input input-form-Font" value="<?=$cust['lastname']?>" required/>
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	Date of Birth
-		    </div>
-		    <div class="signup-input-space-birth">
-		    	<!-- <div id="dob1" class="input-append">
-				<input data-format="dd-MM-yyyy" type="text" name="birthday" id="dob" style="width: 273px;" value="<?=date('d-m-Y',strtotime($cust['birthday']))?>" required></input>
-				<span style="cursor: pointer" class="add-on">
-				  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-				  </i>
-				</span>
-				</div>
-				<script type="text/javascript">
-				  $(function() {
-				    $('#dob1').datetimepicker({
-				      pickTime: false
-				    });
-				  });
-				</script> -->
-				<select class="input-form-Font" style="width: 50%; float: left; margin-right: 3.5%" name="date_dob" id="date_dob" required>
-					<?php
-						for($i=1;$i<=31;$i++)
-						{
-						?>
-						<option <?php if($cust['date_dob'] == $i) {echo "selected='selected'";}?> value="<?=$i?>"><?=$i?></option>
-						<?
-						}
-					?>
-				</select>
-				<select class="input-form-Font" style="width: 45%; float: left;" name="month_dob" id="month_dob" required>
-					<option <?php if($cust['month_dob'] == 1) {echo "selected='selected'";}?> value="1">January</option>
-					<option <?php if($cust['month_dob'] == 2) {echo "selected='selected'";}?> value="2">February</option>
-					<option <?php if($cust['month_dob'] == 3) {echo "selected='selected'";}?> value="3">March</option>
-					<option <?php if($cust['month_dob'] == 4) {echo "selected='selected'";}?> value="4">April</option>
-					<option <?php if($cust['month_dob'] == 5) {echo "selected='selected'";}?> value="5">May</option>
-					<option <?php if($cust['month_dob'] == 6) {echo "selected='selected'";}?> value="6">June</option>
-					<option <?php if($cust['month_dob'] == 7) {echo "selected='selected'";}?> value="7">July</option>
-					<option <?php if($cust['month_dob'] == 8) {echo "selected='selected'";}?> value="8">August</option>
-					<option <?php if($cust['month_dob'] == 9) {echo "selected='selected'";}?> value="9">September</option>
-					<option <?php if($cust['month_dob'] == 10) {echo "selected='selected'";}?> value="10">October</option>
-					<option <?php if($cust['month_dob'] == 11) {echo "selected='selected'";}?> value="11">November</option>
-					<option <?php if($cust['month_dob'] == 12) {echo "selected='selected'";}?> value="12">December</option>
-				</select>
-				
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	Email Address*
-		    </div>
-		    <div class="signup-input-space">
-		    	<input type="text" id="email" name="email" class="signup-input input-form-Font" value="<?=$cust['email']?>" required/>
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
-		    
-		    <div class="label-form-Font signup-label">
-		    	Password
-		    </div>
-		    <div class="signup-input-space">
-		    	<input id="password" name="password" type="password" class="signup-input input-form-Font"/>
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	Retype your password
-		    </div>
-		    <div class="signup-input-space">
-		    	<input id="password2" name="password2" type="password" class="signup-input input-form-Font"/>
-		    </div>
-		    <div style="clear: both; height: 30px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	Phone*
-		    </div>
-		    <div class="signup-input-space">
-		    	<input placeholder="+61 3 9536 8777" type="text" id="phone" name="phone" class="signup-input input-form-Font" value="<?=$cust['phone']?>" required/>
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	Mobile
-		    </div>
-		    <div class="signup-input-space">
-		    	<input placeholder="0400 111 222" type="text" id="mobile" name="mobile" class="signup-input input-form-Font" value="<?=$cust['mobile']?>"/>
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	Address1*
-		    </div>
-		    <div class="signup-input-space">
-		    	<input type="text" id="address1" name="address1" class="signup-input input-form-Font" value="<?=$cust['address']?>" required/>
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	Address2
-		    </div>
-		    <div class="signup-input-space">
-		    	<input type="text" id="address2" name="address2" class="signup-input input-form-Font" value="<?=$cust['address2']?>"/>
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	Suburb*
-		    </div>
-		    <div class="signup-input-space">
-		    	<input id="suburb" name="suburb" type="text" class="signup-input input-form-Font" value="<?=$cust['suburb']?>" required/>
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	Postcode*
-		    </div>
-		    <div class="signup-input-space">
-		    	<input id="postcode" name="postcode" type="text" class="signup-input input-form-Font" value="<?=$cust['postcode']?>" required/>
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	Select your country*
-		    </div>
-		    <div class="signup-input-space">
-		    	<select class="input-form-Font" style="width: 105%" name="country" id="country" required>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">First Name*</label>
+                <div class="col-sm-6">
+                  <input type="text" id="firstname" name="firstname" class="form-control" value="<?=$cust['firstname']?>" required/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Surname*</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="lastname" name="lastname" value="<?=$cust['lastname']?>" required/>
+                </div>
+            </div>
+           	
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Date of Birth</label>
+                <div class="col-sm-6">
+                  	<div class="col-sm-6 x-l-gutter">	
+                      <select class="form-control" name="date_dob" id="date_dob" required>
+						<?php
+                            for($i=1;$i<=31;$i++)
+                            {
+                            ?>
+                            <option <?php if($cust['date_dob'] == $i) {echo "selected='selected'";}?> value="<?=$i?>"><?=$i?></option>
+                            <?
+                            }
+                        ?>
+                    </select>
+                    </div>
+                    <div class="col-sm-6 x-r-gutter">
+                        <select class="form-control" name="month_dob" id="month_dob" required>
+                            <option <?php if($cust['month_dob'] == 1) {echo "selected='selected'";}?> value="1">January</option>
+                            <option <?php if($cust['month_dob'] == 2) {echo "selected='selected'";}?> value="2">February</option>
+                            <option <?php if($cust['month_dob'] == 3) {echo "selected='selected'";}?> value="3">March</option>
+                            <option <?php if($cust['month_dob'] == 4) {echo "selected='selected'";}?> value="4">April</option>
+                            <option <?php if($cust['month_dob'] == 5) {echo "selected='selected'";}?> value="5">May</option>
+                            <option <?php if($cust['month_dob'] == 6) {echo "selected='selected'";}?> value="6">June</option>
+                            <option <?php if($cust['month_dob'] == 7) {echo "selected='selected'";}?> value="7">July</option>
+                            <option <?php if($cust['month_dob'] == 8) {echo "selected='selected'";}?> value="8">August</option>
+                            <option <?php if($cust['month_dob'] == 9) {echo "selected='selected'";}?> value="9">September</option>
+                            <option <?php if($cust['month_dob'] == 10) {echo "selected='selected'";}?> value="10">October</option>
+                            <option <?php if($cust['month_dob'] == 11) {echo "selected='selected'";}?> value="11">November</option>
+                            <option <?php if($cust['month_dob'] == 12) {echo "selected='selected'";}?> value="12">December</option>
+                        </select>  
+                    </div>
+                </div>
+            </div>
+		   
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email Address*</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="email" name="email"  value="<?=$cust['email']?>" required/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-6">
+                  <input type="password" class="form-control" id="password" name="password" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Retype your password</label>
+                <div class="col-sm-6">
+                  <input type="password" class="form-control" id="password2" name="password2" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Phone*</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="phone" name="phone"  value="<?=$cust['phone']?>" placeholder="+61 3 9536 8777" required/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Mobile</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="mobile" name="mobile"  value="<?=$cust['mobile']?>" placeholder="0400 111 222"/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Address1*</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="address1" name="address1" value="<?=$cust['address']?>" required/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Address2</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="address2" name="address2" value="<?=$cust['address2']?>"/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Suburb*</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="suburb" name="suburb" value="<?=$cust['suburb']?>" required/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Postcode*</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="postcode" name="postcode" value="<?=$cust['postcode']?>" required/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Select your country*</label>
+                <div class="col-sm-6">
+                  <select class="form-control" name="country" id="country" required>
 					<option value="" selected="selected">Select Country</option> 
 					<option value="United States">United States</option> 
 					<option value="United Kingdom">United Kingdom</option> 
@@ -490,13 +478,14 @@ function check_form()
 				<script>
 					$('#country').val('<?=$cust['country']?>');
 				</script>
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
-		    <div class="label-form-Font signup-label">
-		    	Select your state*
-		    </div>
-		    <div class="signup-input-space">
-			    <select class="input-form-Font" style="width: 105%" name="province" id="province" required>
+                </div>
+            </div>
+		   
+		   
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Select your state*</label>
+                <div class="col-sm-6">
+                  <select class="form-control" name="province" id="province" required>
 					<option value="" selected="selected">Select State</option>
 					<?php
 						foreach($states as $state)
@@ -508,8 +497,9 @@ function check_form()
 					?>
 					<option value="0">Other</option>
 				</select>	
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
+                </div>
+            </div>
+           
 		    
 		    <!-- <div style="float: left; width: 260px; height: 30px; line-height: 30px">
 		    	Total Spend
@@ -520,13 +510,16 @@ function check_form()
 		    	?>
 		    </div>
 		    <div style="clear: both; height: 10px;"></div> -->
-		    <div class="label-form-Font signup-label">
-		    	&nbsp;
-		    </div>
-		    <div class="signup-input-space" >
-		    	<input type="submit" value="Update" class="button_primary button_size_full_plus5 button-Font" />
-		    </div>
-		    <div style="clear: both; height: 10px;"></div>
+            
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">&nbsp;</label>
+                <div class="col-sm-6">
+                  <input type="submit" value="Update" class="button_primary button-Font pull app-btn" />
+                </div>
+            </div>
+            
+		   
 		    </form>
 	    </div>
 	    <div class="status_box" id="phone_h" style="display: none">
@@ -573,10 +566,9 @@ function check_form()
 	    	</div>
 	    </div>
 	    <div style="clear: both"></div>
-    </div>
+
     
-    
-    
+</div>    
     <!-- Menu Phone End-->
     
     <!-- Menu and Product List for desktop and Ipad version -->

@@ -1136,21 +1136,7 @@ function active(id)
     <?php } ?>
    <!-- <div class="app-container relative bar bg-black text-white"><h3>you may also like</h3></div>-->
     <?php #$this->load->view('common/products/featured_products'); ?>
-   
-    
-    <div class="modal fade" id="anyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          	  <div class="modal-header x-border">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              </div>
-          	<div class="modal-body mybody-modal">
-                <p id="any_message"></p>
-            </div>
-         
-        </div>
-      </div>
-    </div>
+  
     
     <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">

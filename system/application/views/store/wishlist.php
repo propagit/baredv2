@@ -109,14 +109,7 @@ function delete_wishlist(id)
 <div class="app-container">
 	
 	
-    <div id="anyModal" class="popout-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="mytop-modal" onclick="jQuery('#anyModal').modal('hide');">
-        <img src="<?=base_url()?>img/close_sign.png" alt=""/>
-    </div>
-    <div class="modal-body mybody-modal">
-        <p id="any_message"></p>
-    </div>
-    </div>
+    
     <div style="height: 20px;"></div>
     <h4>Welcome to Your Wishlist</h4>
     <?php

@@ -80,6 +80,20 @@
 </div>
 
 
+<div class="modal fade" id="anyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          	  <div class="modal-header x-border">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+          	<div class="modal-body mybody-modal">
+                <p id="any_message"></p>
+            </div>
+         
+        </div>
+      </div>
+    </div>
+
 <script>
 $(function(){
 	app.swiper('#instagram');
