@@ -233,11 +233,13 @@ $btn_states:".active",":active",".focus",":focus";
 .content-wrap{
 	padding-left:30px;
 	padding-right:30px;	
+	padding-bottom:50px;
 }
 .content-wrap-15{
 	padding-left:15px;
 	padding-left:15px;	
 }
+
 .br{
 	margin:10px 0;	
 }
@@ -1184,7 +1186,14 @@ $tile_caption_height:95px;
 		border-color:inherit;	
 	}
 }
-
+.body-content{
+	h5{
+		text-transform:none;	
+	}
+	.h5{
+		text-transform:none;
+	}
+}
 
 /* Helpers */
 $font_weights: 100,300,400,700,900;

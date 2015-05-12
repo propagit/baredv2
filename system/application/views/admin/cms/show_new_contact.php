@@ -61,10 +61,10 @@ $(function() {
 	
 </style>
 
-<div class="app-container" id="page-additional">
+<div class="app-container" id="page-additional" style="padding-bottom:50px;">
 	<div style="height:20px;"></div>   
     <div class="col-sm-12">
-	<div class="col-sm-8">	
+	<div class="col-sm-8 body-content">	
 		
 		<?=$pages['content']?>	
 		<!-- <h1 style="font-family: lato; font-size: 36px; font-weight: 700;">CONTACT US</h1> -->
@@ -136,27 +136,27 @@ $(function() {
 			}
 			</script>
 			<form method="post" action="<?=base_url()?>store/submit_contact_us" onsubmit="return check_contact_us();">
-				<table>
+				<table class="col-sm-10 x-gutters">
 					<tr>
-						<td style="width: 100px; padding-bottom: 10px">Your name<span style="color: red">*</span></td>
-						<td style="padding-bottom: 10px;"><input style="margin:0px;" type="text" name="name" id="name"/></td>
+						<td class="col-sm-3 ucase x-gutters" style="padding-bottom: 10px;">Your name<span style="color: red">*</span></td>
+						<td style="padding-bottom: 10px;"><input class="col-sm-6 form-control" style="margin:0px;" type="text" name="name" id="name"/></td>
 					</tr>
 					<tr>
-						<td style="width: 100px; padding-bottom: 10px">Your email<span style="color: red">*</span></td>
-						<td style="padding-bottom: 10px;"><input style="margin:0px;" type="text" name="email" id="email"/></td>
+						<td class="col-sm-3 ucase x-gutters" style="padding-bottom: 10px">Your email<span style="color: red">*</span></td>
+						<td style="padding-bottom: 10px;"><input class="col-sm-6 form-control" style="margin:0px;" type="text" name="email" id="email"/></td>
 					</tr>
 					<tr>
-						<td style="width: 100px; padding-bottom: 10px">Your phone</td>
-						<td style="padding-bottom: 10px;"><input style="margin:0px;" type="text" name="phone" id="phone"/></td>
+						<td class="col-sm-3 ucase x-gutters" style="padding-bottom: 10px">Your phone</td>
+						<td style="padding-bottom: 10px;"><input class="col-sm-6 form-control" style="margin:0px;" type="text" name="phone" id="phone"/></td>
 					</tr>
 					<tr>
-						<td style="width: 100px; padding-bottom: 10px">Subject<span style="color: red">*</span></td>
-						<td style="padding-bottom: 10px;"><input style="margin:0px;" type="text" name="subject" id="subject"/></td>
+						<td class="col-sm-3 ucase x-gutters" style="padding-bottom: 10px">Subject<span style="color: red">*</span></td>
+						<td style="padding-bottom: 10px;"><input class="col-sm-6 form-control" style="margin:0px;" type="text" name="subject" id="subject"/></td>
 					</tr>
 					<tr>
-						<td style="width: 100px; padding-bottom: 10px; vertical-align: top; padding-top: 7px">Message<span style="color: red">*</span></td>
+						<td class="col-sm-3 ucase x-gutters" style="padding-bottom: 10px; vertical-align: top; padding-top: 7px">Message<span style="color: red">*</span></td>
 						<td style="padding-bottom: 10px;">
-							<textarea id="message" name="message" s="3">
+							<textarea class="col-sm-6 form-control" id="message" name="message" s="3">
 							</textarea>
 						</td>
 					</tr>
@@ -324,183 +324,39 @@ $(function() {
     	<div class="">&nbsp;</div>
     </div>
     <div class="col-sm-3 hidden-xs" style="float:right;" >
-    	<div class="">
-        	<div class="col-sm-3"><div style="height:20px;"></div></div>
-        </div>
-        <div class="">
-        	<div class="col-sm-3">
+
+     		<div class="col-xs-12"><div class="left-page-image-gap"></div></div>
+        	<div class="col-xs-12">
         		<a href="<?=base_url()?>store/page/34"><img class="left-page-image" src="<?=base_url()?>img/The-Bared-Difference-Orange.jpg" alt="Bared Difference"></a>
         		<!-- <img class="left-page-image visible-desktop show-medium hidden-large" style="width:80%" src="<?=base_url()?>img/logo/bared-difference.png" alt="Bared Difference"> -->
         		<!-- <img class="left-page-image visible-tablet" src="<?=base_url()?>img/The-Bared-Difference-Orange.jpg" alt="Bared Difference"> --> 
         	</div>
-        </div>
-        <div class="">
-        	<div class="col-sm-3"><div class="left-page-image-gap"></div></div>
-        </div>
-        <div class="">
-        	<div class="col-sm-3">
+
+
+        	<div class="col-xs-12"><div class="left-page-image-gap"></div></div>
+
+   
+        	<div class="col-xs-12">
         		<a href="<?=base_url()?>store/page/36"><img class="left-page-image" src="<?=base_url()?>img/Famous-Footbed-Icon-ornage.jpg" alt="Famous Footbed"></a>
         	</div>
         	<!-- <div class="col-sm-3"><img class="left-page-image visible-tablet" src="<?=base_url()?>img/Famous-Footbed-Icon-ornage.jpg" alt="Famous Footbed"> </div> -->
-        </div>
-        <div class="">
-        	<div class="col-sm-3"><div class="left-page-image-gap"></div></div>
-        </div>
-        <div class="">
-        	<div class="col-sm-3">
+            
+            <div class="col-xs-12"><div class="left-page-image-gap"></div></div>
+ 
+    
+        	<div class="col-xs-12">
         		<a href="<?=base_url()?>store/page/37"><img class="left-page-image" src="<?=base_url()?>img/Fitting-Icon-Orange.jpg" alt="Fitting System"></a>
         	</div>
-        	<!-- <div class="col-sm-3"><img class="left-page-image visible-tablet" src="<?=base_url()?>img/Fitting-Icon-Orange.jpg" alt="Fitting System"> </div> -->
         </div>
+ 
+        	
+        	<!-- <div class="col-sm-3"><img class="left-page-image visible-tablet" src="<?=base_url()?>img/Fitting-Icon-Orange.jpg" alt="Fitting System"> </div> -->
+ 
     </div>
     </div>   
-
-<div style="clear:both"></div>
-<!--
-<div class="">
-	<div class="col-sm-8">	
-<?php
-	/*
-	$photos = $this->Gallery_model->get_photos($pages['gallery']);
-	if(count($photos) > 0)
-	{
-	$cc=1;
-	foreach($photos as $photo)
-	{
-		if($cc == 5){$cc=1;}
-		if($cc == 1)
-		{
-		?>
-		<div style="margin-top: 20px;" class=" ">
-			<div class="col-sm-2">
-				<?php
-				if($photo['video'] == 0)
-				{
-				?>
-					
-					<div class="gallery slideshow">
-					<a href="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>" rel="prettyPhoto[pp_gal]" title="<?=$photo['title'];?>">
-						<img src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails2/<?php print $photo['name'];?>"  alt="" />
-					</a>
-					</div>
-				<?
-				}
-				else
-				{
-					$src=  $photo['name'];
-					$pos= strpos($src,'embed/');
-					$new_src = substr($src,$pos+4,strlen($src)-($pos+4));
-					
-					
-				?>
-					
-					
-					<div class="gallery">
-					<a href="http://www.youtube.com/watch?v=<?=$new_src?>" rel="prettyPhoto" title=""><img src="http://img.youtube.com/vi/<?=$new_src?>/0.jpg"></a>
-					</div>
-					
-				<?
-				}
-				?>
-			</div>
-		<?
-		}
-		elseif($cc == 4)
-		{
-		?>
-			<div class="col-sm-2">
-				<?php
-				if($photo['video'] == 0)
-				{
-				?>
-					
-					<div class="gallery slideshow">
-					<a href="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>" rel="prettyPhoto[pp_gal]" title="<?=$photo['title'];?>">
-						<img src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails2/<?php print $photo['name'];?>"  alt="" />
-					</a>
-					</div>
-				<?
-				}
-				else
-				{
-					$src=  $photo['name'];
-					$pos= strpos($src,'embed/');
-					$new_src = substr($src,$pos+6,strlen($src)-($pos+6));
-				
-					
-				?>
-				
-					
-					<div class="gallery">
-					<a href="http://www.youtube.com/watch?v=<?=$new_src?>" rel="prettyPhoto" title=""><img src="http://img.youtube.com/vi/<?=$new_src?>/0.jpg"></a>
-					</div>
-					
-				<?
-				}
-				?>
-			</div>
-		</div>
-		<?
-		}
-		else 
-		{
-		?>
-			<div class="col-sm-2">
-				<?php
-				if($photo['video'] == 0)
-				{
-				?>
-					
-					<div class="gallery slideshow">
-					<a href="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/<?php print $photo['name'];?>" rel="prettyPhoto[pp_gal]" title="<?=$photo['title'];?>">
-						<img src="<?=base_url()?>uploads/galleries/<?php print md5("cdkgallery".$pages['gallery']); ?>/thumbnails2/<?php print $photo['name'];?>"  alt="" />
-					</a>
-					</div>
-				<?
-				}
-				else
-				{
-					$src=  $photo['name'];
-					$pos= strpos($src,'embed/');
-					$new_src = substr($src,$pos+4,strlen($src)-($pos+4));
-					
-					
-				?>
-					
-					<div class="gallery">
-					<a href="http://www.youtube.com/watch?v=<?=$new_src?>" rel="prettyPhoto" title=""><img src="http://img.youtube.com/vi/<?=$new_src?>/0.jpg"></a>
-					</div>
-				<?
-				}
-				?>
-			</div>
-		
-		<?
-		}
-		$cc++;
-	}
-	
-	if($cc!=5)
-	{
-		$cc = 4 - $cc;
-		for($i=0;$i<$cc;$i++)
-		{
-		?>
-			<div class="col-sm-2">
-				&nbsp;
-			</div>
-		<?
-		}
-		?>
-		</div>
-		<?
-	}
-	}*/
-?>
 </div>
-</div>-->
+
 <script>
 $(function(){$(".gallery:not(.slideshow) a[rel^='prettyPhoto']").prettyPhoto()});
 $(".gallery.slideshow a[rel^='prettyPhoto']").prettyPhoto({slideshow:5000, autoplay_slideshow:true});
 </script>
-<div style="clear:both;"></div>

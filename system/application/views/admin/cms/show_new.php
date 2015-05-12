@@ -67,7 +67,7 @@ jQuery(document).ready(function() {
 <div class="app-container" id="page-additional">
 	<div style="height:20px;"></div>   
     <div class="col-sm-12">
-	<div class="col-sm-8">		
+	<div class="col-sm-8 body-content">		
 		<?=$pages['content']?>
         <div style="clear:both"></div>
         <div style="clear:both"></div>
@@ -215,27 +215,23 @@ jQuery(document).ready(function() {
     
     <? if($pages['category_id']!=7){ ?>
     <div class="col-sm-3 hidden-xs" style="float:right;" >
-    	<div class="">
-        	<div class="col-sm-3"><div style="height:20px;"></div></div>
-        </div>
-        <div class="">
-        	<div class="col-sm-3">
+
+        <div class="col-sm-12"><div style="height:20px;"></div></div>
+
+
+        	<div class="col-sm-12">
         		<a href="<?=base_url()?>page/The-Bared-Difference"><img class="left-page-image" src="<?=base_url()?>img/The-Bared-Difference-Orange.jpg" alt="Bared Difference"></a>        		
         	</div>
-        </div>
-        <div class="">
-        	<div class="col-sm-3"><div class="left-page-image-gap"></div></div>
-        </div>
-        <div class="">
-        	<div class="col-sm-3">
+
+        	<div class="col-sm-12"><div class="left-page-image-gap"></div></div>
+       
+        	<div class="col-sm-12">
         		<a href="<?=base_url()?>page/Our-Famous-Footbed"><img class="left-page-image" src="<?=base_url()?>img/Famous-Footbed-Icon-ornage.jpg" alt="Famous Footbed"></a>
         	</div>        	
-        </div>
-        <div class="">
-        	<div class="col-sm-3"><div class="left-page-image-gap"></div></div>
-        </div>
-        <div class="">
-        	<div class="col-sm-3">
+  
+        	<div class="col-sm-12"><div class="left-page-image-gap"></div></div>
+
+        	<div class="col-sm-12">
         		<a href="<?=base_url()?>page/The-Bared-Fitting-Difference"><img class="left-page-image" src="<?=base_url()?>img/Fitting-Icon-Orange.jpg" alt="Fitting System"></a>
         	</div>
         </div>

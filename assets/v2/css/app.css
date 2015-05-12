@@ -146,7 +146,8 @@ body {
 
 .content-wrap {
   padding-left: 30px;
-  padding-right: 30px; }
+  padding-right: 30px;
+  padding-bottom: 50px; }
 
 .content-wrap-15 {
   padding-left: 15px;
@@ -859,6 +860,11 @@ body {
 .form-control:focus {
   box-shadow: none;
   border-color: inherit; }
+
+.body-content h5 {
+  text-transform: none; }
+.body-content .h5 {
+  text-transform: none; }
 
 /* Helpers */
 .fw-100 {

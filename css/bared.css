@@ -345,6 +345,10 @@ div.vertical-tablet { height: 260px !important}
 	margin:auto;
 	float:none;	
 }
+.ucase{
+	text-transform:uppercase;	
+}
+
 .yotpo, .yotpo div, .yotpo span, .yotpo p, .yotpo a, .yotpo img, .yotpo i, .yotpo strong, .yotpo sup, .yotpo ul, .yotpo li, .yotpo form, .yotpo label {
 	font-family: 'Lato', sans-serif!important;
 	letter-spacing:0.4pt!important;
