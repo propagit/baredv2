@@ -1259,6 +1259,15 @@ $font_weights: 100,300,400,700,900;
 	border:0;	
 }
 
+@media(max-width:1400px){
+	.body-content{
+		img{
+			width:100%;	
+		}
+	}	
+}
+
+
 @media (min-width: 768px) and (max-width:1400px){
 	.app-modal{
 		
