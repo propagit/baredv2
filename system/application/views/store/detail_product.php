@@ -211,7 +211,7 @@ function add_towishlist()
 		
 		if(html > 0)
 		{
-			$('#any_message').html('You have successfully saved this item to your Wish List.');
+			$('#any_message').html('You have successfully saved <br>this item to your Wish List.');
 		}
 		else
 		{

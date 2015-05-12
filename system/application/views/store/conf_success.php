@@ -1,4 +1,4 @@
-<div class="app-container">
+<div class="app-container content-wrap">
     <div style="height: 20px;"></div>
     <div style="width: 100%">
 	<div style="margin: 0 auto" class="hidden-xs linkbreadcrumb">
@@ -46,7 +46,7 @@
     <div style="height: 20px;"></div>
     
 	<div class="">
-		<div class="col-sm-12">
+		<div class="col-sm-12 x-gutters">
 			<div class="body-copy-Font font18semibold checkout_result_msg">THANK YOU... WE HAVE SUCCESSFULLY RECEIVED YOUR ORDER</div>
 			<div style="height: 50px;"></div>
 			<div class="body-copy-Font">
@@ -142,7 +142,7 @@
 	</div>
 	<div style="height: 30px;"></div>
     
-    
+    </div>
     
     
     <!-- Menu Phone End-->

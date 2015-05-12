@@ -15,7 +15,7 @@
                     <h5>subscribe to our vip mailing list</h5>
                     <div class="form-group has-feedback col-xs-5 x-gutters">
                       <input type="text" class="form-control app-form-control" id="subscribe" placeholder="your email...">
-                      <span class="form-control-feedback pointer susbcribe-btn"><i class="fa fa-envelope"></i></span>
+                      <span class="form-control-feedback pointer subscribe-btn"><i class="fa fa-envelope"></i></span>
                     </div>
                 </div>
                 
@@ -104,7 +104,7 @@ $(function(){
 	app.swiper('#banners');
 	app.swiper('#product-gallery');
 	
-	$('.susbcribe-btn').click(function(){
+	$('.subscribe-btn').click(function(){
 		subscribe();
 	});
 	

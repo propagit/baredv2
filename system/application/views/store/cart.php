@@ -227,7 +227,7 @@ function checkout()
 						 {
 						$multiple_stock = json_decode($pro['size'],true);?>
 						<input type="hidden" name="tempsize-<?=$c['id']?>" id="tempsize-<?=$c['id']?>" value="<?=$var['Size']?>" />
-                        <select name="sizeproduct-<?=$c['id']?>" id="sizeproduct-<?=$c['id']?>" >
+                        <select name="sizeproduct-<?=$c['id']?>" id="sizeproduct-<?=$c['id']?>" class="form-control">
                             <option value="--">Please Select</option>
                             <?php if($multiple_stock['34eu']>0){?><option <?php if($var['Size'] == '34eu') print ' selected="selected"';?> value="34eu">34 EU</option><?php }?>
                             <?php if($multiple_stock['35eu']>0){?><option <?php if($var['Size'] == '35eu') print ' selected="selected"';?> value="35eu">35 EU</option><?php }?>
@@ -262,7 +262,7 @@ function checkout()
                 	<?php } else {echo '-';}?>
 					</td>					
 					<td>
-                    	<input name="quantity-<?=$c['id']?>" type="text" class="textfield rounded input-form-Font" id="meta_title" maxlength="70" value="<?=$c['quantity']?>"/>
+                    	<input name="quantity-<?=$c['id']?>" type="text" class="form-control" id="meta_title" maxlength="70" value="<?=$c['quantity']?>"/>
                     </td>
 					<td style="text-align: center">
 						<span class="detail-cart-Font detail-cart"> <?=$sign?> <?php echo number_format($itemprice * $cur_val,2,'.',',');?></span><br/>						

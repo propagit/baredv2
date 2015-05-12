@@ -77,10 +77,10 @@ define('PAYPAL_MODE','sandbox');
 
 define('ASSETS','assets/v2/');
 # Social Links
-define('FACEBOOK','https://facebook.com');
-define('TWITTER','https://twitter.com');
-define('PINTEREST','https://pinterest.com');
-define('INSTAGRAM','https://instagram.com');
+define('FACEBOOK','https://www.facebook.com/baredfootwear');
+define('TWITTER','https://twitter.com/BaredFootwear');
+define('PINTEREST','https://www.pinterest.com/baredfootwear');
+define('INSTAGRAM','https://instagram.com/baredfootwear');
 # Home Category
 define('MEN',1);
 define('WOMEN',2);

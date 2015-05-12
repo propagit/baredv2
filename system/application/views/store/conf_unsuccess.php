@@ -1,4 +1,4 @@
-<div class="app-container">		    
+<div class="app-container content-wrap">		    
     <div style="height: 20px;"></div>
     <div style="width: 100%">
 	<div style="margin: 0 auto" class="hidden-xs linkbreadcrumb">
@@ -46,7 +46,7 @@
     <div style="height: 20px;"></div>
     
 	<div class="">
-		<div class="col-sm-12">
+		<div class="col-sm-12 x-gutters">
 			<div class="body-copy-Font font18semibold checkout_result_msg">OOPS... THERE HAS BEEN AN ERROR AND YOUR ORDER IS UNSUCCESSFUL</div>
 			<div style="height: 20px;"></div>
 			<div style="width:80%;">
@@ -64,4 +64,4 @@
 
 		
         
-   
+   </div>

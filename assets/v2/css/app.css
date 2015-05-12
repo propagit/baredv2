@@ -53,6 +53,11 @@ h6, .h6 {
   font-size: 14px;
   font-weight: 400; }
 
+a {
+  color: #ff8c52; }
+  a:hover {
+    color: #ff8c52; }
+
 body {
   font-family: "Lato", sans-serif;
   letter-spacing: 1.4px;
@@ -782,6 +787,8 @@ body {
     padding: 0; }
   #footer .subscribe-box {
     margin-top: 28px; }
+    #footer .subscribe-box .subscribe-btn {
+      pointer-events: visible; }
   #footer ul.social-links,
   #footer ul.quick-links {
     text-transform: uppercase;
@@ -861,10 +868,10 @@ body {
   box-shadow: none;
   border-color: inherit; }
 
-.body-content h5 {
-  text-transform: none; }
+.body-content h5,
 .body-content .h5 {
-  text-transform: none; }
+  text-transform: none;
+  line-height: 24px; }
 
 /* Helpers */
 .fw-100 {
@@ -936,6 +943,9 @@ body {
 
 .x-border {
   border: 0; }
+
+.text-upper {
+  text-transform: uppercase; }
 
 @media (max-width: 1400px) {
   .body-content img {

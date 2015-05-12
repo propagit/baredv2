@@ -470,7 +470,7 @@ function checkout()
     		<div style="height: 90px; padding-top: 40px; ">
 		    	<table>
                 	
-                    <tr>
+                    <tr style="margin-bottom:5px;">
                     	<td><div class="info-cart-Font"> <span class="info-cart">Shipping Method <!-- (</span>
                         		<a href="#" onclick="open_window('<?=base_url()?>store/page/47')">
                                 <span class="note-Font note">How is this calculated? </span></a><span class="info-cart">) --></span></div></td>
@@ -480,6 +480,7 @@ function checkout()
                     		</div>
                     	</td>
                     </tr>
+                    <tr><td colspan="3">&nbsp;</td></tr>
                     <tr>
                     	<td>
                         	<input type="text" id="coupon-code" name="coupon-code" placeholder="Promo Code " class="col-sm-2 form-control" style="height:33px;margin-bottom:0px!important; width:100%;">	

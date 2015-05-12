@@ -9,7 +9,7 @@
 <!-- FA -->
 <link rel="stylesheet" href="<?=base_url() . ASSETS;?>font-awesome-4.3.0/css/font-awesome.min.css">
 
-
+<link rel="shortcut icon" type="image/ico" href="<?=base_url() . ASSETS;?>img/bared-favicon-32x32.ico"/>
 
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

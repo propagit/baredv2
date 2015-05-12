@@ -284,7 +284,7 @@ function sort_by_name()
     
     <div class=" hidden-xs"> 
     	<div class="col-sm-5">
-            <ul class="breadcrum-Font breadcrumb">
+            <ul class="breadcrum-Font breadcrumb" style="font-size: 11px; text-transform:capitalize;padding-left:15px;">
 			    <li><a href="<?=base_url()?>">Home</a> <span class="divider">></span></li>
 			    <li class="color_active">Search Result</li>
 		    </ul>
@@ -378,7 +378,7 @@ function sort_by_name()
    	<div class="" >            
         <div class="col-sm-12">
             <div class="">
-                <div class="col-sm-3 hidden-xs">
+                <div class="col-sm-2 hidden-xs">
                     <div class="accordion" id="accordion2">
                          <div class="accordion-group"  style="border-top:none!important;">
                             <div class="accordion-heading">
@@ -1006,7 +1006,7 @@ function sort_by_name()
                          </div>-->
                     </div>                                                    
                 </div>
-                <div class="span9" style="float:right;">         
+                <div class="col-sm-10 xs-x-gutters" style="float:right;">         
                 	
                 	<?php
                 		$on = 0;

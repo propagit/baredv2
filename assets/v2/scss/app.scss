@@ -128,7 +128,13 @@ h6,.h6{
 	font-size:14px;
 	font-weight:400;
 }
-
+a{
+	color:$color5;
+	
+	&:hover{
+		color:$color5;	
+	}
+}
 body{
 	font-family:$font1;
 	letter-spacing:1.4px;	
@@ -1073,6 +1079,10 @@ $tile_caption_height:95px;
 	
 	.subscribe-box{
 		margin-top:28px;	
+		
+		.subscribe-btn{
+			  pointer-events: visible;	
+		}
 	}
 	
 	ul.social-links,
@@ -1187,11 +1197,10 @@ $tile_caption_height:95px;
 	}
 }
 .body-content{
-	h5{
-		text-transform:none;	
-	}
+	h5,
 	.h5{
-		text-transform:none;
+		text-transform:none;	
+		line-height:24px;
 	}
 }
 
@@ -1257,6 +1266,9 @@ $font_weights: 100,300,400,700,900;
 }
 .x-border{
 	border:0;	
+}
+.text-upper{
+	text-transform:uppercase;	
 }
 
 @media(max-width:1400px){

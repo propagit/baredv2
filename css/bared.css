@@ -328,14 +328,22 @@ div.vertical-tablet { height: 260px !important}
 .pull{
 	float:right;	
 }
+.wishlist-wrapper .image-wrapper img{
+	width:100%;	
+}
+
+.sale-icon{
+	width:auto !important;	
+}
 
 /* Full Screen Layout Edits */
 .product-gallery{
-		
+	height:300px !important;	
 }
 .product-gallery .cycle-carousel-wrap{
 	
 }
+
 
 .header-center{
 	text-align:center;	
