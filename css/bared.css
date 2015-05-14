@@ -1666,6 +1666,9 @@ div.vertical-tablet { height: 260px !important}
 /*tablet vertical screen / phone horizontal screen*/
 @media (max-width: 767px)
 {
+	.product-hero{
+		width:100%;	
+	}
 	.product-size
 	{
 		width:350px;

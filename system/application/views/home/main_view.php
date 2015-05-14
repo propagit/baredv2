@@ -3,7 +3,7 @@
 <?php $this->load->view('home/common/tiles');?>
 
 <?php if($feature_products){ ?>
-<div class="app-container relative bar bg-black text-white"><h3>our latest range</h3></div>
+<div class="app-container relative bar bg-black text-white"><h3>features</h3></div>
 <?php $this->load->view('common/products/featured_products'); ?>
 <?php } ?>
 

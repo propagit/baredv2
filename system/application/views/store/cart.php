@@ -130,7 +130,7 @@ function checkout()
     </ul>
     
     
-    <h4>Welcome To Your Shopping Bag</h4>
+    <h4 class="hidden-xs">Welcome To Your Shopping Bag</h4>
 	
 	<div style="float:right;" class="hidden-xs" >		
 		<button onclick="window.location='<?=base_url()?>'" 
@@ -305,13 +305,13 @@ function checkout()
 							if($hero)
 							{
 							?>
-								<img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$pro['id'])?>/<?=$hero['name']?>"/>
+								<img class="product-hero" src="<?=base_url()?>uploads/products/<?=md5('mbb'.$pro['id'])?>/<?=$hero['name']?>"/>
 							<?
 							}
 							else
 							{
 							?>
-								<img style="" src="http://placehold.it/89x97"/>
+								<img class="product-hero" style="" src="http://placehold.it/89x97"/>
 							<?
 							}
 						?>
@@ -328,7 +328,7 @@ function checkout()
                         
                         <?php $multiple_stock = json_decode($pro['size'],true);?>
 						<input type="hidden" name="tempsize-<?=$c['id']?>" id="tempsize-<?=$c['id']?>" value="<?=$var['Size']?>" />
-                <select name="sizeproduct-<?=$c['id']?>" id="sizeproduct-<?=$c['id']?>" >
+                <select name="sizeproduct-<?=$c['id']?>" id="sizeproduct-<?=$c['id']?>" class="form-control" >
                 	<option value="--">Please Select</option>
 					<?php if($multiple_stock['34eu']>0){?><option <?php if($var['Size'] == '34eu') print ' selected="selected"';?> value="34eu">34 EU</option><?php }?>
                     <?php if($multiple_stock['35eu']>0){?><option <?php if($var['Size'] == '35eu') print ' selected="selected"';?> value="35eu">35 EU</option><?php }?>

@@ -2714,7 +2714,6 @@ Warm Regards,<br/>
 	
 	function pages($title)
 	{
-		
 		if( ! $this->session->userdata('cur_sign'))
 		{
 			$data['sign'] = '<span style="font-size:12px">AU</span> $';

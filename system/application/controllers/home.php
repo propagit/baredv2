@@ -70,4 +70,9 @@ class Home extends Controller {
 		echo $this->load->view('home/common/instagram_modal_view', $data, true);
 	}
 	
+	function test()
+	{
+		$this->load->view('home/tumbler');
+	}
+	
 }

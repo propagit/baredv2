@@ -64,7 +64,7 @@ $(function() {
 <div class="app-container" id="page-additional" style="padding-bottom:50px;">
 	<div style="height:20px;"></div>   
     <div class="col-sm-12">
-	<div class="col-sm-8 body-content">	
+	<div class="col-sm-12 body-content">	
 		
 		<?=$pages['content']?>	
 		<!-- <h1 style="font-family: lato; font-size: 36px; font-weight: 700;">CONTACT US</h1> -->
@@ -170,7 +170,7 @@ $(function() {
         <div style="clear:both"></div>
         <div style="clear:both"></div>
 <div class="">
-	<div class="col-sm-8">	
+	<div class="col-sm-12">	
 <?php
 	$photos = $this->Gallery_model->get_photos($pages['gallery']);
 	if(count($photos) > 0)
@@ -323,7 +323,7 @@ $(function() {
     <div class="col-sm-1" >
     	<div class="">&nbsp;</div>
     </div>
-    <div class="col-sm-3 hidden-xs" style="float:right;" >
+    <div class="col-sm-3 hidden-xs hide" style="float:right;" >
 
      		<div class="col-xs-12"><div class="left-page-image-gap"></div></div>
         	<div class="col-xs-12">

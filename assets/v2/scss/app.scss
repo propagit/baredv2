@@ -1257,6 +1257,10 @@ $font_weights: 100,300,400,700,900;
 }
 .text-white{
 	color:$white;
+	
+	&:hover{
+		color:$white;	
+	}
 }
 .x-float{
 	float:none;	

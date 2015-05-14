@@ -67,12 +67,12 @@ jQuery(document).ready(function() {
 <div class="app-container" id="page-additional">
 	<div style="height:20px;"></div>   
     <div class="col-sm-12">
-	<div class="col-sm-8 body-content">		
-		<?=$pages['content']?>
+	<div class="col-sm-12 body-content">		
+		<?=$pages['content']?>        
         <div style="clear:both"></div>
         <div style="clear:both"></div>
 <div class="">
-	<div class="col-sm-8">	
+	<div class="col-sm-12">	
 <?php
 	$photos = $this->Gallery_model->get_photos($pages['gallery']);
 	if(count($photos) > 0)
@@ -214,7 +214,7 @@ jQuery(document).ready(function() {
     </div>
     
     <? if($pages['category_id']!=7){ ?>
-    <div class="col-sm-3 hidden-xs" style="float:right;" >
+    <div class="col-sm-3 hidden-xs hide" style="float:right;" >
 
         <div class="col-sm-12"><div style="height:20px;"></div></div>
 

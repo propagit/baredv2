@@ -12,7 +12,7 @@
             </form>
         </li>
         <li>
-        <a class="app-link" href="<?=base_url()?>cart/list_cart">
+        <a class="text-white" href="<?=base_url()?>cart/list_cart">
             <i class="fa fa-shopping-cart"></i> 
             <span class="badge app-badge shopping-cart-items tot_shopbag"><?=$count_shopbag;?></span>
             </a>
