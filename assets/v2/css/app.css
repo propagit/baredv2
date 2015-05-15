@@ -589,7 +589,8 @@ body {
       min-width: 50%; }
 
 .bar {
-  text-align: center; }
+  text-align: center;
+  /* social */ }
   .bar h3 {
     padding: 15px 0;
     margin: 0; }
@@ -632,6 +633,8 @@ body {
     .bar.social hr {
       border-color: black;
       margin-top: 50px; }
+  .bar.featured hr {
+    margin-top: 9%; }
 
 .multi-carousel {
   /* carousel-caption*/ }
@@ -1019,7 +1022,9 @@ body {
       #top-nav .nav > li:last-child .dropdown-menu {
         margin-left: -86px; }
 
-  /*top-nav*/ }
+  /*top-nav*/
+  .bar.featured hr {
+    margin-top: 33px; } }
 @media (min-width: 768px) {
   #top-nav {
     height: 46px !important;
