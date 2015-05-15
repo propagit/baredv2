@@ -377,6 +377,11 @@ div.vertical-tablet { height: 260px !important}
 .yotpo .yoForm, .yotpo-testimonails .yoForm {
 	color:#000!important;
 }
+.breadcrumb a
+{
+	font-weight:700;
+	color:#000;
+}
 @media (min-width: 980px) and (max-width: 1199px) {
 	
 	

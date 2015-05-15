@@ -242,7 +242,7 @@ function sort_by_name()
                 <? } ?>
 		    </ul>
         </div>
-        <div class="col-sm-7 visible-sm">
+        <div class="col-sm-7">
           
             
             <ul class="breadcrum-Font breadcrumb" >
@@ -266,7 +266,7 @@ function sort_by_name()
                 <li style="float:right" class="active">Sort by: <span class="divider">&nbsp;</span></li>
             </ul>
         </div>        
-        <div class="col-sm-7 hidden-desktop">
+        <div class="col-sm-7 hide">
             <ul class="breadcrumb" style="font-size: 10px; text-transform: uppercase; padding-right: 2px">
                
                 
