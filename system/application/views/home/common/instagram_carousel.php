@@ -59,6 +59,10 @@ function get_modal_view(instagram_gallery_id,product_id){
 
 $(function(){
 	app.adjust_element_height('#instagram','.instagram-item');
+	
+	setTimeout(function(){
+		app.adjust_element_height('#instagram','.instagram-item');
+	},500);
 });
 
 $(window).resize(function(){
