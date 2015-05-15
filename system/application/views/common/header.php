@@ -3,7 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bared Footwear</title>
+
+
+<?php if (isset($pages['meta_description'])){?>
+<?php if($pages['meta_description']!='') {?>
+	<meta name="description" content="<?=$pages['meta_description']?>" />
+<?php } else{?>
+    <meta name="description" content="<?=META_DESC?>" /><?php }?>
+<?php }else{?>
+	<meta name="description" content="<?=META_DESC?>" /><?php }?>
+
+<?php if (isset($pages['meta_title'])){?>
+<?php if($pages['meta_title']!='') {?>
+	<meta name="keywords" content="<?=$pages['meta_title']?>" />
+<?php } else{?>
+    <meta name="keywords" content="<?=META_KEYWORDS?>" /><? }?>
+    
+    <title>
+<?php 
+	if($pages['meta_title']!=''){
+		echo $pages['meta_title'];
+	}else{
+		echo META_TITLE;
+	}
+?>
+	</title>
+<?php }else {?>
+	<title><?php echo META_TITLE;?></title>
+	<meta name="keywords" content="<?=META_KEYWORDS?>" />
+<?php }?>
 
 <link rel="stylesheet" href="<?=base_url() . ASSETS;?>bootstrap-3.2.2/css/bootstrap.min.css">
 <!-- FA -->
@@ -167,10 +195,47 @@ $("#currency_select2").select2({
 <body>
 
 <header>
+	<div id="top-bar" class="app-container bar bg-black">
+    	<div class="col-sm-12 xs-x-gutters">
+        	<div class="currency-converter">
+            	<h6 class="hidden-xs">Currency</h6>
+                <div class="currency-select">
+                    <select id="currency_select" onchange="change_currency()">
+                        <option <?php if($sign == '<span style="font-size:12px">AU</span> $') {echo 'selected="selected"';}?> value="aud">AUD</option>
+                        <option <?php if($sign == '<span style="font-size:12px">US</span> $') {echo 'selected="selected"';}?> value="usa">USA</option>
+                        <option <?php if($sign == '<span style="font-size:12px">€UR</span>') {echo 'selected="selected"';}?> value="eur">EUR</option>
+                        <option <?php if($sign == '<span style="font-size:12px">GB£</span>') {echo 'selected="selected"';}?> value="gbp">GBP</option>
+                        <option <?php if($sign == '<span style="font-size:12px">JP¥</span>') {echo 'selected="selected"';}?> value="jpy">JPY</option>
+                    </select>
+                 </div>
+            </div>
+            <div class="shipping-info">
+            	<div class="h6 fw-700 account-access pull">
+					<?php 
+                        if($this->session->userdata('userloggedin')){
+                        $user = $this->session->userdata('userloggedin');
+                        $cust = $this->Customer_model->identify($user['customer_id']);
+                    ?>
+                    <a class="text-white app-visible-md" href="<?=base_url()?>store/edit_detail_retail/<?=$cust['id']?>"><i class="fa fa-user"></i></a>
+                    <a class="text-white app-hidden-md" href="<?=base_url()?>store/edit_detail_retail/<?=$cust['id']?>"><i class="fa fa-user"></i>  Welcome - <?=$cust['firstname']?></a> /
+                    <a class="text-white" href="<?=base_url()?>store/signout">Logout</a>
+                    <?php }else{ 	?>
+                    <i class="fa fa-unlock-alt"></i> 
+                    <a class="text-white app-hidden-md" href="<?=base_url()?>store/register">Register</a> /
+                    <a class="text-white" href="<?=base_url()?>store/signin">Login</a>
+                    <?php } ?>
+                </div>
+        		<h6 class="pull app-hidden-md hidden-xs"><span class="fw-700">Free Shipping</span> Australia wide on order over $150!</h6>
+                <h6 class="pull app-visible-md hidden-xs"><span class="fw-700">Free <i class="fa fa-truck"></i></span> AU wide on order over $150!</h6>
+                
+                
+            </div>
+        </div>
+    </div>
 	<div id="header" class="app-container">
-    	<div class="hidden-xs desktop"><?=$this->load->view('common/desktop_header',$hdr_data);?></div>
-    	<div class="visible-xs mob"><?=$this->load->view('common/mob_header',$hdr_data);?></div>
-    </div>    
+        <div class="hidden-xs desktop"><?=$this->load->view('common/desktop_header',$hdr_data);?></div>
+        <div class="visible-xs mob"><?=$this->load->view('common/mob_header',$hdr_data);?></div>
+    </div>   
 </header> 
 
 <?php $this->load->view('common/nav/main_view'); ?>

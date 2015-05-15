@@ -3,7 +3,16 @@
 <?php $this->load->view('home/common/tiles');?>
 
 <?php if($feature_products){ ?>
-<div class="app-container relative bar bg-black text-white"><h3>features</h3></div>
+<?php if(0){ # black bar kept for reference ?>
+<!--<div class="app-container relative bar bg-black text-white"><h3>features</h3></div>-->
+<?php } ?>
+<div class="app-container relative bar social col-xs-12 x-gutters">
+	<div class="segment hidden-xs"><hr></div>
+	<div class="segment">
+        <h2>featured products</h2>
+    </div>
+    <div class="segment hidden-xs"><hr></div>
+</div>
 <?php $this->load->view('common/products/featured_products'); ?>
 <?php } ?>
 

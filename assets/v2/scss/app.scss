@@ -19,9 +19,9 @@ $black:#000; /* black */
 
 $font1:'Lato', sans-serif; /* Main font, body copy*/
 $font2:'Lato', sans-serif; /* nav font */
-$font3:'Lato', sans-serif;	/* carousel fonts*/
+$font3:'Lato', sans-serif; /* carousel fonts*/
 $font4:'Lato', sans-serif; /* buttons font */
-$font5:'Lato', sans-serif;	/* headers font */
+$font5:'Lato', sans-serif; /* headers font */
 $fa:'FontAwesome';
 
 @mixin init_font($font:'Lato'){
@@ -256,6 +256,40 @@ $btn_states:".active",":active",".focus",":focus";
 	margin-top:10px;	
 }
 
+
+
+#top-bar{
+	padding-left:15px;
+	padding-right:15px;
+	color:$white;
+	
+	h6{
+		font-weight:300;	
+	}
+	
+	.currency-converter{
+		float:left;
+		text-align:left;	
+		
+		h6{
+			float:left;
+		}
+		
+		.currency-select{
+			margin-top:5px;	
+			float:left;
+			margin-left:15px;
+		}
+	}
+	.shipping-info{
+		text-align:right;	
+	}
+	.account-access{
+		padding-left:25px;
+	}
+		
+}
+
 $header_height:150px;
 $mob_header_height:75px;
 
@@ -275,23 +309,16 @@ $mob_header_height:75px;
 		span.block{
 			line-height:18px;	
 		}
-		
-		&.lt{
-			padding-top:15px;
-		}
 		&.rt{
 			text-align:right;
 			
-			.acc-access{
-				padding-top:42px;
-				padding-bottom:10px;	
-				
-				.fa{
-					margin-right:4px;	
-				}
+			.search-form-wrap{
+				float:left;
+				width:100%;
+				margin-top:46px;	
 			}
 			
-			ul.acc-info{
+			ul.cart-info{
 				margin:0;
 				padding:0;
 				list-style:none;
@@ -491,11 +518,15 @@ $carousel_nav_dim:50px;
 } /*carousel*/
 
 
+
 $nav_height:46px;
 
 #top-nav{
 	@include add_gutters(30px, 30px);
-  	background-color:$color1;
+  	/*background-color:$color1;*/
+	border-top:1px solid $color1;
+	border-bottom:3px solid $color1;
+	
 	height:$nav_height;
 	  
 	  .nav{
@@ -503,27 +534,40 @@ $nav_height:46px;
 		  
 		  & > li{
 			  height:$nav_height;
+			  
+			  &:hover{
+					& > a{
+						border-left:1px solid rgba(0,0,0,0.15);
+  					 	border-right: 1px solid rgba(0,0,0,0.15);	
+					}
+			  }
+			  
 			  & > a{
 				  font-family:$font2;
-				  color:$white;
+				  color:$color1;
 				  font-size: 14px;
 				  font-weight: 400;
 				  letter-spacing: 1.5px;
 				  text-transform:uppercase;
-				  padding: 8px;
-				  border-radius: 4px;
-				  margin-top: 5px;
+				  padding: 12px 20px 10px;
+				  border-left:1px solid #fff;
+				  border-right:1px solid #fff;
+				  /*border-radius: 4px;
+				  margin-top: 5px;*/
 				  
 				  &:hover,
 				  &:focus,
 				  &:active{
-					  background-color:$color2;
+					  background-color:$white;
+					 /* color:$white;*/
+					 border-left:1px solid rgba(0,0,0,0.15);
+  					 border-right: 1px solid rgba(0,0,0,0.15);
 				  }
 			  }
 			  
 			  &:last-child{
 					.dropdown-menu{
-						margin-left:-95px;
+						margin-left:-100px;
 					}
 			  }
 			  
@@ -550,7 +594,7 @@ $nav_height:46px;
 			  float:none;
 			  
 			  a{
-				  color:$white;	
+				  color:$color1;	
 			  }
 			  
 			  &:first-child{
@@ -575,8 +619,9 @@ $nav_height:46px;
 	  .dropdown-menu{
 		  @include overlay(0.8);
 		  border:0;
-		  margin-left:-15px;
-		  border-radius:0;	
+		  /*margin-left:-15px;*/
+		  border-radius:0;
+		  margin-top:-1px;	
 		  
 		   & > li{
 			  min-width:245px;
@@ -1274,7 +1319,9 @@ $font_weights: 100,300,400,700,900;
 .text-upper{
 	text-transform:uppercase;	
 }
-
+.app-visible-md{
+	display:none;	
+}
 @media(max-width:1400px){
 	.body-content{
 		img{
@@ -1283,8 +1330,18 @@ $font_weights: 100,300,400,700,900;
 	}	
 }
 
+@media(max-width:1199px){
+	.app-hidden-md{
+		display:none;	
+	}
+	.app-visible-md{
+		display:inline;	
+	}
+}
+
 
 @media (min-width: 768px) and (max-width:1400px){
+	
 	.app-modal{
 		
 		.modal-dialog{
@@ -1339,6 +1396,46 @@ $font_weights: 100,300,400,700,900;
 	} /* product */
 }
 
+@media (min-width: 768px) and (max-width:1100px){
+	#top-nav{
+		
+		.nav{
+			  & > li{
+				
+				  & > a{
+					  padding: 12px 1px 10px;
+					  
+					  &:hover,
+					  &:focus,
+					  &:active{
+						 
+					  }
+				  }
+				  
+				  .dropdown-menu{
+					   & > li{
+						  min-width:195px;
+						  & > a{
+							  font-size:12px;
+						  }
+					   }
+				  }
+				  
+				  &:last-child{
+						.dropdown-menu{
+							margin-left:-86px;
+						}
+				  }
+				  
+			  } /* & > li*/
+		  
+		  
+	  	} /* nav*/
+	
+			
+	} /*top-nav*/	
+}
+
 @media (min-width: 768px){
 	#top-nav{
 		height:$nav_height !important;
@@ -1374,6 +1471,13 @@ $font_weights: 100,300,400,700,900;
 	.break-list{
 		float:left;
 		width:100%;	
+	}
+	#top-bar{
+		.currency-converter{
+			.currency-select{
+				margin-left:0;	
+			}
+		}
 	}
 	#header{
 		height:$mob_header_height;

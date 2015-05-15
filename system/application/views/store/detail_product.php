@@ -547,10 +547,10 @@ function active(id)
                     </h3> 
                     
                     <h4><?=$product['short_desc'];?></h4>
-                    <h4><span class="currency">au</span> 
+                    <h4><span class="currency"><?=$sign?></span> 
                       <span class="price">
-                          <span class="normal-price">$<?=$normal_price_arr[0];?>.<sub><?=$normal_price_arr[1];?></sub></span>
-                          <span class="sale-price">$<?=$sale_price_arr[0];?>.<sub><?=$sale_price_arr[1];?></sub></span>
+                          <span class="normal-price"><?=$normal_price_arr[0];?>.<sub><?=$normal_price_arr[1];?></sub></span>
+                          <span class="sale-price"><?=$sale_price_arr[0];?>.<sub><?=$sale_price_arr[1];?></sub></span>
                       </span>
                     </h4>
                 </div>
@@ -948,8 +948,13 @@ function active(id)
     	</div>
     </div>
    
-    
-    <div class="app-container relative bar bg-black text-white"><h3>you may also like</h3></div>
+    <div class="app-container relative bar social col-xs-12 x-gutters">
+        <div class="segment hidden-xs"><hr></div>
+        <div class="segment">
+            <h2>you may also like</h2>
+        </div>
+        <div class="segment hidden-xs"><hr></div>
+    </div>
     <?php 
 		$this->load->view('common/products/featured_products',array('feature_products' => $cross_sale)); 
 	?>

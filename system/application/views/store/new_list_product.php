@@ -657,10 +657,10 @@ function sort_by_name()
                                       <div class="product-info <?=$on_sale;?>">
                                           <h3><?=$product['title'];?></h3>
                                           <h4><?=$product['short_desc'];?></h4>
-                                          <h4><span class="currency">au</span> 
+                                          <h4><span class="currency"><?=$sign?></span> 
                                             <span class="price">
-                                                <span class="normal-price">$<?=$normal_price_arr[0];?>.<sub><?=$normal_price_arr[1];?></sub></span>
-                                                <span class="sale-price">$<?=$sale_price_arr[0];?>.<sub><?=$sale_price_arr[1];?></sub></span>
+                                                <span class="normal-price"><?=$normal_price_arr[0];?>.<sub><?=$normal_price_arr[1];?></sub></span>
+                                                <span class="sale-price"><?=$sale_price_arr[0];?>.<sub><?=$sale_price_arr[1];?></sub></span>
                                             </span>
                                           </h4>
                                           <div class="rating">

@@ -16,7 +16,7 @@
 		  ?>
       			<div class="item swapper <?=!$counter ? 'active' : '';?>">
                   <a href="javascript:get_modal_view(<?=$gallery['instagram_gallery_id'];?>,<?=$gallery['product_id'];?>);">
-                      <div class="col-sm-2">
+                      <div class="col-sm-2 instagram-item">
                           <img src="<?=base_url();?>uploads/instagram/<?=$gallery['image'];?>" />
                       </div>
                   </a>
@@ -56,4 +56,12 @@ function get_modal_view(instagram_gallery_id,product_id){
 		}
 	});	
 }
+
+$(function(){
+	app.adjust_element_height('#instagram','.instagram-item');
+});
+
+$(window).resize(function(){
+	app.adjust_element_height('#instagram','.instagram-item');
+});
 </script>

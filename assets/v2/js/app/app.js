@@ -79,6 +79,16 @@ var app = {
 			$(selector).carousel('next');  
 			$(selector).find('.item').removeClass('swapper');
 		});  
+	},
+	
+	adjust_element_height:function(wrap,wrap_item){
+		var maxHeight = 0;
+		var offset = 5;
+		$(wrap_item).each(function() { 
+			maxHeight = Math.max(maxHeight, $(this).height()); 
+		});
+		$(wrap).css({'max-height':maxHeight-offset});
+		  
 	}
 	
 		
