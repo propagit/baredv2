@@ -195,7 +195,7 @@ $("#currency_select2").select2({
 <body>
 
 <header>
-	<div id="top-bar" class="app-container bar bg-black">
+	<div id="top-bar" class="app-container bar bg-black hidden-xs">
     	<div class="col-sm-12 xs-x-gutters">
         	<div class="currency-converter">
             	<h6 class="hidden-xs">Currency</h6>
