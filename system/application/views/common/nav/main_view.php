@@ -3,11 +3,13 @@
 						array('category' => 1, 'label' => 'new arrivals', 'store_url' => base_url()),
 						array('category' => 2, 'label' => 'women\'s', 'store_url' => base_url().'store/product/Womens/'),	
 						array('category' => 3, 'label' => 'men\'s', 'store_url' => base_url().'store/product/Mens/'),
-						array('category' => 4, 'label' => 'sale', 'store_url' => base_url().'store/products/sale/'),
-						array('category' => 5, 'label' => 'why bared?', 'store_url' => base_url().'store/product/Womens/'),
-						array('category' => 6, 'label' => 'gallery', 'store_url' => base_url().'store/product/Womens/'),
-						array('category' => 7, 'label' => 'press', 'store_url' => base_url().'store/product/Womens/'),
-						array('category' => 8, 'label' => 'contact us', 'store_url' => base_url().'store/product/Womens/')	
+						#array('category' => 4, 'label' => 'sale', 'store_url' => base_url().'store/products/sale/'),
+						#array('category' => 5, 'label' => 'why bared?', 'store_url' => base_url().'store/product/Womens/'),
+						array('category' => 5, 'label' => 'our difference', 'store_url' => base_url().'store/product/Womens/'),
+						#array('category' => 6, 'label' => 'gallery', 'store_url' => base_url().'store/product/Womens/'),
+						array('category' => 6, 'label' => 'bared life', 'store_url' => base_url().'store/product/Womens/'),
+						#array('category' => 7, 'label' => 'press', 'store_url' => base_url().'store/product/Womens/'),
+						array('category' => 8, 'label' => 'contact us', 'store_url' => base_url().'store/product/Womens/')
 					);
 ?>
 

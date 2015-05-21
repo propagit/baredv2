@@ -24,7 +24,7 @@
               <div class="form-group">
                   <div class="form-label">Button Visible</div>
                   <div class="form-control">
-                     <input type="checkbox" name="new_window" <?=isset($tile['btn_visibility']) && $tile['btn_visibility'] ? 'checked="checked"' : '';?>>
+                     <input type="checkbox" name="btn_visibility" <?=isset($tile['btn_visibility']) && $tile['btn_visibility'] ? 'checked="checked"' : '';?>>
                   </div>
               </div> 
               <div class="form-group">
