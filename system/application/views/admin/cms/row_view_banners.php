@@ -20,6 +20,7 @@
                   <div style="height: 5px; clear: both">&nbsp;</div> 
                   <p style="width: 55px; margin-top: 6px; height: 10px;">Category:</p>
                   <select name="banners-category" id="banners-filter">
+                  	  <option  value="0">Select One</option>
                       <option  value="<?=MEN?>"<?php if($banner['category'] == MEN){echo "selected";} ?>>Male</option>
                       <option  value="<?=WOMEN?>"<?php if($banner['category'] == WOMEN){echo "selected";} ?>>Female</option>
                   </select> 

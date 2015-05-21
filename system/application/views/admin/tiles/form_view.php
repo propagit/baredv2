@@ -43,6 +43,7 @@
                   <div class="form-label">Category</div>
                   <div class="form-control">
                       <select name="category" id="category">
+                      	  <option value="0">Select One</option>
                           <option <?=(isset($tile['category']) ? ($tile['category'] == MEN ? 'selected="selected"' : '') : 'selected="selected"');?> value="<?=MEN?>">Male</option>
                           <option <?=(isset($tile['category']) ? ($tile['category'] == WOMEN ? 'selected="selected"' : '') : '');?> value="<?=WOMEN?>">Female</option>
                       </select> 

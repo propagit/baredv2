@@ -9,8 +9,10 @@
 					$product = $this->Product_model->identify($p['id']);
 					$hero = $this->Product_model->get_hero($p['id']);
 					$on_sale = $product['sale_price'] < $product['price'] ? 'on-sale' : '';
-					$normal_price_arr = explode('.',$product['price']);
-					$sale_price_arr = explode('.',$product['sale_price']);
+					$normal_price = number_format($product['price'] * $cur_val,2);
+					$sale_price = number_format($product['sale_price'] * $cur_val,2);
+					$normal_price_arr = explode('.',$normal_price);
+					$sale_price_arr = explode('.',$sale_price);
 		  ?>
                      <div class="item swapper <?=!$counter ? 'active' : '';?>">
                           <a href="<?=base_url()?>store/detail_product/quick_link/<?=$product['id_title']?>">
