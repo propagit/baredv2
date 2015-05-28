@@ -14,7 +14,7 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
             </h1>
             <h2>Add new gallery item</h2>
             <p>
-                <span><em>Ideal image size: 600px x 600px<br>All image should be of same width & height for optimum result.</em></span><br><br>
+                <span><em>Ideal image size: 865px x 865px<br>All image should be of same width & height for optimum result.</em></span><br><br>
             
                 Add a new image by browsing your computer and uploading a file. The image files accepted for upload include, (.jpg , .gif , .png)<br><br>
             </p>
