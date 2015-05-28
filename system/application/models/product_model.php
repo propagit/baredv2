@@ -1750,6 +1750,30 @@ class Product_model extends Model {
 			{
 				$tld .= "a.long_desc like '%$l%' ";
 			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			else
 			{
 				$tld .= " or a.long_desc like '%$l%' ";

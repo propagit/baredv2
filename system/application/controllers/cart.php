@@ -3923,12 +3923,20 @@ class Cart extends Controller {
 		redirect(base_url().'cart/conf_success');
 	}
 	
+	function save_note_b4_paypal()
+	{
+		$msg = $this->input->post('pmsg',true);
+		if($msg){
+			$this->session->set_userdata('order_note',$msg);
+		}
+		echo 'ok';
+	}
+	
 	# Implement new Paypal REST API
 	function paypal()
 	{
 		# Add order and mark it as pending
 		$this->_add_order_b4_paypal();
-		
 		#ini_set('display_startup_errors',1); ini_set('display_errors',1); error_reporting(-1);
 		$this->load->library('paypal_rest');
 
@@ -4451,6 +4459,10 @@ class Cart extends Controller {
 		}else{
 			$shipping_method = $this->session->userdata('sshipping_method');
 		}
+		
+		if($this->session->userdata('order_note')){
+			$msg = $this->session->userdata('order_note');	
+		}
 
 		$shipping_weight = $this->session->userdata('sshipping_weight');
 		$shipping_weight_method = $this->session->userdata('sshipping_weight_method');
@@ -4511,7 +4523,7 @@ class Cart extends Controller {
 					'payment_date' => date('Y-m-d H:i:s'),
 					'payment_gross' =>$total,
 					'payment_status' => 'processing',
-					
+					'message' => $msg,
 					'gift' => $gift,
 					'gift_bg' => $gift_bg,
 					'receipt_name' => $rname,
@@ -5157,14 +5169,16 @@ class Cart extends Controller {
 			$size = $temp_str['Size'];
 			if($multiple_stock[$temp_str['Size']] < $quantity)
 			{
-				print "Sorry this item has low stock level in the size $size, so you just either lower the quantity or you still want to keep the amount you want to buy please contact us at ".COMPANY_SALES_EMAIL." to enquiry about the availability, please be sure to let us know how many units you require. We will be in contact shortly.";
+				#print "Sorry this item has low stock level in the size $size, so you just either lower the quantity or you still want to keep the amount you want to buy please contact us at ".COMPANY_SALES_EMAIL." to enquiry about the availability, please be sure to let us know how many units you require. We will be in contact shortly.";
+				print "Sorry, this item is low in stock. Please reduce the quantity you’re adding to your cart";
 			}
 			else
 			{
 			  $status = $this->Cart_model->add_limited_special($data,$multiple_stock[$temp_str['Size']]);
 			  if($status ==-2)
 			  {		
-			     print "Sorry this item has low stock level in the size $size, so you just either lower the quantity or you still want to keep the amount you want to buy please contact us at ".COMPANY_SALES_EMAIL." to enquiry about the availability, please be sure to let us know how many units you require. We will be in contact shortly.";
+			     #print "Sorry this item has low stock level in the size $size, so you just either lower the quantity or you still want to keep the amount you want to buy please contact us at ".COMPANY_SALES_EMAIL." to enquiry about the availability, please be sure to let us know how many units you require. We will be in contact shortly.";
+				 print "Sorry, this item is low in stock. Please reduce the quantity you’re adding to your cart";
 			  }
 			  else if ($status == -1) 
 			  {

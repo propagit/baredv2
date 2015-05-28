@@ -138,30 +138,30 @@ function use_billing_address()
                         </div>
                         
                         <div class="form-group">
-                            <label class="col-sm-4 control-label">First name:</label>
+                            <label class="col-sm-4 control-label">First Name:</label>
                             <div class="col-sm-6" id="sfirstname">
-                              <input class="form-control" type="text" id="input-sfirstname" name="input-sfirstname" placeholder="First name" required>
+                              <input class="form-control" type="text" id="input-sfirstname" name="input-sfirstname" placeholder="First Name" required>
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label class="col-sm-4 control-label">Last name:</label>
+                            <label class="col-sm-4 control-label">Last Name:</label>
                             <div class="col-sm-6" id="slastname">
-                              <input class="form-control" type="text" id="input-slastname" name="input-slastname" placeholder="Last name" required>
+                              <input class="form-control" type="text" id="input-slastname" name="input-slastname" placeholder="Last Name" required>
                             </div>
                         </div>
                         
                         <div class="form-group">
                             <label class="col-sm-4 control-label">Address:</label>
                             <div class="col-sm-6" id="saddress">
-                              <input class="form-control" type="text" id="input-saddress" name="input-saddress" placeholder="Shipping Addres" required>
+                              <input class="form-control" type="text" id="input-saddress" name="input-saddress" placeholder="Shipping Address" required>
                             </div>
                         </div>
                         
                         <div class="form-group">
                             <label class="col-sm-4 control-label">Address Line 2:</label>
                             <div class="col-sm-6" id="saddress2">
-                              <input class="form-control" type="text" id="input-saddress2" name="input-saddress2" placeholder="Shipping Address2">
+                              <input class="form-control" type="text" id="input-saddress2" name="input-saddress2" placeholder="Shipping Address 2">
                             </div>
                         </div>
                         

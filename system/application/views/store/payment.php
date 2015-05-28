@@ -104,7 +104,18 @@ function deletecart(id)
 function paypal_payment()
 {
 	
-	window.location="<?=base_url()?>cart/paypal";	
+	jQuery.ajax({
+		url: '<?=base_url()?>cart/save_note_b4_paypal',
+		type: 'POST',
+		data: ({pmsg:$('#pmsg').val()}),
+		dataType: "html",
+		success: function(html) {
+			window.location="<?=base_url()?>cart/paypal";			
+		}
+	});
+	
+	
+	//window.location="<?=base_url()?>cart/paypal";	
 	/*var gift = jQuery('#gift').val();
 	
 	var ecard_no = jQuery("input:radio[name=ecard_no]").val();
@@ -348,6 +359,17 @@ function check_payment()
                 </p>
                 </div>
                 
+                <div style="clear: both; height: 5px; border-bottom: 1px solid #59595C; margin-bottom: 15px"></div>
+					
+					<div style="float: left; width:50%" class="plabel label-form-Font">
+						<strong>Notes</strong> - Please give us information about your feet. For example; I have wide feet, I wear a full length orthotic etc. This will ensure that we send you the right fitting options for your feet.
+					</div>
+                    
+					<div class="input-space col-sm-6 col-xs-12 x-gutters">
+						<textarea class="input-form-Font form-control" name="pmsg" id="pmsg" s="3"></textarea>
+					</div>
+					
+                 <div style="clear: both; height: 5px; border-bottom: 1px solid #59595C; margin-bottom: 25px; margin-top:10px;"></div>
                 <div class="p-margin-left">
 					
                      <div style="display:block;">
@@ -423,15 +445,6 @@ function check_payment()
 					</div>
 					<div class="input-space col-sm-6 col-xs-12 x-gutters">
 						<input type="text" name="cvvnumber" id="cvvnumber" class="form-control" required/>
-					</div>
-					<div style="clear: both; height: 5px; border-bottom: 1px solid #59595C; margin-bottom: 15px"></div>
-					
-					<div style="float: left; width:50%" class="plabel label-form-Font">
-						Notes - Please give us information about your feet. For example; I have wide feet, I wear a full length orthotic etc. This will ensure that we send you the right fitting options for your feet.
-					</div>
-                    
-					<div class="input-space col-sm-6 col-xs-12 x-gutters">
-						<textarea class="input-form-Font form-control" name="pmsg" id="pmsg" s="3"></textarea>
 					</div>
 					
                     <div style="clear: both;"></div>
