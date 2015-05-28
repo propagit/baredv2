@@ -49,7 +49,7 @@ $(function(){
 		  }
 		  next.children(':first-child').clone().appendTo($(this)).addClass('clone');
 		  
-		  for (var i=0;i<4;i++) {
+		  for (var i=0;i<5;i++) {
 			next=next.next();
 			if (!next.length) {
 				next = $(this).siblings(':first');

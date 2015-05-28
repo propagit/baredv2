@@ -47,6 +47,7 @@ jQuery(function(){
 						  }
 						?>
                         <select name="product-category" id="product-filter" onChange="get_feature_products_by_category();" style="display: inherit; margin-bottom: 10px;">
+                        	 <option  value="0" <?=$feature_product_cur_filter == 0 ? 'selected="selected"' : '';?>>Select One</option>
                              <option  value="<?=MEN?>" <?=$feature_product_cur_filter == MEN ? 'selected="selected"' : '';?>>Male</option>
                  			 <option  value="<?=WOMEN?>" <?=$feature_product_cur_filter == WOMEN ? 'selected="selected"' : '';?>>Female</option>
                         </select> 

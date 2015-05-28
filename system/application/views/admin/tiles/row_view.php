@@ -3,7 +3,7 @@
         <input type="hidden" name="sort[]" value="<?=$tile['tile_id'];?>">
         <td><?=$tile['name'];?></td>
         <td><?=$tile['tile_uri'];?></td>
-        <td class="center"><?=$tile['category'] == MEN ? 'M' : '<span class="female">F</span>';?></td>
+        <td class="center"><?=$tile['category'] == MEN ? 'M' : ($tile['category'] == WOMEN ? '<span class="female">F</span>' : 'NA');?></td>
         <td class="center">
             <a href="<?=base_url();?>admin/tiles/edit/<?=$tile['tile_id'];?>" class="anchor tooltip-alt" data-toggle="tooltip" title="Edit"><i class="icon-edit icon-2x"></i></a>
         </td>

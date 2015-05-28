@@ -5172,7 +5172,7 @@ class Cart extends Controller {
 			  } 
 			  else if ($status > 0) 
 			  {
-				print "You have successfully added $quantity products to your shopping basket";
+				print "You have successfully added $quantity product to your shopping basket";
 			  } 
 			  else 
 			  {
