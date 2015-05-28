@@ -753,11 +753,21 @@ body {
       .gallery .carousel-inner .item a:last-child [class*=col] {
         padding-left: 5px;
         padding-right: 0; }
+    .gallery .carousel-inner .mob-carousel-item {
+      float: left; }
+      .gallery .carousel-inner .mob-carousel-item a [class*=col] {
+        max-height: inherit;
+        overflow: visible; }
 
 /* gallery*/
 #instagram {
   margin-bottom: 90px;
   max-height: 306px; }
+
+.instagram-header {
+  position: absolute;
+  left: 0;
+  right: 0; }
 
 .app-modal {
   /*modal-dialog*/ }
@@ -997,7 +1007,7 @@ body {
   .app-modal {
     /*modal-dialog*/ }
     .app-modal .modal-dialog .modal-content .modal-body .right .product {
-      margin-top: 20%; }
+      margin-top: 6%; }
       .app-modal .modal-dialog .modal-content .modal-body .right .product img {
         max-height: 180px; }
       .app-modal .modal-dialog .modal-content .modal-body .right .product .btn-app {

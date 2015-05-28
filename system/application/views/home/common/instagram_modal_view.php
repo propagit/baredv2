@@ -12,7 +12,11 @@
 </div>
 <div class="col-sm-4 x-gutters right">
      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-     
+     <div class="product" style="margin-top:0;">
+     	<div class="product-info">
+     		<h3 class="instagram-header"><?=$gallery['name'];?></h3>
+        </div>
+     </div>
      <div class="product">
         <img src="<?=base_url()?>uploads/products/<?=md5('mbb'.$product['id'])?>/thumb5/<?=$hero['name']?>" />
         <div class="product-info <?=$on_sale;?>">

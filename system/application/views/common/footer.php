@@ -136,10 +136,11 @@
 
 <script>
 $(function(){
-	app.swiper('#instagram');
+	//app.swiper('#instagram');
 	app.swiper('#featured');
 	app.swiper('#banners');
 	app.swiper('#product-gallery');
+	app.swiper('#instagram-mob');
 	
 	$('.subscribe-btn').click(function(){
 		subscribe();

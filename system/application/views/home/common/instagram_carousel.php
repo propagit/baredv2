@@ -6,24 +6,89 @@
     </div>
     <div class="segment hidden-xs"><hr></div>
 </div>
-<div id="instagram" class="app-container br-top carousel slide multi-carousel gallery" data-ride="carousel" data-type="multi" data-interval="false">
+<div id="instagram" class="app-container br-top carousel slide gallery hidden-xs" data-ride="carousel" data-interval="false">
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
       	  <?php 
 		  	$counter = 0;
-		  	foreach($instagram_gallery as $gallery){ 
-		  		
-		  ?>
-      			<div class="item swapper <?=!$counter ? 'active' : '';?>">
-                  <a href="javascript:get_modal_view(<?=$gallery['instagram_gallery_id'];?>,<?=$gallery['product_id'];?>);">
+			$active = true;
+			$items_per_row = 6;
+			$total = count($instagram_gallery);
+			$num_rows = $total % $items_per_row;
+			$extra_tiles = ($items_per_row * $num_rows) - $total;
+			
+		 ?>
+         <div class="item <?=$active ? 'active' : '';?>">
+			 <?php	
+                foreach($instagram_gallery as $gallery){ 
+					if($counter < $items_per_row){	
+              ?> 
+                          <a href="javascript:get_modal_view(<?=$gallery['instagram_gallery_id'];?>,<?=$gallery['product_id'];?>);">
+                              <div class="col-sm-2 instagram-item">
+                                  <img src="<?=base_url();?>uploads/instagram/<?=$gallery['image'];?>" />
+                              </div>
+                          </a>   
+              <?php 
+			 		 $counter++; 
+			  		}else{
+					$counter = 0;
+			  ?>
+			 </div>
+             <div class="item">
+             	 <a href="javascript:get_modal_view(<?=$gallery['instagram_gallery_id'];?>,<?=$gallery['product_id'];?>);">
                       <div class="col-sm-2 instagram-item">
                           <img src="<?=base_url();?>uploads/instagram/<?=$gallery['image'];?>" />
                       </div>
-                  </a>
-               </div>
-          <?php $counter++; } ?>
+                  </a> 
+			 <?php	
+					}
+					$active = false;
+				}
+				# done with the number of records
+				# if extra tiles is needed populate them
+				if($extra_tiles){
+					for($i = 0; $i < $extra_tiles; $i++){
+				?>
+                	<a href="javascript:get_modal_view(<?=$instagram_gallery[$i]['instagram_gallery_id'];?>,<?=$instagram_gallery[$i]['product_id'];?>);">
+                      <div class="col-sm-2 instagram-item">
+                          <img src="<?=base_url();?>uploads/instagram/<?=$instagram_gallery[$i]['image'];?>" />
+                      </div>
+                   </a>
+                <?php	
+					}
+				}
+				
+				?>
+          </div>
       </div>
       
+      <!-- Controls -->
+      <a class="left carousel-control" href="#instagram" role="button" data-slide="prev">
+          <span class="slide-btn"><i class="fa fa-angle-left"></i></span>
+      </a>
+      <a class="right carousel-control" href="#instagram" role="button" data-slide="next">
+          <span class="slide-btn"><i class="fa fa-angle-right"></i></span>
+      </a>
+</div>
+
+
+<div id="instagram-mob" class="app-container br-top carousel slide gallery visible-xs" data-ride="carousel" data-interval="false">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+      		<?php
+				$mob_active = true; 
+				foreach($instagram_gallery as $gallery){ 
+			?>
+            	<div class="item swapper mob-carousel-item <?=$mob_active ? 'active' : '';?>">
+                	<a href="javascript:get_modal_view(<?=$gallery['instagram_gallery_id'];?>,<?=$gallery['product_id'];?>);">
+                      <div class="col-xs-12">
+                          <img src="<?=base_url();?>uploads/instagram/<?=$gallery['image'];?>" />
+                      </div>
+                  	</a> 
+                </div>
+            <?php $mob_active = false;} ?>
+         
+      </div>
       <!-- Controls -->
       <a class="left carousel-control" href="#instagram" role="button" data-slide="prev">
           <span class="slide-btn"><i class="fa fa-angle-left"></i></span>
@@ -63,6 +128,9 @@ $(function(){
 	setTimeout(function(){
 		app.adjust_element_height('#instagram','.instagram-item');
 	},500);
+	
+	
+	
 });
 
 $(window).resize(function(){

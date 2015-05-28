@@ -5,6 +5,7 @@
           <?php 
 		  		$counter = 0;
 				#echo '<pre>' . print_r($feature_products,true) . '</pre>';
+				$total = count($feature_products);
 		  	 	foreach($feature_products as $p){
 					$product = $this->Product_model->identify($p['id']);
 					$hero = $this->Product_model->get_hero($p['id']);

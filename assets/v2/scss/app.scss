@@ -1024,7 +1024,17 @@ $tile_caption_height:95px;
 					}
 				}
 			} /* a */
+			
 		} /* item */
+		.mob-carousel-item{
+			float:left;
+			  a{
+				  [class*=col]{
+					  max-height:inherit;	
+					  overflow:visible;
+				  }
+			  }
+		  }
 	} /* carousel-inner*/
 } /* gallery*/
 
@@ -1033,7 +1043,11 @@ $tile_caption_height:95px;
 	margin-bottom:90px;	
 	max-height:306px;
 }
-
+.instagram-header{
+	position:absolute;
+	left:0;
+	right:0;	
+}
 .app-modal{
 	.modal-backdrop.in{
 		opacity:1;	
@@ -1370,7 +1384,7 @@ $font_weights: 100,300,400,700,900;
 					.right{
 						
 						.product{
-							margin-top:20%;
+							margin-top:6%;
 							
 							img{
 								max-height:180px;
