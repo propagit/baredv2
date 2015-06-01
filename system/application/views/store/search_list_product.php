@@ -684,17 +684,19 @@ function sort_by_name()
 						{
 							
 							//echo $product['status'].$product['deleted'].'<br>';
-							if($product['status']==1 && $product['deleted']==0)
+							/*if($product['status']==1 && $product['deleted']==0)
 							{
 								$on++;
-							}
+							}*/
+							$on++;
 						}
                 		if(count($products)==0 || $on==0){echo "<div class='body-copy-Font'>The system was unable to find any search results. Please try again.</div>";}
 						$now = 1;
 						$counter = 1;
                 		foreach($products as $product)
 						{
-							if($product['status']==1 && $product['deleted']==0)
+							#if($product['status']==1 && $product['deleted']==0)
+							if(1)
 							{
 								$hero = $this->Product_model->get_hero($product['id']);
 								$modal = $this->Product_model->get_modal($product['id']);

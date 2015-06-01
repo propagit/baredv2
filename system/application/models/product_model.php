@@ -1711,6 +1711,20 @@ class Product_model extends Model {
 		return count($query->result_array());
 	}
 	
+	function get_product_ids_from_search_category_name($keyword)
+	{	
+		$sql = "SELECT pc.product_id as product_id FROM categories c, products_categories pc 
+					WHERE c.name LIKE '%" . $keyword . "%'
+						AND c.id = pc.category_id 
+						AND c.type = 0 
+						AND c.id_menu != -1 
+						GROUP BY pc.product_id";
+						
+		$products = $this->db->query($sql)
+							 ->result_array();
+		return $products;
+	}
+	
 	function get_new_search_product_list_all($keyword,$text,$by,$look_by)
 	{
 		$lk = explode(' ', $keyword);
@@ -1750,30 +1764,6 @@ class Product_model extends Model {
 			{
 				$tld .= "a.long_desc like '%$l%' ";
 			}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			else
 			{
 				$tld .= " or a.long_desc like '%$l%' ";
@@ -1782,7 +1772,20 @@ class Product_model extends Model {
 		}
 		
 		$sql = "select * from products a 
-					where ($ttile or $tsd or $tld) and deleted = 0 and status = 1 ";
+					where ($ttile or $tsd or $tld)";
+					
+		# search categories
+		$products_in_category_like_keyword = $this->get_product_ids_from_search_category_name($keyword);
+		if(count($products_in_category_like_keyword) > 0 ){
+			$product_ids = '';
+			foreach($products_in_category_like_keyword as $pc){
+				$product_ids .= implode(',',$pc) . ',';	
+			}
+			$product_ids = '(' . trim($product_ids,',') . ')';
+			$sql .= " OR (a.id IN " . $product_ids . ")";
+		}
+		
+		$sql .= " and a.deleted = 0 and a.status = 1";
 		
 		if($look_by != '' && $look_by != 0)
 		{
@@ -1880,7 +1883,21 @@ class Product_model extends Model {
 		}
 		
 		$sql = "select * from products a 
-					where ($ttile or $tsd or $tld) and deleted = 0 and status = 1 ";
+					where ($ttile or $tsd or $tld)";
+		
+		
+		# search categories
+		$products_in_category_like_keyword = $this->get_product_ids_from_search_category_name($keyword);
+		if(count($products_in_category_like_keyword) > 0 ){
+			$product_ids = '';
+			foreach($products_in_category_like_keyword as $pc){
+				$product_ids .= implode(',',$pc) . ',';	
+			}
+			$product_ids = '(' . trim($product_ids,',') . ')';
+			$sql .= " OR (a.id IN " . $product_ids . ")";
+		}
+		
+		$sql .= " and a.deleted = 0 and a.status = 1";
 		
 		if($look_by != '' && $look_by != 0)
 		{
@@ -1911,7 +1928,7 @@ class Product_model extends Model {
 			}
 		}
 		
-		//echo $sql;
+		#echo $sql;
 		
 		if($by == 'name')
 		{
@@ -1927,6 +1944,8 @@ class Product_model extends Model {
 		}
 		
 		$sql .= ' Limit '.$row.','.$limit;
+		
+		#echo $sql;
 		
 		$query = $this->db->query($sql);
 		return $query->result_array();

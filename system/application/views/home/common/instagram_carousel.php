@@ -12,18 +12,20 @@
       	  <?php 
 		  	$counter = 0;
 			$active = true;
-			$items_per_row = 6;
+			$items_per_row = MULTI_CAROUSEL_REC_PER_ROW;
 			$total = count($instagram_gallery);
-			$num_rows = $total % $items_per_row;
+			$num_rows = $total / $items_per_row;
+			if(!is_int($num_rows)){
+				$num_rows = $num_rows + 1;
+			}
 			$extra_tiles = ($items_per_row * $num_rows) - $total;
-			
 		 ?>
          <div class="item <?=$active ? 'active' : '';?>">
 			 <?php	
                 foreach($instagram_gallery as $gallery){ 
-					if($counter < $items_per_row){	
+					if($counter < $items_per_row){
               ?> 
-                          <a href="javascript:get_modal_view(<?=$gallery['instagram_gallery_id'];?>,<?=$gallery['product_id'];?>);">
+                          <a onClick="get_modal_view(<?=$gallery['instagram_gallery_id'];?>,<?=$gallery['product_id'];?>);">
                               <div class="col-sm-2 instagram-item">
                                   <img src="<?=base_url();?>uploads/instagram/<?=$gallery['image'];?>" />
                               </div>
@@ -35,7 +37,7 @@
 			  ?>
 			 </div>
              <div class="item">
-             	 <a href="javascript:get_modal_view(<?=$gallery['instagram_gallery_id'];?>,<?=$gallery['product_id'];?>);">
+             	 <a onClick="get_modal_view(<?=$gallery['instagram_gallery_id'];?>,<?=$gallery['product_id'];?>);">
                       <div class="col-sm-2 instagram-item">
                           <img src="<?=base_url();?>uploads/instagram/<?=$gallery['image'];?>" />
                       </div>
@@ -43,18 +45,21 @@
 			 <?php	
 					}
 					$active = false;
+
 				}
 				# done with the number of records
 				# if extra tiles is needed populate them
 				if($extra_tiles){
 					for($i = 0; $i < $extra_tiles; $i++){
+						if(isset($instagram_gallery[$i])){
 				?>
-                	<a href="javascript:get_modal_view(<?=$instagram_gallery[$i]['instagram_gallery_id'];?>,<?=$instagram_gallery[$i]['product_id'];?>);">
-                      <div class="col-sm-2 instagram-item">
-                          <img src="<?=base_url();?>uploads/instagram/<?=$instagram_gallery[$i]['image'];?>" />
-                      </div>
-                   </a>
+                            <a  onClick="get_modal_view(<?=$instagram_gallery[$i]['instagram_gallery_id'];?>,<?=$instagram_gallery[$i]['product_id'];?>);">
+                              <div class="col-sm-2 instagram-item">
+                                  <img src="<?=base_url();?>uploads/instagram/<?=$instagram_gallery[$i]['image'];?>" />
+                              </div>
+                           </a>
                 <?php	
+						}
 					}
 				}
 				
@@ -90,10 +95,10 @@
          
       </div>
       <!-- Controls -->
-      <a class="left carousel-control" href="#instagram" role="button" data-slide="prev">
+      <a class="left carousel-control" href="#instagram-mob" role="button" data-slide="prev">
           <span class="slide-btn"><i class="fa fa-angle-left"></i></span>
       </a>
-      <a class="right carousel-control" href="#instagram" role="button" data-slide="next">
+      <a class="right carousel-control" href="#instagram-mob" role="button" data-slide="next">
           <span class="slide-btn"><i class="fa fa-angle-right"></i></span>
       </a>
 </div>
@@ -101,16 +106,15 @@
 
 <div class="modal fade app-modal" id="instagramModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body" id="instagram-modal-content">
-
-      </div>
+    <div class="modal-content carousel" id="instagram-modal-content">
+      
     </div>
   </div>
 </div>
 <script>
 function get_modal_view(instagram_gallery_id,product_id){
 	$('#instagramModal').modal('show');
+	$('#instagram-modal-content').addClass('app-loading');
 	$.ajax({
 		url:'<?=base_url();?>home/get_instagram_product',
 		type:'POST',
@@ -118,6 +122,7 @@ function get_modal_view(instagram_gallery_id,product_id){
 		data:{instagram_gallery_id:instagram_gallery_id,product_id:product_id},
 		success:function(html){
 			$('#instagram-modal-content').html(html);
+			$('#instagram-modal-content').removeClass('app-loading');
 		}
 	});	
 }

@@ -994,6 +994,9 @@ body {
 .app-visible-md {
   display: none; }
 
+.app-loading {
+  opacity: 0.5; }
+
 @media (max-width: 1400px) {
   .body-content img {
     width: 100%; } }

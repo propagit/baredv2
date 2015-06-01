@@ -142,12 +142,51 @@ class Home extends Controller {
 		$product_id = $this->input->post('product_id');	
 		$data['gallery'] = $this->Instagram_gallery_model->get_gallery_item($instagram_gallery_id);
 		$data['product'] = $this->Product_model->identify($product_id);
+		$data['next_prev'] = $this->get_next_prev($instagram_gallery_id);
 		echo $this->load->view('home/common/instagram_modal_view', $data, true);
 	}
 	
 	function test()
 	{
 		$this->load->view('home/tumbler');
+	}
+	
+	function get_next_prev($instagram_gallery_id)
+	{
+		$instagram =  $this->Instagram_gallery_model->get_gallery_item($instagram_gallery_id);
+		$category = $instagram['home_category'];
+		$instagram_gallery = $this->Instagram_gallery_model->get_active_instagram_gallery($category);
+		$item_counter = 0;
+		$total = count($instagram_gallery);
+		foreach($instagram_gallery as $gallery){ 
+			if($instagram_gallery_id == $gallery['instagram_gallery_id']){
+				# populate next and prev
+				if(!$item_counter){
+					# if this is the first item
+					# next item will be the second
+					$next_item = $instagram_gallery[$item_counter + 1];
+					# last item
+					$prev_item = $instagram_gallery[$total - 1];
+				}else if($item_counter >= ($total - 1)){
+					# if last item reached
+					# next item will be the firs item
+					$next_item = $instagram_gallery[0];
+					# prev item will be the second last item
+					$prev_item = $instagram_gallery[$item_counter - 1];
+				}else{
+					$next_item = $instagram_gallery[$item_counter+1];
+					$prev_item = $instagram_gallery[$item_counter-1];
+				}
+			}
+			$item_counter++;
+		}
+		
+		return array(
+						'next_instagram_gallery_id' => $next_item['instagram_gallery_id'],
+						'next_instagram_product_id' => $next_item['product_id'],
+						'prev_instagram_gallery_id' => $prev_item['instagram_gallery_id'],
+						'prev_instagram_product_id' => $prev_item['product_id'],
+					);
 	}
 	
 }

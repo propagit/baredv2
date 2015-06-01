@@ -84,6 +84,7 @@ define('INSTAGRAM','https://instagram.com/baredfootwear');
 # Home Category
 define('MEN',1);
 define('WOMEN',2);
+define('MULTI_CAROUSEL_REC_PER_ROW',6);
 
 
 /*

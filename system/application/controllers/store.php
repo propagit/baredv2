@@ -2521,6 +2521,9 @@ Warm Regards,<br/>
 		$all_products = $this->Product_model->get_new_search_product_list_all($keyword,$text,$by,$look_by);
 		//echo $this->db->last_query().'<br/>';
 		$data['products'] = $this->Product_model->get_new_search_product_list($keyword,$text,$by,$look_by,$row,$limit);	
+		
+		#echo '<pre>' . print_r($data['products'],true). '</pre>';exit;
+		
 		//echo $this->db->last_query();
 		
 		//echo $this->db->last_query();

@@ -42,7 +42,7 @@ $(function(){
 
 	 });// scroll
 	 
-	 $('.carousel[data-type="multi"] .item').each(function(){
+	/* $('.carousel[data-type="multi"] .item').each(function(){
 		  var next = $(this).next();
 		  if (!next.length) {
 			next = $(this).siblings(':first');
@@ -57,7 +57,7 @@ $(function(){
 			
 			next.children(':first-child').clone().appendTo($(this)).addClass('clone');
 		  }
-	 });
+	 });*/
 	 
 	 //carousel swipe
 	 

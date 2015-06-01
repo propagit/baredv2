@@ -7,7 +7,8 @@ class Lightspeed extends Controller {
 		parent::Controller();		
 		$this->load->model('Lightspeed_model');   		
 		$this->load->model('Product_model');   		
-		$this->load->model('Customer_model');   		
+		$this->load->model('Customer_model');  
+		$this->load->model('System_model'); 		
 	}
 	
 	function update_lightspeed_customer()
@@ -177,10 +178,10 @@ class Lightspeed extends Controller {
 	   return preg_replace('/[^A-Za-z0-9\-]/', '', $string); # Removes special chars.
 	}
 	
+	
 	function set_order($id)
 	{
-		
-		# die();
+		#die();
 		//error_reporting(E_ALL);
 		$orders=$this->Lightspeed_model->get_order($id);
 		
@@ -193,12 +194,21 @@ class Lightspeed extends Controller {
 		$lastname = $customers['lastname'];
 		$address = $this->_clean_string($customers['address']);
 		$suburb = $customers['suburb'];
-		$state_id = $customers['state'];
+		#$state_id = $customers['state'];
+		# this is actually be passed on as state name not id, old code was modified but to make sure it affected all the changes the var name was kept as state_id
+		if($customers['state']){
+			$state_id = $this->System_model->get_state($customers['state']);
+		}else{
+			$state_id = 'Not Set';	
+		}
 		$country = $customers['country'];
 		$postcode = $customers['postcode'];
 		$phone = $customers['phone'];
 		$mobile = $customers['mobile'];
 		$MOStimestamp = date('Y-m-d H:i:s');
+		
+		
+		# changing state
 		
 		
 		
@@ -236,7 +246,7 @@ class Lightspeed extends Controller {
 			</Emails>
 		  </Contact>
 		</Customer>";
-		
+		#echo $xml_create_customer;exit;
 		
 		$additionalHeaders='';
 		
@@ -482,7 +492,12 @@ class Lightspeed extends Controller {
 			$slastName = $orders['lastname'];
 			$saddress1 = $this->_clean_string($orders['address']);
 			$scity = $orders['city'];
-			$sstate = $orders['state'];
+			#$sstate = $orders['state'];
+			if($orders['state']){
+				$sstate = $this->System_model->get_state($orders['state']);
+			}else{
+				$sstate = 'Not Set';	
+			}
 			$scountry = $orders['country'];
 			$szip = $orders['postcode'];
 			$sContactPhone='';
