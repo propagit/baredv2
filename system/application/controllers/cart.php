@@ -5469,19 +5469,22 @@ class Cart extends Controller {
 				<tr><td>&nbsp;</td></tr>
 				<tr>
 				<td>
-				<span style="font-family:Times New Roman, Times, serif; font-size:14px; font-weight:400; ">
-				Thank you for shopping at Bared. <br><br>
-				Please retain this invoice as a record of your purchase. Please check your goods carefully and refer to our <br>
-				Terms & Conditions and Warranty & Returns policy. You will be charged in Australian dollars. <br><br>
-				Unfortunately we cannot accept returns or exchanges on sale items.
+				<span style="font-family:Arial, sans-serif; font-size:16px; font-weight:400; ">
+				Thank you for shopping with Bared. You should receive your shoes within four to eight working days (or often sooner!), and we hope you really love them.<br><br>
+				
+				If for any reason you\'re not completely happy, please call (03) 9509 5771 or email info@bared.com.au.<br><br>
+				
+				We\'ll happily send you another pair (or two!), at no cost to you, to help you compare sizes or styles, and we\'ll pay the return postage for any or all pairs if they\'re still not quite right.<br><br>
+				
+				Your\'s,<br> 
+				The Bared Team
 				</span>
 				</td>
 				</tr>
 				<tr>
 				<td align="center"> 
 				<br>
-				<span style="font-family:Times New Roman, Times, serif; font-size:14px; font-weight:700; color:#000!important; text-decoration:none; ">WWW.BARED.COM.AU </span><br> 
-				<span style="font-family:Times New Roman, Times, serif; font-size:10px; font-weight:400; ">Bared </span></td>
+				<span style="font-family:Times New Roman, Times, serif; font-size:14px; font-weight:700; color:#000!important; text-decoration:none; ">WWW.BARED.COM.AU </span>
 		</tr></table>';
 		$content='';
 		if(!$order['store_pickup']){
@@ -5691,6 +5694,7 @@ class Cart extends Controller {
 		';			
 		$message = $header.$content.$footer;
 		
+		#echo $message;
 		
 		$this->load->library('email');
 		$config['mailtype'] = 'html';

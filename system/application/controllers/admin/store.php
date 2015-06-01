@@ -1529,9 +1529,9 @@ Case Construction Online Merchandise Store
 		$n = $this->Product_model->count_features();
 		if (isset($_POST['products'])) {
 			$products = $_POST['products'];
-			if ($n + count($products) > 12) {
-				$this->session->set_flashdata('addft_true',true);
-			} else
+			#if ($n + count($products) > 12) {
+				#$this->session->set_flashdata('addft_true',true);
+			#} else
 				foreach($products as $product_id) {
 					$feature_id = $this->Product_model->add_feature(array('product_id' => $product_id, 'home_category' => $_POST['home_category']));
 					$this->Product_model->update_feature($feature_id,array('order' => $feature_id));

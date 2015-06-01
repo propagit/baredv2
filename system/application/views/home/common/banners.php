@@ -6,7 +6,7 @@
 		  			foreach($banners as $banner){
 		  ?>
                       <div class="item <?=!$counter ? 'active' : '';?>">
-                          <a href="#">
+                          <a href="<?=$banner['url'] != '' ? $banner['url'] : '';?>">
                               <img src="<?=base_url();?>uploads/banners/ori/<?=$banner['name'];?>"  alt="<?=$banner['name'];?>"/>
                               <div class="carousel-caption visible-xs">
                                   <h3><?=$banner['caption'];?></h3>
