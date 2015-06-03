@@ -382,6 +382,24 @@ div.vertical-tablet { height: 260px !important}
 	font-weight:700;
 	color:#000;
 }
+.fw-pages img{
+	width:100%;	
+}
+.content-h4{
+	font-size:18px;
+	line-height:20px;	
+}
+.app-container .form-group{
+	margin-left:0;
+	margin-right:0;	
+}
+.app-label{
+	padding-right:25px;	
+}
+.inline-block{
+	display:inline-block;	
+}
+
 @media (min-width: 980px) and (max-width: 1199px) {
 	
 	
@@ -1957,10 +1975,10 @@ div.vertical-tablet { height: 260px !important}
 	/*sign in section*/
 	.signin-background
 	{
-		background: none repeat scroll 0 0 #F1F0F1; 
+		background:none;
 		float: left; 
-		padding: 10px 2.5% 20px; 
-		width: 95%;
+		padding: 0; 
+		width: 100%;
 	}
 	
 	.signin-label

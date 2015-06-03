@@ -118,7 +118,7 @@ function use_billing_address()
     	 <!-- delivery details -->
         
 		<div class="col-sm-6 shipping-tabs">
-			<h4>Delivery Details</h4>
+			<h4 class="content-h4">Delivery Details</h4>
 			<div style="clear:both;height:20px;"></div>
             <ul class="nav nav-tabs">
               <li class="<?=$this->session->userdata('store_pickup') ? '' : 'active';?>"><a href="#delivery" data-toggle="tab">Delivery</a></li>
@@ -253,8 +253,8 @@ function use_billing_address()
         
         
         <!-- account details -->
-        <div class="col-sm-5 col-sm-offset-1">
-        	<h4>Account Details</h4>
+        <div class="col-sm-5 col-sm-offset-1 push">
+        	<h4 class="content-h4">Account Details</h4>
 			<div style="clear:both;height:20px;"></div>
             
             <div class="body-copy-Font account-header">Contact Information (<a class="body-copy-Font account-header-link" href="<?=base_url()?>store/edit_detail_retail/<?=$cust['id']?>">Change</a>)</div>

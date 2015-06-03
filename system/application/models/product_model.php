@@ -1713,13 +1713,16 @@ class Product_model extends Model {
 	
 	function get_product_ids_from_search_category_name($keyword)
 	{	
-		$sql = "SELECT pc.product_id as product_id FROM categories c, products_categories pc 
+		$sql = "SELECT pc.product_id as product_id FROM categories c, products_categories pc, products p 
 					WHERE c.name LIKE '%" . $keyword . "%'
 						AND c.id = pc.category_id 
 						AND c.type = 0 
 						AND c.id_menu != -1 
+						AND p.status = 1 
+						AND p.deleted = 0
+						AND pc.product_id = p.id  
 						GROUP BY pc.product_id";
-						
+
 		$products = $this->db->query($sql)
 							 ->result_array();
 		return $products;
@@ -1773,7 +1776,7 @@ class Product_model extends Model {
 		
 		$sql = "select * from products a 
 					where ($ttile or $tsd or $tld)";
-					
+		$sql .= " and a.deleted = 0 and a.status = 1";			
 		# search categories
 		$products_in_category_like_keyword = $this->get_product_ids_from_search_category_name($keyword);
 		if(count($products_in_category_like_keyword) > 0 ){
@@ -1784,8 +1787,6 @@ class Product_model extends Model {
 			$product_ids = '(' . trim($product_ids,',') . ')';
 			$sql .= " OR (a.id IN " . $product_ids . ")";
 		}
-		
-		$sql .= " and a.deleted = 0 and a.status = 1";
 		
 		if($look_by != '' && $look_by != 0)
 		{
@@ -1885,7 +1886,7 @@ class Product_model extends Model {
 		$sql = "select * from products a 
 					where ($ttile or $tsd or $tld)";
 		
-		
+		$sql .= " and a.deleted = 0 and a.status = 1";
 		# search categories
 		$products_in_category_like_keyword = $this->get_product_ids_from_search_category_name($keyword);
 		if(count($products_in_category_like_keyword) > 0 ){
@@ -1897,7 +1898,7 @@ class Product_model extends Model {
 			$sql .= " OR (a.id IN " . $product_ids . ")";
 		}
 		
-		$sql .= " and a.deleted = 0 and a.status = 1";
+		
 		
 		if($look_by != '' && $look_by != 0)
 		{

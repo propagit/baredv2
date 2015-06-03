@@ -7,16 +7,16 @@
 				#echo '<pre>' . print_r($feature_products,true) . '</pre>';
 				$total = count($feature_products);
 				$items_per_row = MULTI_CAROUSEL_REC_PER_ROW;
-				$num_rows = $total / $items_per_row;
-				if(!is_int($num_rows)){
-					$num_rows = $num_rows + 1;
+				
+				$extra_tiles = 0;
+				$remainder = $total % $items_per_row;
+				if($remainder){
+					$extra_tiles = $items_per_row - 	$remainder;
 				}
-				$extra_tiles = ($items_per_row * $num_rows) - $total;
 				$active = true;
 		  ?>
           <div class="item <?=$active ? 'active' : '';?>">
           <?php 
-		  		$item_counter = 0;	
 		  	 	foreach($feature_products as $p){
 					$product = $this->Product_model->identify($p['id']);
 					$hero = $this->Product_model->get_hero($p['id']);
@@ -44,7 +44,6 @@
                           </div>
                           </a>
                    	 <?php 
-			 		 $counter++; 
 			  		}else{
 					$counter = 0;
 					$product = $this->Product_model->identify($p['id']);
@@ -75,7 +74,7 @@
           <?php 
 		  			}
 					$active = false;
-					$item_counter++; 
+					$counter++; 
 				}
 				# done with the number of records
 				# if extra tiles is needed populate them

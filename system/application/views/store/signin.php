@@ -1,7 +1,7 @@
 <?
 if (!empty($_SERVER['HTTPS'])) {}else
 {
-	#Redirect('https://bared.com.au/store/signin', false);
+	Redirect('https://bared.com.au/store/signin', false);
 }
 ?>
 
@@ -147,7 +147,7 @@ function login()
 }
 </script>
 
-<div style="font-family: 'open sans'" class="app-container content-wrap">
+<div class="app-container content-wrap">
 	
 	
 	<div id="fb-root"></div>
@@ -222,10 +222,10 @@ function login()
     
     <div style="height: 20px;"></div>
     
-	<h4>Sign In</h4>
+	<h4 class="content-h4">Sign In</h4>
     <div style="height: 20px;"></div>
 	<div class="signin-background">
-	    <h4>Registered Customers</h4>
+	    <h4 class="content-h4">Registered Customers</h4>
 	    <div style="float: left">
 		    <div class="body-copy-Font">If you have already registered with Bared, then sign in here.</div>
 		    <!-- <div class="alert alert-error" id="alert-login">
@@ -236,15 +236,15 @@ function login()
             
             <form class="form-horizontal">
             <div class="form-group">
-                <label class="col-sm-6 control-label">Enter your email</label>
-                <div class="col-sm-6">
+                <label class="col-sm-6 x-gutters control-label">Enter your email</label>
+                <div class="col-sm-6 x-gutters">
                   <input type="email" id="username" class="form-control">
                 </div>
             </div>
             
             <div class="form-group">
-                <label class="col-sm-6 control-label">Enter your password</label>
-                <div class="col-sm-6">
+                <label class="col-sm-6 x-gutters control-label">Enter your password</label>
+                <div class="col-sm-6 x-gutters">
                   <input type="password" id="password-login" class="form-control">
                 </div>
             </div>
@@ -258,14 +258,14 @@ function login()
 		    	&nbsp;
 		    </div>
 		    <div style="clear: both; height: 10px;"></div>
-		    <div class="visible-tablet visible-xs" style="width: 232px;text-align:center;">
+		    <div class="visible-xs" style="width: 232px;text-align:center;">
 		    	<input onclick="login();" type="button" value="Sign In Now" class="button_primary button_size_fb button-Font"/>
 		    	
                 <div class="body-copy-Font" style="text-align: center; margin-top: 10px; margin-bottom: 10px">
 		    	Or
 		    	</div>
 		    	<!-- <input type="button" value="" style="background: url('<?=base_url()?>img/fb-signin.png'); color: #fff; width: 232px; height: 41px; border:none; font-size: 16px;"/> -->
-		    	<div class="fb-login-button" data-show-faces="false" data-size="xlarge" data-scope="email,user_birthday" data-width="232" data-max-s="1">Sign in Via Facebook</div>
+		    	<div class="fb-login-button" data-show-faces="false" data-size="xlarge" data-scope="email,user_birthday" data-width="232" data-max-s="1">Sign in Via FB</div>
 		    	<!-- <img style="cursor: pointer" onclick="fb_login();" src="<?=base_url()?>img/fb-signin.png" alt=""/> -->
 		    	<!-- <fb:login-button size="xlarge"
 	                 onlogin="require('./log').info('onlogin callback')">
@@ -274,7 +274,7 @@ function login()
 		    </div>
 	    </div>
 	    
-	    <div class="visible-desktop" id="button-login-cont" style="text-align:center;">
+	    <div class="hidden-xs" id="button-login-cont" style="text-align:center;">
 	    	<input onclick="login();" type="button" value="Sign In Now" class="button_primary button_size_fb button-Font"/>
 	    	
             <div class="body-copy-Font" style="text-align: center; margin-top: 10px; margin-bottom: 10px">
@@ -292,9 +292,9 @@ function login()
 	    	<div class="body-copy-Font" style="float: left; font-weight: bold">
 	    		If you are new to Bared, please click 'Register Now'<br/><br/>
 	    		
-	    		<input class="visible-tablet visible-xs button_primary button_size_fb button-Font" type="button" value="Register Now" onclick="window.location='<?=base_url()?>store/register'" />
+	    		<input class="visible-xs button_primary button_size_fb button-Font" type="button" value="Register Now" onclick="window.location='<?=base_url()?>store/register'" />
 	    	</div>
-	    	<div style="float: right" class="visible-desktop">
+	    	<div style="float: right" class="hidden-xs">
 	    		<input onclick="window.location='<?=base_url()?>store/register'" type="button" value="Register Now" class="button_primary button_size_fb button-Font"/>
 	    	</div>
     	</div>

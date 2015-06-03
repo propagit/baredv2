@@ -32,17 +32,21 @@ function register()
 		var postcode=jQuery("#postcode").val();
 		var mobile=jQuery("#mobile").val();
 		var phone=jQuery("#phone").val();
-		var heardus=jQuery("#heardus").val();
+		//var heardus=jQuery("#heardus").val();
+		var heardus_checked = false;
+		if(jQuery('input[name="heardus[]"]:checked').length > 0){
+			heardus_checked = true;	
+		}
 		var personal_referral = jQuery("#personal_referral").val();
 		var title = jQuery('#title').val();
 		
-		if(email!='' && firstname!='' && lastname!='' && password!='' && state!='' && phone!='' && title!='')
+		if(email!='' && firstname!='' && lastname!='' && password!='' && state!='' && phone!='' && title!='' && heardus_checked && address1 != '' && country != '')
 		{
-		
 			jQuery.ajax({
 				url: '<?=base_url()?>store/traderegister2',
 				type: 'POST',
-				data: ({firstname:firstname,lastname:lastname, month_dob:month_dob, date_dob:date_dob, email:email, password:password, address1:address1, address2:address2, suburb:suburb, country:country, state:state, postcode:postcode,phone:phone,mobile:mobile,heardus:heardus,personal_referral:personal_referral,title:title}),
+				/*data: ({firstname:firstname,lastname:lastname, month_dob:month_dob, date_dob:date_dob, email:email, password:password, address1:address1, address2:address2, suburb:suburb, country:country, state:state, postcode:postcode,phone:phone,mobile:mobile,heardus:heardus,personal_referral:personal_referral,title:title}),*/
+				data:jQuery('#registerForm').serialize(),
 				dataType: "html",
 				success: function(data) {					
 					if(data==1)
@@ -107,7 +111,7 @@ function check_heardus()
     <span class="body-copy-Font">
         <!-- Unlock the door to a world of beautiful opportunities exclusively for you. Sign up to start enjoying the glamourous benefits of <a class="primarylink" style="font-weight:400;" href="<?=base_url()?>store/page/26" target="_blank">The Divine Society of Glamour Devotees</a>
         <br /><br /> -->
-    	<span class="body-copy-Font mandatory">*All form fields are mandatory</span>
+    	<span class="body-copy-Font mandatory">* Mandatory Fields</span>
     </span>
     <div style="margin-top: 20px"></div>
     <form class="form-horizontal" id="registerForm"  name="registerForm" method="post" action="javascript:register();" autocomplete="off">
@@ -115,7 +119,7 @@ function check_heardus()
     <div class="form-group">
         <label class="col-sm-3 control-label">Email Address*</label>
         <div class="col-sm-6">
-          <input type="email" id="email" class="form-control" id="email" value="<?=$sub_email?>" required>
+          <input type="email" id="email" class="form-control" name="email" value="<?=$sub_email?>" required>
         </div>
   	</div>
     
@@ -135,14 +139,14 @@ function check_heardus()
     <div class="form-group">
         <label class="col-sm-3 control-label">First Name*</label>
         <div class="col-sm-6">
-          <input type="text" id="firstname" class="form-control" required>
+          <input type="text" id="firstname" name="firstname" class="form-control" required>
         </div>
   	</div>
     
     <div class="form-group">
         <label class="col-sm-3 control-label">Surname*</label>
         <div class="col-sm-6">
-          <input type="text" id="lastname" class="form-control" required>
+          <input type="text" id="lastname" name="lastname" class="form-control" required>
         </div>
   	</div>
     
@@ -179,7 +183,7 @@ function check_heardus()
     <div class="form-group">
         <label class="col-sm-3 control-label">Passowrd*</label>
         <div class="col-sm-6">
-          <input type="password" id="password" class="form-control" required>
+          <input type="password" id="password" name="password" class="form-control" required>
         </div>
   	</div>
     
@@ -193,33 +197,33 @@ function check_heardus()
     <div class="form-group">
         <label class="col-sm-3 control-label">Phone*</label>
         <div class="col-sm-6">
-          <input type="text" id="phone" class="form-control" required>
+          <input type="text" id="phone" name="phone" class="form-control" required>
         </div>
   	</div>
     
     <div class="form-group">
         <label class="col-sm-3 control-label">Mobile*</label>
         <div class="col-sm-6">
-          <input type="text" id="mobile" class="form-control" required>
+          <input type="text" id="mobile" name="mobile" class="form-control" required>
         </div>
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-3 control-label">Address1</label>
+        <label class="col-sm-3 control-label">Address1*</label>
         <div class="col-sm-6">
-          <input type="text" id="address1" class="form-control">
+          <input type="text" id="address1" name="address1" class="form-control">
         </div>
   	</div>
     
     <div class="form-group">
         <label class="col-sm-3 control-label">Address2</label>
         <div class="col-sm-6">
-          <input type="text" id="address2" class="form-control">
+          <input type="text" id="address2" name="address2" class="form-control">
         </div>
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-3 control-label">Select your country</label>
+        <label class="col-sm-3 control-label">Select your country*</label>
         <div class="col-sm-6">
           <select class="form-control" onchange="country_change();" name="country" id="country" >
 			<option value="" selected="selected">Select Country</option> 
@@ -471,7 +475,7 @@ function check_heardus()
     <div class="form-group">
         <label class="col-sm-3 control-label">Select your state*</label>
         <div class="col-sm-6">
-          <select class="form-control" name="province" id="province" required>
+          <select class="form-control" name="state" id="province" required>
 			<option value="" selected="selected">Select State</option>
 			<?php
 				foreach($states as $state)
@@ -481,7 +485,6 @@ function check_heardus()
 				<?php
 				}
 			?>
-			<option value="0">Other</option>
 		</select>
         </div>
   	</div>
@@ -489,20 +492,21 @@ function check_heardus()
     <div class="form-group">
         <label class="col-sm-3 control-label">Suburb</label>
         <div class="col-sm-6">
-          <input type="text" id="suburb" class="form-control" >
+          <input type="text" id="suburb" name="suburb" class="form-control" >
         </div>
   	</div>
    
     <div class="form-group">
         <label class="col-sm-3 control-label">Postcode</label>
         <div class="col-sm-6">
-          <input type="text" id="postcode" class="form-control" >
+          <input type="text" id="postcode" name="postcode" class="form-control" >
         </div>
   	</div>
     
     <div class="form-group">
-        <label class="col-sm-3 control-label">Heard about us</label>
+        <label class="col-sm-3 control-label">Heard about us *</label>
         <div class="col-sm-6">
+        <?php if(0){ ?>
           <select onchange="check_heardus();" class="form-control" name="heardus" id="heardus">
     		<option value="Google">Google</option>
     		<option value="Facebook">Facebook</option>
@@ -511,13 +515,22 @@ function check_heardus()
     		<option value="Personal Referral">Personal Referral</option>
     		<!-- <option value="Other">Other</option> -->
     	</select>
+        <?php } ?>
+       
+        <div><input type="checkbox" name="heardus[]" value="Google" id="heard-google"> <label for="heard-google" class="app-label">Google</label> </div>
+        <div><input type="checkbox" name="heardus[]" value="Facebook" id="heard-fb"> <label for="heard-fb" class="app-label">Facebook</label></div>
+        <div><input type="checkbox" name="heardus[]" value="Instagram" id="heard-instagram"> <label for="heard-instagram" class="app-label">Instagram</label></div>
+        <div><input type="checkbox" name="heardus[]" value="Professional Referral" id="heard-prof-ref"> <label for="heard-prof-ref" class="app-label">Professional Referral</label></div>
+        <div><input type="checkbox" name="heardus[]" value="Personal Referral" id="heard-per-ref"> <label for="heard-per-ref" class="app-label">Personal Referral</label></div>
+        
+        
         </div>
   	</div>
    
     <div class="form-group" style="display:none;" id="when_personal_referral">
         <label class="col-sm-3 control-label">Personal Referral</label>
         <div class="col-sm-6">
-          <input type="text" id="personal_referral" class="form-control" >
+          <input type="text" id="personal_referral" class="form-control" name="personal_referral" >
         </div>
   	</div>
 

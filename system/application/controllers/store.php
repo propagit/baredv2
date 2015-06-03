@@ -1136,7 +1136,7 @@ Please proceed to the website link below to commence shopping.<br/>
 			$suburb = $_POST['suburb'];
 			$state = $_POST['state'];
 			$postcode = $_POST['postcode'];
-			$heardus = $_POST['heardus'];
+			$heardus = implode(', ',$_POST['heardus']);
 			$personal_referral = $_POST['personal_referral'];
 			//$dob = $_POST['dob'];
 			
@@ -1218,7 +1218,7 @@ Please proceed to the website link below to commence shopping.<br/>
 				}
 				//$this->send_confirmation_dealer($user);		
 			}
-			$this->send_confirmation_retailer2($user);
+			#$this->send_confirmation_retailer2($user);
 			echo 1;
 		
 		}
@@ -2674,6 +2674,11 @@ Warm Regards,<br/>
 		$data['jpy'] = $cur['jpy'];
 		$pages = $this->Menu_model->getpage($id);
 		$data['pages'] = $pages;
+		$data['full_width_class'] = '';	
+		if($id == 89){
+			$data['full_width_class'] = 'fw-pages x-gutters';	
+		}
+		
         if($pages['display']==0){
 			$this->load->view('common/header',$data);
 			if($id != '38' && $id != '47')
@@ -2738,6 +2743,10 @@ Warm Regards,<br/>
 		$pages = $this->Menu_model->getpagetitle($title);
 		$id=$pages['id'];
 		$data['pages'] = $pages;
+		$data['full_width_class'] = '';	
+		if($id == 89){
+			$data['full_width_class'] = 'fw-pages x-gutters';	
+		}
         if($pages['display']==0){
 			$this->load->view('common/header',$data);
 			if($id != '38' && $id != '47')

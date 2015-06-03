@@ -14,11 +14,11 @@
 			$active = true;
 			$items_per_row = MULTI_CAROUSEL_REC_PER_ROW;
 			$total = count($instagram_gallery);
-			$num_rows = $total / $items_per_row;
-			if(!is_int($num_rows)){
-				$num_rows = $num_rows + 1;
+			$extra_tiles = 0;
+			$remainder = $total % $items_per_row;
+			if($remainder){
+				$extra_tiles = $items_per_row - 	$remainder;
 			}
-			$extra_tiles = ($items_per_row * $num_rows) - $total;
 		 ?>
          <div class="item <?=$active ? 'active' : '';?>">
 			 <?php	
@@ -31,7 +31,6 @@
                               </div>
                           </a>   
               <?php 
-			 		 $counter++; 
 			  		}else{
 					$counter = 0;
 			  ?>
@@ -45,7 +44,7 @@
 			 <?php	
 					}
 					$active = false;
-
+					$counter++; 
 				}
 				# done with the number of records
 				# if extra tiles is needed populate them

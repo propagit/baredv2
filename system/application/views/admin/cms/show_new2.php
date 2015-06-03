@@ -69,8 +69,8 @@ jQuery(document).ready(function() {
 
 <div class="app-container" id="page-additional">
 	<div style="height:20px;"></div>   
-    <div class="col-sm-12">
-	<div class="col-sm-12 body-content">		
+    <div class="col-sm-12 <?=$full_width_class;?>">
+	<div class="col-sm-12 body-content <?=$full_width_class;?>">		
 		<?=$pages['content']?>		
     </div>
     </div>   
