@@ -146,7 +146,7 @@ class Home extends Controller {
 		echo $this->load->view('home/common/instagram_modal_view', $data, true);
 	}
 	
-	function test()
+	function _test_tumbler()
 	{
 		$this->load->view('home/tumbler');
 	}
@@ -187,6 +187,35 @@ class Home extends Controller {
 						'prev_instagram_gallery_id' => $prev_item['instagram_gallery_id'],
 						'prev_instagram_product_id' => $prev_item['product_id'],
 					);
+	}
+	
+	
+	# to test new pages etc
+	function test()
+	{
+		if( ! $this->session->userdata('cur_sign'))
+		{
+			$data['sign'] = '<span style="font-size:12px">AU</span> $';
+			$data['cur_val'] = 1;
+		}
+		else 
+		{
+			//echo $this->session->userdata('cur_val');
+			$data['sign'] = $this->session->userdata('cur_sign');
+			$data['cur_val'] = $this->session->userdata('cur_val');
+		}
+		
+		$cur = $this->System_model->get_currency();
+		
+		$data['usa'] = $cur['usa'];
+		$data['eur'] = $cur['eur'];
+		$data['gbp'] = $cur['gbp'];
+		$data['jpy'] = $cur['jpy'];
+		
+		
+		$this->load->view('common/header',$data);
+		$this->load->view('dump/test',isset($data) ? $data : NULL);
+		$this->load->view('common/footer');			
 	}
 	
 }

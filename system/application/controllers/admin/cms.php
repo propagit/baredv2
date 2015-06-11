@@ -341,6 +341,11 @@ class Cms extends Controller {
 			$data['cur_val'] = $this->session->userdata('cur_val');
 		}
 		
+		$data['full_width_class'] = '';	
+		if($id == 89){
+			$data['full_width_class'] = 'fw-pages x-gutters';	
+		}
+		
 		$cur = $this->System_model->get_currency();
 		
 		$data['usa'] = $cur['usa'];

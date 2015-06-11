@@ -18,6 +18,24 @@
 /* carousel fonts*/
 /* buttons font */
 /* headers font */
+@font-face {
+  font-family: Besom-free-font;
+  src: url("../fonts/Besom-free-font.ttf"); }
+@font-face {
+  font-family: ManhattanDarling-Regular;
+  src: url("../fonts/ManhattanDarling-Regular.ttf"); }
+@font-face {
+  font-family: ManhattanDarlingExtras;
+  src: url("../fonts/ManhattanDarlingExtras.ttf"); }
+@font-face {
+  font-family: Oswald-RegularItalic;
+  src: url("../fonts/Oswald-RegularItalic.ttf"); }
+@font-face {
+  font-family: MinionPro-Regular;
+  src: url("../fonts/MinionPro-Regular.otf"); }
+@font-face {
+  font-family: Montserrat-Light;
+  src: url("../fonts/Montserrat-Light.otf"); }
 /*
 	vw = ratio 0.05308333 (font in vw / font in px)
 */
@@ -915,6 +933,36 @@ body {
   text-transform: none;
   line-height: 24px; }
 
+#page-additional .body-content-alt {
+  /* New pages : 11 June, 2015 */ }
+  #page-additional .body-content-alt h1, #page-additional .body-content-alt .caption h4, .caption #page-additional .body-content-alt h4, #page-additional .body-content-alt .carousel .carousel-caption h4, .carousel .carousel-caption #page-additional .body-content-alt h4 {
+    font-family: ManhattanDarling-Regular;
+    font-size: 8.70567vw;
+    line-height: 8.70567vw;
+    text-align: center;
+    margin-bottom: 0; }
+  #page-additional .body-content-alt h2 {
+    font-family: Oswald-RegularItalic;
+    font-size: 37px;
+    line-height: 42px;
+    display: inline-block;
+    border-style: dashed;
+    padding: 20px;
+    margin-top: 0; }
+  #page-additional .body-content-alt h3 {
+    /*font-size:22px;*/
+    font-size: 1.44vw;
+    font-style: italic;
+    /*text-align:center;	*/ }
+  #page-additional .body-content-alt .page-block-wrap {
+    margin-top: 80px;
+    margin-bottom: 25px; }
+    #page-additional .body-content-alt .page-block-wrap .page-block .img-wrap {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      text-align: center; }
+
 /* Helpers */
 .fw-100 {
   font-weight: 100; }
@@ -999,7 +1047,14 @@ body {
 
 @media (max-width: 1400px) {
   .body-content img {
-    width: 100%; } }
+    width: 100%; }
+
+  #page-additional .body-content-alt h3 {
+    font-size: 1.3vw; }
+  #page-additional .body-content-alt .page-block-wrap .page-block .img-wrap {
+    min-height: inherit; }
+    #page-additional .body-content-alt .page-block-wrap .page-block .img-wrap img {
+      width: 75%; } }
 @media (max-width: 1199px) {
   .app-hidden-md {
     display: none; }
@@ -1240,7 +1295,19 @@ body {
     #footer ul.social-links li {
       margin-right: 25px; }
 
-  /* footer */ }
+  /* footer */
+  #page-additional .body-content-alt h1, #page-additional .body-content-alt .caption h4, .caption #page-additional .body-content-alt h4, #page-additional .body-content-alt .carousel .carousel-caption h4, .carousel .carousel-caption #page-additional .body-content-alt h4 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    line-height: 40px; }
+  #page-additional .body-content-alt h2 {
+    font-size: 18px;
+    padding: 10px 20px;
+    line-height: 20px; }
+  #page-additional .body-content-alt h3 {
+    font-size: 22px; }
+  #page-additional .body-content-alt .page-block-wrap .page-block .img-wrap img {
+    position: relative; } }
 @media (max-width: 580px) {
   .product img {
     width: 100%; } }

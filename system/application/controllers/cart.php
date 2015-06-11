@@ -5448,7 +5448,23 @@ class Cart extends Controller {
 		$header='';
 		$header .='
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-		<table width="630" align="center"><tr><td></td></tr><tr><td>&nbsp;</td></tr>';
+		<table width="630" align="center"><tr><td></td></tr>
+		<tr>
+				<td>
+				<span style="font-family:Arial, sans-serif; font-size:18px; font-weight:400; ">
+				Thank you for shopping with Bared. You should receive your shoes within four to eight working days (or often sooner!), and we hope you really love them.<br><br>
+				
+				If for any reason you\'re not completely happy, please call (03) 9509 5771 or email info@bared.com.au.<br><br>
+				
+				We\'ll happily send you another pair (or two!), at no cost to you, to help you compare sizes or styles, and we\'ll pay the return postage for any or all pairs if they\'re still not quite right.<br><br>
+				
+				Your\'s,<br> 
+				The Bared Team
+				</span>
+				</td>
+				</tr>
+				<tr><td>&nbsp;</td></tr>
+		';
 		$footer ='';
 		$footer .='
 				<table width="630" align="center">
@@ -5467,20 +5483,7 @@ class Cart extends Controller {
 				$footer.='</span></td>
 				</tr>
 				<tr><td>&nbsp;</td></tr>
-				<tr>
-				<td>
-				<span style="font-family:Arial, sans-serif; font-size:16px; font-weight:400; ">
-				Thank you for shopping with Bared. You should receive your shoes within four to eight working days (or often sooner!), and we hope you really love them.<br><br>
 				
-				If for any reason you\'re not completely happy, please call (03) 9509 5771 or email info@bared.com.au.<br><br>
-				
-				We\'ll happily send you another pair (or two!), at no cost to you, to help you compare sizes or styles, and we\'ll pay the return postage for any or all pairs if they\'re still not quite right.<br><br>
-				
-				Your\'s,<br> 
-				The Bared Team
-				</span>
-				</td>
-				</tr>
 				<tr>
 				<td align="center"> 
 				<br>
@@ -5694,7 +5697,7 @@ class Cart extends Controller {
 		';			
 		$message = $header.$content.$footer;
 		
-		#echo $message;
+		#echo $message;exit;
 		
 		$this->load->library('email');
 		$config['mailtype'] = 'html';
