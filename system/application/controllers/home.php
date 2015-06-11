@@ -218,4 +218,31 @@ class Home extends Controller {
 		$this->load->view('common/footer');			
 	}
 	
+	function bared_difference()
+	{
+		if( ! $this->session->userdata('cur_sign'))
+		{
+			$data['sign'] = '<span style="font-size:12px">AU</span> $';
+			$data['cur_val'] = 1;
+		}
+		else 
+		{
+			//echo $this->session->userdata('cur_val');
+			$data['sign'] = $this->session->userdata('cur_sign');
+			$data['cur_val'] = $this->session->userdata('cur_val');
+		}
+		
+		$cur = $this->System_model->get_currency();
+		
+		$data['usa'] = $cur['usa'];
+		$data['eur'] = $cur['eur'];
+		$data['gbp'] = $cur['gbp'];
+		$data['jpy'] = $cur['jpy'];
+		
+		
+		$this->load->view('common/header',$data);
+		$this->load->view('dump/bared_difference',isset($data) ? $data : NULL);
+		$this->load->view('common/footer');			
+	}
+	
 }

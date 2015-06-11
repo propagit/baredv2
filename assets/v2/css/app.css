@@ -11,6 +11,7 @@
 /* grey - mobile nav background */
 /* darker grey - mob sub nav background */
 /* shade of grey as well mobile badge */
+/* tangerine */
 /* white */
 /* black */
 /* Main font, body copy*/
@@ -933,35 +934,134 @@ body {
   text-transform: none;
   line-height: 24px; }
 
-#page-additional .body-content-alt {
-  /* New pages : 11 June, 2015 */ }
-  #page-additional .body-content-alt h1, #page-additional .body-content-alt .caption h4, .caption #page-additional .body-content-alt h4, #page-additional .body-content-alt .carousel .carousel-caption h4, .carousel .carousel-caption #page-additional .body-content-alt h4 {
-    font-family: ManhattanDarling-Regular;
-    font-size: 8.70567vw;
-    line-height: 8.70567vw;
-    text-align: center;
-    margin-bottom: 0; }
-  #page-additional .body-content-alt h2 {
-    font-family: Oswald-RegularItalic;
-    font-size: 37px;
-    line-height: 42px;
-    display: inline-block;
-    border-style: dashed;
-    padding: 20px;
-    margin-top: 0; }
-  #page-additional .body-content-alt h3 {
-    /*font-size:22px;*/
-    font-size: 1.44vw;
-    font-style: italic;
-    /*text-align:center;	*/ }
-  #page-additional .body-content-alt .page-block-wrap {
-    margin-top: 80px;
-    margin-bottom: 25px; }
-    #page-additional .body-content-alt .page-block-wrap .page-block .img-wrap {
+#page-additional {
+  /**
+   Bared Difference Page
+  */
+  /* bared-difference*/ }
+  #page-additional .body-content-alt {
+    /* 
+    	New pages : 11 June, 2015 
+    */ }
+    #page-additional .body-content-alt h1, #page-additional .body-content-alt .caption h4, .caption #page-additional .body-content-alt h4, #page-additional .body-content-alt .carousel .carousel-caption h4, .carousel .carousel-caption #page-additional .body-content-alt h4 {
+      font-family: ManhattanDarling-Regular;
+      font-size: 8.70567vw;
+      line-height: 8.70567vw;
+      text-align: center;
+      margin-bottom: 0; }
+    #page-additional .body-content-alt h2 {
+      font-family: Oswald-RegularItalic;
+      font-size: 37px;
+      line-height: 42px;
       display: inline-block;
-      position: relative;
-      width: 100%;
-      text-align: center; }
+      border-style: dashed;
+      padding: 20px;
+      margin-top: 0; }
+    #page-additional .body-content-alt h3 {
+      /*font-size:22px;*/
+      font-size: 1.44vw;
+      font-style: italic;
+      /*text-align:center;	*/ }
+    #page-additional .body-content-alt .page-block-wrap {
+      margin-top: 80px;
+      margin-bottom: 25px; }
+      #page-additional .body-content-alt .page-block-wrap .page-block .img-wrap {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        text-align: center; }
+  #page-additional .bared-difference {
+    /* intro */ }
+    #page-additional .bared-difference h1, #page-additional .bared-difference .caption h4, .caption #page-additional .bared-difference h4, #page-additional .bared-difference .carousel .carousel-caption h4, .carousel .carousel-caption #page-additional .bared-difference h4 {
+      font-family: ManhattanDarling-Regular;
+      font-size: 84px;
+      text-transform: none;
+      line-height: 84px; }
+    #page-additional .bared-difference p {
+      font-family: Besom-free-font; }
+    #page-additional .bared-difference .intro {
+      color: white;
+      text-align: center;
+      border-style: dashed;
+      border-color: white;
+      border-width: 3px;
+      padding: 25px;
+      margin: 25px 5px; }
+      #page-additional .bared-difference .intro p {
+        font-size: 29px;
+        text-transform: uppercase; }
+        #page-additional .bared-difference .intro p strong {
+          font-family: ManhattanDarling-Regular;
+          font-size: 58px;
+          text-transform: lowercase; }
+    #page-additional .bared-difference .the-difference {
+      margin-top: 50px;
+      /* dif-row */ }
+      #page-additional .bared-difference .the-difference h1, #page-additional .bared-difference .the-difference .caption h4, .caption #page-additional .bared-difference .the-difference h4, #page-additional .bared-difference .the-difference .carousel .carousel-caption h4, .carousel .carousel-caption #page-additional .bared-difference .the-difference h4 {
+        color: black; }
+      #page-additional .bared-difference .the-difference .diff-row {
+        font-family: Besom-free-font;
+        color: black;
+        float: left;
+        margin-bottom: 50px;
+        /* numbering */ }
+        #page-additional .bared-difference .the-difference .diff-row .numbering {
+          font-family: ManhattanDarling-Regular;
+          float: left;
+          padding-left: 25px; }
+          #page-additional .bared-difference .the-difference .diff-row .numbering span {
+            display: inline-block;
+            float: left; }
+          #page-additional .bared-difference .the-difference .diff-row .numbering .bullet {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            background-color: #ffb594;
+            line-height: 70px;
+            line-height: 90px;
+            font-size: 62px;
+            margin-left: 10px; }
+          #page-additional .bared-difference .the-difference .diff-row .numbering .label {
+            color: black;
+            line-height: 80px;
+            font-size: 40px;
+            padding: 0 0 0 35px;
+            margin: 0; }
+          #page-additional .bared-difference .the-difference .diff-row .numbering:after {
+            content: " ";
+            background-image: url("../img/stripe-long.png");
+            background-repeat: no-repeat;
+            height: 10px;
+            width: 100%;
+            float: left;
+            min-width: 340px;
+            margin-left: -40px; }
+        #page-additional .bared-difference .the-difference .diff-row p {
+          font-size: 29px;
+          float: left;
+          width: 100%;
+          padding-top: 25px; }
+        #page-additional .bared-difference .the-difference .diff-row .footbed {
+          background-image: url("../img/bared-diff-bg-footbed.jpg");
+          background-repeat: no-repeat;
+          float: left;
+          min-height: 1000px;
+          width: 100%;
+          background-size: 55%;
+          margin-top: 100px; }
+          #page-additional .bared-difference .the-difference .diff-row .footbed .features {
+            margin: 30px;
+            background-color: white;
+            width: 45%;
+            float: left; }
+          #page-additional .bared-difference .the-difference .diff-row .footbed .hero {
+            width: 40%;
+            float: left;
+            margin-top: -70px;
+            position: absolute;
+            left: 47%; }
+            #page-additional .bared-difference .the-difference .diff-row .footbed .hero img {
+              /*width:auto;*/ }
 
 /* Helpers */
 .fw-100 {

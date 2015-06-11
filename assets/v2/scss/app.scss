@@ -15,6 +15,7 @@ $color5:#ff8c52; /* orange sale colors */
 $color6:#333333; /* grey - mobile nav background */
 $color7:#292929; /* darker grey - mob sub nav background */
 $color8:#303030; /* shade of grey as well mobile badge */
+$color9:#ffb594; /* tangerine */
 
 $white:#fff; /* white */
 $black:#000; /* black */
@@ -1289,7 +1290,9 @@ $tile_caption_height:95px;
 }
 #page-additional{
 	.body-content-alt{
-		/* New pages : 11 June, 2015 */
+		/* 
+			New pages : 11 June, 2015 
+		*/
 		h1{
 			font-family:	ManhattanDarling-Regular;
 			@include responsive_font(164,164);
@@ -1331,7 +1334,138 @@ $tile_caption_height:95px;
 		}
 	
 	}
+	
+	/**
+	 Bared Difference Page
+	*/
+	.bared-difference{
+		h1{
+			font-family:	ManhattanDarling-Regular;
+			font-size:84px;
+			text-transform:none;
+			line-height:84px;	
+		}
+		p{
+			font-family:Besom-free-font;	
+		}
+		.intro{
+			color:$white;
+			text-align:center;
+			border-style: dashed;
+			border-color:$white;
+			border-width:3px;
+			padding: 25px;
+			margin: 25px 5px;
+			
+			
+			p{
+				font-size:29px;
+				text-transform:uppercase;
+				
+				strong{
+					font-family:ManhattanDarling-Regular;
+					font-size:58px;	
+					text-transform: lowercase;
+				}
+			}
+		} /* intro */
+		
+		$bullet_dim:70px;
+		.the-difference{
+			margin-top:50px;
+			
+			h1{
+				color:$black;	
+			}
+			
+			.diff-row{
+				font-family:Besom-free-font;	
+				color:$black;
+				float:left;
+				margin-bottom:50px;
+				
+				.numbering{
+					font-family:ManhattanDarling-Regular;
+					float:left;
+					padding-left:25px;
+					
+					span{
+						display:inline-block;	
+						float:left;
+					}
+					.bullet{
+						height:$bullet_dim;
+						width:$bullet_dim;
+						border-radius:50%;
+						
+						background-color:$color9;
+						line-height:$bullet_dim;
+						line-height: 90px;
+						font-size: 62px;
+						margin-left: 10px;
+					}
+					.label{
+						color:$black;
+						line-height:80px;
+						font-size:40px;
+						padding:0 0 0 35px;
+						margin:0;
+					}
+					
+					&:after{
+						content:" ";
+						background-image:url('../img/stripe-long.png');
+						background-repeat:no-repeat;	
+						height:10px;
+						width:100%;
+						float:left;
+						min-width:340px;
+						margin-left:-40px;
+					}
+	
+				} /* numbering */
+				
+				p{
+					font-size:29px;
+					float:left;
+					width:100%;
+					padding-top:25px;	
+				}
+				
+				.footbed{
+					background-image:url('../img/bared-diff-bg-footbed.jpg');
+					background-repeat:no-repeat;
+					float:left;
+					min-height:1000px;
+					width:100%;
+					background-size:55%;
+					margin-top:100px;
+					
+					.features{
+						margin:30px;
+						background-color:$white;
+						width:45%;	
+						float:left;
+					}
+					.hero{
+						width:40%;
+						float:left;
+						margin-top:-70px;
+						position:absolute;
+						left:47%;
+						img{
+							/*width:auto;*/	
+						}
+					}
+				}
+			} /* dif-row */
+			
+			
+		}
+	} /* bared-difference*/
 }
+
+
 
 /* Helpers */
 $font_weights: 100,300,400,700,900;
