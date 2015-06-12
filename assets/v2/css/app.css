@@ -1000,12 +1000,14 @@ body {
       #page-additional .bared-difference .the-difference h1, #page-additional .bared-difference .the-difference .caption h4, .caption #page-additional .bared-difference .the-difference h4, #page-additional .bared-difference .the-difference .carousel .carousel-caption h4, .carousel .carousel-caption #page-additional .bared-difference .the-difference h4 {
         color: black; }
       #page-additional .bared-difference .the-difference .diff-row {
+        position: relative;
         font-family: Besom-free-font;
         color: black;
         float: left;
         margin-bottom: 50px;
         width: 100%;
-        /* numbering */ }
+        /* numbering */
+        /* video*/ }
         #page-additional .bared-difference .the-difference .diff-row .numbering {
           font-family: ManhattanDarling-Regular;
           float: left;
@@ -1049,6 +1051,44 @@ body {
           width: 100%;
           padding-top: 25px;
           margin-bottom: 20px; }
+        #page-additional .bared-difference .the-difference .diff-row .fitting-option {
+          background-image: url("../img/pages/fitting-options.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 0;
+          padding-top: 173.37%;
+          /*(img-height / img-width * width) */
+          float: left;
+          margin-top: 80px;
+          position: relative; }
+        #page-additional .bared-difference .the-difference .diff-row .video {
+          width: 100%;
+          position: absolute;
+          top: 0; }
+          #page-additional .bared-difference .the-difference .diff-row .video .wide-feet {
+            position: relative;
+            left: 3%;
+            margin-top: 35%;
+            width: 50%; }
+          #page-additional .bared-difference .the-difference .diff-row .video .narrow-feet {
+            position: relative;
+            right: 3%;
+            margin-top: 108%;
+            width: 50%;
+            float: right; }
+        #page-additional .bared-difference .the-difference .diff-row .video-wrapper {
+          position: relative;
+          padding-bottom: 56.25%;
+          /* 16:9 */
+          padding-top: 25px;
+          height: 0; }
+          #page-additional .bared-difference .the-difference .diff-row .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; }
 
 /* Helpers */
 .fw-100 {
@@ -1397,10 +1437,62 @@ body {
       font-size: 22px; }
     #page-additional .body-content-alt .page-block-wrap .page-block .img-wrap img {
       position: relative; }
-    #page-additional .the-difference {
-      /* dif-row */ }
-      #page-additional .the-difference .diff-row .mob-img {
-        margin-top: 25px; }
+    #page-additional .bared-difference {
+      /* intro */ }
+      #page-additional .bared-difference h1, #page-additional .bared-difference .caption h4, .caption #page-additional .bared-difference h4, #page-additional .bared-difference .carousel .carousel-caption h4, .carousel .carousel-caption #page-additional .bared-difference h4 {
+        font-size: 50px;
+        line-height: 50px; }
+      #page-additional .bared-difference .the-difference .diff-row p,
+      #page-additional .bared-difference .intro p,
+      #page-additional .bared-difference p {
+        font-size: 20px !important; }
+      #page-additional .bared-difference .intro p strong {
+        font-size: 30px; }
+      #page-additional .bared-difference .the-difference {
+        /* dif-row */ }
+        #page-additional .bared-difference .the-difference .diff-row {
+          /* numbering */
+          /* video*/ }
+          #page-additional .bared-difference .the-difference .diff-row .numbering {
+            padding-left: 0;
+            width: 100%; }
+            #page-additional .bared-difference .the-difference .diff-row .numbering .bullet {
+              font-size: 42px;
+              height: 50px;
+              width: 50px;
+              line-height: 65px; }
+            #page-additional .bared-difference .the-difference .diff-row .numbering .label {
+              font-size: 25px;
+              padding-left: 15px;
+              line-height: 65px; }
+            #page-additional .bared-difference .the-difference .diff-row .numbering:after {
+              margin-left: -15px;
+              min-width: inherit; }
+            #page-additional .bared-difference .the-difference .diff-row .numbering.right {
+              float: left; }
+              #page-additional .bared-difference .the-difference .diff-row .numbering.right:after {
+                background-position: 0 0;
+                min-width: inherit;
+                margin-left: -15px; }
+          #page-additional .bared-difference .the-difference .diff-row .mob-img {
+            margin-top: 25px; }
+          #page-additional .bared-difference .the-difference .diff-row .fitting-option {
+            background-image: none;
+            height: inherit;
+            padding-top: 0; }
+          #page-additional .bared-difference .the-difference .diff-row .video {
+            width: 100%;
+            position: relative;
+            margin-top: 25px; }
+            #page-additional .bared-difference .the-difference .diff-row .video .wide-feet {
+              margin-top: 0;
+              width: 100%;
+              left: 0; }
+            #page-additional .bared-difference .the-difference .diff-row .video .narrow-feet {
+              width: 100%;
+              right: 0;
+              margin-top: 0;
+              margin-bottom: 25px; }
 
   /* page additional*/
   .flag {

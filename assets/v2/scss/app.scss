@@ -1379,6 +1379,7 @@ $tile_caption_height:95px;
 			}
 			
 			.diff-row{
+				position:relative;
 				font-family:Besom-free-font;	
 				color:$black;
 				float:left;
@@ -1443,6 +1444,55 @@ $tile_caption_height:95px;
 					margin-bottom:20px;
 				}
 				
+				.fitting-option{
+					background-image:url('../img/pages/fitting-options.jpg');
+					background-size:cover;
+					background-repeat: no-repeat;
+					width: 100%;
+					height: 0;
+					padding-top: 173.37%; /*(img-height / img-width * width) */ 	
+					float:left;
+					margin-top:80px;
+					position:relative;
+				}
+				
+				.video{
+					width:100%;	
+					position:absolute;
+					top:0;
+					
+					.wide-feet{
+						position:relative;
+						left:3%;	
+						margin-top:35%;
+						width:50%;
+					}
+					.narrow-feet{
+						  position: relative;
+						  right: 3%;
+						  margin-top: 108%;
+						  width: 50%;
+						  float: right;
+					}
+					
+				} /* video*/
+				.video-wrapper{
+					position: relative;
+					padding-bottom: 56.25%; /* 16:9 */
+					padding-top: 25px;
+					height: 0;	
+					
+					iframe {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+					}
+					
+					
+					
+				}
 				
 			} /* dif-row */
 			
@@ -2144,23 +2194,100 @@ $font_weights: 100,300,400,700,900;
 			}
 		
 		}
-		
 	
-		
-		$bullet_dim:70px;
-		.the-difference{
+		.bared-difference{
+			h1{
+				font-size:50px;
+				line-height:50px;	
+			}
 			
-			.diff-row{
-				
-	
-				.mob-img{
-					margin-top:25px
-						
+			.the-difference .diff-row p,
+			.intro p,
+			p{
+				font-size:20px !important;	
+			}
+			.intro{
+				p{
+					strong{
+						font-size:30px;	
+					}
 				}
-				
-				
-				
-			} /* dif-row */
+			} /* intro */
+			.the-difference{
+				.diff-row{
+					
+					.numbering{
+						padding-left:0;
+						width:100%;
+						
+						span{
+		
+						}
+						.bullet{
+							font-size: 42px;
+							height: 50px;
+							width: 50px;
+							line-height: 65px;
+						}
+						.label{
+							font-size:25px;
+							padding-left:15px;
+							line-height:65px;
+						}
+						
+						&:after{
+							margin-left:-15px;
+							min-width:inherit;
+						}
+						
+						&.right{
+							float:left;
+							&:after{
+								background-position:0 0;
+								min-width:inherit;
+								margin-left:-15px;	
+							}
+						}
+		
+					} /* numbering */
+		
+					.mob-img{
+						margin-top:25px
+							
+					}
+	
+					.fitting-option{
+						background-image:none;
+						height:inherit;
+						padding-top: 0;
+	
+					}
+					
+					.video{
+						width:100%;	
+						position:relative;
+						margin-top:25px;
+						
+						.wide-feet{
+							margin-top:0;
+							width:100%;
+							left:0;
+						}
+						
+						.narrow-feet{
+							width:100%;
+							right:0;
+							margin-top:0;
+							margin-bottom:25px;
+						}
+						
+					} /* video*/
+					.video-wrapper{
+						
+					}
+					
+				} /* dif-row */
+			}
 			
 			
 		}/* bared-difference*/

@@ -40,11 +40,27 @@
                         <p>
                         	Whether you would describe your feet as perfectly normal (whatever that is) or super wide or skinny we should be able to get the right fit for your foot.
                         </p>
-                   		<img class="hidden-xs" src="<?=base_url() . ASSETS ;?>/img/pages/fitting-options.jpg">
-                        <img class="visible-xs mob-img" src="<?=base_url() . ASSETS ;?>/img/pages/perfect-feet.jpg">
-                        <img class="visible-xs mob-img" src="<?=base_url() . ASSETS ;?>/img/pages/wide-feet.jpg">
-                        <img class="visible-xs mob-img" src="<?=base_url() . ASSETS ;?>/img/pages/narrow-feet.jpg">
-                        <img class="visible-xs mob-img" src="<?=base_url() . ASSETS ;?>/img/pages/orthotics.jpg">
+                        <div class="fitting-option">
+                            <img class="visible-xs mob-img" src="<?=base_url() . ASSETS ;?>/img/pages/perfect-feet.jpg">
+                            <img class="visible-xs mob-img" src="<?=base_url() . ASSETS ;?>/img/pages/wide-feet.jpg">
+                            <div class="video">
+                                <div class="wide-feet">
+                                    <div class="video-wrapper">
+                                        <iframe width="853" height="480" src="https://www.youtube.com/embed/uHXQrUjN3Xc" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <img class="visible-xs mob-img" src="<?=base_url() . ASSETS ;?>/img/pages/narrow-feet.jpg">
+                            <div class="video">
+                                <div class="narrow-feet">
+                                    <div class="video-wrapper">
+                                        <iframe width="853" height="480" src="https://www.youtube.com/embed/YIVj_3m28Vk" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <img class="visible-xs mob-img" src="<?=base_url() . ASSETS ;?>/img/pages/orthotics.jpg">
+                        
+                        </div>
                 	</div>
                     
                     <div class="diff-row">
