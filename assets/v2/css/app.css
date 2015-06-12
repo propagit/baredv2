@@ -1004,6 +1004,7 @@ body {
         color: black;
         float: left;
         margin-bottom: 50px;
+        width: 100%;
         /* numbering */ }
         #page-additional .bared-difference .the-difference .diff-row .numbering {
           font-family: ManhattanDarling-Regular;
@@ -1029,39 +1030,25 @@ body {
             margin: 0; }
           #page-additional .bared-difference .the-difference .diff-row .numbering:after {
             content: " ";
-            background-image: url("../img/stripe-long.png");
+            background-image: url("../img/pages/stripe-long.png");
             background-repeat: no-repeat;
             height: 10px;
             width: 100%;
             float: left;
             min-width: 340px;
             margin-left: -40px; }
+          #page-additional .bared-difference .the-difference .diff-row .numbering.right {
+            float: right; }
+            #page-additional .bared-difference .the-difference .diff-row .numbering.right:after {
+              min-width: 15px;
+              background-position: 40px 0;
+              margin-left: 0; }
         #page-additional .bared-difference .the-difference .diff-row p {
           font-size: 29px;
           float: left;
           width: 100%;
-          padding-top: 25px; }
-        #page-additional .bared-difference .the-difference .diff-row .footbed {
-          background-image: url("../img/bared-diff-bg-footbed.jpg");
-          background-repeat: no-repeat;
-          float: left;
-          min-height: 1000px;
-          width: 100%;
-          background-size: 55%;
-          margin-top: 100px; }
-          #page-additional .bared-difference .the-difference .diff-row .footbed .features {
-            margin: 30px;
-            background-color: white;
-            width: 45%;
-            float: left; }
-          #page-additional .bared-difference .the-difference .diff-row .footbed .hero {
-            width: 40%;
-            float: left;
-            margin-top: -70px;
-            position: absolute;
-            left: 47%; }
-            #page-additional .bared-difference .the-difference .diff-row .footbed .hero img {
-              /*width:auto;*/ }
+          padding-top: 25px;
+          margin-bottom: 20px; }
 
 /* Helpers */
 .fw-100 {
@@ -1396,18 +1383,28 @@ body {
       margin-right: 25px; }
 
   /* footer */
-  #page-additional .body-content-alt h1, #page-additional .body-content-alt .caption h4, .caption #page-additional .body-content-alt h4, #page-additional .body-content-alt .carousel .carousel-caption h4, .carousel .carousel-caption #page-additional .body-content-alt h4 {
-    font-size: 50px;
-    margin-bottom: 20px;
-    line-height: 40px; }
-  #page-additional .body-content-alt h2 {
-    font-size: 18px;
-    padding: 10px 20px;
-    line-height: 20px; }
-  #page-additional .body-content-alt h3 {
-    font-size: 22px; }
-  #page-additional .body-content-alt .page-block-wrap .page-block .img-wrap img {
-    position: relative; } }
+  #page-additional {
+    /* bared-difference*/ }
+    #page-additional .body-content-alt h1, #page-additional .body-content-alt .caption h4, .caption #page-additional .body-content-alt h4, #page-additional .body-content-alt .carousel .carousel-caption h4, .carousel .carousel-caption #page-additional .body-content-alt h4 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      line-height: 40px; }
+    #page-additional .body-content-alt h2 {
+      font-size: 18px;
+      padding: 10px 20px;
+      line-height: 20px; }
+    #page-additional .body-content-alt h3 {
+      font-size: 22px; }
+    #page-additional .body-content-alt .page-block-wrap .page-block .img-wrap img {
+      position: relative; }
+    #page-additional .the-difference {
+      /* dif-row */ }
+      #page-additional .the-difference .diff-row .mob-img {
+        margin-top: 25px; }
+
+  /* page additional*/
+  .flag {
+    width: auto !important; } }
 @media (max-width: 580px) {
   .product img {
     width: 100%; } }

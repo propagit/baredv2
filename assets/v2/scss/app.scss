@@ -1383,6 +1383,7 @@ $tile_caption_height:95px;
 				color:$black;
 				float:left;
 				margin-bottom:50px;
+				width:100%;
 				
 				.numbering{
 					font-family:ManhattanDarling-Regular;
@@ -1414,13 +1415,22 @@ $tile_caption_height:95px;
 					
 					&:after{
 						content:" ";
-						background-image:url('../img/stripe-long.png');
+						background-image:url('../img/pages/stripe-long.png');
 						background-repeat:no-repeat;	
 						height:10px;
 						width:100%;
 						float:left;
 						min-width:340px;
 						margin-left:-40px;
+					}
+					
+					&.right{
+						float:right;
+						&:after{
+							min-width:15px;
+							background-position:40px 0;
+							margin-left:0;	
+						}
 					}
 	
 				} /* numbering */
@@ -1430,34 +1440,10 @@ $tile_caption_height:95px;
 					float:left;
 					width:100%;
 					padding-top:25px;	
+					margin-bottom:20px;
 				}
 				
-				.footbed{
-					background-image:url('../img/bared-diff-bg-footbed.jpg');
-					background-repeat:no-repeat;
-					float:left;
-					min-height:1000px;
-					width:100%;
-					background-size:55%;
-					margin-top:100px;
-					
-					.features{
-						margin:30px;
-						background-color:$white;
-						width:45%;	
-						float:left;
-					}
-					.hero{
-						width:40%;
-						float:left;
-						margin-top:-70px;
-						position:absolute;
-						left:47%;
-						img{
-							/*width:auto;*/	
-						}
-					}
-				}
+				
 			} /* dif-row */
 			
 			
@@ -2158,6 +2144,29 @@ $font_weights: 100,300,400,700,900;
 			}
 		
 		}
+		
+	
+		
+		$bullet_dim:70px;
+		.the-difference{
+			
+			.diff-row{
+				
+	
+				.mob-img{
+					margin-top:25px
+						
+				}
+				
+				
+				
+			} /* dif-row */
+			
+			
+		}/* bared-difference*/
+	} /* page additional*/
+	.flag{
+		width:auto !important;	
 	}
 }
 

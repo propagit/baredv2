@@ -1,7 +1,7 @@
 <?
 if (!empty($_SERVER['HTTPS'])) {}else
 {
-	Redirect('https://bared.com.au/store/signin', false);
+	#Redirect('https://bared.com.au/store/signin', false);
 }
 ?>
 
@@ -350,8 +350,8 @@ function login()
     
     
 	
-    
-    <div id="forgot1Modal" class="modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <?php if(0){ ?>
+    <!--<div id="forgot1Modal" class="modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="mytop-modal" onclick="jQuery('#forgot1Modal').modal('hide');">
         <img src="<?=base_url()?>img/close_sign.png" alt=""/>
     </div>
@@ -361,9 +361,24 @@ function login()
        	<div style="margin-bottom: 5px;"><input onclick="send_forgot();" type="button" value="Submit" style="background: #000; color: #fff; width: 100%; height: 41px; border:none; font-size: 16px;"/></div>
         </p>
     </div>
-    </div>
+    </div>-->
+    <?php }?>
 
-	
+	<div class="modal fade" id="forgot1Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header x-border">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+         <div class="modal-body mybody-modal">
+            <div style="margin-bottom: 5px;">Please insert your email</div>
+    		<div style="margin-bottom: 5px;"><input class="form-control" id="forgot_email" type="email" style="border: 1px solid #cac5c2;" /></div>
+       		<div style="margin-bottom: 5px;"><input onclick="send_forgot();" type="button" value="Submit" style="background: #000; color: #fff; width: 100%; height: 41px; border:none; font-size: 16px;"/></div>
+         </div>
+         
+        </div>
+      </div>
+    </div>
     
     </div><!-- app-container-->	
         
