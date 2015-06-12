@@ -2744,7 +2744,7 @@ Warm Regards,<br/>
 		$id=$pages['id'];
 		$data['pages'] = $pages;
 		$data['full_width_class'] = '';	
-		if($id == 89){
+		if($id == 89 || $id == 38){
 			$data['full_width_class'] = 'fw-pages x-gutters';	
 		}
         if($pages['display']==0){

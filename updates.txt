@@ -5,7 +5,8 @@
 
 	
 # controllers
-	
+		- store/pages
+		- admin/cms
 
 # css
 	
