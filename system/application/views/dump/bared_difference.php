@@ -46,7 +46,7 @@
                             <div class="video">
                                 <div class="wide-feet">
                                     <div class="video-wrapper">
-                                        <iframe width="853" height="480" src="https://www.youtube.com/embed/uHXQrUjN3Xc" frameborder="0" allowfullscreen></iframe>
+                                        <iframe width="853" height="480" src="https://www.youtube.com/embed/uHXQrUjN3Xc?rel=0" frameborder="0" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                             <div class="video">
                                 <div class="narrow-feet">
                                     <div class="video-wrapper">
-                                        <iframe width="853" height="480" src="https://www.youtube.com/embed/YIVj_3m28Vk" frameborder="0" allowfullscreen></iframe>
+                                        <iframe width="853" height="480" src="https://www.youtube.com/embed/YIVj_3m28Vk?rel=0" frameborder="0" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>

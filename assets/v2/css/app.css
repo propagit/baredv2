@@ -1070,7 +1070,8 @@ body {
             position: relative;
             left: 3%;
             margin-top: 35%;
-            width: 50%; }
+            width: 50%;
+            z-index: 1000; }
           #page-additional .bared-difference .the-difference .diff-row .video .narrow-feet {
             position: relative;
             right: 3%;
