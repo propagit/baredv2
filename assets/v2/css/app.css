@@ -1479,7 +1479,8 @@ body {
           #page-additional .bared-difference .the-difference .diff-row .fitting-option {
             background-image: none;
             height: inherit;
-            padding-top: 0; }
+            padding-top: 0;
+            margin-top: 0; }
           #page-additional .bared-difference .the-difference .diff-row .video {
             width: 100%;
             position: relative;
