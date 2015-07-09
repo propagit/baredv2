@@ -5,16 +5,17 @@
 <script src="<?=base_url()?>js/jquery.cycle2.carousel.js"></script> -->
 
 
-<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 <script src="http://malsup.github.io/jquery.cycle2.js"></script>
 <script src="http://malsup.github.io/jquery.cycle2.carousel.js"></script>
-<script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>-->
+<script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
 <?php
 	$url_pages=$_SERVER['REQUEST_URI'];
 	$ex_pages=explode("/",$url_pages);
 	$curr_cat=$ex_pages[4];
 ?>
 <script>
+
 // jQuery(function() {
 	// jQuery('.all_tt').tooltip({
 		// showURL: false
@@ -122,10 +123,10 @@ function addtocart() {
 	}
 	}
 	
-	if($('#sizeproduct').val() == '--')
+	if($j('#sizeproduct').val() == '--')
 	{
-		$('#any_message').html("Please select your shoes's size");
-		$('#anyModal').modal('show');
+		$j('#any_message').html("Please select your shoes's size");
+		$j('#anyModal').modal('show');
 		return false;
 	}
 	var attributes = '';
@@ -136,12 +137,12 @@ function addtocart() {
 	<?php for($i=0;$i<count($attributes);$i++) 
 	{ ?>
 	 // use json javascript generator and pass value in json format(by Hieu)
-	 //myArray[<?=$i?>] = $('#attribute-<?=$i?>').val();
-	 myObject.<?=$attributes[$i]['name']?> = $('#attribute-<?=$i?>').val();
+	 //myArray[<?=$i?>] = $j('#attribute-<?=$i?>').val();
+	 myObject.<?=$attributes[$i]['name']?> = $j('#attribute-<?=$i?>').val();
 	<?php } ?>
-	if($('#sizeproduct').length)
+	if($j('#sizeproduct').length)
 	{
-	  mul_size = $('#sizeproduct').val();
+	  mul_size = $j('#sizeproduct').val();
 	
 		myObject.Size = mul_size;
 	}
@@ -155,8 +156,8 @@ function addtocart() {
 	dataType: "html",
 	success: function(html) {
 	
-			$('#any_message').html(html);
-			$('#anyModal').modal('show');
+			$j('#any_message').html(html);
+			$j('#anyModal').modal('show');
 			
 			
 			$.ajax({
@@ -166,8 +167,8 @@ function addtocart() {
 			dataType: "html",
 			success: function(html) {
 					//var adding = "<br/><br/>Note: This product will stay in your shopping cart for only 1hour. If you think you may take longer to check out place in your Wish List";
-					$('.tot_shopbag').text(html);
-					$('#anyModal').modal('show');
+					$j('.tot_shopbag').text(html);
+					$j('#anyModal').modal('show');
 			
 			}
 			});
@@ -191,15 +192,15 @@ function add_towishlist()
 		
 		if(html > 0)
 		{
-			$('#any_message').html('You have successfully saved this item to your Wish List.');
+			$j('#any_message').html('You have successfully saved this item to your Wish List.');
 		}
 		else
 		{
-			$('#any_message').html('Please login to your member account to add this product to your wish list <br> Click <a href="<?=base_url()?>store/signin"> here </a> to sign up or login to your member account.');
+			$j('#any_message').html('Please login to your member account to add this product to your wish list <br> Click <a href="<?=base_url()?>store/signin"> here </a> to sign up or login to your member account.');
 		}
 		
 		
-		$('#anyModal').modal('show');
+		$j('#anyModal').modal('show');
 		
 		$.ajax({
 			url: '<?=base_url()?>cart/count_wishlist',
@@ -208,8 +209,8 @@ function add_towishlist()
 			dataType: "html",
 			success: function(html) {
 			
-					$('.tot_wishlist').text(html);
-					$('#anyModal').modal('show');
+					$j('.tot_wishlist').text(html);
+					$j('#anyModal').modal('show');
 			
 			}
 			});
@@ -897,8 +898,8 @@ function add_towishlist()
 				dataType: "html",
 				success: function(html) {
 				
-						$('#any_message').html(html);
-						$('#anyModal').modal('show');
+						$j('#any_message').html(html);
+						$j('#anyModal').modal('show');
 						
 						
 						$.ajax({
@@ -908,8 +909,8 @@ function add_towishlist()
 						dataType: "html",
 						success: function(html) {
 								//var adding = "<br/><br/>Note: This product will stay in your shopping cart for only 1hour. If you think you may take longer to check out place in your Wish List";
-								$('.tot_shopbag').text(html);
-								$('#anyModal').modal('show');
+								$j('.tot_shopbag').text(html);
+								$j('#anyModal').modal('show');
 						
 						}
 						});
@@ -919,8 +920,8 @@ function add_towishlist()
 			}
 			else
 			{
-				$('#any_message').html(error);
-				$('#anyModal').modal('show');
+				$j('#any_message').html(error);
+				$j('#anyModal').modal('show');
 			}
 			
 			
@@ -936,43 +937,22 @@ function add_towishlist()
             	<div class="gcard-form-label label-form-Font">Send On</div>
             	<div class="gcard-form-input">
             		
-            		<!--<div id="dob1" class="input-append gcard-input" style="width: 89%; margin: 0">
+            		<div id="dob1" class="input-append gcard-input" style="width: 89%; margin: 0">
 						<input data-format="dd-MM-yyyy" class="input-form-Font" type="text" name="g_send" id="g_send" style="width: 95%;"></input>
 						<span style="cursor: pointer" class="add-on">
 						  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
 						  </i>
 						</span>
-                        
-					</div>-->
-                    
-                     
-                         <div class='input-group date input-form-Font' id='dob1' style="width: 93.5%;">
-                            <input data-format="DD-MM-YYYY" name="g_send" id="g_send" type='text' class="form-control" style="border-radius:0; height:30px;"/>
-                            <span class="input-group-addon" style="border-radius:0;">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                        </div>
-                   
+					</div>
 					<script type="text/javascript">
 						var date = new Date();
 						date.setDate(date.getDate());
 						
-						  $(function() {
-						   /* $('#dob1').datetimepicker({
+						  $j(function() {
+						    $j('#dob1').datetimepicker({
 						      pickTime: false,
 						      startDate:date
-						    });*/
-							
-							 $(function () {
-								$('#dob1').datetimepicker({
-									pickTime: false,
-						     		startDate:date
-								});
-
-								$('#dob1 input').focus(function(event){
-								   $('#dob1 ').data("DateTimePicker").show();
-								});
-							});
+						    });
 						  });
 					</script>
             	</div>
@@ -1048,7 +1028,7 @@ function add_towishlist()
                       })();
                     </script>
                 </div>					
-                <img  class="social-icon" style="cursor: pointer; margin-right: 0px;" onclick="$('#emailModal').modal('show');" src="<?=base_url()?>img/mail.png" />
+                <img  class="social-icon" style="cursor: pointer; margin-right: 0px;" onclick="$j('#emailModal').modal('show');" src="<?=base_url()?>img/mail.png" />
                 
                 
                 <div style="clear: both"></div>
@@ -1215,7 +1195,7 @@ function add_towishlist()
 	
 	
 	<div id="emailModal" class="popup-Font modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="mytop-modal" onclick="$('#emailModal').modal('hide');">
+	<div class="mytop-modal" onclick="$j('#emailModal').modal('hide');">
         <img src="<?=base_url()?>img/close_sign.png" alt=""/>
     </div>
 	<form method="post" action="<?=base_url()?>store/send_friend_email">

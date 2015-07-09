@@ -1053,6 +1053,9 @@ $tile_caption_height:95px;
 			  }
 		  }
 	} /* carousel-inner*/
+	.carousel-control{
+		width:auto;
+	}
 } /* gallery*/
 
 
@@ -1405,6 +1408,8 @@ $tile_caption_height:95px;
 						line-height: 90px;
 						font-size: 62px;
 						margin-left: 10px;
+						display:inline-block;
+						float:left;
 					}
 					.label{
 						color:$black;
@@ -1412,7 +1417,10 @@ $tile_caption_height:95px;
 						font-size:40px;
 						padding:0 0 0 35px;
 						margin:0;
+						display:inline-block;
+						float:left;
 					}
+					
 					
 					&:after{
 						content:" ";

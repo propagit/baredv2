@@ -1776,7 +1776,9 @@ class Product_model extends Model {
 		
 		$sql = "select * from products a 
 					where ($ttile or $tsd or $tld)";
-		$sql .= " and a.deleted = 0 and a.status = 1";			
+
+		$sql .= " and a.deleted = 0 and a.status = 1";
+					
 		# search categories
 		$products_in_category_like_keyword = $this->get_product_ids_from_search_category_name($keyword);
 		if(count($products_in_category_like_keyword) > 0 ){
@@ -1787,6 +1789,8 @@ class Product_model extends Model {
 			$product_ids = '(' . trim($product_ids,',') . ')';
 			$sql .= " OR (a.id IN " . $product_ids . ")";
 		}
+		
+		
 		
 		if($look_by != '' && $look_by != 0)
 		{
@@ -1885,8 +1889,10 @@ class Product_model extends Model {
 		
 		$sql = "select * from products a 
 					where ($ttile or $tsd or $tld)";
-		
+
 		$sql .= " and a.deleted = 0 and a.status = 1";
+		
+		
 		# search categories
 		$products_in_category_like_keyword = $this->get_product_ids_from_search_category_name($keyword);
 		if(count($products_in_category_like_keyword) > 0 ){

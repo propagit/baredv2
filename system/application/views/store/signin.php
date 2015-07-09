@@ -1,7 +1,7 @@
 <?
 if (!empty($_SERVER['HTTPS'])) {}else
 {
-	#Redirect('https://bared.com.au/store/signin', false);
+	Redirect('https://bared.com.au/store/signin', false);
 }
 ?>
 
@@ -350,7 +350,8 @@ function login()
     
     
 	
-    <?php if(0){ ?>
+    
+     <?php if(0){ ?>
     <!--<div id="forgot1Modal" class="modal mymodal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="mytop-modal" onclick="jQuery('#forgot1Modal').modal('hide');">
         <img src="<?=base_url()?>img/close_sign.png" alt=""/>
@@ -379,6 +380,8 @@ function login()
         </div>
       </div>
     </div>
+
+	
     
     </div><!-- app-container-->	
         

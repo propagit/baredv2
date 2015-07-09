@@ -24,6 +24,7 @@ class Cron extends Controller {
 		
 		
 		$ndate = date('Y-m-d',strtotime('-1 day'));
+		
 		$list = $this->Cart_model->get_giftcard($ndate);
 	
 		foreach($list as $l)
@@ -68,7 +69,7 @@ class Cron extends Controller {
 								<span style="font-weight: 700; font-size: 18px;">AU $ '.number_format($l['price'],2,'.',',').'</span><br/>
 								<br/>
 								ENTER CODE AT CHECKOUT<br/>
-								<span style="font-weight: 700; font-size: 18px;">'.$l['gift_code'].'</span><br/>
+								<span style="font-weight: 700; font-size: 18px; text-transform: none;">'.$l['gift_code'].'</span><br/>
 								<br/>
 								VALID UNTIL<br/>
 								<span style="font-weight: 700; font-size: 18px;">'.$to_date.'</span>
@@ -81,34 +82,36 @@ class Cron extends Controller {
 						<td>
 							Dear '.$l['gift_to'].',<br/>
 							<br/>
-							'.$l['gift_from'].' has sent you a Gift Voucher to spend on something special from Bared Footwear. Your Gift Voucher can be redeemed online at <a href="'.base_url().'">www.bared.com.au</a> and is valid for 12 months.<br/>
+							'.$l['gift_from'].' has sent you a gift voucher to spend on something special from Bared Footwear. Your gift voucher can be redeemed in-store, online at <a href="'.base_url().'">www.bared.com.au</a> or by calling us on (03) 9509 5771.<br/>
 							<br/>
 							Now you just need to choose your gift, wait for your delivery, and enjoy!<br/><br/>
 							xo Bared Footwear<br/>
 							<br/>
 							<br/>
 							<span style="font-weight: 700">HOW TO REDEEM YOUR GIFT VOUCHER</span><br/>
-							Your Gift Voucher has a unique code, which is required to ‘pay’ for your item. <br/>
+							Your gift voucher has a unique code, which is required to \'pay\' for your item. <br/>
 							<ol>
 								<li>Go to <a href="'.base_url().'">www.bared.com.au</a></li>
 								<li>Select the item you wish to purchase.</li>
 								<li>Add to Shopping Bag.</li>
-								<li>To purchase, go to your Shopping Bag, located in the top right of the screen, and follow the prompts. You will be required to sign in or register with us, and we will also ask you for a ‘Billing address’, even though you may not be required to pay any extra for your item. If there is an outstanding balance, you will be required to give your credit card details also.</li>
-								<li>When you get to the ORDER SUMMARY page, you will need to add your Gift Voucher Code into the area allocated and select UPDATE.</li>
+								<li>To purchase, go to your Shopping Bag, located in the top right of the screen, and follow the prompts. You will be required to sign in or register with us, and we will also ask you for a \'billing address\', even though you may not be required to pay any extra for your item. If there is an outstanding balance, you will be required to give your credit card details also.</li>
+								<li>When you get to the ORDER SUMMARY page, you will need to add your gift voucher code into the area allocated and select UPDATE.</li>
 								<li>Follow the prompts through to place your order.</li>
 								<li>Wait for your delivery to arrive!</li>
 							</ol>
 							<br/>
-							If there is a difference between the amount on the Gift Voucher and the order total you may need to add your credit card details to pay any extra amount.<br/><br/>
-							If there is an amount left over, it will remain available on your Gift Voucher for future use.<br/><br/>
-							Gift Vouchers are valid for 12 months from the date of purchase and can only be used in the Bared Footwear.<br/>
+							If there is a difference between the gift voucher amount and the order total you\'ll need to enter additional payment details (credit card or PayPal).<br/><br/>
+							If there is an amount left over, it will remain available on your gift voucher for future use.<br/><br/>
+							Gift vouchers are valid for 12 months from the date of purchase and can only be used in the Bared Footwear.<br/>
 						</td>
 					</tr>
 				</table>
 				
 				<table cellspacing="0" cellpadding="0" width="630" align="center" style="margin-top: 20px">			
 					<tr>
-						
+						<td style="width:630px; height:45px; line-height:45px; text-align:center; color:#5b5758">
+							<a href="'.base_url().'"><img alt="" src="'.base_url().'img/email-link-footer.png"/></a>
+						</td>
 						
 					</tr>
 				</table>

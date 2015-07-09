@@ -24,7 +24,7 @@
         <li>
         	<a class="app-link" href="<?=base_url()?>cart/list_cart">
                 <i class="fa fa-shopping-cart"></i> 
-                <span class="hidden-md hidden-sm hidden-xs">Shopping Cart </span>
+                <span class="hidden-md hidden-sm hidden-xs">Shopping Bag </span>
                 <span class="badge app-badge shopping-cart-items tot_shopbag"><?=$count_shopbag;?></span>
             </a>
         </li>

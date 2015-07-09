@@ -1,12 +1,14 @@
 # views
-	- 
+	- common/desktop_header
 
 # models	
 
 	
 # controllers
-		- store/pages
-		- admin/cms
+	- cart/send_order_confirmation
+	- cart/send_giftcard
+	- cron/send_giftcard
+	- store	
 
 # css
 	
@@ -21,10 +23,9 @@
 # database - done
 
 
-# Friday New updates
 
 
 
 # images
-	- assets/v2/img
+	- img/email-link-footer.png
 	

@@ -73,6 +73,22 @@
 <script type="text/javascript" src="<?=base_url() . ASSETS;?>js/app/app.js"></script>
 
 
+<meta name="google-site-verification" content="Nd2vOX7BNVofZbQ45ojv8-BXcZPdNRXrB_chmUwnbnE" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37760446-1']);
+  _gaq.push(['_setDomainName', 'bared.com.au']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 
 <script type="text/javascript">
 var yotpo_app_key = "87cmugsJWWCvn4YdAy3U9AcGnlYiUwvpv1TKwE5Z";
@@ -90,6 +106,7 @@ function open_window(url) {
 
 <script src="<?=base_url()?>js/select2/select2.js"></script>
 <script src="<?=base_url()?>js/zoome.js"></script>
+<script src="<?=base_url()?>js/moment.js"></script>
 <script src="<?=base_url()?>js/bootstrap-datetimepicker.min.js"></script>
 <script src="<?=base_url()?>js/jquery.placeholder.js"></script>
 <script src="<?=base_url()?>js/magiczoom.js"></script>

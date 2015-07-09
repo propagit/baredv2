@@ -47,8 +47,8 @@
     <script src="<?=base_url()?>js/styles.js"></script>
     <script src="<?=base_url()?>js/select2/select2.js"></script>
     <!-- <script src="<?=base_url()?>js/build-config.js"></script> -->
-    <!-- <script src="<?=base_url()?>ckfinder/ckfinder.js"></script> -->
-    <!-- <script src="<?=base_url()?>ckfinder/config.js"></script> -->
+     <script src="<?=base_url()?>ckfinder/ckfinder.js"></script> 
+     <script src="<?=base_url()?>ckfinder/config.js"></script>
     <!-- <script src="<?=base_url()?>js/bootstrap-datepicker.js"></script> -->
 
 	<!-- start here -->

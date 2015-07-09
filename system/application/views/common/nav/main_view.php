@@ -20,7 +20,7 @@
                 	<a href="javascript_void(0);" class="dropdown-toggle" data-toggle="dropdown">new arrivals</a>
                     <ul class="dropdown-menu" role="menu">
                     	<li><a href="<?=base_url();?>store/products/Mens/new-arrivals">Men's</a></li>
-                        <li><a href="<?=base_url();?>store/products/Womens/new-arrivals-">Womens's</a></li>
+                        <li><a href="<?=base_url();?>store/products/Womens/new-arrivals-">Women's</a></li>
                     </ul>
                 </li>
         	<?php 

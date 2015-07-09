@@ -1218,7 +1218,7 @@ Please proceed to the website link below to commence shopping.<br/>
 				}
 				//$this->send_confirmation_dealer($user);		
 			}
-			#$this->send_confirmation_retailer2($user);
+			$this->send_confirmation_retailer2($user);
 			echo 1;
 		
 		}
@@ -1233,7 +1233,7 @@ Please proceed to the website link below to commence shopping.<br/>
 		$message = "Hi ".$customer['firstname']." ".$customer['lastname'].",<br/><br/>
 Thanks for signing up with ".COMPANY_NAME.".<br/>
 If you would like to proceed into the products area to order something, click <a href='".base_url()."'>here</a>, or we look forward to the next time you visit us!<br/><br/>
-Warm Regards,<br/>
+Kind regards,<br/>
 ".COMPANY_NAME."";
 		
 		$this->load->library('email');
@@ -2521,9 +2521,6 @@ Warm Regards,<br/>
 		$all_products = $this->Product_model->get_new_search_product_list_all($keyword,$text,$by,$look_by);
 		//echo $this->db->last_query().'<br/>';
 		$data['products'] = $this->Product_model->get_new_search_product_list($keyword,$text,$by,$look_by,$row,$limit);	
-		
-		#echo '<pre>' . print_r($data['products'],true). '</pre>';exit;
-		
 		//echo $this->db->last_query();
 		
 		//echo $this->db->last_query();
@@ -2678,7 +2675,6 @@ Warm Regards,<br/>
 		if($id == 89){
 			$data['full_width_class'] = 'fw-pages x-gutters';	
 		}
-		
         if($pages['display']==0){
 			$this->load->view('common/header',$data);
 			if($id != '38' && $id != '47')
@@ -2743,8 +2739,9 @@ Warm Regards,<br/>
 		$pages = $this->Menu_model->getpagetitle($title);
 		$id=$pages['id'];
 		$data['pages'] = $pages;
+
 		$data['full_width_class'] = '';	
-		if($id == 89 || $id == 38){
+		if($id == 89 || $id == 92){
 			$data['full_width_class'] = 'fw-pages x-gutters';	
 		}
         if($pages['display']==0){
