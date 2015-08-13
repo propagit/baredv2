@@ -219,7 +219,7 @@ class Competition extends Controller {
 			$this->email->from('info@bared.com.au', $inviter['firstname'] . ' ' . $inviter['lastname']);
 			$this->email->to($invitee['invitee_email']);
 			#$this->email->to('kaushtuv@propagate.com.au');
-			$this->email->subject('Bared Fathers Day Competition!');
+			$this->email->subject('The Big Bared Winter Clearance Sale!');
 			$this->email->message($email_content);
 			$this->email->send();
 			$this->email->clear();
@@ -254,7 +254,7 @@ class Competition extends Controller {
 			$this->email->set_newline("\r\n");
 			$this->email->from('propagate.au@gmail.com', $inviter['firstname'] . ' ' . $inviter['lastname']); // change it to yours
 			$this->email->to('kaushtuv@propagate.com.au');// change it to yours
-			$this->email->subject($invitee['invitee_name'] . ' Bared Fathers Day Competition!');
+			$this->email->subject($invitee['invitee_name'] . ' The Big Bared Winter Clearance Sale!');
 			$this->email->message($email_content);
 			$this->email->send();
 		}

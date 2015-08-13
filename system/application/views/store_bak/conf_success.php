@@ -47,7 +47,7 @@
     
 	<div class="">
 		<div class="col-sm-12 x-gutters">
-			<div class="body-copy-Font font18semibold checkout_result_msg">THANK YOU, WE HAVE SUCCESSFULLY RECEIVED YOUR ORDER</div>
+			<div class="body-copy-Font font18semibold checkout_result_msg">THANK YOU... WE HAVE SUCCESSFULLY RECEIVED YOUR ORDER</div>
 			<div style="height: 50px;"></div>
 			<div class="body-copy-Font">
 				<div style="float: left; width:140px; height:30px;">Your order no: </div>
@@ -118,21 +118,16 @@
 				</div>
 				<div style="clear: both; height: 20px"></div>
 				<div style="width:80%;">
-					Thank you for placing your order with Bared. Your payment has been accepted and you will receive a tax invoice via email shortly.<br><br>
-					
-					Unless you have elected to pick up your order in-store your shoes will be dispatched within two business days. We will notify you as soon as your order is on its way and include a tracking number so that you can follow it right to your door! 
-					
-					<!--
-					<?php if(0){ ?>
+					Thank you for placing an order with Bared, your credit card has been debited and you will receive a tax invoice via email shortly.<br> 
                     <?php if(!$order['store_pickup']){ ?>
 					Your order will be dispatched within two business days. We will notify you as soon as your order is on its way and inculde a tracking number so you can follow it right to your door!
                     <?php }else{ ?>
                     Your order is ready for pickup at our store. You can check our opening hours <a target="_blank" href="<?=base_url();?>page/Melbourne-Shoe-Store">here</a>
-                    <?php }} ?> -->
+                    <?php } ?>
 				</div>
 				<div style="clear: both; height: 20px"></div>
 				<div style="width:80%;">
-					Should you have any queries or concerns please contact our customer service team by emailing <a class="body-copy-Font primarylink " href="mailto:info@bared.com.au">info@bared.com.au</a><br /> or calling +61 3 9500 8008.
+					Should you have any questions or concerns please contact customer service by emailing <a class="body-copy-Font primarylink " href="mailto:info@bared.com.au">info@bared.com.au</a><br /> or calling +61 3 9509 5771.
 				</div>
                 <? 
 				
