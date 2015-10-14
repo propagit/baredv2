@@ -22,3 +22,12 @@
 	margin-top: 15px;
 	line-height: 14px;
 }
+.img-wrap img{
+	width:100%;	
+}
+@media (max-width:767px){
+	.competition .competition-form-wrap{
+		padding-left:0;
+		margin-top:15px;
+	}
+}

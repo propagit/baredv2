@@ -40,7 +40,7 @@
 	<script src="<?=base_url()?>js/bootstrap.js"></script>
     <script src="<?=base_url()?>js/bootstrap-select.js"></script>
     <script src="<?=base_url()?>js/bootstrap-tree.js"></script>
-    <script src="<?=base_url()?>js/bootstrap-datetimepicker.min.js"></script>
+    <script src="<?=base_url()?>js/admin_bootstrap-datetimepicker.min.js"></script>
     <script src="<?=base_url()?>js/jasny-bootstrap.js"></script>
     <script src="<?=base_url()?>js/ckeditor.js"></script>
     <script src="<?=base_url()?>js/config.js"></script>
